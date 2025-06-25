@@ -1,0 +1,136 @@
+[
+  {
+    "id": "123dd16c-10a7-4fee-a5ff-881f3a3a1bbe",
+    "name": "Render",
+    "key": "render",
+    "type": "exec",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "code": "// Simple templating engine\n// Accepts two arguments - template and data\n// Template is a string with placeholders in the format {{ key }} or {{ key.nestedKey }}\n// Loops are supported with the format {{ loop:key }} ... {{ /loop:key }}\n// Data is an object with values to replace the placeholders\n// Example:\n// templateEngine({\n//     template: 'Hello {{ name }}! <ul>{{ loop:items }}<li>{{ name }} - {{ price }}</li>{{ /loop: items }}</ul>',\n//     data: {\n//         name: 'John',\n//         items: [\n//             { name: 'Apple', price: 1 },\n//             { name: 'Banana', price: 2 }\n//         ]\n//     }\n// });\n// Output: 'Hello John! <ul><li>Apple - 1</li><li>Banana - 2</li></ul>'\n// Created because Liquid templating is not available within Flow Operations and cannot use third party libs without extensions either.\n\nfunction templateEngine(template, data) {\n    // Function to handle replacement within a string for simple placeholders\n    function replaceString(str, localData) {\n        return str.replace(/\\{\\{\\s*([^}]+?)\\s*\\}\\}/g, function(match, key) {\n            let value = localData;\n            key.split('.').forEach(part => {\n                part = part.trim(); // Trim any whitespace around the key parts\n                // Handle array syntax\n                const arrayMatch = part.match(/^(.+?)\\[(\\d+)\\]$/);\n                if (arrayMatch) {\n                    const arrayKey = arrayMatch[1];\n                    const index = parseInt(arrayMatch[2], 10);\n                    if (value[arrayKey] && Array.isArray(value[arrayKey])) {\n                        value = value[arrayKey][index];\n                    } else {\n                        throw new Error(`Key '${arrayKey}' is missing or not an array.`);\n                    }\n                } else {\n                    if (value != null && value[part] !== undefined) {\n                        value = value[part];\n                    } else {\n                        throw new Error(`Key '${part}' not found in the data.`);\n                    }\n                }\n            });\n            return value;\n        });\n    }\n\n    // Function to process loop blocks\n    function processLoops(template, data) {\n        return template.replace(/\\{\\{\\s*loop:([^}]+?)\\s*\\}\\}([\\s\\S]*?)\\{\\{\\s*\\/loop:\\1\\s*\\}\\}/g, function(match, loopKey, loopItemTemplate) {\n            loopKey = loopKey.trim(); // Ensure loop key is correctly trimmed\n            if (data[loopKey] && Array.isArray(data[loopKey])) {\n                return data[loopKey].map(item => replaceString(loopItemTemplate, item)).join('');\n            } else {\n                throw new Error(`Key '${loopKey}' is missing or not an array.`);\n            }\n        });\n    }\n\n    // Validate input data and template are adequate\n    if (!data || typeof data !== 'object' || Object.keys(data).length === 0) {\n        throw new Error(\"Data object is empty or invalid.\");\n    }\n\n    if (!template || typeof template !== 'string') {\n        throw new Error(\"Template is empty or not a string.\");\n    }\n\n    // Process loop blocks first, then replace remaining placeholders\n    let processedTemplate = processLoops(template, data);\n    return replaceString(processedTemplate, data);\n}\n\nmodule.exports = function(inputData) {\n    try {\n        const { $trigger, template } = inputData;\n        const data = $trigger.data;\n        // We're passing template.template because the message templates have a template field.\n        return templateEngine(template.template, data);\n    } catch (error) {\n        throw new Error(error.message);\n    }\n};"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "7705fdaa-2cbf-469c-957e-c0c07b3bdfd5",
+    "date_created": "2024-06-11T11:34:16.169Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a"
+  },
+  {
+    "id": "18792e1b-7ace-404d-adb1-55b4c7fab921",
+    "name": "Render Template",
+    "key": "render_template",
+    "type": "trigger",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "flow": "7705fdaa-2cbf-469c-957e-c0c07b3bdfd5",
+      "payload": {
+        "data": "{{$trigger.body}}",
+        "template": "confirmation-code-reset"
+      }
+    },
+    "resolve": "847100a4-e334-438c-83cb-940516c3e16f",
+    "reject": null,
+    "flow": "ee200502-ca95-45b7-a19d-bb9dfac18304",
+    "date_created": "2024-06-11T11:34:16.179Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a"
+  },
+  {
+    "id": "632e948f-ee24-4e91-9b53-c1741930a651",
+    "name": "Validate",
+    "key": "validate",
+    "type": "exec",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "code": "module.exports = function(data) {\n\tconst trigger = data.$trigger\n    \n    if (!trigger.template && typeof trigger.template !== 'string') {\n        throw new Error('Template is missing or not supplied in the proper format. Needs to be a string that contains the id of the template to render.')\n    }\n    \n    if (!trigger.data && typeof trigger.data !== 'object') {\n\t\tthrow new Error('Data is missing or not supplied in the proper format. Needs to be a object.')\n\n    }\n}"
+    },
+    "resolve": "89011251-551b-401a-b36d-fc0a74d3e538",
+    "reject": null,
+    "flow": "7705fdaa-2cbf-469c-957e-c0c07b3bdfd5",
+    "date_created": "2024-06-11T11:34:16.183Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a"
+  },
+  {
+    "id": "790f4bc4-eab0-4b8d-ac63-9658d1a517e1",
+    "name": "Send Email",
+    "key": "send_email",
+    "type": "mail",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "to": [
+        "{{$trigger.payload.email}}"
+      ],
+      "subject": "Your ticket for [Your Event]",
+      "type": "wysiwyg",
+      "body": "<div>{{render_template}}</div>"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "8293cea7-81ea-44a8-adb9-785ed6e5b2fb",
+    "date_created": "2024-06-11T11:34:16.187Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a"
+  },
+  {
+    "id": "847100a4-e334-438c-83cb-940516c3e16f",
+    "name": "Send Email",
+    "key": "send_email",
+    "type": "mail",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "to": [
+        "{{$trigger.body.email}}"
+      ],
+      "subject": "New confirmation code for [Your Event]",
+      "type": "wysiwyg",
+      "body": "<div>{{render_template}}</div>"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "ee200502-ca95-45b7-a19d-bb9dfac18304",
+    "date_created": "2024-06-11T11:34:16.190Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a"
+  },
+  {
+    "id": "89011251-551b-401a-b36d-fc0a74d3e538",
+    "name": "Read Template",
+    "key": "template",
+    "type": "item-read",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "permissions": "$full",
+      "collection": "email_templates",
+      "key": [
+        "{{$trigger.template}}"
+      ]
+    },
+    "resolve": "123dd16c-10a7-4fee-a5ff-881f3a3a1bbe",
+    "reject": null,
+    "flow": "7705fdaa-2cbf-469c-957e-c0c07b3bdfd5",
+    "date_created": "2024-06-11T11:34:16.194Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a"
+  },
+  {
+    "id": "aa081d53-48c3-4e1b-a2ee-581fc5931a4b",
+    "name": "Render Template",
+    "key": "render_template",
+    "type": "trigger",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "flow": "7705fdaa-2cbf-469c-957e-c0c07b3bdfd5",
+      "payload": {
+        "data": "{{$trigger.payload}}",
+        "template": "intro"
+      }
+    },
+    "resolve": "790f4bc4-eab0-4b8d-ac63-9658d1a517e1",
+    "reject": null,
+    "flow": "8293cea7-81ea-44a8-adb9-785ed6e5b2fb",
+    "date_created": "2024-06-11T11:34:16.201Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a"
+  }
+]

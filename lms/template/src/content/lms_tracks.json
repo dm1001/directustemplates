@@ -1,0 +1,19 @@
+[
+  {
+    "id": "6148834d-4871-4a8e-8145-a6efb58baec6",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_created": "2024-01-04T21:20:07.328Z",
+    "user_updated": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_updated": "2024-01-17T11:28:44.725Z",
+    "title": "Framework Mastery",
+    "slug": "framework-mastery",
+    "description": "<p>If you want a great peek at all the popular front-end frameworks out there - then this is the track for you. You'll gain insights into four different frameworks.</p>\n<ul>\n<li>Vue</li>\n<li>React</li>\n<li>Svelte</li>\n<li>Astro</li>\n</ul>",
+    "image": "c3a07a01-267a-4c49-a453-b29739a53bdc",
+    "courses": [
+      "94e3a7d6-de27-48a3-995d-d413d37c0cd1",
+      "46925207-9488-4a01-b240-c8a95dcb078c",
+      "f728937d-728f-4649-b1bd-7ea57f382376",
+      "67a006e5-b072-411f-acab-b98585a07119"
+    ]
+  }
+]

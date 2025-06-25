@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2e16c9e1-11d9-4e47-b621-75e4e0c8e5fd",
+    "name": "Color",
+    "options_id": "77842437-9677-4428-8ff6-a1d821bca55d",
+    "languages_code": "en-US"
+  },
+  {
+    "id": "5cf7b8f4-8243-48a2-95c5-94c6082ef96e",
+    "name": "Size",
+    "options_id": "483ca17d-1ab3-4c72-97fb-00123c1b9f0d",
+    "languages_code": "en-US"
+  },
+  {
+    "id": "99a851c9-093c-4e6e-9897-0b7f3823c884",
+    "name": "Farbe",
+    "options_id": "77842437-9677-4428-8ff6-a1d821bca55d",
+    "languages_code": "de-DE"
+  },
+  {
+    "id": "9d140173-ee6d-4046-9ad0-2f329bef4cb5",
+    "name": "Größe",
+    "options_id": "483ca17d-1ab3-4c72-97fb-00123c1b9f0d",
+    "languages_code": "de-DE"
+  }
+]

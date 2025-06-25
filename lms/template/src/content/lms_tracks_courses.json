@@ -1,0 +1,32 @@
+[
+  {
+    "id": "02860940-d5c5-4ae7-af82-35a3a7efb416",
+    "lms_tracks_id": null,
+    "lms_courses_id": null,
+    "sort": 1
+  },
+  {
+    "id": "46925207-9488-4a01-b240-c8a95dcb078c",
+    "lms_tracks_id": "6148834d-4871-4a8e-8145-a6efb58baec6",
+    "lms_courses_id": "520fd9bd-981e-4b37-b30d-71d8199e9f7c",
+    "sort": 2
+  },
+  {
+    "id": "67a006e5-b072-411f-acab-b98585a07119",
+    "lms_tracks_id": "6148834d-4871-4a8e-8145-a6efb58baec6",
+    "lms_courses_id": "4e0d5e59-8770-4f5b-b750-6582e66a4c93",
+    "sort": 4
+  },
+  {
+    "id": "94e3a7d6-de27-48a3-995d-d413d37c0cd1",
+    "lms_tracks_id": "6148834d-4871-4a8e-8145-a6efb58baec6",
+    "lms_courses_id": "1bb1b023-9c61-4e21-8dd7-6548416e7e16",
+    "sort": 1
+  },
+  {
+    "id": "f728937d-728f-4649-b1bd-7ea57f382376",
+    "lms_tracks_id": "6148834d-4871-4a8e-8145-a6efb58baec6",
+    "lms_courses_id": "22f713dd-e4c1-4dd5-bc7e-37ab49f1750a",
+    "sort": 3
+  }
+]

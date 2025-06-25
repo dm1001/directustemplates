@@ -1,0 +1,44 @@
+[
+  {
+    "id": "0b320aee-a15d-4c82-a9a5-645fdc61315a",
+    "attribute_groups_id": null,
+    "languages_code": null,
+    "name": "Mandibular Advancement Devices"
+  },
+  {
+    "id": "2313d08d-152e-447c-8539-879a8a0481d7",
+    "attribute_groups_id": null,
+    "languages_code": null,
+    "name": "Google"
+  },
+  {
+    "id": "2ad9721d-35ad-42b2-9c7e-34b9b3cfdd9e",
+    "attribute_groups_id": "d87664ca-886b-4190-84ec-c1810e1d9454",
+    "languages_code": "en-US",
+    "name": "Amazon Attributes"
+  },
+  {
+    "id": "34566b5b-6720-4bde-9606-9a0a5d91806a",
+    "attribute_groups_id": "ada4e1e3-754c-49ef-b747-dfda4180720d",
+    "languages_code": "de-DE",
+    "name": "Versand"
+  },
+  {
+    "id": "52676438-d476-4374-a2c5-70c267ccfbbb",
+    "attribute_groups_id": null,
+    "languages_code": "de-DE",
+    "name": "Google"
+  },
+  {
+    "id": "848cf447-5670-4193-b1c0-14b1526b99a5",
+    "attribute_groups_id": null,
+    "languages_code": "de-DE",
+    "name": "Alle Schnarchschienen"
+  },
+  {
+    "id": "940f6321-1c29-4fbb-a197-f53bb5802fb0",
+    "attribute_groups_id": "ada4e1e3-754c-49ef-b747-dfda4180720d",
+    "languages_code": "en-US",
+    "name": "Shipping"
+  }
+]

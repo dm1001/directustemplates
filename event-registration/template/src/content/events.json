@@ -1,0 +1,56 @@
+[
+  {
+    "id": "c7e29494-0faa-469e-8966-b3458ada22cf",
+    "status": "active",
+    "sort": null,
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-11T12:13:11.051Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-22T15:49:23.592Z",
+    "title": "Hoppin Code 24",
+    "slug": "hoppin-code-24",
+    "start_at": "2024-07-01T16:00:00.000Z",
+    "end_at": "2024-07-05T16:00:00.000Z",
+    "description": "Discover cutting-edge software solutions with the best and brightest from Initech - the world's leader in TPS Reporting Software.",
+    "logo": null,
+    "tagline": "Cake and ice cream for everyone.",
+    "sessions": [
+      "3da300c3-f983-4eb1-ae32-6ac4666f6f09",
+      "32d5feef-9d63-4e6f-b226-116c934ffaa7",
+      "ff8c36e7-4dda-44c9-8b10-4e4c1e54a0e5"
+    ],
+    "landing_page": [
+      "dc7f8eba-6ce1-4ac2-af85-0c86a02bdf6b",
+      "444a7f81-4300-4729-8816-cd71aa528015",
+      "9c568323-7505-4249-8651-72074bf6097f",
+      "061d4ee3-aa34-4af4-9d13-eec38c065579",
+      "828b59c8-b692-432b-a0a6-0e7ae5756fec",
+      "bacf780e-40c7-4724-b0c5-dc7f7955152b",
+      "7a19d232-818a-4cbc-954b-d8fa901be04c"
+    ],
+    "tickets": [
+      "c4d7cf6a-878c-4a0d-9d8e-604314828f88"
+    ]
+  },
+  {
+    "id": "a5df9b77-c858-4fd7-8e6f-236b8212153f",
+    "status": "past",
+    "sort": null,
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-12T21:11:00.619Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-21T16:04:45.365Z",
+    "title": "Old Event Test",
+    "slug": "old-event-test",
+    "start_at": "2024-05-01T16:00:00.000Z",
+    "end_at": "2024-05-03T16:00:00.000Z",
+    "description": "This is just an older event to test out the functionality.",
+    "logo": null,
+    "tagline": null,
+    "sessions": [],
+    "landing_page": [
+      "689ebb62-f8fd-435c-b152-d58989ad54c0"
+    ],
+    "tickets": []
+  }
+]

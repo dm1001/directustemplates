@@ -1,0 +1,22 @@
+[
+  {
+    "id": "e38ca6c1-5b76-4597-862a-ef475704513f",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_created": "2024-01-17T13:05:18.850Z",
+    "user_updated": null,
+    "date_updated": null,
+    "message": "In Vue 3, ref and reactive are two different ways to create reactive state, but they have some key differences in how they are used and how they handle reactivity.\n\nref:\nref is used to define a reactive reference to a primitive value (like string, number, boolean).\nWhen you declare a state using ref, it wraps the value in an object with a .value property. This means whenever you want to access or mutate the value, you need to use the .value property.\nIt's more suitable for primitives, but can be used with objects too. When used with objects, it makes the entire object reactive.\nExample:\njavascript\nCopy code\nconst count = ref(0); // Access with count.value\nreactive:\nreactive is used to create a reactive object. It's more suitable for complex data structures like objects or arrays.\nUnlike ref, reactive does not wrap the original object with a .value property. You interact with the reactive object just as you would with a normal JavaScript object.\nThe reactivity is deep, meaning all nested properties in the object are also reactive.\nExample:\njavascript\nCopy code\nconst state = reactive({ count: 0 }); // Access with state.count",
+    "lesson": "c98fe4ee-4c6a-4d8e-8334-689b6d2987b9",
+    "parent_comment": "ee42f852-d903-4b68-ab6f-b48c7bf073c6"
+  },
+  {
+    "id": "ee42f852-d903-4b68-ab6f-b48c7bf073c6",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_created": "2024-01-17T12:12:23.330Z",
+    "user_updated": null,
+    "date_updated": null,
+    "message": "I'm having trouble with one of the concepts in this lesson. What's the difference between ref and reactive?",
+    "lesson": "c98fe4ee-4c6a-4d8e-8334-689b6d2987b9",
+    "parent_comment": null
+  }
+]

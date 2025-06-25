@@ -1,0 +1,146 @@
+{
+  "id": "651c4a0e-45c8-4f52-9a38-ac1bb9f2e8dc",
+  "send_registrations_to_slack": false,
+  "slack_webhook_url": null,
+  "registration_page": {
+    "headline": "Hop into the deep end.",
+    "content": "Fill our your information to register for the event.",
+    "callout": {
+      "title": "Join us for a special weeklong virtual conference!",
+      "content": "<p>Register to create your own badge and earn a chance to win some awesome swag.</p>"
+    }
+  },
+  "login_page": {
+    "headline": "Welcome back friend!",
+    "content": "Enter your email and confirmation code to login.",
+    "callout": {
+      "title": "Join us for a special weeklong virtual conference!",
+      "content": "<p>Register to create your own badge and earn a chance to win some awesome swag.</p>"
+    }
+  },
+  "reset_page": {
+    "headline": "Recover your account",
+    "content": "Lost a code? No worries. Just enter your email and we will send you a new one.",
+    "callout": {
+      "title": "Join us for a special weeklong virtual conference!",
+      "content": "<p>Register to create your own badge and earn a chance to win some awesome swag.</p>"
+    }
+  },
+  "ticket_page": {
+    "logged_in": {
+      "headline": "We'll see you on the <em>stage</em> {{person.first_name}}!",
+      "content": "You have earned {{ticket.referred_tickets_count}} giveaway entries. Earn more for every single person you refer.",
+      "meter": {
+        "title": "Referrals",
+        "content": "You have earned {{ticket.referred_tickets_count}} giveaway entries. Earn more for every single person you refer."
+      }
+    },
+    "logged_out": {
+      "headline": "Join <em>{{person.first_name}}</em> at Hoppin Code 2024",
+      "content": "Hopin Code 24 will be the biggest, baddest, most awesome-est event for developers in history.",
+      "meter": {
+        "title": "Referrals",
+        "content": "{{person.first_name}} has earned {{ticket.referred_tickets_count}} giveaway entries. Register now to earn your chance at awesome prizes."
+      }
+    },
+    "share": {
+      "show": true,
+      "title": "Share to earn more giveaway entries."
+    }
+  },
+  "terms_page_content": "<h2><strong>Giveaway Terms and Conditions</strong></h2>\n<p><strong>Official Rules</strong></p>\n<p>[Organization Name] (Address) will be running a giveaway as part of [Event Name] held from [Start Date] through [End Date]. [Organization Name] will be giving away various prizes during the event. Information on how to participate for a chance to win one of the prizes is below.</p>\n<p><strong>Eligibility</strong></p>\n<p><strong>Age Requirement</strong>: Participants must be at least 18 years of age to enter the giveaway.</p>\n<p><strong>Event-Based Participation</strong>: The giveaway is open to virtual attendees of [Event Name]; no territorial restrictions apply beyond event attendance.</p>\n<p><strong>Entry Requirements</strong></p>\n<p><strong>Method of Entry</strong>: Entry into the giveaway will be automatic upon filling out the registration form for [Event Name]. All participants will receive an email notification. Additional entries can be earned by referring people to register with your unique URL.</p>\n<p><strong>No Purchase Necessary</strong>: No purchase or payment of any kind is necessary to enter or win this giveaway.</p>\n<p><strong>Duration</strong></p>\n<p><strong>Event Duration</strong>: The giveaway will take place during the event. Entries will be accepted from the start of the event until the designated end time of the giveaway.</p>\n<p><strong>Prizes</strong></p>\n<p><strong>Prize Description</strong>: The prizes will include various items. The approximate retail value of the prizes will be specified.</p>\n<p><strong>Prize Conditions</strong>: The prizes are non-transferable, non-exchangeable, and non-refundable. No cash alternative will be offered. The prizes will be awarded \"as is\" with no warranty or guarantee, either express or implied.</p>\n<p><strong>Odds</strong>: The odds of winning the prize depend on the total number of eligible entries received.</p>\n<p><strong>Winner Selection and Notification</strong></p>\n<p><strong>Selection Process</strong>: Winners will be selected in a random drawing from all eligible entries received during the event.</p>\n<p><strong>Notification</strong>: The winners will be announced after the event and contacted via email. If the initially selected winner does not reply within a specified time, another winner will be drawn in the same process until a winner is established.</p>\n<p><strong>Data Protection and Privacy</strong></p>\n<p><strong>Use of Personal Information</strong>: By participating, entrants agree to the collection and use of their personal information for the purpose of administering the giveaway and for any other purposes to which they have consented.</p>\n<p><strong>Liability and Disputes</strong></p>\n<p><strong>Limitation of Liability</strong>: By entering, participants release the organizer from any liability for any injuries, loss, or damage of any kind resulting from participation in the giveaway or acceptance, possession, or use/misuse of the prize.</p>\n<p><strong>General Conditions</strong></p>\n<p><strong>Compliance with Laws</strong>: The giveaway is subject to all applicable laws and regulations. It is the entrant's responsibility to ensure compliance with any laws governing their participation. Void where prohibited.</p>\n<p><strong>Right to Modify</strong>: The organizer reserves the right to cancel, suspend, or modify the giveaway if any problem prevents the giveaway from being conducted as planned.</p>",
+  "error_page": {
+    "id": "404",
+    "headline": "Uh it's a <em>404</em>. And I said, I don't care if they lay me off either, because I told, I told Bill that if they move my webpage one more time, then, then I'm, I'm quitting, I'm going to quit",
+    "content": "The page you are looking for is not available.",
+    "background": "4bb4ee71-ea55-44c0-bde5-e0bae76d4ef0",
+    "button_group": {
+      "alignment": "center",
+      "buttons": [
+        {
+          "label": "Register",
+          "url": "/tickets",
+          "variant": "solid"
+        },
+        {
+          "label": "Event Overview",
+          "url": "/",
+          "variant": "outline"
+        }
+      ]
+    }
+  },
+  "footer_links": [
+    {
+      "label": "What is Directus?",
+      "url": "https://directus.io/tv/discover-directus/ceo-5",
+      "open_in_new_window": true
+    },
+    {
+      "label": "Directus+ Starter Kits",
+      "url": "https://directus.io/plus",
+      "open_in_new_window": true
+    },
+    {
+      "label": "Get A Demo",
+      "url": "https://directus.io/demo",
+      "open_in_new_window": true
+    },
+    {
+      "label": "100 Apps To Build",
+      "url": "https://directus.io/blog/100-tools-apps-and-platforms-you-can-build-with-directus",
+      "open_in_new_window": true
+    }
+  ],
+  "social_links": [
+    {
+      "service": "github",
+      "url": "https://github.com/directus/directus"
+    },
+    {
+      "service": "linkedin",
+      "url": "https://www.linkedin.com/company/directus-io"
+    },
+    {
+      "service": "youtube",
+      "url": "https://www.youtube.com/c/DirectusVideos"
+    },
+    {
+      "url": "https://directus.chat/",
+      "service": "discord"
+    },
+    {
+      "service": "twitter",
+      "url": "https://twitter.com/directus"
+    }
+  ],
+  "footer_logo": "25f9558c-c693-4fc4-83c0-2e17fd11066c",
+  "footer_tagline": "Build your own event registration platform at rabbit speed.",
+  "footer_logo_url": "https://directus.io",
+  "customize_page": {
+    "headline": "Customize Your <em>Badge</em>",
+    "content": "Earn more entries by personalizing and sharing your badge."
+  },
+  "build_hook_url": null,
+  "terms_page": {
+    "headline": "Terms and Conditions",
+    "content": "Read the official fine print of the event and giveaways below",
+    "button_group": {
+      "alignment": "center",
+      "buttons": [
+        {
+          "label": "Register",
+          "url": "/tickets",
+          "variant": "solid"
+        },
+        {
+          "label": "Event Overview",
+          "url": "/",
+          "variant": "outline"
+        }
+      ]
+    }
+  },
+  "ticket_pages_background": "4f698683-74e8-489a-9bd8-dfde4ac0378a",
+  "favicon": "15cdf6ff-a2c0-4709-baf3-9ea7727f11a6"
+}

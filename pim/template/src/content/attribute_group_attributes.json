@@ -1,0 +1,38 @@
+[
+  {
+    "id": "31600ff3-2c78-4a61-91f8-6428108fc52c",
+    "attribute_groups_id": null,
+    "attributes_id": null,
+    "sort": null
+  },
+  {
+    "id": "77957d08-2408-47e9-8e66-71b6802deb7e",
+    "attribute_groups_id": "d87664ca-886b-4190-84ec-c1810e1d9454",
+    "attributes_id": "c9ffee8b-21e3-4a91-a0a4-6e77d4359ec2",
+    "sort": null
+  },
+  {
+    "id": "7acb0d6f-bf5b-4b76-aa7d-cdc346716433",
+    "attribute_groups_id": null,
+    "attributes_id": null,
+    "sort": 2
+  },
+  {
+    "id": "9d4a4514-dba2-4f9c-bd94-f188cb3b4425",
+    "attribute_groups_id": "ada4e1e3-754c-49ef-b747-dfda4180720d",
+    "attributes_id": "ae0a232c-0f6d-46ce-84ce-89db79b1ce82",
+    "sort": 1
+  },
+  {
+    "id": "a648378a-e6c1-428c-bfe0-596ebe267638",
+    "attribute_groups_id": null,
+    "attributes_id": null,
+    "sort": 3
+  },
+  {
+    "id": "bbeaa1c0-b6ec-45fb-8e5f-b0a52e5f7025",
+    "attribute_groups_id": null,
+    "attributes_id": null,
+    "sort": 1
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "e4652b88-b34f-4ed8-9b54-a51da0f56fec",
+    "status": "published",
+    "sort": 2,
+    "title": "Interviews"
+  },
+  {
+    "id": "40a4541a-79b6-4bf6-bc02-6d5febbbfaae",
+    "status": "published",
+    "sort": 5,
+    "title": "Code With Us"
+  },
+  {
+    "id": "536c459a-562d-435f-a439-427694f6f6c7",
+    "status": "draft",
+    "sort": null,
+    "title": "Short Hops"
+  }
+]

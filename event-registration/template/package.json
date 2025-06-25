@@ -1,0 +1,11 @@
+{
+  "author": "",
+  "description": "",
+  "directusTemplate": true,
+  "files": [
+    "src"
+  ],
+  "name": "directus-template-event-registration",
+  "templateName": "Event Registration",
+  "version": "1.0.0"
+}

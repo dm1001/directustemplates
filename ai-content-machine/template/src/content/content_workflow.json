@@ -1,0 +1,38 @@
+[
+  {
+    "id": "feed41e6-7f30-4a0e-9cd4-f21549cfb1b0",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_created": "2024-05-16T21:35:06.904Z",
+    "user_updated": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_updated": "2024-05-16T22:35:28.239Z",
+    "current_step": "published",
+    "title": "Directus AI Announcement",
+    "post_title": "Announcing Directus AI: Elevate Your Data Projects with AI-Powered Extensions",
+    "post_content": "# Announcing Directus AI: Elevate Your Data Projects with AI-Powered Extensions\n\nAh, artificial intelligence. It seems like every company under the sun has jumped on the AI bandwagon, often with more gusto than sense. In this whirlpool of hype, it’s easy to lose sight of what truly matters. At Directus, we believe in substance over spectacle. Today, we are thrilled to announce Directus AI – an initiative grounded in user needs and tempered by cautious optimism.\n\n## The Genesis of Directus AI\n\nAccording to Rijk, our Co-founder and CTO, AI initiatives often falter because they lack grounding in the core purposes they’re meant to enhance. We’ve all seen those products built around AI, promising the moon but delivering little more than fanciful hallucinations. At Directus, we pride ourselves on building features our users actually need. That approach hasn’t changed with Directus AI.\n\nOur recent survey confirmed what we sensed – 80% of developers are already using AI in their daily work. This isn't just some passing fad; it's a necessity. So, we’ve taken our time, done our homework, and created AI enhancements that won't distract you from what really matters. Namely, your data.\n\n## Overview of New AI Extensions\n\nDirectus AI brings you a plethora of new tools, more specifically, 10 new AI operation extensions. These fall into three main categories: data transformation, generation, and analysis. Let's briefly touch on what each of these powerful new extensions can do for you. Trust me, it’s more exciting than watching paint dry.\n\n1. **AI Transcription**: Feed it your media files, and out come the transcripts, courtesy of Deepgram's speech recognition API. Useful if you’re tired of hearing your own voice.\n\n2. **AI Translation**: Ever need text switched to another language? This operation has you covered. Language barriers, begone.\n\n3. **AI Alt Text and Text Extraction**: Uses Clarifai’s models to describe images and extract text. Ideal for business cards, receipts, or just impressing your boss.\n\n4. **AI Writer**: Enter some text, pick a prompt, and it’ll spit out a polished version. Whether it’s writing social posts, SEO descriptions, or even correcting grammar, this one's got you covered. It also has an advanced mode for multi-step prompting – for those of you who love complexity.\n\n5. **AI Image Generation**: Provide a prompt, get an image. Simple as that. Great for when stock photos just won't cut it.\n\n6. **AI Speech Generation**: Take your text and choose a voice; it then generates an MP3 file. Perfect for automating ads or creating voiceovers.\n\n7. **AI Text Intelligence**: Uses Deepgram's text analysis API to give you summaries, sentiment, intents, and topics. Now, your texts can finally have some depth.\n\n8. **AI Focal Point Detection**: Uses OpenAI’s vision models to identify the primary point of interest in an image. Pair it with the new focal point feature for intelligent image cropping.\n\n9. **AI Image Moderation**: Also powered by Clarifai, it scans for drugs, explicit material, and gore. Because nobody likes unpleasant surprises.\n\n## Integration and Accessibility\n\nSo, the question on everyone's lips: How do you integrate these shiny new extensions? Worry not, for Directus makes it straightforward. You can download these extensions from the Directus Marketplace, ready to slot right into your existing workflows. Think of it like adding new tools to your ever-expanding toolkit, only without the hassle.\n\nThese extensions aren't about redefining what Directus can do; they're about enhancing what you can do with Directus. Even as AI takes over the world, your control over your projects remains absolute. That’s the Directus promise.\n\n## That's All Folks\n\nIn this announcement, we've unveiled Directus AI – a robust set of new tools designed to enhance your data projects without diverting from what matters most. As AI continues to seep into every facet of technology, we remain committed to providing you with meaningful, user-driven features.\n\nWhy wait? Dive into the Directus Marketplace and explore these new AI extensions today. And don't forget to catch our upcoming Directus TV series, where we’ll delve deep into the setup and use cases for each extension. Until then, happy automating.\n\n## Learn More\n\n- **[Explore the Directus Marketplace](https://directus.io/marketplace) for the new AI extensions.**\n- **[Watch our upcoming Directus TV series](https://directus.io/tv) for detailed tutorials.**\n",
+    "post_image": "6261b674-c35e-4b6c-b093-f483aed6e7eb",
+    "post_slug": "announcing-directus-ai-elevate-your-data-projects",
+    "date_completed": "2024-05-16T21:43:55.110Z",
+    "seo_keywords": [
+      "ai",
+      "Directus AI"
+    ],
+    "images": [
+      "6ef5f4f2-8399-41c5-be28-55c09700623f"
+    ],
+    "posts": [
+      "d1e214b0-b1a8-4fa5-beca-242a3cd4a268"
+    ],
+    "ideas": [
+      "9c8a9cc0-3781-49e8-88e4-d3f28706fb4c",
+      "151f3594-57b2-42f0-86c7-340ce309fd5d"
+    ],
+    "social_posts": [
+      "51ab43ca-f703-42e9-b1d3-f3686e41eb2d",
+      "a7359479-6804-4d4b-9e14-524bacf8e967",
+      "d514b026-1b04-48d6-8da8-58fa80772378"
+    ],
+    "inputs": [
+      "55f56021-2933-41b8-ac32-805b4411b4a0"
+    ]
+  }
+]

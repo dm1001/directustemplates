@@ -1,0 +1,31 @@
+[
+  {
+    "id": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "first_name": "Admin",
+    "last_name": "User",
+    "email": "admin@example.com",
+    "password": "**********",
+    "location": null,
+    "title": null,
+    "description": null,
+    "tags": null,
+    "avatar": null,
+    "language": null,
+    "tfa_secret": null,
+    "status": "active",
+    "role": "5232cc40-89d0-4faf-bf0a-c44c75c6ba6b",
+    "token": "**********",
+    "last_access": "2025-01-02T17:13:56.798Z",
+    "last_page": "/users",
+    "provider": "default",
+    "external_identifier": null,
+    "auth_data": null,
+    "email_notifications": true,
+    "appearance": null,
+    "theme_dark": null,
+    "theme_light": null,
+    "theme_light_overrides": null,
+    "theme_dark_overrides": null,
+    "policies": null
+  }
+]

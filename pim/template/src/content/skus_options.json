@@ -1,0 +1,35 @@
+[
+  {
+    "id": "535bb986-9e37-417b-98a8-d79e2a0e9e71",
+    "sort": 1,
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_created": "2024-01-19T17:05:54.439Z",
+    "user_updated": null,
+    "date_updated": null,
+    "skus_id": null,
+    "options_id": "483ca17d-1ab3-4c72-97fb-00123c1b9f0d",
+    "value": "1c2bb4aa-2c37-4e89-8809-721ade9b8a5f"
+  },
+  {
+    "id": "b900083f-c553-41e1-8d93-d5279c248e28",
+    "sort": 1,
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_created": "2024-01-18T07:07:15.591Z",
+    "user_updated": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_updated": "2024-01-19T16:51:25.155Z",
+    "skus_id": null,
+    "options_id": null,
+    "value": null
+  },
+  {
+    "id": "f673125a-f68b-4fae-9e58-52401db545e7",
+    "sort": 2,
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_created": "2024-01-19T00:53:51.663Z",
+    "user_updated": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_updated": "2024-01-19T16:51:25.155Z",
+    "skus_id": null,
+    "options_id": "483ca17d-1ab3-4c72-97fb-00123c1b9f0d",
+    "value": null
+  }
+]

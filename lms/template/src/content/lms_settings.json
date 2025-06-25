@@ -1,0 +1,15 @@
+{
+  "id": "8e37fe44-8ac4-4390-a25a-bc0f31ba8f2e",
+  "user_updated": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+  "date_updated": "2024-01-17T18:45:31.320Z",
+  "links": [
+    {
+      "type": "website",
+      "url": "https://directus.io?ref=directus_lms"
+    }
+  ],
+  "title": "Directus Headless LMS",
+  "tagline": "Learn everything about anything.",
+  "description": "Headless LMS is the platform you need to power your own custom learning experiences for your clients.",
+  "course_folder_root": "c249f390-51b0-4abd-83c1-6db7d5bde30b"
+}

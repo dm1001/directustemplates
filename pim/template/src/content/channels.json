@@ -1,0 +1,38 @@
+[
+  {
+    "id": "08ff9e05-7eb4-45ab-9d50-378ca1fb10e9",
+    "sort": null,
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_created": "2024-02-06T12:41:32.042Z",
+    "user_updated": null,
+    "date_updated": null,
+    "name": "Shopify",
+    "description": null,
+    "key": "shopify",
+    "url": null
+  },
+  {
+    "id": "5e2cbcf1-f8fa-4b40-94f7-5567756f3c94",
+    "sort": null,
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_created": "2024-02-06T07:18:15.454Z",
+    "user_updated": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_updated": "2024-02-06T07:18:32.777Z",
+    "name": "Directus Shop",
+    "description": "Our own online retail outlet",
+    "key": "directus",
+    "url": null
+  },
+  {
+    "id": "918d7752-2365-4a36-b446-d841484ba1eb",
+    "sort": null,
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_created": "2024-01-19T19:13:28.229Z",
+    "user_updated": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_updated": "2024-02-06T07:18:27.835Z",
+    "name": "Amazon",
+    "description": "Everything from a to z.",
+    "key": "amazon",
+    "url": null
+  }
+]

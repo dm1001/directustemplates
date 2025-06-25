@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1d9e5195-ca3e-417e-92d0-4a64b0a57250",
+    "language": "en-US",
+    "key": "in_stock",
+    "value": "In Stock"
+  },
+  {
+    "id": "20df0ace-3175-4a04-9896-2f87ff1806e2",
+    "language": "de-DE",
+    "key": "out_of_stock",
+    "value": "Nicht auf Lager"
+  },
+  {
+    "id": "24505a19-1c87-43e8-af53-00c58cb9244c",
+    "language": "en-US",
+    "key": "ltr",
+    "value": "Left to Right"
+  },
+  {
+    "id": "393cd1d7-309d-47fd-a661-48608c24a2c4",
+    "language": "de-DE",
+    "key": "in_stock",
+    "value": "Auf Lager"
+  },
+  {
+    "id": "4b4b16d6-ea6a-4130-aa17-1869bdd4a86d",
+    "language": "en-US",
+    "key": "out_of_stock",
+    "value": "Out of Stock"
+  },
+  {
+    "id": "799e5ab8-1a91-42c3-a45b-69a9e39b7330",
+    "language": "en-US",
+    "key": "review",
+    "value": "In Review"
+  },
+  {
+    "id": "98371c68-af08-43d0-9d3c-1206dc9625a2",
+    "language": "en-US",
+    "key": "rtl",
+    "value": "Right to Left"
+  },
+  {
+    "id": "cf97fd5e-724f-42b1-892b-aa51e5f8383e",
+    "language": "de-DE",
+    "key": "review",
+    "value": "In Überprüfung"
+  }
+]

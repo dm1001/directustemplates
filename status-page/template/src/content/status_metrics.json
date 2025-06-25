@@ -1,0 +1,14 @@
+[
+  {
+    "id": "969845cf-543d-4bfa-a68e-12781e651807",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_created": "2023-11-28T01:43:28.718Z",
+    "user_updated": null,
+    "date_updated": null,
+    "name": "API Response Time",
+    "description": "Measures the average response time from the API every 30 seconds",
+    "suffix": "ms",
+    "prefix": null,
+    "data": []
+  }
+]

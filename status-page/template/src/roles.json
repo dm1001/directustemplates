@@ -1,0 +1,32 @@
+[
+  {
+    "id": "0f4597b8-d89e-468f-82f0-63ae2507a9aa",
+    "name": "API User - Status Page",
+    "icon": "robot",
+    "description": "Used for server to server communications and users that consume the API directly.",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "7b2dd655-29ad-4c47-9651-449ca4a1b216",
+    "name": "Team Member - Status Page",
+    "icon": "supervised_user_circle",
+    "description": "Use this role for team members that need to update your status page, but don't need Admin Access.",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "9e01472e-3207-409b-a3d0-94c25330874d",
+    "name": "Administrator",
+    "icon": "verified",
+    "description": "$t:admin_description",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  }
+]

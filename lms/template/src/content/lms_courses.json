@@ -1,0 +1,94 @@
+[
+  {
+    "id": "1bb1b023-9c61-4e21-8dd7-6548416e7e16",
+    "status": "published",
+    "sort": null,
+    "user_created": null,
+    "date_created": "2024-01-17T11:04:54.553Z",
+    "user_updated": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_updated": "2024-01-17T13:21:34.716Z",
+    "title": "Astro: Blazing-Fast Web Development",
+    "slug": "astro-blazing-fast-web-development",
+    "description": "Learn Astro, the modern framework for building faster websites with a delightful developer experience. Suitable for all web developers.",
+    "image": "41486e66-8dcc-4ca9-99e8-c97d2c0cd2e8",
+    "date_published": "2024-01-01T17:00:00.000Z",
+    "description_long": "<p>Discover <strong>Astro</strong>, a modern web framework that allows you to build faster and more efficient websites. This course provides a thorough understanding of Astro's static site generation capabilities, component-based architecture, and how to leverage its performance benefits. You'll learn to create scalable and maintainable websites with a focus on speed and developer experience.</p>",
+    "modules": [
+      "0895ff0f-4d05-40cd-80a0-d37556653c2b"
+    ],
+    "instructors": [
+      "80a3a648-cdae-40aa-b1ee-588f03254eea"
+    ],
+    "topics": [
+      "61af2e9c-957b-447a-90a3-53dd73a134a9"
+    ]
+  },
+  {
+    "id": "22f713dd-e4c1-4dd5-bc7e-37ab49f1750a",
+    "status": "published",
+    "sort": null,
+    "user_created": null,
+    "date_created": "2024-01-17T11:04:54.546Z",
+    "user_updated": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_updated": "2024-01-17T13:21:30.109Z",
+    "title": "React Essentials: From Basics to Advanced",
+    "slug": "react-essentials-from-basics-to-advanced",
+    "description": "Explore React, the popular JavaScript library for building user interfaces. Ideal for those starting out or looking to deepen their React skills.",
+    "image": "0ed47519-cbf9-428d-892b-ff3997ae0ced",
+    "date_published": "2024-01-01T17:00:00.000Z",
+    "description_long": "<p>Begin your journey with <strong>React</strong>, a powerful JavaScript library developed by Facebook for building user interfaces. This course takes you from the fundamentals to advanced concepts, including component lifecycle, state management, and React hooks. Gain hands-on experience by building real-world applications and dive into the React ecosystem with topics like Redux and React Router.</p>",
+    "modules": [
+      "98e24c09-c52a-42bd-97c9-4ee59c843feb"
+    ],
+    "instructors": [],
+    "topics": [
+      "68c06dc3-c784-4003-9ba4-8199297b4129"
+    ]
+  },
+  {
+    "id": "4e0d5e59-8770-4f5b-b750-6582e66a4c93",
+    "status": "published",
+    "sort": null,
+    "user_created": null,
+    "date_created": "2024-01-17T11:04:54.539Z",
+    "user_updated": "0aa23191-681e-47ff-b638-3f2d8030feb9",
+    "date_updated": "2024-01-17T13:25:06.678Z",
+    "title": "Mastering Vue: Building Dynamic Interfaces",
+    "slug": "mastering-vue-building-dynamic-interfaces",
+    "description": "Dive into Vue and learn how to create dynamic, interactive web interfaces with ease. Perfect for both beginners and experienced developers.",
+    "image": "35c68ad9-0bf5-44cc-b4b6-2326efbfc14a",
+    "date_published": "2024-01-01T17:00:00.000Z",
+    "description_long": "<p>This comprehensive course covers everything you need to know about <strong>Vue</strong>, a progressive JavaScript framework for building user interfaces. Learn how to build dynamic, single-page applications, understand Vue's core concepts, and explore advanced features like Vue Router and Vuex. Hands-on projects and real-world examples make this course ideal for anyone looking to master Vue.</p>",
+    "modules": [
+      "9f2f437c-db90-4c14-888b-5d4e170ad70a"
+    ],
+    "instructors": [
+      "c6850bee-295d-4ba0-99a0-ec4dcd1bde7f"
+    ],
+    "topics": []
+  },
+  {
+    "id": "520fd9bd-981e-4b37-b30d-71d8199e9f7c",
+    "status": "published",
+    "sort": null,
+    "user_created": null,
+    "date_created": "2024-01-17T11:04:54.548Z",
+    "user_updated": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_updated": "2024-01-17T13:10:25.385Z",
+    "title": "Svelte: The Next-Gen Frontend Tool",
+    "slug": "svelte-the-next-gen-frontend-tool",
+    "description": "Unlock the power of Svelte for building high-performance web applications with less code. Ideal for developers seeking efficiency and simplicity.",
+    "image": "0ae684ec-b235-46a3-ba55-c7546838a2c3",
+    "date_published": "2024-01-01T17:00:00.000Z",
+    "description_long": "<p>Experience the future of web development with <strong>Svelte</strong>, an innovative tool that enables you to write high-performance applications with significantly less code. This course offers a deep dive into Svelte's unique approach to building user interfaces, covering its reactive programming model, component architecture, and seamless integration with existing JavaScript libraries.</p>",
+    "modules": [
+      "e3fe2bc3-6fd1-42da-864b-252e555bb059"
+    ],
+    "instructors": [
+      "c045cdbc-2ba0-40e7-b4ed-a455cb80018e"
+    ],
+    "topics": [
+      "5b1b6952-af8f-4dad-b82a-0a2187ffbff2"
+    ]
+  }
+]

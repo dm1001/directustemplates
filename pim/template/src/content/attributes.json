@@ -1,0 +1,36 @@
+[
+  {
+    "id": "ae0a232c-0f6d-46ce-84ce-89db79b1ce82",
+    "status": "draft",
+    "sort": null,
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_created": "2024-02-06T12:37:28.075Z",
+    "user_updated": null,
+    "date_updated": null,
+    "key": "requires_shipping",
+    "attribute_groups": [
+      "9d4a4514-dba2-4f9c-bd94-f188cb3b4425"
+    ],
+    "translations": [
+      "5123b55b-fa2f-4b6e-b675-63d99d6863be",
+      "e15b86fe-d4a6-49ab-99d4-379df8fa593d"
+    ]
+  },
+  {
+    "id": "c9ffee8b-21e3-4a91-a0a4-6e77d4359ec2",
+    "status": "draft",
+    "sort": null,
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_created": "2024-02-06T12:41:11.539Z",
+    "user_updated": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_updated": "2024-02-06T12:41:16.784Z",
+    "key": "compare_at_price",
+    "attribute_groups": [
+      "77957d08-2408-47e9-8e66-71b6802deb7e"
+    ],
+    "translations": [
+      "4d119182-eb5f-429f-aedd-5e6c1ab8632b",
+      "6b42c803-18ef-4f0f-a57c-e658507ef1c3"
+    ]
+  }
+]

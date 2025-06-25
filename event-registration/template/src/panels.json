@@ -1,0 +1,173 @@
+[
+  {
+    "id": "342b354f-130d-43a9-b765-af3d3556e198",
+    "dashboard": "1f34eccb-2f8a-484c-8cb6-078463692393",
+    "name": "Total Registrants",
+    "icon": null,
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "metric",
+    "position_x": 1,
+    "position_y": 7,
+    "width": 26,
+    "height": 8,
+    "options": {
+      "collection": "event_tickets",
+      "field": "id",
+      "function": "count",
+      "sortField": "id"
+    },
+    "date_created": "2024-06-11T11:31:07.668Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a"
+  },
+  {
+    "id": "949c8dab-9f3d-41c6-9464-632a61cd8f1a",
+    "dashboard": "1f34eccb-2f8a-484c-8cb6-078463692393",
+    "name": "Registrations Per Day",
+    "icon": null,
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "time-series",
+    "position_x": 1,
+    "position_y": 22,
+    "width": 52,
+    "height": 17,
+    "options": {
+      "collection": "event_tickets",
+      "function": "count",
+      "precision": "day",
+      "dateField": "date_created",
+      "valueField": "id"
+    },
+    "date_created": "2024-06-11T11:31:07.866Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a"
+  },
+  {
+    "id": "9d542220-a134-4e26-9975-47d05bf059c1",
+    "dashboard": "1f34eccb-2f8a-484c-8cb6-078463692393",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 1,
+    "position_y": 3,
+    "width": 52,
+    "height": 4,
+    "options": {
+      "text": "Event Metrics"
+    },
+    "date_created": "2024-06-11T11:31:07.971Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a"
+  },
+  {
+    "id": "a88a7509-6044-4300-a8e1-a4d1777d960f",
+    "dashboard": "1f34eccb-2f8a-484c-8cb6-078463692393",
+    "name": "Registrant Job Titles",
+    "icon": null,
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "metric-list",
+    "position_x": 1,
+    "position_y": 39,
+    "width": 26,
+    "height": 19,
+    "options": {
+      "collection": "people",
+      "column": "job_title",
+      "donut": true,
+      "legend": "bottom",
+      "showLabels": true,
+      "limit": -1,
+      "groupByField": "job_title",
+      "aggregateField": "job_title",
+      "aggregateFunction": "count",
+      "filter": {
+        "_and": [
+          {
+            "job_title": {
+              "_nempty": true
+            }
+          }
+        ]
+      }
+    },
+    "date_created": "2024-06-11T11:31:08.086Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a"
+  },
+  {
+    "id": "b2a94cce-f468-4082-84e8-dfbf1c234625",
+    "dashboard": "1f34eccb-2f8a-484c-8cb6-078463692393",
+    "name": "Total Referrals",
+    "icon": null,
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "metric",
+    "position_x": 27,
+    "position_y": 7,
+    "width": 26,
+    "height": 8,
+    "options": {
+      "collection": "event_tickets",
+      "field": "id",
+      "function": "count",
+      "sortField": "id",
+      "filter": {
+        "_and": [
+          {
+            "referred_by": {
+              "id": {
+                "_nnull": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    "date_created": "2024-06-11T11:31:08.179Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a"
+  },
+  {
+    "id": "c26f0cda-d0b7-416a-a251-e99602e4fa6d",
+    "dashboard": "1f34eccb-2f8a-484c-8cb6-078463692393",
+    "name": "Registrant Countries",
+    "icon": null,
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "metric-list",
+    "position_x": 27,
+    "position_y": 39,
+    "width": 26,
+    "height": 19,
+    "options": {
+      "collection": "people",
+      "column": "country",
+      "donut": true,
+      "legend": "bottom",
+      "showLabels": true,
+      "field": "country",
+      "filter": {
+        "_and": [
+          {
+            "country": {
+              "_nempty": true
+            }
+          }
+        ]
+      },
+      "function": "count",
+      "aggregateFunction": "count",
+      "groupByField": "country",
+      "limit": -1,
+      "aggregateField": "country"
+    },
+    "date_created": "2024-06-11T11:31:08.268Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a"
+  }
+]

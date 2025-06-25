@@ -1,0 +1,111 @@
+[
+  {
+    "id": "1f2defb4-33ba-47a8-9c4b-ed4b12b3c66b",
+    "name": "Create Folder",
+    "key": "create_folder",
+    "type": "item-create",
+    "position_x": 39,
+    "position_y": 1,
+    "options": {
+      "collection": "directus_folders",
+      "payload": {
+        "name": "{{$trigger.payload.title}}",
+        "parent": "{{get_settings[0].course_folder_root}}"
+      }
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "08dc310e-3c35-4328-ae6e-46c3797fb405",
+    "date_created": "2024-01-30T01:09:21.508Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "80411c16-34b4-43c1-963a-92396783200b",
+    "name": "Get Settings",
+    "key": "get_settings",
+    "type": "item-read",
+    "position_x": 20,
+    "position_y": 1,
+    "options": {
+      "collection": "lms_settings"
+    },
+    "resolve": "1f2defb4-33ba-47a8-9c4b-ed4b12b3c66b",
+    "reject": null,
+    "flow": "08dc310e-3c35-4328-ae6e-46c3797fb405",
+    "date_created": "2024-01-30T01:09:21.517Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "b04fe3c2-6b1c-484f-9dc4-a55f5bd53e62",
+    "name": "Update Enrollment",
+    "key": "update_enrollment",
+    "type": "item-update",
+    "position_x": 60,
+    "position_y": 1,
+    "options": {
+      "key": [
+        "{{get_enrollment.id}}"
+      ],
+      "payload": {
+        "percent_complete": "{{calculate_course_completion}}"
+      },
+      "collection": "lms_enrollments"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "827f018d-5e0f-4129-b9d8-3455d2a8dc1a",
+    "date_created": "2024-01-30T01:09:21.523Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "b5d9195e-e12c-4e95-82f4-9e5d0b172726",
+    "name": "Get Enrollment",
+    "key": "get_enrollment",
+    "type": "item-read",
+    "position_x": 20,
+    "position_y": 1,
+    "options": {
+      "collection": "lms_enrollments",
+      "key": [
+        "{{$trigger.payload.lms_enrollments_id}}"
+      ],
+      "query": {
+        "fields": "*,lessons_completed.lms_lessons_id,course.modules.lessons",
+        "deep": {
+          "course": {
+            "modules": {
+              "lessons": {
+                "_filter": {
+                  "status": {
+                    "_eq": "published"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "resolve": "ca2893ae-6bfd-4f6b-91dc-d5d8a8ab3234",
+    "reject": null,
+    "flow": "827f018d-5e0f-4129-b9d8-3455d2a8dc1a",
+    "date_created": "2024-01-30T01:09:21.530Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "ca2893ae-6bfd-4f6b-91dc-d5d8a8ab3234",
+    "name": "Calculate Course Completion",
+    "key": "calculate_course_completion",
+    "type": "exec",
+    "position_x": 40,
+    "position_y": 1,
+    "options": {
+      "code": "function calculateCourseCompletion(courseData) {\n    // Basic validation to check if courseData is valid\n    if (!courseData || !courseData.course || !courseData.course.modules || !courseData.lessons_completed) {\n        throw new Error(\"Invalid course data\");\n    }\n\n    // Extract all lessons from course modules\n    const allLessons = courseData.course.modules.flatMap(module => {\n        if (!module.lessons) {\n            throw new Error(\"Invalid module data: missing lessons\");\n        }\n        return module.lessons;\n    });\n\n    // Extract the lesson IDs from lessons_completed\n    const completedLessonIds = courseData.lessons_completed.map(lesson => lesson.lms_lessons_id);\n\n    // Count the completed lessons that are in the course\n    const completedLessonsCount = completedLessonIds.filter(lessonId => \n        allLessons.includes(lessonId)).length;\n\n    // Calculate the total number of lessons in the course\n    const totalLessonsCount = allLessons.length;\n\n    // Calculate and return the course completion percentage\n    return totalLessonsCount > 0 ? (completedLessonsCount / totalLessonsCount) * 100 : 0;\n}\n\nmodule.exports = async function(data) {\n    try {\n        const percentComplete = calculateCourseCompletion(data.get_enrollment);\n        return percentComplete;\n    } catch (error) {\n        // Log the error and handle it as per your application's requirements\n        console.error(\"Error calculating course completion:\", error.message);\n        // You might want to return a default value or rethrow the error, depending on your use case\n        return 0; // Returning 0 as default, but this can be modified as needed\n    }\n}\n"
+    },
+    "resolve": "b04fe3c2-6b1c-484f-9dc4-a55f5bd53e62",
+    "reject": null,
+    "flow": "827f018d-5e0f-4129-b9d8-3455d2a8dc1a",
+    "date_created": "2024-01-30T01:09:21.533Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  }
+]

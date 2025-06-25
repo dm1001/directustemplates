@@ -1,0 +1,36 @@
+[
+  {
+    "id": "962c5ccc-df8b-4907-b147-9d70697fbc31",
+    "user_created": "2aeb5942-5192-4e5a-9be1-9a23335f00a8",
+    "date_created": "2024-02-08T06:37:28.534Z",
+    "user_updated": "2aeb5942-5192-4e5a-9be1-9a23335f00a8",
+    "date_updated": "2024-02-08T07:12:48.945Z",
+    "first_name": "Bryant",
+    "last_name": "Gillespie",
+    "avatar": "d86c91af-e1e4-4f2f-9908-9fa6e322bb4c",
+    "links": null,
+    "bio": "Developer advocate at @directus. Founder of @bettersignshop. Designer, developer, builder, content creator. Father of 3 beautiful, yet rotten little girls.",
+    "episodes": [
+      "4921a989-c5c4-433f-9b85-5fac63495629",
+      "710ceb75-6c90-4d0d-aedb-93de5d7b68e4",
+      "95848702-5b6f-47bd-be7a-eb8a9c58f5df",
+      "f547f4a8-3cbd-401d-8262-3c4a3f28d648"
+    ]
+  },
+  {
+    "id": "b565dc52-512e-43fa-822c-8f9b008597e8",
+    "user_created": "2aeb5942-5192-4e5a-9be1-9a23335f00a8",
+    "date_created": "2024-02-08T06:58:54.907Z",
+    "user_updated": "2aeb5942-5192-4e5a-9be1-9a23335f00a8",
+    "date_updated": "2024-02-08T07:13:17.545Z",
+    "first_name": "Kevin",
+    "last_name": "Lewis",
+    "avatar": "5484cfb9-7a8d-44f7-a6b2-61ead9c376d9",
+    "links": null,
+    "bio": "Kevin runs Developer Relations at Directus and is Director of You Got This - a learning hub to help developers improve their core skills. He is an avid boardgamer, tired dad, and shameless Disney adult. He is based in Berlin with his partner and two kids.",
+    "episodes": [
+      "d709bc98-1891-4d24-86aa-a6ad489566f6",
+      "fc33d94f-f4bc-4b5c-8128-f38086856119"
+    ]
+  }
+]

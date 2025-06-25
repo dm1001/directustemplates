@@ -1,0 +1,20 @@
+[
+  {
+    "id": "80a3a648-cdae-40aa-b1ee-588f03254eea",
+    "lms_courses_id": "1bb1b023-9c61-4e21-8dd7-6548416e7e16",
+    "lms_instructors_id": "7fe17a13-43c6-4834-aca4-a669720526ac",
+    "sort": null
+  },
+  {
+    "id": "c045cdbc-2ba0-40e7-b4ed-a455cb80018e",
+    "lms_courses_id": "520fd9bd-981e-4b37-b30d-71d8199e9f7c",
+    "lms_instructors_id": "7fe17a13-43c6-4834-aca4-a669720526ac",
+    "sort": 1
+  },
+  {
+    "id": "c6850bee-295d-4ba0-99a0-ec4dcd1bde7f",
+    "lms_courses_id": "4e0d5e59-8770-4f5b-b750-6582e66a4c93",
+    "lms_instructors_id": "7fe17a13-43c6-4834-aca4-a669720526ac",
+    "sort": 1
+  }
+]

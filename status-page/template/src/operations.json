@@ -1,0 +1,266 @@
+[
+  {
+    "id": "120f24d6-a1f6-4d63-861f-071ad882f39a",
+    "name": "Send SMS",
+    "key": "send_sms",
+    "type": "log",
+    "position_x": 55,
+    "position_y": 17,
+    "options": {
+      "message": "Send SMS"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "3a0b9ec6-f522-4374-ba96-510d4ede01b1",
+    "date_created": "2023-12-19T00:52:27.087Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "2eb2fa90-34ec-405b-9301-5b1165598afa",
+    "name": "If Email",
+    "key": "if_email",
+    "type": "condition",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "filter": {
+        "$trigger": {
+          "type": {
+            "_eq": "email"
+          }
+        }
+      }
+    },
+    "resolve": "82142957-09be-498c-a064-6d00bd578eac",
+    "reject": "8d435675-805c-471e-a704-91245a01b5a3",
+    "flow": "3a0b9ec6-f522-4374-ba96-510d4ede01b1",
+    "date_created": "2023-12-19T00:52:27.116Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "79cb22f7-ef06-4a07-bd1c-f07ed8ef921d",
+    "name": "Trigger Notifications",
+    "key": "trigger_notifications",
+    "type": "trigger",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "flow": "49ed6d6d-0e44-46b5-bb9d-d694c1d1b2e8",
+      "payload": {
+        "user": "{{ $accountability.user }}",
+        "data": "{{ $trigger }}"
+      }
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "02e99b1e-c46c-4489-89fb-d44821739fd3",
+    "date_created": "2023-12-18T23:19:00.397Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "82142957-09be-498c-a064-6d00bd578eac",
+    "name": "Send Email",
+    "key": "send_email",
+    "type": "mail",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "to": [
+        "{{$trigger.email}}"
+      ],
+      "subject": "{{$trigger.message.email.subject}}",
+      "body": "{{$trigger.message.email.body}}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "3a0b9ec6-f522-4374-ba96-510d4ede01b1",
+    "date_created": "2023-12-19T00:52:27.059Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "8d435675-805c-471e-a704-91245a01b5a3",
+    "name": "If SMS",
+    "key": "if_sms",
+    "type": "condition",
+    "position_x": 37,
+    "position_y": 17,
+    "options": {
+      "filter": {
+        "$trigger": {
+          "type": {
+            "_eq": "sms"
+          }
+        }
+      }
+    },
+    "resolve": "120f24d6-a1f6-4d63-861f-071ad882f39a",
+    "reject": "8e7a3626-b09d-4aa1-a749-cc4c68f36d99",
+    "flow": "3a0b9ec6-f522-4374-ba96-510d4ede01b1",
+    "date_created": "2023-12-19T00:52:27.107Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "8e7a3626-b09d-4aa1-a749-cc4c68f36d99",
+    "name": "If Webhook",
+    "key": "if_webhook",
+    "type": "condition",
+    "position_x": 55,
+    "position_y": 33,
+    "options": {
+      "filter": {
+        "$trigger": {
+          "type": {
+            "_eq": "webhook"
+          }
+        }
+      }
+    },
+    "resolve": "be619037-e20b-4082-ae09-950eb19b941f",
+    "reject": null,
+    "flow": "3a0b9ec6-f522-4374-ba96-510d4ede01b1",
+    "date_created": "2023-12-19T00:52:27.100Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "95418351-d9d5-4473-a897-be4cebcfb582",
+    "name": "Group Subscribers",
+    "key": "group_subscribers",
+    "type": "exec",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "code": "module.exports = async function(data) {\n    const subscribers = data.read_subscribers;\n    const subscribersWithMessages = subscribers.map((subscriber) => {\n        const message = {\n            email: {\n                subject: 'Incident ABC - Test - 2023-12-18',\n                body: 'The incident is resolved',\n            },\n            sms: {\n                message: 'Here is the SMS'\n            }\n        };\n\n        return {\n            ...subscriber,\n            message\n        };\n    });\n\n    return subscribersWithMessages;\n};\n"
+    },
+    "resolve": "cb683067-d94b-4184-af27-965180912cb1",
+    "reject": null,
+    "flow": "49ed6d6d-0e44-46b5-bb9d-d694c1d1b2e8",
+    "date_created": "2023-12-18T23:25:03.671Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "99a074c2-588c-4468-b242-67c422df00e3",
+    "name": "Update Service Status",
+    "key": "update_service_status",
+    "type": "item-update",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "collection": "status_services",
+      "key": [
+        "{{$trigger.payload.status_services_id.id}}"
+      ],
+      "payload": {
+        "status": "{{$trigger.payload.status}}"
+      }
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "526b3120-4445-4a18-a94d-c4ed61737cd9",
+    "date_created": "2023-12-18T22:42:43.476Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "ac94b080-bf02-4141-9c41-e421a9f5ada5",
+    "name": "Update Incident",
+    "key": "update_incident",
+    "type": "item-update",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "collection": "status_incidents",
+      "key": [
+        "{{$trigger.payload.incident}}"
+      ],
+      "payload": {
+        "status": "{{$trigger.payload.status}}"
+      }
+    },
+    "resolve": "ff658ebc-1bda-416d-ac70-474bfdf14fb2",
+    "reject": null,
+    "flow": "02e99b1e-c46c-4489-89fb-d44821739fd3",
+    "date_created": "2023-12-18T22:39:33.889Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "be619037-e20b-4082-ae09-950eb19b941f",
+    "name": "Send Webhook",
+    "key": "send_webhook",
+    "type": "request",
+    "position_x": 73,
+    "position_y": 33,
+    "options": {
+      "method": "POST",
+      "url": "{{$trigger.webhook_url}}",
+      "body": "{\n\"web\": \"hook\"\n}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "3a0b9ec6-f522-4374-ba96-510d4ede01b1",
+    "date_created": "2023-12-19T00:52:27.095Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "cb683067-d94b-4184-af27-965180912cb1",
+    "name": "Send Individual Notifications",
+    "key": "send_individual_notifications",
+    "type": "trigger",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "flow": "3a0b9ec6-f522-4374-ba96-510d4ede01b1",
+      "payload": "{{group_subscribers}}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "49ed6d6d-0e44-46b5-bb9d-d694c1d1b2e8",
+    "date_created": "2023-12-19T00:49:28.350Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "f51b713a-b30a-44b4-b309-374c37557b14",
+    "name": "Read Subscribers",
+    "key": "read_subscribers",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "permissions": "$full",
+      "collection": "status_subscribers",
+      "query": {
+        "filter": {
+          "is_active": {
+            "_eq": true
+          }
+        },
+        "fields": [
+          "type",
+          "email",
+          "phone_number",
+          "webhook_url"
+        ],
+        "limit": -1
+      }
+    },
+    "resolve": "95418351-d9d5-4473-a897-be4cebcfb582",
+    "reject": null,
+    "flow": "49ed6d6d-0e44-46b5-bb9d-d694c1d1b2e8",
+    "date_created": "2023-12-18T23:18:26.267Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "ff658ebc-1bda-416d-ac70-474bfdf14fb2",
+    "name": "Check For Notify Subscriber",
+    "key": "check_for_notify_subscriber",
+    "type": "exec",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "code": "function checkAndThrowError(payload) {\n    // Check if 'notify_subscribers' exists and is set to false\n    if (payload.hasOwnProperty('notify_subscribers') && payload.notify_subscribers === false) {\n        throw new Error('notify_subscribers is set to false');\n    }\n    // If 'notify_subscribers' doesn't exist or is true, no error is thrown\n}\n\nmodule.exports = async function(data) {\n\tcheckAndThrowError(data.$trigger.payload)\n}"
+    },
+    "resolve": "79cb22f7-ef06-4a07-bd1c-f07ed8ef921d",
+    "reject": null,
+    "flow": "02e99b1e-c46c-4489-89fb-d44821739fd3",
+    "date_created": "2023-12-18T23:11:02.612Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  }
+]

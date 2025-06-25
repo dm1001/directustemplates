@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1f34eccb-2f8a-484c-8cb6-078463692393",
+    "name": "Event Dashboard",
+    "icon": "event_available",
+    "note": "Dashboard to review performance for a specific event.",
+    "date_created": "2024-06-11T11:31:07.566Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "color": null,
+    "panels": null
+  }
+]

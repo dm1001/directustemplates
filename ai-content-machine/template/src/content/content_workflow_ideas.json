@@ -1,0 +1,38 @@
+[
+  {
+    "id": "9c8a9cc0-3781-49e8-88e4-d3f28706fb4c",
+    "sort": null,
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_created": "2024-05-16T21:35:24.276Z",
+    "user_updated": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_updated": "2024-05-16T22:35:28.329Z",
+    "title": "Announcing Directus AI: Elevate Your Data Projects with AI-Powered Extensions",
+    "outline": "### Introduction\n- Brief introduction to Directus and its developer-centric philosophy.\n- Mention of the AI trend and how Directus plans to integrate AI meaningfully.\n\n### The Genesis of Directus AI\n- Insights from Rijk's keynote speech on the motivation and approach to AI integration.\n- Emphasis on user-driven development and cautious optimism regarding AI.\n\n### Overview of New AI Extensions\n- Detailed breakdown of the 10 new AI operation extensions (transcription, translation, alt text, text extraction, etc.)\n- Highlight practical use cases and benefits for each extension.\n\n### Integration and Accessibility\n- Explain how developers can integrate these extensions into their existing workflows.\n- Introduction to the Directus marketplace where these extensions can be downloaded.\n\n### Conclusion\n- Recap of key points and forward-looking statements about the evolution of AI at Directus.\n- Invite developers to explore the new AI extensions and share feedback.\n\n### Call to Action\n- Direct link to the Directus marketplace.\n- Announcement of the upcoming Directus TV series for detailed tutorials.",
+    "rating": 5,
+    "content_workflow": "feed41e6-7f30-4a0e-9cd4-f21549cfb1b0",
+    "template": "14d10db8-7ce2-4135-b411-fb11c19ce72a",
+    "seo_keywords": [
+      "ai",
+      "Directus AI"
+    ],
+    "is_archived": false
+  },
+  {
+    "id": "151f3594-57b2-42f0-86c7-340ce309fd5d",
+    "sort": null,
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_created": "2024-05-16T21:35:24.286Z",
+    "user_updated": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_updated": "2024-05-16T22:35:28.432Z",
+    "title": "Top 5 Ways to Supercharge Your Directus Workflow with AI",
+    "outline": "### Introduction\n- Explanation of Directus' commitment to enhancing developer workflows.\n- Introduction to Directus AI and its key features.\n\n### 1. AI Transcription Operation\n- Use case: Converting media files into text with Deepgram speech recognition.\n- How to set it up and its benefits.\n\n### 2. AI Translation Operation\n- Use case: Translating text into multiple languages effortlessly.\n- Setup guide and advantages.\n\n### 3. AI Text Intelligence Operation\n- Use case: Analyzing text for summaries, sentiment, intents, and topics.\n- Detailed setup and potential applications.\n\n### 4. AI Image Generation Operation\n- Use case: Creating images from text prompts for creative projects.\n- Instructions and utility.\n\n### 5. AI Image Moderation Operation\n- Use case: Ensuring safe and positive application environments by detecting inappropriate content.\n- Step-by-step setup and importance.\n\n### Conclusion\n- Recap of how these AI extensions can transform Directus workflows.\n- Encouragement to explore the Directus marketplace for more AI tools.\n\n### Call to Action\n- Direct link to the Directus marketplace to download AI operation extensions.",
+    "rating": 4,
+    "content_workflow": "feed41e6-7f30-4a0e-9cd4-f21549cfb1b0",
+    "template": "14d10db8-7ce2-4135-b411-fb11c19ce72a",
+    "seo_keywords": [
+      "ai",
+      "Directus AI"
+    ],
+    "is_archived": false
+  }
+]

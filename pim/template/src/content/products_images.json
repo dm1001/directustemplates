@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2e68631d-26c7-40b2-bafe-bb1930c441ce",
+    "products_id": null,
+    "directus_files_id": null,
+    "sort": 2
+  },
+  {
+    "id": "46719d2f-cbd1-4d43-9f16-93b6936aff21",
+    "products_id": null,
+    "directus_files_id": null,
+    "sort": 3
+  },
+  {
+    "id": "4ec649da-fd33-4ee8-bbe9-aaee1ee67df5",
+    "products_id": null,
+    "directus_files_id": null,
+    "sort": 6
+  },
+  {
+    "id": "5206a306-f6e1-4cbc-8146-8021c10673f4",
+    "products_id": null,
+    "directus_files_id": null,
+    "sort": 5
+  },
+  {
+    "id": "9d9a00f0-887b-447c-8031-2fb138db4f6b",
+    "products_id": null,
+    "directus_files_id": null,
+    "sort": 1
+  },
+  {
+    "id": "ee5dfff3-2894-4858-983f-d14d860dcf6b",
+    "products_id": null,
+    "directus_files_id": null,
+    "sort": 4
+  }
+]

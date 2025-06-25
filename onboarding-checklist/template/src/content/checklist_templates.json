@@ -1,0 +1,50 @@
+[
+  {
+    "id": "bf5578e3-b9e5-475a-a661-8733483534ed",
+    "sort": null,
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "date_created": "2024-04-24T02:58:06.021Z",
+    "user_updated": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "date_updated": "2024-05-03T19:15:16.900Z",
+    "template_name": "New Hire Onboarding",
+    "description": "<p>Onboarding checklist for new employees.</p>",
+    "checklist_type": "single",
+    "status": "active",
+    "default_approver": "0e789571-a83b-42eb-bfef-5e8a91189c34",
+    "default_assigned_to": null,
+    "last_ran_at": "2024-05-03T19:15:16.893Z",
+    "recurring_timeframe": null,
+    "recurring_time": null,
+    "recurring_day_of_week": null,
+    "recurring_day_of_the_month": null,
+    "run_count": 5,
+    "tasks": [
+      "744b7996-e233-4671-abf2-5df2cb26fff5",
+      "b93daea9-770d-4fb5-8935-78884b35b536"
+    ]
+  },
+  {
+    "id": "f35472a1-0b38-4714-9c98-4464b458f187",
+    "sort": null,
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "date_created": "2024-05-01T20:44:26.268Z",
+    "user_updated": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "date_updated": "2024-05-03T19:29:10.384Z",
+    "template_name": "Weekly Tasks",
+    "description": "Weekly business tasks for Task Rabbit.",
+    "checklist_type": "recurring",
+    "status": "active",
+    "default_approver": null,
+    "default_assigned_to": "0d76bf11-8778-4e71-b40e-907343fe37e7",
+    "last_ran_at": "2024-05-03T19:29:10.368Z",
+    "recurring_timeframe": "weekly",
+    "recurring_time": "07:00:00",
+    "recurring_day_of_week": 3,
+    "recurring_day_of_the_month": null,
+    "run_count": 1,
+    "tasks": [
+      "bb6a11ca-186a-41a2-b868-ed6ebeaa2f9c",
+      "8643b65b-4738-4ab2-a80f-bde4bb171609"
+    ]
+  }
+]

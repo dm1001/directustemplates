@@ -1,0 +1,447 @@
+[
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "checklist_templates",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "fields": [
+          "status",
+          "template_name",
+          "description"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "status": 32,
+          "template_name": 224.92578125,
+          "description": 266.5078125
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": null,
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "checklists",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "checklist_name",
+          "assigned_to",
+          "status",
+          "due_date"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "status": 105.2490234375
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "directus_presets",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "fields": [
+          "id",
+          "bookmark",
+          "collection",
+          "role",
+          "user"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "id": 51.7724609375,
+          "collection": 232.3095703125
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "checklist_tasks",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "status",
+          "task_name",
+          "assigned_to",
+          "due_date"
+        ],
+        "sort": [
+          "-due_date"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {}
+      }
+    },
+    "refresh_interval": null,
+    "filter": {
+      "_and": [
+        {
+          "status": {
+            "_neq": "completed"
+          }
+        }
+      ]
+    },
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "checklist_template_tasks",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "status",
+          "task_name",
+          "checklist_template",
+          "description"
+        ],
+        "sort": [
+          "sort"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "status": 50.625,
+          "task_name": 179.2353515625,
+          "checklist_template": 181.52520751953125,
+          "description": 304.21875
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": "1. My Tasks",
+    "user": null,
+    "role": null,
+    "collection": "checklist_tasks",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "status",
+          "task_name",
+          "assigned_to",
+          "due_date"
+        ],
+        "sort": [
+          "-due_date"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {}
+      }
+    },
+    "refresh_interval": null,
+    "filter": {
+      "_and": [
+        {
+          "assigned_to": {
+            "_eq": "$CURRENT_USER"
+          }
+        },
+        {
+          "status": {
+            "_neq": "completed"
+          }
+        }
+      ]
+    },
+    "icon": "assignment_ind",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "directus_presets",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "fields": [
+          "id",
+          "bookmark",
+          "collection",
+          "role",
+          "user"
+        ],
+        "sort": [
+          "user"
+        ],
+        "page": 1
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "id": 51.7724609375,
+          "collection": 232.3095703125
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": "1. My Checklists",
+    "user": null,
+    "role": null,
+    "collection": "checklists",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "checklist_name",
+          "assigned_to",
+          "due_date",
+          "status",
+          "completion_percentage",
+          "approver"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "checklist_name": 208.46875,
+          "assigned_to": 191.12890625,
+          "due_date": 124.2265625,
+          "status": 169.3203125
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": {
+      "_and": [
+        {
+          "_or": [
+            {
+              "assigned_to": {
+                "_eq": "$CURRENT_USER"
+              }
+            },
+            {
+              "approver": {
+                "_eq": "$CURRENT_USER"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "icon": "person_pin",
+    "color": null
+  },
+  {
+    "bookmark": "4. Completed Tasks",
+    "user": null,
+    "role": null,
+    "collection": "checklist_tasks",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "status",
+          "task_name",
+          "assigned_to",
+          "due_date",
+          "date_completed"
+        ],
+        "sort": [
+          "-date_completed"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {}
+      }
+    },
+    "refresh_interval": null,
+    "filter": {
+      "_and": [
+        {
+          "status": {
+            "_eq": "completed"
+          }
+        }
+      ]
+    },
+    "icon": "check",
+    "color": null
+  },
+  {
+    "bookmark": "3. Board",
+    "user": null,
+    "role": null,
+    "collection": "checklist_tasks",
+    "search": null,
+    "layout": "kanban",
+    "layout_query": {
+      "kanban": {
+        "page": 1
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {}
+      },
+      "kanban": {
+        "groupField": "status",
+        "groupTitle": null,
+        "titleField": "task_name",
+        "textField": "description",
+        "userField": "assigned_to",
+        "dateField": "due_date",
+        "crop": true
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "view_kanban",
+    "color": null
+  },
+  {
+    "bookmark": null,
+    "user": null,
+    "role": null,
+    "collection": "checklist_message_templates",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "name",
+          "id",
+          "template"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {
+          "name": 309.9375,
+          "template": 463.977294921875
+        }
+      }
+    },
+    "refresh_interval": null,
+    "filter": null,
+    "icon": "bookmark",
+    "color": null
+  },
+  {
+    "bookmark": "2. To Approve",
+    "user": null,
+    "role": null,
+    "collection": "checklist_tasks",
+    "search": null,
+    "layout": "tabular",
+    "layout_query": {
+      "tabular": {
+        "page": 1,
+        "fields": [
+          "status",
+          "task_name",
+          "assigned_to",
+          "due_date",
+          "date_completed"
+        ],
+        "sort": [
+          "-date_completed"
+        ]
+      }
+    },
+    "layout_options": {
+      "tabular": {
+        "widths": {}
+      }
+    },
+    "refresh_interval": null,
+    "filter": {
+      "_and": [
+        {
+          "checklist": {
+            "approver": {
+              "_eq": "$CURRENT_USER"
+            }
+          }
+        },
+        {
+          "status": {
+            "_eq": "review"
+          }
+        }
+      ]
+    },
+    "icon": "indeterminate_check_box",
+    "color": null
+  }
+]

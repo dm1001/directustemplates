@@ -1,0 +1,38 @@
+[
+  {
+    "id": "7fe17a13-43c6-4834-aca4-a669720526ac",
+    "sort": null,
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_created": "2024-01-04T18:17:29.007Z",
+    "user_updated": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_updated": "2024-01-17T13:46:26.627Z",
+    "first_name": "Bryant",
+    "last_name": "Gillespie",
+    "title": "Developer Advocate at Directus",
+    "avatar": "1b7dc5be-7378-4669-a7d2-d85b6dbefe3f",
+    "bio": "<p>Developer advocate at @directus. Founder of @bettersignshop. Designer, developer, builder, content creator. Father of 3 beautiful, yet rotten little girls.</p>",
+    "links": [
+      {
+        "type": "x",
+        "url": "https://twitter.com/bryantgillespie"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/bryantgillespie"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/bryantgillespie/"
+      }
+    ],
+    "slug": "bryant-gillespie",
+    "courses": [
+      "80a3a648-cdae-40aa-b1ee-588f03254eea",
+      "c045cdbc-2ba0-40e7-b4ed-a455cb80018e",
+      "c6850bee-295d-4ba0-99a0-ec4dcd1bde7f"
+    ],
+    "user_id": [
+      "0aa23191-681e-47ff-b638-3f2d8030feb9"
+    ]
+  }
+]

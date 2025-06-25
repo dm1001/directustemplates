@@ -1,0 +1,1178 @@
+[
+  {
+    "id": "06851e8b-b961-4293-bf8b-d4db2e18864f",
+    "dashboard": "dcc64180-e883-4556-b82c-02b650866990",
+    "name": "Latest Enrollments",
+    "icon": "bookmark_added",
+    "color": null,
+    "show_header": true,
+    "note": "A list of the latest enrollments for the selected user.",
+    "type": "list",
+    "position_x": 2,
+    "position_y": 40,
+    "width": 36,
+    "height": 13,
+    "options": {
+      "collection": "lms_enrollments",
+      "sortField": null,
+      "filter": {
+        "_and": [
+          {
+            "user_enrolled": {
+              "id": {
+                "_eq": "{{ user }}"
+              }
+            }
+          }
+        ]
+      },
+      "displayTemplate": "{{course.title}}-{{date_created}}",
+      "linkToItem": true
+    },
+    "date_created": "2024-01-17T21:08:22.469Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "0c9fbdb1-7e34-44a6-83bc-65bcabf3d543",
+    "dashboard": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": "Avg. Completion Percentage",
+    "icon": "percent",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks the average completion percentage for each enrollment.",
+    "type": "metric",
+    "position_x": 14,
+    "position_y": 14,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_enrollments",
+      "field": "percent_complete",
+      "sortField": "date_created",
+      "function": "avg",
+      "filter": null,
+      "suffix": "%",
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T22:11:58.462Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "0de6fb85-77fd-4e81-902a-11bf9b3562e4",
+    "dashboard": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": "Avg. Rating",
+    "icon": "star_rate",
+    "color": null,
+    "show_header": true,
+    "note": "Average review rating.",
+    "type": "metric",
+    "position_x": 26,
+    "position_y": 20,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_courses_reviews",
+      "field": "rating",
+      "sortField": null,
+      "function": "avg",
+      "filter": null,
+      "suffix": "⭐",
+      "maximumFractionDigits": 2,
+      "fn": "avg",
+      "max": 5,
+      "strokeWidth": 8,
+      "size": "half"
+    },
+    "date_created": "2024-01-17T22:11:58.455Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "175052bb-096f-4a2e-bc07-33f21608622f",
+    "dashboard": "dcc64180-e883-4556-b82c-02b650866990",
+    "name": "Reviews",
+    "icon": "play_lesson",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks how many reviews the user has left for courses.",
+    "type": "metric",
+    "position_x": 26,
+    "position_y": 20,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_courses_reviews",
+      "field": "id",
+      "sortField": null,
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "user_created": {
+              "id": {
+                "_eq": "{{ user }}"
+              }
+            }
+          }
+        ]
+      },
+      "suffix": null,
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T21:30:02.367Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "18e5a7d8-df92-43f1-9fa1-091e3a06ae2e",
+    "dashboard": "dcc64180-e883-4556-b82c-02b650866990",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 2,
+    "position_y": 1,
+    "width": 18,
+    "height": 3,
+    "options": {
+      "text": "User Detail",
+      "textAlign": "left"
+    },
+    "date_created": "2024-01-17T21:14:22.136Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "1f6b2c65-f852-4bd4-9dd6-c255d0608360",
+    "dashboard": "dcc64180-e883-4556-b82c-02b650866990",
+    "name": "Avg. Completion Percentage",
+    "icon": "percent",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks the average completion percentage for all the courses enrolled.",
+    "type": "metric",
+    "position_x": 20,
+    "position_y": 14,
+    "width": 18,
+    "height": 6,
+    "options": {
+      "collection": "lms_enrollments",
+      "field": "percent_complete",
+      "sortField": "date_created",
+      "function": "avg",
+      "filter": {
+        "_and": [
+          {
+            "user_enrolled": {
+              "id": {
+                "_eq": "{{ user }}"
+              }
+            }
+          }
+        ]
+      },
+      "suffix": "%",
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T21:17:13.042Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "2292f6b5-c59c-425e-bb34-f1e1dd43d953",
+    "dashboard": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": "Archived Courses",
+    "icon": "school",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "metric",
+    "position_x": 26,
+    "position_y": 6,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_courses",
+      "field": "id",
+      "sortField": null,
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "status": {
+              "_eq": "archived"
+            }
+          }
+        ]
+      },
+      "suffix": null,
+      "maximumFractionDigits": 2,
+      "conditionalFormatting": [
+        {
+          "operator": ">=",
+          "value": 0,
+          "color": "#A2B5CD"
+        }
+      ]
+    },
+    "date_created": "2024-01-17T22:20:45.733Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "26de2732-9b86-4acb-913f-9de6240d2efd",
+    "dashboard": "dcc64180-e883-4556-b82c-02b650866990",
+    "name": "Comments",
+    "icon": "play_lesson",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks how many comments the user has made.",
+    "type": "metric",
+    "position_x": 14,
+    "position_y": 20,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_comments",
+      "field": "id",
+      "sortField": null,
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "user_created": {
+              "id": {
+                "_eq": "{{ user }}"
+              }
+            }
+          }
+        ]
+      },
+      "suffix": null,
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T21:27:31.856Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "33805ab3-3985-4ae4-81e4-206a527ff5f6",
+    "dashboard": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": "Comments",
+    "icon": "play_lesson",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks the number of comments from lessons on this course.",
+    "type": "metric",
+    "position_x": 2,
+    "position_y": 28,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_comments",
+      "field": "id",
+      "sortField": null,
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "lesson": {
+              "module": {
+                "course": {
+                  "id": {
+                    "_eq": "{{ course }}"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "suffix": null,
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T21:34:21.423Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "340719b0-6c1f-46fc-bd28-95364b5c3213",
+    "dashboard": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": "Select Course",
+    "icon": "school",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "relational-variable",
+    "position_x": 2,
+    "position_y": 6,
+    "width": 36,
+    "height": 6,
+    "options": {
+      "field": "course",
+      "collection": "lms_courses",
+      "displayTemplate": "{{title}}"
+    },
+    "date_created": "2024-01-17T21:34:21.385Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "340caecf-7526-46b6-8648-a5ab0094fcbb",
+    "dashboard": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": "Enrollments",
+    "icon": "circle_notifications",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks how many total enrollments this course has.",
+    "type": "metric",
+    "position_x": 2,
+    "position_y": 22,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_enrollments",
+      "field": "id",
+      "sortField": "date_created",
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "course": {
+              "id": {
+                "_eq": "{{ course }}"
+              }
+            }
+          }
+        ]
+      },
+      "suffix": null,
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T21:34:21.427Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "3b53a3ae-189a-406f-9f33-ca868365dc75",
+    "dashboard": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": "Published Courses",
+    "icon": "school",
+    "color": "#2ECDA7",
+    "show_header": true,
+    "note": null,
+    "type": "metric",
+    "position_x": 14,
+    "position_y": 6,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_courses",
+      "field": "id",
+      "sortField": null,
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "status": {
+              "_eq": "published"
+            }
+          }
+        ]
+      },
+      "suffix": null,
+      "maximumFractionDigits": 2,
+      "conditionalFormatting": [
+        {
+          "operator": ">=",
+          "value": 0,
+          "color": "#2ECDA7"
+        }
+      ]
+    },
+    "date_created": "2024-01-17T22:16:18.233Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "41c4eaee-49b0-4fe6-b287-1d10f517d863",
+    "dashboard": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": "Reviews",
+    "icon": "play_lesson",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks how many total reviews.",
+    "type": "metric",
+    "position_x": 14,
+    "position_y": 20,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_courses_reviews",
+      "field": "id",
+      "sortField": null,
+      "function": "count",
+      "filter": null,
+      "suffix": null,
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T22:11:58.466Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "41cb5b39-cc82-4a84-b91b-300b5590dd3b",
+    "dashboard": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": "Course Instructors",
+    "icon": "keyboard_full",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "list",
+    "position_x": 2,
+    "position_y": 12,
+    "width": 36,
+    "height": 8,
+    "options": {
+      "collection": "lms_instructors",
+      "sortField": "sort",
+      "displayTemplate": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}",
+      "filter": {
+        "_and": [
+          {
+            "courses": {
+              "lms_courses_id": {
+                "id": {
+                  "_eq": "{{ course }}"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "linkToItem": true
+    },
+    "date_created": "2024-01-17T21:46:14.319Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "4a2a8d57-3500-4c5a-8a88-35190ee39dbb",
+    "dashboard": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": "Avg. Rating",
+    "icon": "star_rate",
+    "color": null,
+    "show_header": true,
+    "note": "Average review rating for this course.",
+    "type": "metric",
+    "position_x": 26,
+    "position_y": 28,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_courses_reviews",
+      "field": "rating",
+      "sortField": null,
+      "function": "avg",
+      "filter": {
+        "_and": [
+          {
+            "course": {
+              "id": {
+                "_eq": "{{ course }}"
+              }
+            }
+          }
+        ]
+      },
+      "suffix": "⭐",
+      "maximumFractionDigits": 2,
+      "fn": "avg",
+      "max": 5,
+      "strokeWidth": 8,
+      "size": "half"
+    },
+    "date_created": "2024-01-17T21:51:18.503Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "4d8e1db9-4dfb-4e10-88b3-79dc7a944984",
+    "dashboard": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": "Avg. Completion Percentage",
+    "icon": "percent",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks the average completion percentage for this course.",
+    "type": "metric",
+    "position_x": 14,
+    "position_y": 22,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_enrollments",
+      "field": "percent_complete",
+      "sortField": "date_created",
+      "function": "avg",
+      "filter": {
+        "_and": [
+          {
+            "course": {
+              "id": {
+                "_eq": "{{ course }}"
+              }
+            }
+          }
+        ]
+      },
+      "suffix": "%",
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T21:34:21.363Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "4e30e441-6c52-489a-a564-5b85530da5da",
+    "dashboard": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": "Lessons Completed",
+    "icon": "play_lesson",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks how many total lessons from this course have been completed.",
+    "type": "metric",
+    "position_x": 26,
+    "position_y": 22,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_enrollments_lessons_completed",
+      "field": "id",
+      "sortField": null,
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "lms_enrollments_id": {
+              "course": {
+                "id": {
+                  "_eq": "{{ course }}"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "suffix": null,
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T21:34:21.404Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "58725f0b-53dd-42ca-a035-89def1c99a09",
+    "dashboard": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": "Comments",
+    "icon": "play_lesson",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks the number of comments.",
+    "type": "metric",
+    "position_x": 2,
+    "position_y": 20,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_comments",
+      "field": "id",
+      "sortField": null,
+      "function": "count",
+      "filter": null,
+      "suffix": null,
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T22:11:58.438Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "5b72619c-fd9b-434d-8988-ab0c0b09cf91",
+    "dashboard": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": "Lessons Completed Over Time",
+    "icon": null,
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "time-series",
+    "position_x": 2,
+    "position_y": 46,
+    "width": 36,
+    "height": 10,
+    "options": {
+      "collection": "lms_enrollments_lessons_completed",
+      "xAxis": null,
+      "yAxis": null,
+      "function": "count",
+      "dateField": "timestamp",
+      "filter": {
+        "_and": [
+          {
+            "lms_enrollments_id": {
+              "course": {
+                "id": {
+                  "_eq": "{{ course }}"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "range": "auto",
+      "valueField": "lms_lessons_id",
+      "color": "#6644FF",
+      "precision": "day"
+    },
+    "date_created": "2024-01-17T21:34:21.392Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "66a659e4-6a87-489c-ae26-8a6b4ce78c17",
+    "dashboard": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 2,
+    "position_y": 1,
+    "width": 18,
+    "height": 3,
+    "options": {
+      "text": "LMS Dashboard",
+      "textAlign": "left"
+    },
+    "date_created": "2024-01-17T22:11:58.415Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "69d2f8f5-eb37-4279-a004-eb63c4a9df93",
+    "dashboard": "dcc64180-e883-4556-b82c-02b650866990",
+    "name": "Courses Enrolled",
+    "icon": "circle_notifications",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks how many total courses a user has enrolled in.",
+    "type": "metric",
+    "position_x": 2,
+    "position_y": 14,
+    "width": 18,
+    "height": 6,
+    "options": {
+      "collection": "lms_enrollments",
+      "field": "id",
+      "sortField": "date_created",
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "user_enrolled": {
+              "id": {
+                "_eq": "{{ user }}"
+              }
+            }
+          }
+        ]
+      },
+      "suffix": null,
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T21:17:13.052Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "6f2700c1-970d-4a14-8e4b-a9cf77c0dba5",
+    "dashboard": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": "Enrollments Over Time",
+    "icon": null,
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "time-series",
+    "position_x": 2,
+    "position_y": 36,
+    "width": 36,
+    "height": 10,
+    "options": {
+      "collection": "lms_enrollments",
+      "xAxis": null,
+      "yAxis": null,
+      "function": "count",
+      "dateField": "date_created",
+      "filter": {
+        "_and": [
+          {
+            "course": {
+              "id": {
+                "_eq": "{{ course }}"
+              }
+            }
+          }
+        ]
+      },
+      "range": "auto",
+      "valueField": "id",
+      "color": "#3399FF",
+      "precision": "day"
+    },
+    "date_created": "2024-01-17T21:53:59.054Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "7f00f03c-ded5-48f2-9e92-7aeb38c8a4d5",
+    "dashboard": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 2,
+    "position_y": 1,
+    "width": 18,
+    "height": 3,
+    "options": {
+      "text": "Course Detail",
+      "textAlign": "left"
+    },
+    "date_created": "2024-01-17T21:34:21.414Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "7fedfbd0-193a-420e-ad3f-7a678748c81f",
+    "dashboard": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 20,
+    "position_y": 1,
+    "width": 18,
+    "height": 3,
+    "options": {
+      "text": "Pick a specific course to drill into statistics about the course.",
+      "whiteSpace": "normal",
+      "fontWeight": 300,
+      "textAlign": "left",
+      "color": "#A2B5CD"
+    },
+    "date_created": "2024-01-17T21:34:21.419Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "81f4002b-d4ab-4976-867c-fc394b4ba706",
+    "dashboard": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": "Reviews",
+    "icon": "play_lesson",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks how many reviews this course has.",
+    "type": "metric",
+    "position_x": 14,
+    "position_y": 28,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_courses_reviews",
+      "field": "id",
+      "sortField": null,
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "course": {
+              "id": {
+                "_eq": "{{ course }}"
+              }
+            }
+          }
+        ]
+      },
+      "suffix": null,
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T21:34:21.373Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "8fa3cbd2-2039-4fae-b477-02f2f4d9c4d5",
+    "dashboard": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": "Enrollments",
+    "icon": "circle_notifications",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks how many total enrollments.",
+    "type": "metric",
+    "position_x": 2,
+    "position_y": 14,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_enrollments",
+      "field": "id",
+      "sortField": "date_created",
+      "function": "count",
+      "filter": null,
+      "suffix": null,
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T22:11:58.432Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "9563e9d6-98c2-4a7e-8a1f-32682d59c8c3",
+    "dashboard": "dcc64180-e883-4556-b82c-02b650866990",
+    "name": "Select User",
+    "icon": "supervised_user_circle",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "relational-variable",
+    "position_x": 2,
+    "position_y": 6,
+    "width": 18,
+    "height": 6,
+    "options": {
+      "field": "user",
+      "collection": "directus_users",
+      "displayTemplate": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+    },
+    "date_created": "2024-01-17T21:07:22.880Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "965ae500-e1dd-405c-8d32-9fd1c2829a30",
+    "dashboard": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": "Draft Courses",
+    "icon": "school",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "metric",
+    "position_x": 2,
+    "position_y": 6,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_courses",
+      "field": "id",
+      "sortField": null,
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "_or": [
+              {
+                "status": {
+                  "_eq": "draft"
+                }
+              },
+              {
+                "status": {
+                  "_eq": "review"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "suffix": null,
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T22:20:45.702Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "9a5aa874-81b9-4c19-b433-330c856c1146",
+    "dashboard": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": "Lessons Completed",
+    "icon": "play_lesson",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks how many total lessons from this course have been completed.",
+    "type": "metric",
+    "position_x": 26,
+    "position_y": 14,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_enrollments_lessons_completed",
+      "field": "id",
+      "sortField": null,
+      "function": "count",
+      "filter": null,
+      "suffix": null,
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T22:11:58.452Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "9a88b2d5-6cf4-4419-8d1d-0ff91e09583d",
+    "dashboard": "dcc64180-e883-4556-b82c-02b650866990",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 20,
+    "position_y": 1,
+    "width": 18,
+    "height": 3,
+    "options": {
+      "text": "Pick a user to drill into their specific completion progress.",
+      "whiteSpace": "normal",
+      "fontWeight": 300,
+      "textAlign": "left",
+      "color": "#A2B5CD"
+    },
+    "date_created": "2024-01-17T21:14:22.144Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "b39e3160-5531-43de-b602-aade6d09daca",
+    "dashboard": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": "Latest Reviews",
+    "icon": "star_rate",
+    "color": null,
+    "show_header": true,
+    "note": "A list of the latest reviews for the selected course.",
+    "type": "list",
+    "position_x": 20,
+    "position_y": 58,
+    "width": 18,
+    "height": 12,
+    "options": {
+      "collection": "lms_courses_reviews",
+      "sortField": null,
+      "filter": {
+        "_and": [
+          {
+            "course": {
+              "id": {
+                "_eq": "{{ course }}"
+              }
+            }
+          }
+        ]
+      },
+      "displayTemplate": "{{rating}} - {{date_created}}",
+      "linkToItem": true
+    },
+    "date_created": "2024-01-17T21:38:51.832Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "be898943-8226-45b2-a7df-62fcbfbbc00b",
+    "dashboard": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": "Latest Enrollments",
+    "icon": "bookmark_added",
+    "color": null,
+    "show_header": true,
+    "note": "A list of the latest enrollments for the selected course.",
+    "type": "list",
+    "position_x": 2,
+    "position_y": 58,
+    "width": 18,
+    "height": 12,
+    "options": {
+      "collection": "lms_enrollments",
+      "sortField": null,
+      "filter": {
+        "_and": [
+          {
+            "course": {
+              "id": {
+                "_eq": "{{ course }}"
+              }
+            }
+          }
+        ]
+      },
+      "displayTemplate": " {{user_enrolled.first_name}}{{user_enrolled.last_name}} - {{date_created}}",
+      "linkToItem": true
+    },
+    "date_created": "2024-01-17T21:34:21.410Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "c94bf368-f36e-48e7-9713-d18d9ad18c72",
+    "dashboard": "dcc64180-e883-4556-b82c-02b650866990",
+    "name": "Lessons Completed Over Time",
+    "icon": null,
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "time-series",
+    "position_x": 2,
+    "position_y": 28,
+    "width": 36,
+    "height": 10,
+    "options": {
+      "collection": "lms_enrollments_lessons_completed",
+      "xAxis": null,
+      "yAxis": null,
+      "function": "count",
+      "dateField": "timestamp",
+      "filter": {
+        "_and": [
+          {
+            "lms_enrollments_id": {
+              "user_enrolled": {
+                "id": {
+                  "_eq": "{{ user }}"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "range": "auto",
+      "valueField": "lms_lessons_id",
+      "color": "#6644FF",
+      "precision": "day"
+    },
+    "date_created": "2024-01-17T21:23:31.068Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "e15e8db4-b698-4464-8191-5714dd869622",
+    "dashboard": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": "Latest Reviews",
+    "icon": "star_rate",
+    "color": null,
+    "show_header": true,
+    "note": "A list of the latest reviews.",
+    "type": "list",
+    "position_x": 2,
+    "position_y": 62,
+    "width": 36,
+    "height": 12,
+    "options": {
+      "collection": "lms_courses_reviews",
+      "sortField": null,
+      "filter": null,
+      "displayTemplate": "{{rating}} • {{date_created}}",
+      "linkToItem": true
+    },
+    "date_created": "2024-01-17T22:11:58.424Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "ee80d8ce-6706-4bab-a843-8323511df854",
+    "dashboard": "dcc64180-e883-4556-b82c-02b650866990",
+    "name": "Lessons Completed",
+    "icon": "play_lesson",
+    "color": null,
+    "show_header": true,
+    "note": "This metric tracks how many total lessons a user has completed.",
+    "type": "metric",
+    "position_x": 2,
+    "position_y": 20,
+    "width": 12,
+    "height": 6,
+    "options": {
+      "collection": "lms_enrollments_lessons_completed",
+      "field": "id",
+      "sortField": null,
+      "function": "count",
+      "filter": {
+        "_and": [
+          {
+            "lms_enrollments_id": {
+              "user_enrolled": {
+                "id": {
+                  "_eq": "{{ user }}"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "suffix": null,
+      "maximumFractionDigits": 2
+    },
+    "date_created": "2024-01-17T21:21:11.807Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "f00b110f-11d0-4530-a8ea-986c798c5b11",
+    "dashboard": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": "Enrollments Over Time",
+    "icon": null,
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "time-series",
+    "position_x": 2,
+    "position_y": 28,
+    "width": 36,
+    "height": 10,
+    "options": {
+      "collection": "lms_enrollments",
+      "xAxis": null,
+      "yAxis": null,
+      "function": "count",
+      "dateField": "date_created",
+      "filter": null,
+      "range": "auto",
+      "valueField": "id",
+      "color": "#3399FF",
+      "precision": "day"
+    },
+    "date_created": "2024-01-17T22:11:58.442Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "f541a3ce-f73b-4edb-8b00-3d518d2beb82",
+    "dashboard": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": "Latest Enrollments",
+    "icon": "bookmark_added",
+    "color": null,
+    "show_header": true,
+    "note": "A list of the latest enrollments.",
+    "type": "list",
+    "position_x": 2,
+    "position_y": 50,
+    "width": 36,
+    "height": 12,
+    "options": {
+      "collection": "lms_enrollments",
+      "sortField": null,
+      "filter": null,
+      "displayTemplate": "{{course.title}} • {{user_enrolled.first_name}}{{user_enrolled.last_name}} • {{date_created}}",
+      "linkToItem": true,
+      "limit": 10
+    },
+    "date_created": "2024-01-17T22:11:58.404Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  },
+  {
+    "id": "fc445cce-7e1d-48fc-8736-4966f833ebf1",
+    "dashboard": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": "Lessons Completed Over Time",
+    "icon": null,
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "time-series",
+    "position_x": 2,
+    "position_y": 38,
+    "width": 36,
+    "height": 10,
+    "options": {
+      "collection": "lms_enrollments_lessons_completed",
+      "xAxis": null,
+      "yAxis": null,
+      "function": "count",
+      "dateField": "timestamp",
+      "filter": null,
+      "range": "auto",
+      "valueField": "lms_lessons_id",
+      "color": "#6644FF",
+      "precision": "day"
+    },
+    "date_created": "2024-01-17T22:11:58.428Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca"
+  }
+]

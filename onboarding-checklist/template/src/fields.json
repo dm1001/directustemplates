@@ -1,0 +1,5163 @@
+[
+  {
+    "collection": "checklist_message_templates",
+    "field": "id",
+    "type": "string",
+    "schema": {
+      "name": "id",
+      "table": "checklist_message_templates",
+      "data_type": "character varying",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": false,
+      "is_unique": true,
+      "is_indexed": false,
+      "is_primary_key": true,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_message_templates",
+      "field": "id",
+      "special": null,
+      "interface": "input",
+      "options": {
+        "trim": true
+      },
+      "display": "formatted-value",
+      "display_options": {
+        "font": "monospace",
+        "background": "#D0D8E2",
+        "color": "#18222F"
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 7,
+      "width": "half",
+      "translations": null,
+      "note": "Unique ID for the template. Cannot be changed after creation.",
+      "conditions": null,
+      "required": true,
+      "group": null,
+      "validation": {
+        "_and": [
+          {
+            "id": {
+              "_regex": "^[a-z]+(_[a-z]+)*$"
+            }
+          }
+        ]
+      },
+      "validation_message": "ID needs to be in snake case format weekly_report or welcome_email."
+    }
+  },
+  {
+    "collection": "checklist_message_templates",
+    "field": "sort",
+    "type": "integer",
+    "schema": {
+      "name": "sort",
+      "table": "checklist_message_templates",
+      "data_type": "integer",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_message_templates",
+      "field": "sort",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 1,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_message_templates",
+    "field": "user_created",
+    "type": "uuid",
+    "schema": {
+      "name": "user_created",
+      "table": "checklist_message_templates",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_message_templates",
+      "field": "user_created",
+      "special": [
+        "user-created"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+      },
+      "display": "user",
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 2,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_message_templates",
+    "field": "date_created",
+    "type": "timestamp",
+    "schema": {
+      "name": "date_created",
+      "table": "checklist_message_templates",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_message_templates",
+      "field": "date_created",
+      "special": [
+        "date-created"
+      ],
+      "interface": "datetime",
+      "options": null,
+      "display": "datetime",
+      "display_options": {
+        "relative": true
+      },
+      "readonly": true,
+      "hidden": true,
+      "sort": 3,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_message_templates",
+    "field": "user_updated",
+    "type": "uuid",
+    "schema": {
+      "name": "user_updated",
+      "table": "checklist_message_templates",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_message_templates",
+      "field": "user_updated",
+      "special": [
+        "user-updated"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+      },
+      "display": "user",
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 4,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_message_templates",
+    "field": "date_updated",
+    "type": "timestamp",
+    "schema": {
+      "name": "date_updated",
+      "table": "checklist_message_templates",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_message_templates",
+      "field": "date_updated",
+      "special": [
+        "date-updated"
+      ],
+      "interface": "datetime",
+      "options": null,
+      "display": "datetime",
+      "display_options": {
+        "relative": true
+      },
+      "readonly": true,
+      "hidden": true,
+      "sort": 5,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_message_templates",
+    "field": "name",
+    "type": "string",
+    "schema": {
+      "name": "name",
+      "table": "checklist_message_templates",
+      "data_type": "character varying",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_message_templates",
+      "field": "name",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": "raw",
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 6,
+      "width": "half",
+      "translations": null,
+      "note": "Title for this template. Only used for organization.",
+      "conditions": null,
+      "required": true,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_message_templates",
+    "field": "template",
+    "type": "text",
+    "schema": {
+      "name": "template",
+      "table": "checklist_message_templates",
+      "data_type": "text",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_message_templates",
+      "field": "template",
+      "special": null,
+      "interface": "input-code",
+      "options": {
+        "language": "htmlmixed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 8,
+      "width": "full",
+      "translations": null,
+      "note": "This is a simple template engine based on template literals. See the Render Template flow. // Template is a string with placeholders in the format {{ key }} or {{ key.nestedKey }} // Loops are supported with the format {{ loop: key }} ... {{ /loop: key }}",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "id",
+    "type": "uuid",
+    "schema": {
+      "name": "id",
+      "table": "checklist_tasks",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": false,
+      "is_unique": true,
+      "is_indexed": false,
+      "is_primary_key": true,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "id",
+      "special": [
+        "uuid"
+      ],
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 1,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "status",
+    "type": "string",
+    "schema": {
+      "name": "status",
+      "table": "checklist_tasks",
+      "data_type": "character varying",
+      "default_value": "pending",
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "status",
+      "special": null,
+      "interface": "select-dropdown",
+      "options": {
+        "choices": [
+          {
+            "text": "$t:pending",
+            "value": "pending",
+            "icon": "pending",
+            "color": "#A2B5CD"
+          },
+          {
+            "text": "$t:in_progress",
+            "value": "in_progress",
+            "icon": "avg_pace",
+            "color": "#FFC23B"
+          },
+          {
+            "text": "$t:review",
+            "value": "review",
+            "icon": "rate_review",
+            "color": "#FFA439"
+          },
+          {
+            "text": "$t:completed",
+            "value": "completed",
+            "icon": "check",
+            "color": "#2ECDA7"
+          },
+          {
+            "text": "$t:void",
+            "value": "void",
+            "icon": "delete_forever",
+            "color": "#E35169"
+          }
+        ]
+      },
+      "display": "labels",
+      "display_options": {
+        "choices": [
+          {
+            "text": "$t:pending",
+            "value": "pending",
+            "icon": "pending",
+            "color": null,
+            "background": "#A2B5CD",
+            "foreground": "#FFFFFF"
+          },
+          {
+            "text": "$t:in_progress",
+            "value": "in_progress",
+            "icon": "avg_pace",
+            "color": null,
+            "background": "#FFC23B",
+            "foreground": "#FFFFFF"
+          },
+          {
+            "text": "$t:review",
+            "value": "review",
+            "icon": "rate_review",
+            "color": null,
+            "background": "#FFA439",
+            "foreground": "#FFFFFF"
+          },
+          {
+            "text": "$t:completed",
+            "value": "completed",
+            "icon": "check",
+            "color": null,
+            "background": "#2ECDA7",
+            "foreground": "#FFFFFF"
+          },
+          {
+            "text": "$t:void",
+            "value": "void",
+            "icon": "delete_forever",
+            "color": null,
+            "background": "#E35169",
+            "foreground": "#FFFFFF"
+          }
+        ]
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 10,
+      "width": "half",
+      "translations": null,
+      "note": "Current status of the task. Options may change if approval is required to complete the task.",
+      "conditions": [
+        {
+          "name": "If Approval is Required",
+          "rule": {
+            "_and": [
+              {
+                "is_approval_required": {
+                  "_eq": true
+                }
+              },
+              {
+                "assigned_to": {
+                  "_eq": "$CURRENT_USER"
+                }
+              }
+            ]
+          },
+          "options": {
+            "allowOther": false,
+            "allowNone": false
+          },
+          "readonly": true
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "sort",
+    "type": "integer",
+    "schema": {
+      "name": "sort",
+      "table": "checklist_tasks",
+      "data_type": "integer",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "sort",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "user_created",
+    "type": "uuid",
+    "schema": {
+      "name": "user_created",
+      "table": "checklist_tasks",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "user_created",
+      "special": [
+        "user-created"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+      },
+      "display": "user",
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 3,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "date_created",
+    "type": "timestamp",
+    "schema": {
+      "name": "date_created",
+      "table": "checklist_tasks",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "date_created",
+      "special": [
+        "date-created"
+      ],
+      "interface": "datetime",
+      "options": null,
+      "display": "datetime",
+      "display_options": {
+        "relative": true
+      },
+      "readonly": true,
+      "hidden": true,
+      "sort": 4,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "user_updated",
+    "type": "uuid",
+    "schema": {
+      "name": "user_updated",
+      "table": "checklist_tasks",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "user_updated",
+      "special": [
+        "user-updated"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+      },
+      "display": "user",
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 5,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "date_updated",
+    "type": "timestamp",
+    "schema": {
+      "name": "date_updated",
+      "table": "checklist_tasks",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "date_updated",
+      "special": [
+        "date-updated"
+      ],
+      "interface": "datetime",
+      "options": null,
+      "display": "datetime",
+      "display_options": {
+        "relative": true
+      },
+      "readonly": true,
+      "hidden": true,
+      "sort": 6,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "task_name",
+    "type": "string",
+    "schema": {
+      "name": "task_name",
+      "table": "checklist_tasks",
+      "data_type": "character varying",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "task_name",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 12,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": [
+        {
+          "name": "If Created From Template, Then Read Only",
+          "rule": {
+            "_and": [
+              {
+                "checklist_template_task": {
+                  "_nnull": true
+                }
+              }
+            ]
+          },
+          "readonly": true,
+          "options": {
+            "font": "sans-serif",
+            "trim": false,
+            "masked": false,
+            "clear": false,
+            "slug": false
+          }
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "description",
+    "type": "text",
+    "schema": {
+      "name": "description",
+      "table": "checklist_tasks",
+      "data_type": "text",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "description",
+      "special": null,
+      "interface": "input-rich-text-html",
+      "options": null,
+      "display": "formatted-value",
+      "display_options": {
+        "format": true
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 13,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": [
+        {
+          "name": "If Created From Template, Then Read Only",
+          "rule": {
+            "_and": [
+              {
+                "checklist_template_task": {
+                  "_nnull": true
+                }
+              }
+            ]
+          },
+          "readonly": true,
+          "options": {
+            "toolbar": [
+              "bold",
+              "italic",
+              "underline",
+              "h1",
+              "h2",
+              "h3",
+              "numlist",
+              "bullist",
+              "removeformat",
+              "blockquote",
+              "customLink",
+              "customImage",
+              "customMedia",
+              "hr",
+              "code",
+              "fullscreen"
+            ],
+            "font": "sans-serif",
+            "trim": false,
+            "masked": false,
+            "clear": false,
+            "slug": false
+          }
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "start_date",
+    "type": "timestamp",
+    "schema": {
+      "name": "start_date",
+      "table": "checklist_tasks",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "start_date",
+      "special": null,
+      "interface": "datetime",
+      "options": {
+        "use24": false
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 8,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "due_date",
+    "type": "timestamp",
+    "schema": {
+      "name": "due_date",
+      "table": "checklist_tasks",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "due_date",
+      "special": null,
+      "interface": "datetime",
+      "options": {
+        "use24": false
+      },
+      "display": "datetime",
+      "display_options": {
+        "relative": true,
+        "strict": true
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 15,
+      "width": "half",
+      "translations": null,
+      "note": "When does this task need to be completed?",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "checklist_template_task",
+    "type": "uuid",
+    "schema": {
+      "name": "checklist_template_task",
+      "table": "checklist_tasks",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "checklist_template_tasks",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "checklist_template_task",
+      "special": [
+        "m2o"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 7,
+      "width": "half",
+      "translations": null,
+      "note": "What checklist template task was this created from?",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "checklist",
+    "type": "uuid",
+    "schema": {
+      "name": "checklist",
+      "table": "checklist_tasks",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "checklists",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "checklist",
+      "special": null,
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{checklist_name}}"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 14,
+      "width": "half",
+      "translations": null,
+      "note": "The checklist this task belongs to.",
+      "conditions": [
+        {
+          "name": "If Created From Template, Then Read Only",
+          "rule": {
+            "_and": [
+              {
+                "checklist_template_task": {
+                  "_nnull": true
+                }
+              }
+            ]
+          },
+          "readonly": true,
+          "options": {
+            "enableCreate": true,
+            "enableSelect": true,
+            "font": "sans-serif",
+            "trim": false,
+            "masked": false,
+            "clear": false,
+            "slug": false
+          }
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "assigned_to",
+    "type": "uuid",
+    "schema": {
+      "name": "assigned_to",
+      "table": "checklist_tasks",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "assigned_to",
+      "special": [
+        "m2o"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}",
+        "enableCreate": false
+      },
+      "display": "related-values",
+      "display_options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 9,
+      "width": "half",
+      "translations": null,
+      "note": "Who needs to complete this task?",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "video_url",
+    "type": "string",
+    "schema": {
+      "name": "video_url",
+      "table": "checklist_tasks",
+      "data_type": "character varying",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "video_url",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 19,
+      "width": "full",
+      "translations": null,
+      "note": "Embed YouTube, Vimeo, Wistia, or Loom videos",
+      "conditions": [
+        {
+          "name": "If Created From Template, Then Read Only",
+          "rule": {
+            "_and": [
+              {
+                "checklist_template_task": {
+                  "_nnull": true
+                }
+              }
+            ]
+          },
+          "readonly": true,
+          "options": {
+            "font": "sans-serif",
+            "trim": false,
+            "masked": false,
+            "clear": false,
+            "slug": false
+          }
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "links",
+    "type": "json",
+    "schema": {
+      "name": "links",
+      "table": "checklist_tasks",
+      "data_type": "json",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "links",
+      "special": [
+        "cast-json"
+      ],
+      "interface": "list",
+      "options": {
+        "fields": [
+          {
+            "field": "name",
+            "name": "name",
+            "type": "string",
+            "meta": {
+              "field": "name",
+              "width": "full",
+              "type": "string",
+              "required": true,
+              "interface": "input"
+            }
+          },
+          {
+            "field": "url",
+            "name": "url",
+            "type": "string",
+            "meta": {
+              "field": "url",
+              "width": "full",
+              "type": "string",
+              "interface": "input"
+            }
+          }
+        ]
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 21,
+      "width": "half",
+      "translations": null,
+      "note": "Important links or external resources for this task.",
+      "conditions": [
+        {
+          "name": "If Created From Template, Then Read Only",
+          "rule": {
+            "_and": [
+              {
+                "checklist_template_task": {
+                  "_nnull": true
+                }
+              }
+            ]
+          },
+          "readonly": true,
+          "options": {
+            "font": "sans-serif",
+            "trim": false,
+            "masked": false,
+            "clear": false,
+            "slug": false
+          }
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "date_completed",
+    "type": "timestamp",
+    "schema": {
+      "name": "date_completed",
+      "table": "checklist_tasks",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "date_completed",
+      "special": null,
+      "interface": "datetime",
+      "options": {
+        "use24": false
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 18,
+      "width": "full",
+      "translations": null,
+      "note": "When was this task completed?",
+      "conditions": [
+        {
+          "name": "Show If Task Status equals Completed",
+          "rule": {
+            "_and": [
+              {
+                "status": {
+                  "_eq": "completed"
+                }
+              }
+            ]
+          },
+          "hidden": false,
+          "options": {
+            "includeSeconds": false,
+            "use24": true
+          }
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "is_approval_required",
+    "type": "boolean",
+    "schema": {
+      "name": "is_approval_required",
+      "table": "checklist_tasks",
+      "data_type": "boolean",
+      "default_value": false,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "is_approval_required",
+      "special": [
+        "cast-boolean"
+      ],
+      "interface": "boolean",
+      "options": {
+        "label": "Approval Required"
+      },
+      "display": "boolean",
+      "display_options": {
+        "labelOn": "Approval Required",
+        "labelOff": null
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 17,
+      "width": "half",
+      "translations": null,
+      "note": "Does this task require approval to complete?",
+      "conditions": [
+        {
+          "name": "If Created From Template, Then Read Only",
+          "rule": {
+            "_and": [
+              {
+                "checklist_template_task": {
+                  "_nnull": true
+                }
+              }
+            ]
+          },
+          "readonly": true,
+          "options": {
+            "iconOn": "check_box",
+            "iconOff": "check_box_outline_blank",
+            "label": "Enabled",
+            "font": "sans-serif",
+            "trim": false,
+            "masked": false,
+            "clear": false,
+            "slug": false
+          }
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "task_type",
+    "type": "string",
+    "schema": {
+      "name": "task_type",
+      "table": "checklist_tasks",
+      "data_type": "character varying",
+      "default_value": "task",
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "task_type",
+      "special": null,
+      "interface": "select-dropdown",
+      "options": {
+        "choices": [
+          {
+            "text": "Task",
+            "value": "task",
+            "icon": "library_add_check"
+          },
+          {
+            "text": "Deliverable",
+            "value": "deliverable",
+            "icon": "package"
+          },
+          {
+            "text": "Meeting",
+            "value": "meeting",
+            "icon": "calendar_month"
+          }
+        ]
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 16,
+      "width": "half",
+      "translations": null,
+      "note": "What type of task is this?",
+      "conditions": [
+        {
+          "name": "If Created From Template, Then Read Only",
+          "rule": {
+            "_and": [
+              {
+                "checklist_template_task": {
+                  "_nnull": true
+                }
+              }
+            ]
+          },
+          "readonly": true,
+          "options": {
+            "allowOther": false,
+            "allowNone": false,
+            "font": "sans-serif",
+            "trim": false,
+            "masked": false,
+            "clear": false,
+            "slug": false
+          }
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks_files",
+    "field": "id",
+    "type": "uuid",
+    "schema": {
+      "name": "id",
+      "table": "checklist_tasks_files",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": false,
+      "is_unique": true,
+      "is_indexed": false,
+      "is_primary_key": true,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks_files",
+      "field": "id",
+      "special": [
+        "uuid"
+      ],
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 1,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks_files",
+    "field": "sort",
+    "type": "integer",
+    "schema": {
+      "name": "sort",
+      "table": "checklist_tasks_files",
+      "data_type": "integer",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks_files",
+      "field": "sort",
+      "special": null,
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 4,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks_files",
+    "field": "checklist_tasks_id",
+    "type": "uuid",
+    "schema": {
+      "name": "checklist_tasks_id",
+      "table": "checklist_tasks_files",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "checklist_tasks",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks_files",
+      "field": "checklist_tasks_id",
+      "special": null,
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 5,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks_files",
+    "field": "directus_files_id",
+    "type": "uuid",
+    "schema": {
+      "name": "directus_files_id",
+      "table": "checklist_tasks_files",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_tasks_files",
+      "field": "directus_files_id",
+      "special": null,
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 6,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "id",
+    "type": "uuid",
+    "schema": {
+      "name": "id",
+      "table": "checklist_template_tasks",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": false,
+      "is_unique": true,
+      "is_indexed": false,
+      "is_primary_key": true,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "id",
+      "special": [
+        "uuid"
+      ],
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 1,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "status",
+    "type": "string",
+    "schema": {
+      "name": "status",
+      "table": "checklist_template_tasks",
+      "data_type": "character varying",
+      "default_value": "draft",
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": false,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "status",
+      "special": null,
+      "interface": "select-dropdown",
+      "options": {
+        "choices": [
+          {
+            "text": "$t:draft",
+            "value": "draft",
+            "color": "var(--theme--foreground)"
+          },
+          {
+            "text": "$t:active",
+            "value": "active",
+            "color": "var(--theme--primary)"
+          },
+          {
+            "text": "$t:archived",
+            "value": "archived",
+            "color": "var(--theme--warning)"
+          }
+        ]
+      },
+      "display": "labels",
+      "display_options": {
+        "showAsDot": true,
+        "choices": [
+          {
+            "text": "$t:draft",
+            "value": "draft",
+            "color": "var(--theme--foreground)",
+            "foreground": "var(--theme--foreground)",
+            "background": "var(--theme--background-normal)"
+          },
+          {
+            "text": "$t:active",
+            "value": "active",
+            "color": "var(--theme--primary)",
+            "foreground": "var(--theme--primary)",
+            "background": "var(--theme--primary-background)"
+          },
+          {
+            "text": "$t:archived",
+            "value": "archived",
+            "color": "var(--theme--warning)",
+            "foreground": "var(--theme--warning)",
+            "background": "var(--theme--warning-background)"
+          }
+        ]
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 3,
+      "width": "half",
+      "translations": null,
+      "note": "Template tasks that are draft or archived will not be included when creating new checklist runs.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "sort",
+    "type": "integer",
+    "schema": {
+      "name": "sort",
+      "table": "checklist_template_tasks",
+      "data_type": "integer",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "sort",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 4,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "user_created",
+    "type": "uuid",
+    "schema": {
+      "name": "user_created",
+      "table": "checklist_template_tasks",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "user_created",
+      "special": [
+        "user-created"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+      },
+      "display": "user",
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 5,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "date_created",
+    "type": "timestamp",
+    "schema": {
+      "name": "date_created",
+      "table": "checklist_template_tasks",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "date_created",
+      "special": [
+        "date-created"
+      ],
+      "interface": "datetime",
+      "options": null,
+      "display": "datetime",
+      "display_options": {
+        "relative": true
+      },
+      "readonly": true,
+      "hidden": true,
+      "sort": 6,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "user_updated",
+    "type": "uuid",
+    "schema": {
+      "name": "user_updated",
+      "table": "checklist_template_tasks",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "user_updated",
+      "special": [
+        "user-updated"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+      },
+      "display": "user",
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 7,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "date_updated",
+    "type": "timestamp",
+    "schema": {
+      "name": "date_updated",
+      "table": "checklist_template_tasks",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "date_updated",
+      "special": [
+        "date-updated"
+      ],
+      "interface": "datetime",
+      "options": null,
+      "display": "datetime",
+      "display_options": {
+        "relative": true
+      },
+      "readonly": true,
+      "hidden": true,
+      "sort": 8,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "checklist_template",
+    "type": "uuid",
+    "schema": {
+      "name": "checklist_template",
+      "table": "checklist_template_tasks",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "checklist_templates",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "checklist_template",
+      "special": null,
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{template_name}}"
+      },
+      "display": "related-values",
+      "display_options": {
+        "template": "{{template_name}}"
+      },
+      "readonly": false,
+      "hidden": true,
+      "sort": 9,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "task_name",
+    "type": "string",
+    "schema": {
+      "name": "task_name",
+      "table": "checklist_template_tasks",
+      "data_type": "character varying",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "task_name",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 10,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "description",
+    "type": "text",
+    "schema": {
+      "name": "description",
+      "table": "checklist_template_tasks",
+      "data_type": "text",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "description",
+      "special": null,
+      "interface": "input-rich-text-html",
+      "options": null,
+      "display": "formatted-value",
+      "display_options": {
+        "format": true
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 11,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "set_dates_relative_to",
+    "type": "string",
+    "schema": {
+      "name": "set_dates_relative_to",
+      "table": "checklist_template_tasks",
+      "data_type": "character varying",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "set_dates_relative_to",
+      "special": null,
+      "interface": "select-dropdown",
+      "options": {
+        "choices": [
+          {
+            "text": "Start of Checklist",
+            "value": "checklist_start",
+            "icon": "traffic"
+          },
+          {
+            "text": "Checklist Due Date",
+            "value": "checklist_due_date",
+            "icon": "calendar_month"
+          }
+        ]
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 15,
+      "width": "full",
+      "translations": null,
+      "note": "Task start and due dates will be calculated relative to the option you select.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "start_days",
+    "type": "integer",
+    "schema": {
+      "name": "start_days",
+      "table": "checklist_template_tasks",
+      "data_type": "integer",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "start_days",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 16,
+      "width": "half",
+      "translations": null,
+      "note": "Relative days to use as the start date for this task - if you enter 7 and chose from \"Start of Checklist\", the task start date would be calculated and set to 7 days after the checklist start date.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "task_type",
+    "type": "string",
+    "schema": {
+      "name": "task_type",
+      "table": "checklist_template_tasks",
+      "data_type": "character varying",
+      "default_value": "task",
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "task_type",
+      "special": null,
+      "interface": "select-dropdown",
+      "options": {
+        "choices": [
+          {
+            "text": "Task",
+            "value": "task",
+            "icon": "library_add_check"
+          },
+          {
+            "text": "Deliverable",
+            "value": "deliverable",
+            "icon": "package"
+          },
+          {
+            "text": "Meeting",
+            "value": "meeting",
+            "icon": "calendar_month"
+          }
+        ]
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 2,
+      "width": "half",
+      "translations": null,
+      "note": "What type of task is this? Used for grouping and filtering.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "default_assigned_to",
+    "type": "uuid",
+    "schema": {
+      "name": "default_assigned_to",
+      "table": "checklist_template_tasks",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "default_assigned_to",
+      "special": [
+        "m2o"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+      },
+      "display": "user",
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 12,
+      "width": "full",
+      "translations": null,
+      "note": "(Optional) If this task in the checklist template should always being assigned to a specific person - you can default that assignment here.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "assigned_to",
+    "type": "string",
+    "schema": {
+      "name": "assigned_to",
+      "table": "checklist_template_tasks",
+      "data_type": "character varying",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "assigned_to",
+      "special": null,
+      "interface": "select-radio",
+      "options": {
+        "choices": [
+          {
+            "text": "Assignee",
+            "value": "assignee"
+          },
+          {
+            "text": "Creator",
+            "value": "creator"
+          },
+          {
+            "text": "Approver",
+            "value": "approver"
+          }
+        ]
+      },
+      "display": "labels",
+      "display_options": {
+        "choices": [
+          {
+            "text": "Assignee",
+            "value": "assignee"
+          },
+          {
+            "text": "Creator",
+            "value": "creator"
+          },
+          {
+            "text": "Approver",
+            "value": "approver"
+          }
+        ]
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 13,
+      "width": "full",
+      "translations": null,
+      "note": "Which party is responsible for completing this task?",
+      "conditions": [
+        {
+          "name": "Hide if Default Assigned To",
+          "rule": {
+            "_and": [
+              {
+                "default_assigned_to": {
+                  "_nnull": true
+                }
+              }
+            ]
+          },
+          "hidden": true,
+          "options": {
+            "iconOn": "radio_button_checked",
+            "iconOff": "radio_button_unchecked",
+            "allowOther": false
+          }
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "video_url",
+    "type": "string",
+    "schema": {
+      "name": "video_url",
+      "table": "checklist_template_tasks",
+      "data_type": "character varying",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "video_url",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 18,
+      "width": "full",
+      "translations": null,
+      "note": "Embed YouTube, Vimeo, Wistia, or Loom videos",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "links",
+    "type": "json",
+    "schema": {
+      "name": "links",
+      "table": "checklist_template_tasks",
+      "data_type": "json",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "links",
+      "special": [
+        "cast-json"
+      ],
+      "interface": "list",
+      "options": {
+        "fields": [
+          {
+            "field": "name",
+            "name": "name",
+            "type": "string",
+            "meta": {
+              "field": "name",
+              "width": "full",
+              "type": "string",
+              "required": true,
+              "interface": "input"
+            }
+          },
+          {
+            "field": "url",
+            "name": "url",
+            "type": "string",
+            "meta": {
+              "field": "url",
+              "width": "full",
+              "type": "string",
+              "interface": "input"
+            }
+          }
+        ]
+      },
+      "display": "formatted-json-value",
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 20,
+      "width": "half",
+      "translations": null,
+      "note": "Links that are helpful or necessary to complete this task.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "is_approval_required",
+    "type": "boolean",
+    "schema": {
+      "name": "is_approval_required",
+      "table": "checklist_template_tasks",
+      "data_type": "boolean",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "is_approval_required",
+      "special": [
+        "cast-boolean"
+      ],
+      "interface": "boolean",
+      "options": {
+        "label": "Approval Required To Complete"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 14,
+      "width": "full",
+      "translations": null,
+      "note": "Does this require approval to mark as completed?",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "due_days",
+    "type": "integer",
+    "schema": {
+      "name": "due_days",
+      "table": "checklist_template_tasks",
+      "data_type": "integer",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "due_days",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 17,
+      "width": "half",
+      "translations": null,
+      "note": "Relative days to use as the due date for this task - if you enter 3 and chose from \"Checklist Due Date\", the task due date would be set to 3 days before the checklist due date.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks_files",
+    "field": "id",
+    "type": "uuid",
+    "schema": {
+      "name": "id",
+      "table": "checklist_template_tasks_files",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": false,
+      "is_unique": true,
+      "is_indexed": false,
+      "is_primary_key": true,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks_files",
+      "field": "id",
+      "special": [
+        "uuid"
+      ],
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 1,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks_files",
+    "field": "checklist_template_tasks_id",
+    "type": "uuid",
+    "schema": {
+      "name": "checklist_template_tasks_id",
+      "table": "checklist_template_tasks_files",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "checklist_template_tasks",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks_files",
+      "field": "checklist_template_tasks_id",
+      "special": null,
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks_files",
+    "field": "directus_files_id",
+    "type": "uuid",
+    "schema": {
+      "name": "directus_files_id",
+      "table": "checklist_template_tasks_files",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks_files",
+      "field": "directus_files_id",
+      "special": null,
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 3,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks_files",
+    "field": "sort",
+    "type": "integer",
+    "schema": {
+      "name": "sort",
+      "table": "checklist_template_tasks_files",
+      "data_type": "integer",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_template_tasks_files",
+      "field": "sort",
+      "special": null,
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 4,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "id",
+    "type": "uuid",
+    "schema": {
+      "name": "id",
+      "table": "checklist_templates",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": false,
+      "is_unique": true,
+      "is_indexed": false,
+      "is_primary_key": true,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "id",
+      "special": [
+        "uuid"
+      ],
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 1,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "sort",
+    "type": "integer",
+    "schema": {
+      "name": "sort",
+      "table": "checklist_templates",
+      "data_type": "integer",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "sort",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "user_created",
+    "type": "uuid",
+    "schema": {
+      "name": "user_created",
+      "table": "checklist_templates",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "user_created",
+      "special": [
+        "user-created"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+      },
+      "display": "user",
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 3,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "date_created",
+    "type": "timestamp",
+    "schema": {
+      "name": "date_created",
+      "table": "checklist_templates",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "date_created",
+      "special": [
+        "date-created"
+      ],
+      "interface": "datetime",
+      "options": null,
+      "display": "datetime",
+      "display_options": {
+        "relative": true
+      },
+      "readonly": true,
+      "hidden": true,
+      "sort": 4,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "user_updated",
+    "type": "uuid",
+    "schema": {
+      "name": "user_updated",
+      "table": "checklist_templates",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "user_updated",
+      "special": [
+        "user-updated"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+      },
+      "display": "user",
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 5,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "date_updated",
+    "type": "timestamp",
+    "schema": {
+      "name": "date_updated",
+      "table": "checklist_templates",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "date_updated",
+      "special": [
+        "date-updated"
+      ],
+      "interface": "datetime",
+      "options": null,
+      "display": "datetime",
+      "display_options": {
+        "relative": true
+      },
+      "readonly": true,
+      "hidden": true,
+      "sort": 6,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "template_name",
+    "type": "string",
+    "schema": {
+      "name": "template_name",
+      "table": "checklist_templates",
+      "data_type": "character varying",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "template_name",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 9,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "description",
+    "type": "text",
+    "schema": {
+      "name": "description",
+      "table": "checklist_templates",
+      "data_type": "text",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "description",
+      "special": null,
+      "interface": "input-rich-text-html",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 10,
+      "width": "full",
+      "translations": null,
+      "note": "Default description that gets populated when running instances of this checklist.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "checklist_type",
+    "type": "string",
+    "schema": {
+      "name": "checklist_type",
+      "table": "checklist_templates",
+      "data_type": "character varying",
+      "default_value": "single",
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "checklist_type",
+      "special": null,
+      "interface": "select-dropdown",
+      "options": {
+        "choices": [
+          {
+            "text": "One Off",
+            "value": "single",
+            "icon": "1x_mobiledata"
+          },
+          {
+            "text": "Recurring",
+            "value": "recurring",
+            "icon": "recycling"
+          }
+        ]
+      },
+      "display": "labels",
+      "display_options": {
+        "choices": [
+          {
+            "text": "One Off",
+            "value": "single",
+            "icon": "1x_mobiledata"
+          },
+          {
+            "text": "Recurring",
+            "value": "recurring",
+            "icon": "recycling"
+          }
+        ]
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 7,
+      "width": "half",
+      "translations": null,
+      "note": "Is this a one-off checklist or a recurring one?",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "status",
+    "type": "string",
+    "schema": {
+      "name": "status",
+      "table": "checklist_templates",
+      "data_type": "character varying",
+      "default_value": "draft",
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": false,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "status",
+      "special": null,
+      "interface": "select-dropdown",
+      "options": {
+        "choices": [
+          {
+            "text": "$t:draft",
+            "value": "draft",
+            "color": "var(--theme--foreground)"
+          },
+          {
+            "text": "$t:active",
+            "value": "active",
+            "color": "var(--theme--primary)"
+          },
+          {
+            "text": "$t:archived",
+            "value": "archived",
+            "color": "var(--theme--warning)"
+          }
+        ]
+      },
+      "display": "labels",
+      "display_options": {
+        "showAsDot": true,
+        "choices": [
+          {
+            "text": "$t:draft",
+            "value": "draft",
+            "color": "var(--theme--foreground)",
+            "foreground": "var(--theme--foreground)",
+            "background": "var(--theme--background-normal)"
+          },
+          {
+            "text": "$t:active",
+            "value": "active",
+            "color": "var(--theme--primary)",
+            "foreground": "var(--theme--primary)",
+            "background": "var(--theme--primary-background)"
+          },
+          {
+            "text": "$t:archived",
+            "value": "archived",
+            "color": "var(--theme--warning)",
+            "foreground": "var(--theme--warning)",
+            "background": "var(--theme--warning-background)"
+          }
+        ]
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 8,
+      "width": "half",
+      "translations": null,
+      "note": "Templates that are archived will not be able to be used when creating new checklists.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "default_approver",
+    "type": "uuid",
+    "schema": {
+      "name": "default_approver",
+      "table": "checklist_templates",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "default_approver",
+      "special": [
+        "m2o"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 12,
+      "width": "half",
+      "translations": null,
+      "note": "Always adds this user as the approver whenever the checklist is ran. Great if the same manager or person is always the approver on certain checklists.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "default_assigned_to",
+    "type": "uuid",
+    "schema": {
+      "name": "default_assigned_to",
+      "table": "checklist_templates",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "default_assigned_to",
+      "special": [
+        "m2o"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 11,
+      "width": "half",
+      "translations": null,
+      "note": "Always assigns the checklist to this user whenever the checklist is ran. Great for recurring checklists that a specific person needs to complete.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "last_ran_at",
+    "type": "timestamp",
+    "schema": {
+      "name": "last_ran_at",
+      "table": "checklist_templates",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "last_ran_at",
+      "special": null,
+      "interface": "datetime",
+      "options": {
+        "use24": false
+      },
+      "display": "datetime",
+      "display_options": {
+        "relative": true
+      },
+      "readonly": true,
+      "hidden": false,
+      "sort": 2,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "meta_group",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "recurring_timeframe",
+    "type": "string",
+    "schema": {
+      "name": "recurring_timeframe",
+      "table": "checklist_templates",
+      "data_type": "character varying",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "recurring_timeframe",
+      "special": null,
+      "interface": "select-dropdown",
+      "options": {
+        "choices": [
+          {
+            "text": "Weekly",
+            "value": "weekly"
+          },
+          {
+            "text": "Monthly",
+            "value": "monthly"
+          }
+        ]
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 1,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "recurring_details",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "recurring_time",
+    "type": "time",
+    "schema": {
+      "name": "recurring_time",
+      "table": "checklist_templates",
+      "data_type": "time without time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "recurring_time",
+      "special": null,
+      "interface": "datetime",
+      "options": {
+        "use24": false
+      },
+      "display": "datetime",
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 4,
+      "width": "full",
+      "translations": null,
+      "note": "What time will this recurring checklist run? (Note: Has to be in UTC(+0) time zone). So if your local timezone offset is +4 and you want to run at 7:00 am local time - you'd set 11:00 am. [This tool might be helpful](https://dateful.com/convert/utc)",
+      "conditions": null,
+      "required": false,
+      "group": "recurring_details",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "recurring_day_of_week",
+    "type": "integer",
+    "schema": {
+      "name": "recurring_day_of_week",
+      "table": "checklist_templates",
+      "data_type": "integer",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "recurring_day_of_week",
+      "special": null,
+      "interface": "select-dropdown",
+      "options": {
+        "choices": [
+          {
+            "text": "Sunday",
+            "value": 0
+          },
+          {
+            "text": "Monday",
+            "value": 1
+          },
+          {
+            "text": "Tuesday",
+            "value": 2
+          },
+          {
+            "text": "Wednesday",
+            "value": 3
+          },
+          {
+            "text": "Thursday",
+            "value": 4
+          },
+          {
+            "text": "Friday",
+            "value": 5
+          },
+          {
+            "text": "Saturday",
+            "value": 6
+          }
+        ],
+        "icon": "calendar_month"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": "Checklist will automatically run every week on this day.",
+      "conditions": [
+        {
+          "name": "Show If Timeframe = Weekly",
+          "rule": {
+            "_and": [
+              {
+                "recurring_timeframe": {
+                  "_eq": "weekly"
+                }
+              }
+            ]
+          },
+          "hidden": false,
+          "options": {
+            "allowOther": false,
+            "allowNone": false
+          }
+        }
+      ],
+      "required": false,
+      "group": "recurring_details",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "recurring_day_of_the_month",
+    "type": "integer",
+    "schema": {
+      "name": "recurring_day_of_the_month",
+      "table": "checklist_templates",
+      "data_type": "integer",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "recurring_day_of_the_month",
+      "special": null,
+      "interface": "input",
+      "options": {
+        "choices": null,
+        "icon": "calendar_month",
+        "max": 31,
+        "min": 1
+      },
+      "display": "formatted-value",
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 3,
+      "width": "full",
+      "translations": null,
+      "note": "Checklist will run once per month on the X day.",
+      "conditions": [
+        {
+          "name": "Show If Timeframe = Monthly",
+          "rule": {
+            "_and": [
+              {
+                "recurring_timeframe": {
+                  "_eq": "monthly"
+                }
+              }
+            ]
+          },
+          "hidden": false,
+          "options": {
+            "font": "sans-serif",
+            "trim": false,
+            "masked": false,
+            "clear": false,
+            "slug": false
+          }
+        }
+      ],
+      "required": false,
+      "group": "recurring_details",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "run_count",
+    "type": "integer",
+    "schema": {
+      "name": "run_count",
+      "table": "checklist_templates",
+      "data_type": "integer",
+      "default_value": 0,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "run_count",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": "formatted-value",
+      "display_options": null,
+      "readonly": true,
+      "hidden": false,
+      "sort": 1,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "meta_group",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "id",
+    "type": "uuid",
+    "schema": {
+      "name": "id",
+      "table": "checklists",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": false,
+      "is_unique": true,
+      "is_indexed": false,
+      "is_primary_key": true,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "id",
+      "special": [
+        "uuid"
+      ],
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 1,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "status",
+    "type": "string",
+    "schema": {
+      "name": "status",
+      "table": "checklists",
+      "data_type": "character varying",
+      "default_value": "active",
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "status",
+      "special": null,
+      "interface": "select-dropdown",
+      "options": {
+        "choices": [
+          {
+            "text": "$t:active",
+            "value": "active",
+            "color": "var(--theme--primary)",
+            "icon": "check_box_outline_blank"
+          },
+          {
+            "text": "$t:completed",
+            "value": "completed",
+            "color": "#2ECDA7",
+            "icon": "check"
+          },
+          {
+            "text": "$t:void",
+            "value": "void",
+            "color": "#E35169",
+            "icon": "delete_forever"
+          }
+        ]
+      },
+      "display": "labels",
+      "display_options": {
+        "choices": [
+          {
+            "text": "$t:active",
+            "value": "active",
+            "color": "var(--theme--primary)",
+            "icon": "check_box_outline_blank"
+          },
+          {
+            "text": "$t:completed",
+            "value": "completed",
+            "color": "#2ECDA7",
+            "icon": "check"
+          },
+          {
+            "text": "$t:void",
+            "value": "void",
+            "color": "#E35169",
+            "icon": "delete_forever"
+          }
+        ]
+      },
+      "readonly": true,
+      "hidden": false,
+      "sort": 8,
+      "width": "half",
+      "translations": null,
+      "note": "What is the current checklist status?",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "sort",
+    "type": "integer",
+    "schema": {
+      "name": "sort",
+      "table": "checklists",
+      "data_type": "integer",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "sort",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "user_created",
+    "type": "uuid",
+    "schema": {
+      "name": "user_created",
+      "table": "checklists",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "user_created",
+      "special": [
+        "user-created"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+      },
+      "display": "user",
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 3,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "date_created",
+    "type": "timestamp",
+    "schema": {
+      "name": "date_created",
+      "table": "checklists",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "date_created",
+      "special": [
+        "date-created"
+      ],
+      "interface": "datetime",
+      "options": null,
+      "display": "datetime",
+      "display_options": {
+        "relative": true
+      },
+      "readonly": true,
+      "hidden": true,
+      "sort": 4,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "user_updated",
+    "type": "uuid",
+    "schema": {
+      "name": "user_updated",
+      "table": "checklists",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "user_updated",
+      "special": [
+        "user-updated"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+      },
+      "display": "user",
+      "display_options": null,
+      "readonly": true,
+      "hidden": true,
+      "sort": 5,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "date_updated",
+    "type": "timestamp",
+    "schema": {
+      "name": "date_updated",
+      "table": "checklists",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "date_updated",
+      "special": [
+        "date-updated"
+      ],
+      "interface": "datetime",
+      "options": null,
+      "display": "datetime",
+      "display_options": {
+        "relative": true
+      },
+      "readonly": true,
+      "hidden": true,
+      "sort": 6,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "start_date",
+    "type": "timestamp",
+    "schema": {
+      "name": "start_date",
+      "table": "checklists",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "start_date",
+      "special": null,
+      "interface": "datetime",
+      "options": {
+        "use24": false
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 16,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "due_date",
+    "type": "timestamp",
+    "schema": {
+      "name": "due_date",
+      "table": "checklists",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "due_date",
+      "special": null,
+      "interface": "datetime",
+      "options": {
+        "use24": false
+      },
+      "display": "datetime",
+      "display_options": {
+        "relative": true,
+        "strict": true
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 9,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "checklist_name",
+    "type": "string",
+    "schema": {
+      "name": "checklist_name",
+      "table": "checklists",
+      "data_type": "character varying",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": 255,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "checklist_name",
+      "special": null,
+      "interface": "input",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 11,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "description",
+    "type": "text",
+    "schema": {
+      "name": "description",
+      "table": "checklists",
+      "data_type": "text",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "description",
+      "special": null,
+      "interface": "input-rich-text-html",
+      "options": null,
+      "display": "formatted-value",
+      "display_options": {
+        "format": true
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 12,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "assigned_to",
+    "type": "uuid",
+    "schema": {
+      "name": "assigned_to",
+      "table": "checklists",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "assigned_to",
+      "special": [
+        "m2o"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+      },
+      "display": "user",
+      "display_options": {},
+      "readonly": false,
+      "hidden": false,
+      "sort": 7,
+      "width": "half",
+      "translations": null,
+      "note": "Who is responsible for completing this checklist?",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "approver",
+    "type": "uuid",
+    "schema": {
+      "name": "approver",
+      "table": "checklists",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "approver",
+      "special": [
+        "m2o"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": {
+        "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+      },
+      "display": "user",
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 10,
+      "width": "half",
+      "translations": null,
+      "note": "User that receives and controls approvals for this checklist.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "checklist_template",
+    "type": "uuid",
+    "schema": {
+      "name": "checklist_template",
+      "table": "checklists",
+      "data_type": "uuid",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": "public",
+      "foreign_key_table": "checklist_templates",
+      "foreign_key_column": "id",
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "checklist_template",
+      "special": [
+        "m2o"
+      ],
+      "interface": "select-dropdown-m2o",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 15,
+      "width": "full",
+      "translations": null,
+      "note": "What template was this created from?",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "date_completed",
+    "type": "timestamp",
+    "schema": {
+      "name": "date_completed",
+      "table": "checklists",
+      "data_type": "timestamp with time zone",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "date_completed",
+      "special": null,
+      "interface": "datetime",
+      "options": {
+        "use24": false
+      },
+      "display": "datetime",
+      "display_options": {
+        "relative": true,
+        "strict": true
+      },
+      "readonly": false,
+      "hidden": true,
+      "sort": 17,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "completion_percentage",
+    "type": "decimal",
+    "schema": {
+      "name": "completion_percentage",
+      "table": "checklists",
+      "data_type": "numeric",
+      "default_value": null,
+      "generation_expression": null,
+      "max_length": null,
+      "numeric_precision": 10,
+      "numeric_scale": 2,
+      "is_generated": false,
+      "is_nullable": true,
+      "is_unique": false,
+      "is_indexed": false,
+      "is_primary_key": false,
+      "has_auto_increment": false,
+      "foreign_key_schema": null,
+      "foreign_key_table": null,
+      "foreign_key_column": null,
+      "comment": null
+    },
+    "meta": {
+      "collection": "checklists",
+      "field": "completion_percentage",
+      "special": null,
+      "interface": "input",
+      "options": {
+        "min": 0,
+        "max": 100,
+        "indicator": true,
+        "label": "Tasks Completed",
+        "color": null,
+        "editable": true,
+        "iconRight": "percent",
+        "font": "monospace"
+      },
+      "display": "formatted-value",
+      "display_options": {
+        "min": 0,
+        "max": 100,
+        "label": "Tasks Completed",
+        "indicator": true,
+        "format": true,
+        "suffix": "%",
+        "font": "monospace"
+      },
+      "readonly": true,
+      "hidden": false,
+      "sort": 13,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": [
+        {
+          "name": "If Value is Less Than 20%",
+          "rule": {
+            "_and": [
+              {
+                "completion_percentage": {
+                  "_lt": "20"
+                }
+              }
+            ]
+          },
+          "options": {
+            "label": "This is not good",
+            "color": "#E35169"
+          }
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "tasks",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "checklists",
+      "field": "tasks",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": {
+        "enableLink": true,
+        "layout": "table",
+        "fields": [
+          "task_name",
+          "due_date",
+          "assigned_to",
+          "status"
+        ],
+        "enableSearchFilter": true
+      },
+      "display": "related-values",
+      "display_options": {
+        "template": "{{task_name}} • {{status}}"
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 14,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "files",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "checklist_template_tasks",
+      "field": "files",
+      "special": [
+        "files"
+      ],
+      "interface": "files",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 19,
+      "width": "half",
+      "translations": null,
+      "note": "Attach preset files to include on the task.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "recurring_details",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "recurring_details",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "headerIcon": "recycling"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 14,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": [
+        {
+          "name": "Show If Template Type equals Recurring",
+          "rule": {
+            "_and": [
+              {
+                "checklist_type": {
+                  "_eq": "recurring"
+                }
+              }
+            ]
+          },
+          "hidden": false,
+          "options": {
+            "start": "open"
+          }
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "tasks",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "tasks",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": {
+        "enableLink": true,
+        "layout": "table",
+        "fields": [
+          "task_name",
+          "description",
+          "assigned_to"
+        ],
+        "enableSearchFilter": true
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 13,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "meta_group",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "checklist_templates",
+      "field": "meta_group",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "headerIcon": "data_exploration",
+        "start": "closed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 15,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Stats"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "files",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "files",
+      "special": [
+        "files"
+      ],
+      "interface": "files",
+      "options": {
+        "folder": "ccb12e87-0e5f-4392-9da2-91f10f300cab"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 20,
+      "width": "half",
+      "translations": null,
+      "note": "Helpful files or assets to complete this task.",
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "notice_checklist_task",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "collection": "checklist_tasks",
+      "field": "notice_checklist_task",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "presentation-notice",
+      "options": {
+        "icon": "info"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 11,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": [
+        {
+          "name": "If Current User and Approval Required",
+          "rule": {
+            "_and": [
+              {
+                "assigned_to": {
+                  "_eq": "$CURRENT_USER"
+                }
+              },
+              {
+                "is_approval_required": {
+                  "_eq": true
+                }
+              }
+            ]
+          },
+          "options": {
+            "color": "normal",
+            "text": "This task has been assigned to you, but it requires approval to mark as completed. Please set status to In Review once you're ready for review and the approver will be automatically notified."
+          },
+          "hidden": false
+        },
+        {
+          "name": "If Not Current User and Approval Required",
+          "rule": {
+            "_and": [
+              {
+                "assigned_to": {
+                  "_neq": "$CURRENT_USER"
+                }
+              },
+              {
+                "is_approval_required": {
+                  "_eq": true
+                }
+              }
+            ]
+          },
+          "options": {
+            "color": "normal",
+            "text": "This task requires approval to mark as completed. Please review and confirm as completed."
+          },
+          "hidden": false
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "3b2e99a2-7693-4a21-a1ac-c978d59b6685",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-11T12:15:20.868Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-14T05:54:22.233Z",
+    "title": "Hoppin Code 24",
+    "headline": "Hop Into the Past",
+    "content": "<p>Discover cutting-edge software solutions, attend insightful sessions, and <a href=\"https://directus.io/plus?ref=event_registration_template_hero_link\" target=\"_blank\" rel=\"noopener\">ship faster with this starter kit</a>. Register now to be a part of this hare-raising experience!</p>",
+    "button_group": "2fd9fb30-e989-43a6-9938-18b6d131992c",
+    "background": "4f698683-74e8-489a-9bd8-dfde4ac0378a"
+  },
+  {
+    "id": "d610c516-e72a-4b50-b94d-db5f6ef66903",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-12T21:13:45.187Z",
+    "user_updated": null,
+    "date_updated": null,
+    "title": null,
+    "headline": "This event came and went, but it was awesome.",
+    "content": "<p>We're real sad you missed this past event but there's a recap below.</p>",
+    "button_group": null,
+    "background": null
+  }
+]

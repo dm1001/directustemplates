@@ -1,0 +1,19 @@
+[
+  {
+    "id": "a729e6f0-0475-4afb-9501-4d5d16bb1b3e",
+    "sort": null,
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_created": "2024-01-04T18:11:04.458Z",
+    "user_updated": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_updated": "2024-01-17T21:21:30.095Z",
+    "percent_complete": "100.00",
+    "course": "4e0d5e59-8770-4f5b-b750-6582e66a4c93",
+    "user_enrolled": "a9f71bf6-2d5a-4ef2-a29d-04aa8d30a44e",
+    "date_completed": "2024-01-04T18:11:04.458Z",
+    "is_completed": true,
+    "lessons_completed": [
+      "e633598a-28d9-4e14-b330-b15c98bea71c",
+      "f98e240f-bdb3-4bd0-bca3-62bb0dbdcff8"
+    ]
+  }
+]

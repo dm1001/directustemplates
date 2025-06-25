@@ -1,0 +1,1015 @@
+[
+  {
+    "id": "00a295a3-aae7-4712-8827-826c5f82f64c",
+    "name": "Read Voice",
+    "key": "voice",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 37,
+    "options": {
+      "collection": "voices",
+      "key": [
+        "{{$trigger.body.voice.key}}"
+      ]
+    },
+    "resolve": "52ec5e6d-2468-4dbf-ae63-c489803bb0dd",
+    "reject": null,
+    "flow": "b900604f-d37c-4fd8-beac-1835ec35f8a1",
+    "date_created": "2024-05-16T22:35:32.237Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "0b37f4ce-70d3-425d-a18c-104ebb43f115",
+    "name": "Return Globals",
+    "key": "return_globals",
+    "type": "exec",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "code": "module.exports = function(data) {\n\treturn data.read_globals[0]\n}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "82163edf-47ea-4d19-9580-3814fb72fe3a",
+    "date_created": "2024-05-16T22:35:32.243Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "10a7433b-82ba-462d-a82a-d13e45750cd5",
+    "name": "Read Template",
+    "key": "template",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 19,
+    "options": {
+      "collection": "templates",
+      "key": [
+        "{{$trigger.body.template.key}}"
+      ]
+    },
+    "resolve": "8725e10d-30f7-464b-9e2a-21b1aa289596",
+    "reject": null,
+    "flow": "21da0057-8b53-4ebb-ad62-5402420374c4",
+    "date_created": "2024-05-16T22:35:32.246Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "18c67218-497d-49d9-9d50-33283c27dee5",
+    "name": "Update Content",
+    "key": "update_content",
+    "type": "item-update",
+    "position_x": 74,
+    "position_y": 19,
+    "options": {
+      "collection": "content_workflow",
+      "key": [
+        "{{$trigger.body.keys}}"
+      ],
+      "payload": "{{format_post}}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "b900604f-d37c-4fd8-beac-1835ec35f8a1",
+    "date_created": "2024-05-16T22:35:32.251Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "23349f13-d99f-47e1-bd2d-e0a95dd1449e",
+    "name": "Generate Ideas",
+    "key": "generate_ideas",
+    "type": "directus-labs-ai-writer-operation",
+    "position_x": 48,
+    "position_y": 1,
+    "options": {
+      "apiKey": "{{globals.open_ai_api_key}}",
+      "model": "gpt-4o",
+      "promptKey": "custom",
+      "system": "You are an expert writer and content strategist specializing in creating engaging and informative articles for developers. Your task is to brainstorm 2-3 article ideas based on the provided theme and materials, which include images, text, transcripts, and other information. The articles should cater to the following specifics:\n\n1. Audience: Developers\n2. Purpose: Varies (e.g., product announcement, listicle) as indicated by the supplied template\n3. Tone and Style: Follow the provided template voice\n4. SEO Keywords: Incorporate the supplied keywords to enhance search engine optimization\n5. Length: Will be provided by a templated prompt\n\nThe articles should be flexible to accommodate various structures and formats as needed. Generate innovative and compelling ideas that align with the theme and purpose while keeping the audience in mind. Ensure that the articles are well-researched, informative, and engaging, with clear and concise language.\n\nAdditional Requirements:\n- Always include a short outline for each idea.\n- Output the ideas in a JSON object that matches the sample format below.\n- Rate each idea on a scale of 1-5 for quality and estimated popularity based on your judgement.\n{\n    \"ideas\": [\n        {\n            \"idea\": \"Idea 1 Title\",\n            \"outline\": \"Simple outline for the idea. The outline needs to be in Markdown format\",\n            \"rating\": 3\n        },\n        {\n            \"idea\": \"Idea 2 Title\",\n            \"outline\": \"Simple outline for the idea. The outline needs to be in Markdown format\",\n            \"rating\": 5\n        }\n    ]\n}",
+      "thread": "{{format_ai_payload.messageThread}}",
+      "text": "# Context\n\n## SEO Keywords\n{{ content_workflow.seo_keywords }}\n\n## Article Template\n{{ template.title }}\n\nSamples of Template\n---\n{{ template.sample_one }}\n{{ template.sample_two }}\n{{ template.sample_three }}",
+      "json_mode": true
+    },
+    "resolve": "e61b1303-03ca-4191-a6da-24213dc9f42b",
+    "reject": null,
+    "flow": "e4efc0e1-cb1f-4e73-ad4a-f62dff00babc",
+    "date_created": "2024-05-16T22:35:32.256Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "2b7bf61a-1713-4e54-adea-0614cb5b2470",
+    "name": "Read Workflow",
+    "key": "workflow",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "collection": "content_workflow",
+      "query": {
+        "fields": [
+          "*"
+        ]
+      },
+      "key": "{{$trigger.body.keys}}"
+    },
+    "resolve": "e867f4f3-c0b7-45c5-94fc-d9608f0906cb",
+    "reject": null,
+    "flow": "1c79e17f-b591-421b-b00f-53b110e179c8",
+    "date_created": "2024-05-16T22:35:32.261Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "385a9892-e66c-498b-8765-85652ab3dd6a",
+    "name": "Read Workflow",
+    "key": "content_workflow",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "collection": "content_workflow",
+      "key": "{{$trigger.body.keys}}",
+      "query": {
+        "fields": [
+          "*",
+          "inputs.*"
+        ]
+      }
+    },
+    "resolve": "10a7433b-82ba-462d-a82a-d13e45750cd5",
+    "reject": null,
+    "flow": "21da0057-8b53-4ebb-ad62-5402420374c4",
+    "date_created": "2024-05-16T22:35:32.267Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "420ecaa3-a229-41c7-91c3-77b6238d23d1",
+    "name": "Read Content Workflow",
+    "key": "content_workflow",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "collection": "content_workflow",
+      "key": "{{$trigger.body.keys}}"
+    },
+    "resolve": "54827af0-23ca-4374-bf40-5c384bdcf205",
+    "reject": null,
+    "flow": "0d1083b0-7076-433f-a303-668902d4f9fa",
+    "date_created": "2024-05-16T22:35:32.271Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "45910e83-5eba-49c2-9c47-690d9ddfb1b4",
+    "name": "Format AI Payload",
+    "key": "format_ai_payload",
+    "type": "exec",
+    "position_x": 19,
+    "position_y": 55,
+    "options": {
+      "code": "module.exports = function(data) {\n\tconst globals = data.globals;\n\tconst baseUrl = globals.directus_base_url;\n\tconst inputs = data.content_workflow.inputs\n\t\n\t// There's three types of inputs: file (audio/video), text, and image\n\t// Let's loop through all the inputs and format them for OPENAI API chat/completions\n\tconst messageContent = inputs.map(input => {\n\t\tif (input.input_type === 'file') {\n\t\t\tif(!input.file_transcript_text) {\n\t\t\t\tthrow new Error('No file transcript text found')\n\t\t\t}\n\t\t\treturn {\n\t\t\t\ttype: 'text',\n\t\t\t\ttext: input.input_name + '//' + input.file_transcript_text\n\t\t\t}\n\t\t} else if (input.input_type === 'text') {\n\t\t\treturn {\n\t\t\t\ttype: 'text',\n\t\t\t\ttext:  input.input_name + '//' + input.text\n\t\t\t}\n\t\t} else if (input.input_type === 'image') {\n\t\t\treturn {\n\t\t\t\ttype: 'image_url',\n\t\t\t\timage_url: {\n\t\t\t\t\turl: `${baseUrl}/assets/${input.image}`\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t})\n\n\tmessageContent.unshift({\n\t\ttype: 'text',\n\t\ttext: 'Use the following notes, files, or images to help you generate a response:'\n\t})\n\n\tconst messageThread = [{\n\t\t\"role\": \"user\",\n\t\t\"content\": messageContent\n\t}]\n\n\treturn {\n\t\tmessageThread\n\t}\n}"
+    },
+    "resolve": "23349f13-d99f-47e1-bd2d-e0a95dd1449e",
+    "reject": null,
+    "flow": "e4efc0e1-cb1f-4e73-ad4a-f62dff00babc",
+    "date_created": "2024-05-16T22:35:32.275Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "462c7a18-a77a-4b78-8b69-ce50db4ce556",
+    "name": "Globals",
+    "key": "globals",
+    "type": "trigger",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "flow": "82163edf-47ea-4d19-9580-3814fb72fe3a"
+    },
+    "resolve": "5af97352-3686-4fcf-ac02-e2370f2584f6",
+    "reject": null,
+    "flow": "9745bd85-6830-40bd-a4c2-55d5c301c186",
+    "date_created": "2024-05-16T22:35:32.280Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "4dd5c5ce-449e-4903-922c-0be8a8d438aa",
+    "name": "Update Content Workflow",
+    "key": "update_content_workflow",
+    "type": "item-update",
+    "position_x": 73,
+    "position_y": 1,
+    "options": {
+      "key": "{{$trigger.body.keys}}",
+      "payload": {
+        "date_completed": "{{format_post.now}}",
+        "current_step": "published"
+      },
+      "collection": "content_workflow"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "0d1083b0-7076-433f-a303-668902d4f9fa",
+    "date_created": "2024-05-16T22:35:32.284Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "4e8439ca-f6c3-4980-8ebe-180ffa85991d",
+    "name": "Globals",
+    "key": "globals",
+    "type": "trigger",
+    "position_x": 19,
+    "position_y": 55,
+    "options": {
+      "flow": "82163edf-47ea-4d19-9580-3814fb72fe3a",
+      "iterationMode": "serial"
+    },
+    "resolve": "f7349a30-d6fe-42fb-aa81-71817ae27969",
+    "reject": null,
+    "flow": "21da0057-8b53-4ebb-ad62-5402420374c4",
+    "date_created": "2024-05-16T22:35:32.289Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "5167c9a8-a557-4569-9d94-0e52402898e5",
+    "name": "Slugify",
+    "key": "slugify",
+    "type": "exec",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "code": "function slugify(text) {\n    // Normalize Unicode characters to ASCII\n    text = text.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');\n    \n    // Convert to lowercase\n    text = text.toLowerCase();\n    \n    // Replace spaces and other non-alphanumeric characters with hyphens\n    text = text.replace(/\\s+/g, '-'); // Replace spaces with hyphens\n    text = text.replace(/[^a-z0-9-]/g, '-'); // Replace other non-alphanumeric characters with hyphens\n    \n    // Remove duplicate hyphens\n    text = text.replace(/-+/g, '-');\n    \n    // Trim leading and trailing hyphens\n    text = text.replace(/^-+|-+$/g, '');\n    \n    return text;\n}\n\nmodule.exports = async function(data) {\n\treturn slugify(data.$trigger.text)\n}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "62ce4de3-29a1-440a-910c-6e6a76cefaea",
+    "date_created": "2024-05-16T22:35:32.293Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "52ec5e6d-2468-4dbf-ae63-c489803bb0dd",
+    "name": "Globals",
+    "key": "globals",
+    "type": "trigger",
+    "position_x": 19,
+    "position_y": 55,
+    "options": {
+      "iterationMode": "serial",
+      "flow": "82163edf-47ea-4d19-9580-3814fb72fe3a"
+    },
+    "resolve": "64d29c2a-874f-490a-bc4c-8ea3e94badf0",
+    "reject": null,
+    "flow": "b900604f-d37c-4fd8-beac-1835ec35f8a1",
+    "date_created": "2024-05-16T22:35:32.296Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "54827af0-23ca-4374-bf40-5c384bdcf205",
+    "name": "Format Post",
+    "key": "format_post",
+    "type": "exec",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "code": "module.exports = function(data) {\n\tconst workflow = data.content_workflow\n    \n    const payload = {\n        title: workflow.post_title,\n        slug: workflow.post_slug,\n        image: workflow.post_image,\n        date_published: data.$trigger.body.date_published,\n        content_workflow: data.$trigger.body.keys[0],\n    }\n    \n    payload.translations = [\n        {\n            title: workflow.post_title,\n\t        slug: workflow.post_slug,\n            content: workflow.post_content,\n            languages_code: 'en-US'\n        }\n    ]\n    \n    return {\n        post: payload,\n        now: new Date().toISOString(),\n    }\n}"
+    },
+    "resolve": "8ce972b3-ff9e-4896-8812-d3398e987441",
+    "reject": null,
+    "flow": "0d1083b0-7076-433f-a303-668902d4f9fa",
+    "date_created": "2024-05-16T22:35:32.299Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "5a56831e-e8dc-4dc2-b419-7ecb8ca242a0",
+    "name": "Read Workflow",
+    "key": "content_workflow",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "collection": "content_workflow",
+      "key": "{{$trigger.body.keys}}",
+      "query": {
+        "fields": [
+          "*",
+          "inputs.*"
+        ]
+      }
+    },
+    "resolve": "89290a51-d700-4566-aeae-9ee59d24bab5",
+    "reject": null,
+    "flow": "e4efc0e1-cb1f-4e73-ad4a-f62dff00babc",
+    "date_created": "2024-05-16T22:35:32.302Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "5af97352-3686-4fcf-ac02-e2370f2584f6",
+    "name": "Format Trigger",
+    "key": "format_trigger",
+    "type": "exec",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "code": "function triggerKeys(trigger) {\n  // Normalize inputs to always return an array of keys to make it easier to work with\n  if (trigger.event.includes('.create') && trigger.key && typeof trigger.key === 'string') {\n      return [trigger.key]\n  }\n  \n  else if (trigger.event.includes('.update') && trigger.keys && Array.isArray(trigger.keys)) {\n      return trigger.keys\n  }\n}\n\nmodule.exports = function(data) {\n  const keys = triggerKeys(data.$trigger)\n  const baseUrl = data.globals.directus_base_url\n\n  // We only want to trigger the transcription if the following is true:\n  // The input_type === 'file'\n  // file_url or file exist\n  // If both file_url and file exist, we will prioritize file\n  const payload = data.$trigger.payload\n\n  if (payload.input_type !== 'file') {\n    throw new Error('Stoping execution because the input_type is not a file.')\n  }\n\n  if (!payload.file && !payload.file_url) {\n    throw new Error('Stopping execution because either file or file_url is required.')\n  }\n\n  let fileId\n\n  if (payload.file) {\n    // If file is a string, we'll assume it's the file id\n    if (typeof payload.file === 'string') {\n      fileId = payload.file\n    }\n\n    // If the file is an object, we'll assume it's the file object and we'll extract the id\n    if (typeof payload.file === 'object') {\n      fileId = payload.file.id\n    }\n  }\n\n  let url = fileId ? `${baseUrl}/assets/${fileId}` : payload.file_url\n\n  return {\n    keys,\n    file_url: url,\n  }\n}"
+    },
+    "resolve": "e5c3882e-9890-4856-9473-9e34db8ef6ea",
+    "reject": null,
+    "flow": "9745bd85-6830-40bd-a4c2-55d5c301c186",
+    "date_created": "2024-05-16T22:35:32.304Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "5c0e16ac-418f-470a-97fe-7edbd874f001",
+    "name": "Globals",
+    "key": "globals",
+    "type": "trigger",
+    "position_x": 19,
+    "position_y": 37,
+    "options": {
+      "flow": "82163edf-47ea-4d19-9580-3814fb72fe3a",
+      "iterationMode": "serial"
+    },
+    "resolve": "45910e83-5eba-49c2-9c47-690d9ddfb1b4",
+    "reject": null,
+    "flow": "e4efc0e1-cb1f-4e73-ad4a-f62dff00babc",
+    "date_created": "2024-05-16T22:35:32.308Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "5f7f28ee-cef0-462b-8804-394f4ce7936e",
+    "name": "Import Image",
+    "key": "import_image",
+    "type": "request",
+    "position_x": 72,
+    "position_y": 1,
+    "options": {
+      "url": "{{globals.directus_base_url}}/files/import",
+      "method": "POST",
+      "headers": null,
+      "body": "{\n  \"url\": \"{{generate_image}}\",\n  \"data\": {\n    \"folder\": \"{{globals.generated_image_folder}}\"\n    }\n}"
+    },
+    "resolve": "a7404424-923f-434d-bea6-0692921bba75",
+    "reject": null,
+    "flow": "1c79e17f-b591-421b-b00f-53b110e179c8",
+    "date_created": "2024-05-16T22:35:32.310Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "62332936-87b9-4563-afc7-cf58494ec261",
+    "name": "Translate",
+    "key": "translate",
+    "type": "directus-labs-ai-translation",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "api_key": "{{globals.deep_l_api_key}}",
+      "api_plan": "free",
+      "text": "{{$trigger.value}}",
+      "target_lang": "{{$trigger.language_to}}"
+    },
+    "resolve": "d83e8877-0901-4ab0-b45a-e7785e557dae",
+    "reject": null,
+    "flow": "f9411e3d-bb8c-41cb-b3aa-c50da4eddaea",
+    "date_created": "2024-05-16T22:35:32.312Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "64d29c2a-874f-490a-bc4c-8ea3e94badf0",
+    "name": "Format AI Payload",
+    "key": "format_ai_payload",
+    "type": "exec",
+    "position_x": 19,
+    "position_y": 73,
+    "options": {
+      "code": "module.exports = function(data) {\n\tconst globals = data.globals;\n\tconst baseUrl = globals.directus_base_url;\n\tconst inputs = data.workflow.inputs\n\t\n\t// There's three types of inputs: file (audio/video), text, and image\n\t// Let's loop through all the inputs and format them for OPENAI API chat/completions\n\tconst messageContent = inputs.map(input => {\n\t\tif (input.input_type === 'file') {\n\t\t\tif(!input.file_transcript_text) {\n\t\t\t\tthrow new Error('No file transcript text found')\n\t\t\t}\n\t\t\treturn {\n\t\t\t\ttype: 'text',\n\t\t\t\ttext: input.input_name + '//' + input.file_transcript_text\n\t\t\t}\n\t\t} else if (input.input_type === 'text') {\n\t\t\treturn {\n\t\t\t\ttype: 'text',\n\t\t\t\ttext:  input.input_name + '//' + input.text\n\t\t\t}\n\t\t} else if (input.input_type === 'image') {\n\t\t\treturn {\n\t\t\t\ttype: 'image_url',\n\t\t\t\timage_url: {\n\t\t\t\t\turl: `${baseUrl}/assets/${input.image}`\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t})\n\n\tmessageContent.unshift({\n\t\ttype: 'text',\n\t\ttext: 'Use the following notes, files, or images to help you generate a response:'\n\t})\n\n\tconst messageThread = [{\n\t\t\"role\": \"user\",\n\t\t\"content\": messageContent\n\t}]\n\n\treturn {\n\t\tmessageThread\n\t}\n}"
+    },
+    "resolve": "a28e4ceb-5aee-4227-be86-5b349490f8d1",
+    "reject": null,
+    "flow": "b900604f-d37c-4fd8-beac-1835ec35f8a1",
+    "date_created": "2024-05-16T22:35:32.314Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "654a011a-7687-4d73-b372-bee0388b0b9c",
+    "name": "Translations",
+    "key": "translations",
+    "type": "trigger",
+    "position_x": 55,
+    "position_y": 19,
+    "options": {
+      "flow": "f9411e3d-bb8c-41cb-b3aa-c50da4eddaea",
+      "payload": "{{format_loop.translationData}}"
+    },
+    "resolve": "88fceac3-dc54-48b5-bafb-806fb8ea829b",
+    "reject": null,
+    "flow": "91fb672f-00b2-4a7f-9571-865baaf4d1e0",
+    "date_created": "2024-05-16T22:35:32.317Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "710f0e75-bd74-428f-b3af-18abce81a5da",
+    "name": "Update Content Workflow",
+    "key": "update_content_workflow",
+    "type": "item-update",
+    "position_x": 68,
+    "position_y": 37,
+    "options": {
+      "collection": "content_workflow",
+      "key": [
+        "{{$trigger.body.keys[0]}}"
+      ],
+      "payload": {
+        "current_step": "ideas"
+      }
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "e4efc0e1-cb1f-4e73-ad4a-f62dff00babc",
+    "date_created": "2024-05-16T22:35:32.320Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "7864a7fd-b455-42ca-a4ed-4aa2a2fb7d16",
+    "name": "Read Node",
+    "key": "node",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 19,
+    "options": {
+      "key": [
+        "{{$trigger.body.content_workflow_idea.key}}"
+      ],
+      "collection": "content_workflow_ideas",
+      "query": {
+        "fields": [
+          "*",
+          "template.*",
+          "voice.*"
+        ]
+      }
+    },
+    "resolve": "00a295a3-aae7-4712-8827-826c5f82f64c",
+    "reject": null,
+    "flow": "b900604f-d37c-4fd8-beac-1835ec35f8a1",
+    "date_created": "2024-05-16T22:35:32.323Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "7d8b7e94-3d88-4eb7-ba67-db0cdcad9bdd",
+    "name": "Globals",
+    "key": "globals",
+    "type": "trigger",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "flow": "82163edf-47ea-4d19-9580-3814fb72fe3a"
+    },
+    "resolve": "62332936-87b9-4563-afc7-cf58494ec261",
+    "reject": null,
+    "flow": "f9411e3d-bb8c-41cb-b3aa-c50da4eddaea",
+    "date_created": "2024-05-16T22:35:32.326Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "81404056-59c3-4e2e-8be5-d8d1b8de5c3a",
+    "name": "Create or Update",
+    "key": "create_or_update",
+    "type": "condition",
+    "position_x": 73,
+    "position_y": 37,
+    "options": {
+      "filter": {
+        "format_translation": {
+          "id": {
+            "_null": true
+          }
+        }
+      }
+    },
+    "resolve": "a38add23-80a5-4713-830e-a0a76a142819",
+    "reject": "b0ccfd01-39e2-499f-bfcf-a59fd0b84a50",
+    "flow": "91fb672f-00b2-4a7f-9571-865baaf4d1e0",
+    "date_created": "2024-05-16T22:35:32.329Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "8725e10d-30f7-464b-9e2a-21b1aa289596",
+    "name": "Read Voice",
+    "key": "voice",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 37,
+    "options": {
+      "collection": "voices",
+      "key": [
+        "{{$trigger.body.voice.key}}"
+      ]
+    },
+    "resolve": "4e8439ca-f6c3-4980-8ebe-180ffa85991d",
+    "reject": null,
+    "flow": "21da0057-8b53-4ebb-ad62-5402420374c4",
+    "date_created": "2024-05-16T22:35:32.331Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "88fceac3-dc54-48b5-bafb-806fb8ea829b",
+    "name": "Format Translation",
+    "key": "format_translation",
+    "type": "exec",
+    "position_x": 55,
+    "position_y": 37,
+    "options": {
+      "code": "function combineObjects(array) {\n  return array.reduce((acc, obj) => {\n    return { ...acc, ...obj };\n  }, {});\n}\n\nmodule.exports = function(data) {\n  const translations = data.translations;\n  const { postId, translationId } = data.format_loop;\n  const language_to = data.$trigger.body.language_to.key; // de\n\n  const translationPayload = combineObjects(translations)\n\n  const payload = {\n    posts_id: postId,\n    languages_code: language_to,\n    id: translationId ?? null,\n    ...translationPayload,\n  }\n  \n  return payload;\n}"
+    },
+    "resolve": "81404056-59c3-4e2e-8be5-d8d1b8de5c3a",
+    "reject": null,
+    "flow": "91fb672f-00b2-4a7f-9571-865baaf4d1e0",
+    "date_created": "2024-05-16T22:35:32.334Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "89290a51-d700-4566-aeae-9ee59d24bab5",
+    "name": "Read Template",
+    "key": "template",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 19,
+    "options": {
+      "collection": "templates",
+      "key": [
+        "{{$trigger.body.template.key}}"
+      ]
+    },
+    "resolve": "5c0e16ac-418f-470a-97fe-7edbd874f001",
+    "reject": null,
+    "flow": "e4efc0e1-cb1f-4e73-ad4a-f62dff00babc",
+    "date_created": "2024-05-16T22:35:32.336Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "8ce972b3-ff9e-4896-8812-d3398e987441",
+    "name": "Create Post",
+    "key": "create_post",
+    "type": "item-create",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "collection": "posts",
+      "payload": "{{format_post.post}}"
+    },
+    "resolve": "4dd5c5ce-449e-4903-922c-0be8a8d438aa",
+    "reject": null,
+    "flow": "0d1083b0-7076-433f-a303-668902d4f9fa",
+    "date_created": "2024-05-16T22:35:32.338Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "8d64a743-fe25-4a10-977a-7d3305cb9f17",
+    "name": "Read Globals",
+    "key": "read_globals",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "permissions": "$full",
+      "collection": "globals"
+    },
+    "resolve": "0b37f4ce-70d3-425d-a18c-104ebb43f115",
+    "reject": null,
+    "flow": "82163edf-47ea-4d19-9580-3814fb72fe3a",
+    "date_created": "2024-05-16T22:35:32.340Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "8f17e185-3617-4961-9911-39321234a0f8",
+    "name": "Add Transcript",
+    "key": "add_transcript",
+    "type": "item-update",
+    "position_x": 73,
+    "position_y": 1,
+    "options": {
+      "key": "{{format_trigger.keys}}",
+      "collection": "content_workflow_inputs",
+      "payload": {
+        "file_transcript_text": "{{transcription.paragraphs.transcript}}"
+      }
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "9745bd85-6830-40bd-a4c2-55d5c301c186",
+    "date_created": "2024-05-16T22:35:32.342Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "91e9e575-0e18-42ff-85b6-b4488c99b152",
+    "name": "Create Ideas",
+    "key": "create_ideas",
+    "type": "item-create",
+    "position_x": 48,
+    "position_y": 37,
+    "options": {
+      "collection": "content_workflow_ideas",
+      "payload": "{{format_ideas}}"
+    },
+    "resolve": "710f0e75-bd74-428f-b3af-18abce81a5da",
+    "reject": null,
+    "flow": "e4efc0e1-cb1f-4e73-ad4a-f62dff00babc",
+    "date_created": "2024-05-16T22:35:32.344Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "98487308-072c-4218-8c08-860c65854b98",
+    "name": "Format Posts",
+    "key": "format_posts",
+    "type": "exec",
+    "position_x": 48,
+    "position_y": 19,
+    "options": {
+      "code": "module.exports = function (data) {\n  try {\n    const postList = JSON.parse(data.generate_social_posts);\n\n    if (!Array.isArray(postList.posts)) {\n      throw new Error(\n        \"Response from OpenAI is missingposts or is not an array\"\n      );\n    }\n\n    const addToEachPost = {};\n\n    addToEachPost.template = data.$trigger.body.template.key;\n    addToEachPost.content_workflow = data.$trigger.body.keys[0];\n\n    const posts = postList.posts.map((post) => {\n      return {\n        ...addToEachPost,\n\t    channel: post.channel,\n        content: post.content,\n        rating: post.rating,\n      };\n    });\n\n    return posts;\n  } catch (error) {\n    throw new Error(error.message);\n  }\n};\n"
+    },
+    "resolve": "b1cb0729-ca41-45e4-a167-13e34232e40d",
+    "reject": null,
+    "flow": "21da0057-8b53-4ebb-ad62-5402420374c4",
+    "date_created": "2024-05-16T22:35:32.346Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "a28e4ceb-5aee-4227-be86-5b349490f8d1",
+    "name": "Generate Article",
+    "key": "generate_article",
+    "type": "directus-labs-ai-writer-operation",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "promptKey": "custom",
+      "system": "{{ node.template.prompt }}\n\n## Voice\nMatch this style and tone of voice when writing.\n{{ voice.prompt }}\n\n## SEO Keywords\nTarget these keywords in the article.\n{{ node.keywords }}\n\n## Idea and Outline\nHere's the idea and the outline that you will follow for your writing.\n\nIdea: \n{{ node.title }}\n\nOutline: \n{{ node.outline }}\n\n\n## Rules\n- ALWAYS output a JSON object that matches the sample below.\n{\n\"post_title\": \"Article Title\",\n\"post_slug\": \"formatted-slug\",\n\"post_content\": \"Article content goes here. This needs to be properly encoded Markdown with proper line breaks, etc.\"\n}",
+      "text": "# Context\nUse the provided context below when writing the article.\n\n## Post Template \nUse this template and the samples to provide cues for formatting and style.\n{{ node.template.title }}  \n\n### Samples\n{{ node.template.sample_one }} \n<--->\n{{ node.template.sample_two}} \n<--->\n{{ node.template.sample_three}}",
+      "thread": "{{format_ai_payload.messageThread}}",
+      "apiKey": "{{globals.open_ai_api_key}}",
+      "model": "gpt-4o",
+      "json_mode": true
+    },
+    "resolve": "c23ee0c9-f4e7-4bbe-886a-e4bc0a707c83",
+    "reject": null,
+    "flow": "b900604f-d37c-4fd8-beac-1835ec35f8a1",
+    "date_created": "2024-05-16T22:35:32.349Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "a38add23-80a5-4713-830e-a0a76a142819",
+    "name": "Create Translation",
+    "key": "create_translation",
+    "type": "item-create",
+    "position_x": 91,
+    "position_y": 37,
+    "options": {
+      "collection": "posts_translations",
+      "payload": "{{format_translation}}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "91fb672f-00b2-4a7f-9571-865baaf4d1e0",
+    "date_created": "2024-05-16T22:35:32.352Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "a7404424-923f-434d-bea6-0692921bba75",
+    "name": "Create Image",
+    "key": "create_image",
+    "type": "item-create",
+    "position_x": 72,
+    "position_y": 19,
+    "options": {
+      "collection": "content_workflow_images",
+      "payload": {
+        "directus_files_id": "{{import_image.data.data.id}}",
+        "image_style": "{{$trigger.body.image_style.key}}",
+        "content_workflow_id": "{{$trigger.body.keys[0]}}",
+        "image_prompt": "{{generate_image_prompt}}"
+      }
+    },
+    "resolve": "b793eb83-0ba8-4016-8fae-6cfa82bff076",
+    "reject": null,
+    "flow": "1c79e17f-b591-421b-b00f-53b110e179c8",
+    "date_created": "2024-05-16T22:35:32.354Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "b0ccfd01-39e2-499f-bfcf-a59fd0b84a50",
+    "name": "Update Translation",
+    "key": "update_translation",
+    "type": "item-update",
+    "position_x": 91,
+    "position_y": 53,
+    "options": {
+      "collection": "posts_translations",
+      "payload": "{{format_translation}}",
+      "key": [
+        "{{format_translation.id}}"
+      ]
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "91fb672f-00b2-4a7f-9571-865baaf4d1e0",
+    "date_created": "2024-05-16T22:35:32.356Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "b1a52604-bd82-455f-a3e7-1a6ecfd6d88c",
+    "name": "Format API Calls",
+    "key": "format_loop",
+    "type": "exec",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "code": "function getTranslation(post, langCode) {\n    if (post.translations) {\n        return post.translations.find(translation => translation.languages_code === langCode);\n    }\n    return null;\n}\n\nfunction checkFields(translation, fieldsToTranslate) {\n    if (translation) {\n        return fieldsToTranslate.every(field => translation[field]);\n    }\n    return false;\n}\n\nmodule.exports = function(data) {\n\tconst language_from = data.$trigger.body.language_from.key; // en-US\n\tconst language_to = data.$trigger.body.language_to.key; // de\n\tconst fieldsToTranslate = data.$trigger.body.fields;\n\t// [\n    //     \"title\",\n    //     \"content\",\n    //     \"slug\"\n    //   ]\n\n\tconst post = data.get_post;\n\n    // Check if the post has a translation for the language_from\n    const fromTranslation = getTranslation(post, language_from);\n\n    if(!fromTranslation) {\n        throw new Error(`Translation for ${language_from} not found`);\n    }\n\n    if(!checkFields(fromTranslation, fieldsToTranslate)) {\n        throw new Error(`Fields to translate not found in ${language_from} translation`);\n    }\n\n    // Check if the post already has a translation for the language_to\n    const toTranslation = getTranslation(post, language_to);\n\n\t// Loop through fields and format the data as an array of objects to send to the DeepL API via the Util: Translate Content flow.\n    // [\n    //     {\n    //         field: 'title',\n    //         text: fromTranslation.title,\n    //         language_from: language_from,\n    //         language_to: language_to\n    //     }\n    // ]\n\n    const translationData = fieldsToTranslate.map(field => {\n        return {\n            field,\n            value: fromTranslation[field],\n\t\t\tlanguage_to: language_to.split('-')[0].toUpperCase(),\n        }\n    });\n\n    return {\n        translationData,\n        postId: post.id,\n        translationId: toTranslation ? toTranslation.id : null\n    };\n}\n"
+    },
+    "resolve": "654a011a-7687-4d73-b372-bee0388b0b9c",
+    "reject": null,
+    "flow": "91fb672f-00b2-4a7f-9571-865baaf4d1e0",
+    "date_created": "2024-05-16T22:35:32.359Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "b1cb0729-ca41-45e4-a167-13e34232e40d",
+    "name": "Create Posts",
+    "key": "create_posts",
+    "type": "item-create",
+    "position_x": 48,
+    "position_y": 37,
+    "options": {
+      "collection": "content_workflow_posts",
+      "payload": "{{format_posts}}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "21da0057-8b53-4ebb-ad62-5402420374c4",
+    "date_created": "2024-05-16T22:35:32.361Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "b793eb83-0ba8-4016-8fae-6cfa82bff076",
+    "name": "Update Workflow",
+    "key": "update_workflow",
+    "type": "item-update",
+    "position_x": 72,
+    "position_y": 37,
+    "options": {
+      "collection": "content_workflow",
+      "key": [
+        "{{$trigger.body.keys}}"
+      ],
+      "payload": {
+        "post_image": "{{import_image.data.data.id}}"
+      }
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "1c79e17f-b591-421b-b00f-53b110e179c8",
+    "date_created": "2024-05-16T22:35:32.363Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "b7e35b36-2e7c-40fe-b6ec-5b582bec7c84",
+    "name": "Globals",
+    "key": "globals",
+    "type": "trigger",
+    "position_x": 19,
+    "position_y": 19,
+    "options": {
+      "flow": "82163edf-47ea-4d19-9580-3814fb72fe3a",
+      "iterationMode": "serial"
+    },
+    "resolve": "b1a52604-bd82-455f-a3e7-1a6ecfd6d88c",
+    "reject": null,
+    "flow": "91fb672f-00b2-4a7f-9571-865baaf4d1e0",
+    "date_created": "2024-05-16T22:35:32.367Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "bb839c62-dc62-465b-976f-8c5921667798",
+    "name": "Globals",
+    "key": "globals",
+    "type": "trigger",
+    "position_x": 19,
+    "position_y": 37,
+    "options": {
+      "flow": "82163edf-47ea-4d19-9580-3814fb72fe3a",
+      "iterationMode": "serial"
+    },
+    "resolve": "bdbcaf77-5d10-41fa-87e8-00a8a4c9b7f3",
+    "reject": null,
+    "flow": "1c79e17f-b591-421b-b00f-53b110e179c8",
+    "date_created": "2024-05-16T22:35:32.370Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "bdbcaf77-5d10-41fa-87e8-00a8a4c9b7f3",
+    "name": "Generate Image Prompt",
+    "key": "generate_image_prompt",
+    "type": "directus-labs-ai-writer-operation",
+    "position_x": 46,
+    "position_y": 1,
+    "options": {
+      "apiKey": "{{globals.open_ai_api_key}}",
+      "model": "gpt-4o",
+      "promptKey": "custom",
+      "system": "Use the supplied Context below to write a prompt for Dall•E 3 to generate an image.\n\nImage Style:\n{{ image_style.prompt }}\n\nAspect Ratio: \n{{ image_style.aspect_ratio }}\n\nColor Palette:\n{{ image_style.colors }}\n",
+      "text": "# Context\n\n## Post Title\n{{ workflow.post_title }}\n\n## Post Content\n{{ workflow.post_content }}"
+    },
+    "resolve": "cc363df6-942b-4958-aad0-3fa0f1c73a1c",
+    "reject": null,
+    "flow": "1c79e17f-b591-421b-b00f-53b110e179c8",
+    "date_created": "2024-05-16T22:35:32.372Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "c23ee0c9-f4e7-4bbe-886a-e4bc0a707c83",
+    "name": "Format Post",
+    "key": "format_post",
+    "type": "exec",
+    "position_x": 56,
+    "position_y": 19,
+    "options": {
+      "code": "module.exports = function(data) {\n    const aiResponse = JSON.parse(data.generate_article)\n\tconst payload = {}\n    payload.post_title = aiResponse.post_title\n    payload.post_content = aiResponse.post_content\n    payload.post_slug = aiResponse.post_slug\n    payload.current_step = 'editing'\n    return payload\n}"
+    },
+    "resolve": "18c67218-497d-49d9-9d50-33283c27dee5",
+    "reject": null,
+    "flow": "b900604f-d37c-4fd8-beac-1835ec35f8a1",
+    "date_created": "2024-05-16T22:35:32.374Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "c3ff1be5-e10e-4426-823d-b4e8711de0bd",
+    "name": "Read Data",
+    "key": "workflow",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "collection": "content_workflow",
+      "key": "{{$trigger.body.keys}}",
+      "query": {
+        "fields": [
+          "*",
+          "inputs.*"
+        ]
+      }
+    },
+    "resolve": "7864a7fd-b455-42ca-a4ed-4aa2a2fb7d16",
+    "reject": null,
+    "flow": "b900604f-d37c-4fd8-beac-1835ec35f8a1",
+    "date_created": "2024-05-16T22:35:32.376Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "cc363df6-942b-4958-aad0-3fa0f1c73a1c",
+    "name": "Generate Image",
+    "key": "generate_image",
+    "type": "directus-labs-ai-image-generation",
+    "position_x": 46,
+    "position_y": 19,
+    "options": {
+      "apiKey": "{{globals.open_ai_api_key}}",
+      "prompt": "{{generate_image_prompt}}",
+      "quality": "standard",
+      "size": "landscape"
+    },
+    "resolve": "5f7f28ee-cef0-462b-8804-394f4ce7936e",
+    "reject": null,
+    "flow": "1c79e17f-b591-421b-b00f-53b110e179c8",
+    "date_created": "2024-05-16T22:35:32.378Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "d83e8877-0901-4ab0-b45a-e7785e557dae",
+    "name": "Format Response",
+    "key": "format_response",
+    "type": "exec",
+    "position_x": 57,
+    "position_y": 1,
+    "options": {
+      "code": "function slugify(text) {\n    // Normalize Unicode characters to ASCII\n    text = text.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');\n    \n    // Convert to lowercase\n    text = text.toLowerCase();\n    \n    // Replace spaces and other non-alphanumeric characters with hyphens\n    text = text.replace(/\\s+/g, '-'); // Replace spaces with hyphens\n    text = text.replace(/[^a-z0-9-]/g, '-'); // Replace other non-alphanumeric characters with hyphens\n    \n    // Remove duplicate hyphens\n    text = text.replace(/-+/g, '-');\n    \n    // Trim leading and trailing hyphens\n    text = text.replace(/^-+|-+$/g, '');\n    \n    return text;\n}\n\nmodule.exports = function(data) {\n\tif(data.translate && typeof data.translate === 'string') {\n        return {\n        \t[data.$trigger.field]: data.$trigger.field === 'slug' ? slugify(data.translate) : data.translate\n    \t}\n    } else throw new Error('Error with translation')\n}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "f9411e3d-bb8c-41cb-b3aa-c50da4eddaea",
+    "date_created": "2024-05-16T22:35:32.380Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "e5c3882e-9890-4856-9473-9e34db8ef6ea",
+    "name": "AI Transcription",
+    "key": "transcription",
+    "type": "directus-labs-ai-transcription",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "apiKey": "{{globals.deepgram_api_key}}",
+      "url": "{{format_trigger.file_url}}",
+      "diarize": true,
+      "keywords": [],
+      "callback": null
+    },
+    "resolve": "8f17e185-3617-4961-9911-39321234a0f8",
+    "reject": null,
+    "flow": "9745bd85-6830-40bd-a4c2-55d5c301c186",
+    "date_created": "2024-05-16T22:35:32.382Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "e61b1303-03ca-4191-a6da-24213dc9f42b",
+    "name": "Format Ideas",
+    "key": "format_ideas",
+    "type": "exec",
+    "position_x": 48,
+    "position_y": 19,
+    "options": {
+      "code": "module.exports = function (data) {\n  try {\n    const ideaList = JSON.parse(data.generate_ideas);\n\n    if (!Array.isArray(ideaList.ideas)) {\n      throw new Error(\n        \"Response from OpenAI is missing ideas or is not an array\"\n      );\n    }\n\n    const addToEachIdea = {};\n\n    addToEachIdea.template = data.$trigger.body.template.key;\n    addToEachIdea.content_workflow = data.$trigger.body.keys[0];\n    addToEachIdea.seo_keywords = data.content_workflow.seo_keywords;\n\n    const ideas = ideaList.ideas.map((idea) => {\n      return {\n        ...addToEachIdea,\n\t    title: idea.idea,\n        outline: idea.outline,\n        rating: idea.rating,\n      };\n    });\n\n    return ideas;\n  } catch (error) {\n    throw new Error(error.message);\n  }\n};\n"
+    },
+    "resolve": "91e9e575-0e18-42ff-85b6-b4488c99b152",
+    "reject": null,
+    "flow": "e4efc0e1-cb1f-4e73-ad4a-f62dff00babc",
+    "date_created": "2024-05-16T22:35:32.385Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "e867f4f3-c0b7-45c5-94fc-d9608f0906cb",
+    "name": "Read Image Style",
+    "key": "image_style",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 19,
+    "options": {
+      "collection": "image_styles",
+      "key": [
+        "{{$trigger.body.image_style.key}}"
+      ]
+    },
+    "resolve": "bb839c62-dc62-465b-976f-8c5921667798",
+    "reject": null,
+    "flow": "1c79e17f-b591-421b-b00f-53b110e179c8",
+    "date_created": "2024-05-16T22:35:32.388Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "f6126cf7-6e1b-4874-9341-169c1aab29a5",
+    "name": "Get Post",
+    "key": "get_post",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "key": "{{$trigger.body.keys}}",
+      "collection": "posts",
+      "query": {
+        "fields": [
+          "*",
+          "translations.*"
+        ],
+        "deep": {
+          "translations": {
+            "_filter": {
+              "_or": [
+                {
+                  "languages_code": {
+                    "_eq": "{{$trigger.body.language_to.key}}"
+                  }
+                },
+                {
+                  "languages_code": {
+                    "_eq": "{{$trigger.body.language_from.key}}"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "resolve": "b7e35b36-2e7c-40fe-b6ec-5b582bec7c84",
+    "reject": null,
+    "flow": "91fb672f-00b2-4a7f-9571-865baaf4d1e0",
+    "date_created": "2024-05-16T22:35:32.391Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  },
+  {
+    "id": "f7349a30-d6fe-42fb-aa81-71817ae27969",
+    "name": "Generate Social Posts",
+    "key": "generate_social_posts",
+    "type": "directus-labs-ai-writer-operation",
+    "position_x": 48,
+    "position_y": 1,
+    "options": {
+      "apiKey": "{{globals.open_ai_api_key}}",
+      "model": "gpt-4o",
+      "promptKey": "custom",
+      "system": "{{ template.prompt }}\n\n## Channels\n{{ $trigger.body.channels }}\n\n## Additional Requirements:\n- Output the posts in a JSON object that matches the sample format below.\n- Rate each post on a scale of 1-5 for estimated engagement level based on your own judgement and knowledge of which posts do best on each platform / channel.\n{\n    \"posts\": [\n        {\n            \"channel\": \"x\",\n            \"content\": \"Content of the social media post. The outline needs to be in plain text format\",\n            \"rating\": 3\n        },\n         {\n            \"channel\": \"linkedin\",\n            \"content\": \"Content of the social media post. The outline needs to be in plain text format\",\n            \"rating\": 3\n        },\n    ]\n}",
+      "thread": null,
+      "text": "# Context\n\n## Tone of Voice\n{{ voice.prompt }}\n\n## Post Title\n{{ content_workflow.post_title }}\n\n## Post Content\n{{ content_workflow.post_content }}\n\n## SEO Keywords\n{{ content_workflow.seo_keywords }}\n\n## Social Post Template\n{{ template.title }}\n\nSamples of Template\n---\n{{ template.sample_one }}\n{{ template.sample_two }}\n{{ template.sample_three }}",
+      "json_mode": true
+    },
+    "resolve": "98487308-072c-4218-8c08-860c65854b98",
+    "reject": null,
+    "flow": "21da0057-8b53-4ebb-ad62-5402420374c4",
+    "date_created": "2024-05-16T22:35:32.394Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c"
+  }
+]

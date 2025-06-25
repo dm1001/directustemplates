@@ -1,0 +1,263 @@
+[
+  {
+    "id": "1559f1f4-136c-4cc3-b9ce-4873e7bb6e5c",
+    "name": "[Checklist] Calculate Checklist Completion",
+    "icon": "calculate",
+    "color": null,
+    "description": "Calculates the completion percentage for a given checklist based on the number of tasks completed.",
+    "status": "active",
+    "trigger": "operation",
+    "accountability": "all",
+    "options": {},
+    "operation": "104affdd-9a4a-4fab-8637-81c4a086bc91",
+    "date_created": "2024-04-24T18:13:02.293Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "operations": null
+  },
+  {
+    "id": "2d00c079-6928-41f8-804d-5f374bcbef44",
+    "name": "Send Task for Review",
+    "icon": "mark_email_unread",
+    "color": null,
+    "description": "Sends an email to checklist approver for the task(s) to approve a task as completed.",
+    "status": "active",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "collections": [
+        "checklist_tasks"
+      ],
+      "async": true,
+      "requireConfirmation": true,
+      "confirmationDescription": "Send Task for Review",
+      "fields": [
+        {
+          "field": "notes",
+          "name": "Notes",
+          "type": "text",
+          "meta": {
+            "interface": "input-multiline",
+            "note": "Add notes for the approver so they can mark this task completed.",
+            "width": "full",
+            "required": false,
+            "options": {
+              "placeholder": "Enter any notes about these tasks here"
+            }
+          }
+        }
+      ]
+    },
+    "operation": "7704a4e1-7647-4c1d-9344-d3a173d38dad",
+    "date_created": "2024-05-03T16:32:30.856Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "operations": null
+  },
+  {
+    "id": "40235771-cc75-4770-8c55-ec12b86c9036",
+    "name": "[Checklist] On Task Updates",
+    "icon": "add_task",
+    "color": null,
+    "description": "This flow updates the completion time if tasks are completed and triggers a completion calculation for the checklist attached to the task.",
+    "status": "active",
+    "trigger": "event",
+    "accountability": "all",
+    "options": {
+      "type": "action",
+      "scope": [
+        "items.update",
+        "items.create"
+      ],
+      "collections": [
+        "checklist_tasks"
+      ]
+    },
+    "operation": "31eddcf5-e70c-4d1a-83ee-6502374ce780",
+    "date_created": "2024-04-24T15:22:47.746Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "operations": null
+  },
+  {
+    "id": "5f16e208-34cf-40fa-b860-40917e13c08a",
+    "name": "Run Checklist",
+    "icon": "call_missed_outgoing",
+    "color": null,
+    "description": "Manually triggered flow to create a new checklist instance from a selected template.",
+    "status": "active",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "collections": [
+        "checklist_templates",
+        "checklists"
+      ],
+      "requireConfirmation": true,
+      "fields": [
+        {
+          "field": "checklist_name",
+          "type": "string",
+          "name": "Checklist Name",
+          "meta": {
+            "interface": "input",
+            "note": "What would you like to name this checklist?",
+            "width": "full",
+            "required": true
+          }
+        },
+        {
+          "field": "assigned_to",
+          "type": "json",
+          "name": "Assigned To",
+          "meta": {
+            "interface": "collection-item-dropdown",
+            "width": "half",
+            "required": false,
+            "options": {
+              "selectedCollection": "directus_users",
+              "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+            },
+            "note": "Who is the owner of this checklist?"
+          }
+        },
+        {
+          "field": "approver",
+          "type": "json",
+          "name": "Approver",
+          "meta": {
+            "interface": "collection-item-dropdown",
+            "width": "half",
+            "required": false,
+            "options": {
+              "selectedCollection": "directus_users",
+              "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+            },
+            "note": "Who has final approval on this checklist?"
+          }
+        },
+        {
+          "field": "checklist_template",
+          "type": "json",
+          "name": "Checklist Template",
+          "meta": {
+            "interface": "collection-item-dropdown",
+            "note": "Which template would you like to use?",
+            "width": "full",
+            "required": true,
+            "options": {
+              "selectedCollection": "checklist_templates",
+              "template": "{{template_name}}",
+              "filter": {
+                "_and": [
+                  {
+                    "status": {
+                      "_eq": "active"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "field": "start_date",
+          "type": "timestamp",
+          "name": "Start Date",
+          "meta": {
+            "interface": "datetime",
+            "note": "When will this checklist start, if not set - it will default to today's date.",
+            "width": "half",
+            "required": false,
+            "options": {
+              "use24": false
+            }
+          }
+        },
+        {
+          "field": "due_date",
+          "type": "timestamp",
+          "name": "Due Date",
+          "meta": {
+            "interface": "datetime",
+            "note": "What date does this checklist need to be completed by?",
+            "width": "half",
+            "options": {
+              "use24": false
+            },
+            "required": false
+          }
+        }
+      ],
+      "requireSelection": false,
+      "confirmationDescription": "Run a Checklist"
+    },
+    "operation": "d526ee46-ef72-4b7c-820a-63624ce5e6d8",
+    "date_created": "2024-04-24T15:22:01.372Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "operations": null
+  },
+  {
+    "id": "adf9a331-58df-4b7c-8e19-dbda146aef7d",
+    "name": "[Checklist] Render Template",
+    "icon": "display_external_input",
+    "color": null,
+    "description": "Renders a simple template using template literals.",
+    "status": "active",
+    "trigger": "operation",
+    "accountability": "all",
+    "options": {
+      "return": "$last"
+    },
+    "operation": "321e9690-d324-46ee-8ff3-446310c1c494",
+    "date_created": "2024-05-02T12:24:12.653Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "operations": null
+  },
+  {
+    "id": "b407ee9d-ac49-4eea-b50c-36fed355c3bc",
+    "name": "[Checklist] Recurring Checklists",
+    "icon": "schedule",
+    "color": null,
+    "description": "Scheduled (CRON) workflow to look for and create recurring checklists. Triggers everyday at 7am.",
+    "status": "active",
+    "trigger": "schedule",
+    "accountability": "all",
+    "options": {
+      "cron": "0 * * * *"
+    },
+    "operation": "7a1de3e0-dbc4-4bdf-ac37-cc167f1b3e7e",
+    "date_created": "2024-05-01T21:00:43.269Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "operations": null
+  },
+  {
+    "id": "c1506f1f-3244-4f86-867a-f23ef2a6c449",
+    "name": "[Checklist] Create Checklist",
+    "icon": "create_new_folder",
+    "color": null,
+    "description": "Core logic for creating checklists – triggered by either manual flow or scheduled flow.",
+    "status": "active",
+    "trigger": "operation",
+    "accountability": "all",
+    "options": {},
+    "operation": "7c4ebe90-7c87-45ec-81f7-44f388161406",
+    "date_created": "2024-05-01T21:03:48.827Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "operations": null
+  },
+  {
+    "id": "dd8e5b01-e58b-41ea-bf47-8c95d1adfe25",
+    "name": "[Checklist] Weekly Summary Report",
+    "icon": "attach_email",
+    "color": null,
+    "description": "Sends automated weekly report with tasks completed.",
+    "status": "active",
+    "trigger": "schedule",
+    "accountability": "all",
+    "options": {
+      "cron": "0 12 * * FRI"
+    },
+    "operation": "42b69010-e3c7-43a5-88c2-dfe7b55760de",
+    "date_created": "2024-05-02T20:48:45.604Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "operations": null
+  }
+]

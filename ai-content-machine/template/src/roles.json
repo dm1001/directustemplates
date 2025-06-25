@@ -1,0 +1,22 @@
+[
+  {
+    "id": "25d143cc-e370-458c-b01a-eb831e9618fe",
+    "name": "Content Editors",
+    "icon": "supervised_user_circle",
+    "description": "Role for non-admin team members who will be creating and editing content.",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "372c4592-8b84-4a13-be03-e9a6adefa687",
+    "name": "Administrator",
+    "icon": "verified",
+    "description": "$t:admin_description",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  }
+]

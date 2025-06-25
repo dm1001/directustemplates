@@ -1,0 +1,22 @@
+[
+  {
+    "id": "593ffe6c-3494-417d-9ab7-be1a7262fcc1",
+    "name": "Private",
+    "parent": "878c5b00-f8d9-4706-b084-3731082663e7"
+  },
+  {
+    "id": "878c5b00-f8d9-4706-b084-3731082663e7",
+    "name": "LMS",
+    "parent": null
+  },
+  {
+    "id": "a87f38f4-41b7-4f3f-a9c2-e2f00639f09e",
+    "name": "Uploads",
+    "parent": "878c5b00-f8d9-4706-b084-3731082663e7"
+  },
+  {
+    "id": "c249f390-51b0-4abd-83c1-6db7d5bde30b",
+    "name": "Courses",
+    "parent": "878c5b00-f8d9-4706-b084-3731082663e7"
+  }
+]

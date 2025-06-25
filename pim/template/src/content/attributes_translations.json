@@ -1,0 +1,191 @@
+[
+  {
+    "id": "006a8252-ef2e-4d4f-9a6e-40b69c554ca6",
+    "attributes_id": null,
+    "languages_code": "de-DE",
+    "name": "Länge Schiene (mm)",
+    "description": null
+  },
+  {
+    "id": "2a9df22d-1c57-4d4d-abd1-217fdcbf50a0",
+    "attributes_id": null,
+    "languages_code": "de-DE",
+    "name": "Verstellmechanismus",
+    "description": null
+  },
+  {
+    "id": "3d2eed35-6172-441f-9ddf-22f8764bea59",
+    "attributes_id": null,
+    "languages_code": null,
+    "name": "Storage Box",
+    "description": null
+  },
+  {
+    "id": "4d119182-eb5f-429f-aedd-5e6c1ab8632b",
+    "attributes_id": "c9ffee8b-21e3-4a91-a0a4-6e77d4359ec2",
+    "languages_code": "en-US",
+    "name": "Compare At Price",
+    "description": "Price comparison to other competing shops."
+  },
+  {
+    "id": "4e9ac7b3-1a35-4d4f-98f9-344b1a052f04",
+    "attributes_id": null,
+    "languages_code": "de-DE",
+    "name": "Breite der Bissrinne (mm)",
+    "description": null
+  },
+  {
+    "id": "5123b55b-fa2f-4b6e-b675-63d99d6863be",
+    "attributes_id": "ae0a232c-0f6d-46ce-84ce-89db79b1ce82",
+    "languages_code": "de-DE",
+    "name": "Erfordert Versand",
+    "description": "Ist für dieses Produkt ein Versand erforderlich?"
+  },
+  {
+    "id": "52bdfe43-5088-4291-88f3-70e0dd627f3f",
+    "attributes_id": null,
+    "languages_code": null,
+    "name": "Google Product Category",
+    "description": null
+  },
+  {
+    "id": "55bd0cf7-b43b-4c5e-81a7-47538fee21e4",
+    "attributes_id": null,
+    "languages_code": null,
+    "name": "Spare Parts Available",
+    "description": null
+  },
+  {
+    "id": "5963fab1-478f-4d9a-a4f0-5c4cbca99998",
+    "attributes_id": null,
+    "languages_code": "de-DE",
+    "name": "Ersatzteile erhältlich",
+    "description": null
+  },
+  {
+    "id": "6b42c803-18ef-4f0f-a57c-e658507ef1c3",
+    "attributes_id": "c9ffee8b-21e3-4a91-a0a4-6e77d4359ec2",
+    "languages_code": "de-DE",
+    "name": "Zum Preis vergleichen",
+    "description": "Preisvergleich mit anderen Konkurrenzshops."
+  },
+  {
+    "id": "775174ed-37e7-479b-808f-eaa269bc426e",
+    "attributes_id": null,
+    "languages_code": null,
+    "name": "Width of bite channel (mm)",
+    "description": null
+  },
+  {
+    "id": "7ce2f4ea-3997-4243-9b5e-9cbcde024ac1",
+    "attributes_id": null,
+    "languages_code": "de-DE",
+    "name": "Aufbewahrungsbox",
+    "description": null
+  },
+  {
+    "id": "81d0a158-247e-4513-9a50-147e6319917e",
+    "attributes_id": null,
+    "languages_code": "de-DE",
+    "name": "Höhe Schiene / Höhe Materialaufbau",
+    "description": null
+  },
+  {
+    "id": "82b66c36-2ec3-4395-aadf-d78abbe2db88",
+    "attributes_id": null,
+    "languages_code": null,
+    "name": "Mouth / Jaw Size",
+    "description": "Standard measurement for jaw size."
+  },
+  {
+    "id": "8c5f41df-7300-4f45-8f44-320920818db0",
+    "attributes_id": null,
+    "languages_code": null,
+    "name": "Advancement Levels",
+    "description": null
+  },
+  {
+    "id": "9385c495-d448-4a5c-bd67-2c6ffcbb6df3",
+    "attributes_id": null,
+    "languages_code": null,
+    "name": "Adjustment Mechanism",
+    "description": null
+  },
+  {
+    "id": "b11741b5-035b-4324-a82b-0167a7b8d26f",
+    "attributes_id": null,
+    "languages_code": null,
+    "name": "Rail Height / Material Height (mm)",
+    "description": null
+  },
+  {
+    "id": "b88e23ee-3a22-4f04-bcb8-2ddcf6e98783",
+    "attributes_id": null,
+    "languages_code": null,
+    "name": "Allows Mouth Breathing",
+    "description": null
+  },
+  {
+    "id": "c6b27daf-8beb-4934-ae3e-827bed48f44d",
+    "attributes_id": null,
+    "languages_code": null,
+    "name": "Rail Length (mm)",
+    "description": null
+  },
+  {
+    "id": "c7e6d8ad-d4e1-48ec-8942-759659a898bf",
+    "attributes_id": null,
+    "languages_code": null,
+    "name": "Rail Width (mm)",
+    "description": null
+  },
+  {
+    "id": "cd48dcec-0c40-436f-bade-135c8bcc8ae6",
+    "attributes_id": null,
+    "languages_code": null,
+    "name": "Comfort",
+    "description": null
+  },
+  {
+    "id": "ce7a560a-1263-492e-9cd0-392235dc8cbd",
+    "attributes_id": null,
+    "languages_code": null,
+    "name": "Width of the Bite Groove (mm)",
+    "description": null
+  },
+  {
+    "id": "e15b86fe-d4a6-49ab-99d4-379df8fa593d",
+    "attributes_id": "ae0a232c-0f6d-46ce-84ce-89db79b1ce82",
+    "languages_code": "en-US",
+    "name": "Requires Shipping",
+    "description": "Does this product require shipping?"
+  },
+  {
+    "id": "e7282e97-6c24-46d5-9a79-fdd20fe72968",
+    "attributes_id": null,
+    "languages_code": "de-DE",
+    "name": "Erlaubt Mundatmung",
+    "description": null
+  },
+  {
+    "id": "ecdea4bc-09f1-4298-91e7-4a6457db5354",
+    "attributes_id": null,
+    "languages_code": "de-DE",
+    "name": "Google Produktkategorie",
+    "description": null
+  },
+  {
+    "id": "eeae2dc5-55be-4128-af48-9e3c16b6a547",
+    "attributes_id": null,
+    "languages_code": "de-DE",
+    "name": "Breite Schiene (mm)",
+    "description": null
+  },
+  {
+    "id": "f2b9d423-3012-45f6-b0e0-5719fec92981",
+    "attributes_id": null,
+    "languages_code": "de-DE",
+    "name": "Vorschubstufen",
+    "description": null
+  }
+]

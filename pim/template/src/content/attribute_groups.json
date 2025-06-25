@@ -1,0 +1,33 @@
+[
+  {
+    "id": "ada4e1e3-754c-49ef-b747-dfda4180720d",
+    "sort": null,
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_created": "2024-02-06T12:39:33.773Z",
+    "user_updated": null,
+    "date_updated": null,
+    "key": "shipping",
+    "translations": [
+      "34566b5b-6720-4bde-9606-9a0a5d91806a",
+      "940f6321-1c29-4fbb-a197-f53bb5802fb0"
+    ],
+    "attributes": [
+      "9d4a4514-dba2-4f9c-bd94-f188cb3b4425"
+    ]
+  },
+  {
+    "id": "d87664ca-886b-4190-84ec-c1810e1d9454",
+    "sort": null,
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_created": "2024-02-06T12:40:12.977Z",
+    "user_updated": null,
+    "date_updated": null,
+    "key": "amazon",
+    "translations": [
+      "2ad9721d-35ad-42b2-9c7e-34b9b3cfdd9e"
+    ],
+    "attributes": [
+      "77957d08-2408-47e9-8e66-71b6802deb7e"
+    ]
+  }
+]

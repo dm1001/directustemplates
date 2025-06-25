@@ -1,0 +1,11 @@
+{
+  "author": "",
+  "description": "",
+  "directusTemplate": true,
+  "files": [
+    "src"
+  ],
+  "name": "directus-template-status-page",
+  "templateName": "Status Page",
+  "version": "1.0.0"
+}

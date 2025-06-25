@@ -1,0 +1,8 @@
+{
+  "id": "c5073e0c-1ecc-4560-a546-bcd28d89e0dc",
+  "open_ai_api_key": "openaiapikey",
+  "deepgram_api_key": "deepgramapikey",
+  "deep_l_api_key": "deeplapikey",
+  "directus_base_url": "http://0.0.0.0:8055",
+  "generated_image_folder": "090a3dff-1eac-4d06-9d34-ce54e54e3bb7"
+}

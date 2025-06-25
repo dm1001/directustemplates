@@ -1,0 +1,30 @@
+[
+  {
+    "id": "8033ed7a-2aff-4fd1-aa87-59f2840b1e7b",
+    "role": "28c4e8de-f9f0-4025-ad24-d8bb9a0b0007",
+    "user": null,
+    "policy": "28c4e8de-f9f0-4025-ad24-d8bb9a0b0007",
+    "sort": 1
+  },
+  {
+    "id": "4b589625-de95-4889-a975-bb44ffd4da9c",
+    "role": "a181c69e-41e3-4781-87ac-eda913aa401e",
+    "user": null,
+    "policy": "a181c69e-41e3-4781-87ac-eda913aa401e",
+    "sort": 1
+  },
+  {
+    "id": "e0ce6872-0c44-4339-be91-6865b17e6e5b",
+    "role": "1414514e-df08-4302-b75b-99fcf3a1dcf1",
+    "user": null,
+    "policy": "1414514e-df08-4302-b75b-99fcf3a1dcf1",
+    "sort": 1
+  },
+  {
+    "id": "56c42778-3d74-4f0d-9132-104d5e0f2818",
+    "role": null,
+    "user": null,
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17",
+    "sort": 1
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1525588a-1ff2-4d2c-8edd-cd19c7d4a412",
+    "status": "resolved",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_created": "2023-12-31T00:52:33.557Z",
+    "user_updated": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_updated": "2023-12-20T00:54:07.186Z",
+    "name": "Website Glitches",
+    "postmortem": null,
+    "impact": "minor",
+    "scheduled_for": null,
+    "scheduled_until": null,
+    "is_maintenance": false,
+    "updates": [
+      "010c8179-af83-4376-86df-786ad2815a13",
+      "11e5954d-5656-4a3f-96e0-750c34c19c64",
+      "9d2f200f-ee72-442b-8abc-67a437263d3e"
+    ]
+  },
+  {
+    "id": "2fcfbdee-add1-4cbb-8eb8-919670a2ac97",
+    "status": "scheduled",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_created": "2023-12-31T00:50:09.101Z",
+    "user_updated": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_updated": "2023-12-20T00:53:36.200Z",
+    "name": "Scheduled Maintenance",
+    "postmortem": null,
+    "impact": "none",
+    "scheduled_for": "2023-12-25T17:00:00.000Z",
+    "scheduled_until": "2023-12-26T17:00:00.000Z",
+    "is_maintenance": true,
+    "updates": [
+      "6e95c1bd-6555-4fc5-86da-1cb1a749890c"
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "20ed105a-dbc9-4a50-abd0-6539c08adec4",
+    "value": "no",
+    "languages_code": null
+  },
+  {
+    "id": "4ac20730-9831-42d4-a12d-33700be2b991",
+    "value": "yes",
+    "languages_code": null
+  },
+  {
+    "id": "53b2c3db-4d44-42f7-91b1-b903ce49e7b3",
+    "value": "nein",
+    "languages_code": "de-DE"
+  },
+  {
+    "id": "bd7b84b1-1c47-48e5-a851-651639fadf41",
+    "value": "ja",
+    "languages_code": "de-DE"
+  }
+]

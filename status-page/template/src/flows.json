@@ -1,0 +1,95 @@
+[
+  {
+    "id": "02e99b1e-c46c-4489-89fb-d44821739fd3",
+    "name": "On New Incident Update",
+    "icon": "fiber_new",
+    "color": "#2ECDA7",
+    "description": "When new incident updates are posted, this flow updates the incident status and then triggers the Notify All Subscribers flow.",
+    "status": "active",
+    "trigger": "event",
+    "accountability": "all",
+    "options": {
+      "type": "action",
+      "scope": [
+        "items.create"
+      ],
+      "collections": [
+        "status_incidents_updates"
+      ]
+    },
+    "operation": "ac94b080-bf02-4141-9c41-e421a9f5ada5",
+    "date_created": "2023-12-18T22:36:09.242Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "operations": null
+  },
+  {
+    "id": "3a0b9ec6-f522-4374-ba96-510d4ede01b1",
+    "name": "Notify Single Subscriber",
+    "icon": "send",
+    "color": "#18222F",
+    "description": "Flow that sends email, SMS, or webhook to an individual subscriber whenever triggered.",
+    "status": "active",
+    "trigger": "operation",
+    "accountability": "all",
+    "options": {},
+    "operation": "2eb2fa90-34ec-405b-9301-5b1165598afa",
+    "date_created": "2023-12-18T23:31:03.285Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "operations": null
+  },
+  {
+    "id": "49ed6d6d-0e44-46b5-bb9d-d694c1d1b2e8",
+    "name": "Notify All Subscribers",
+    "icon": "format_text_overflow",
+    "color": "#18222F",
+    "description": "Workflow for getting subscribers, composing messages, and triggering the flow to send individual notifications.",
+    "status": "active",
+    "trigger": "operation",
+    "accountability": "all",
+    "options": {},
+    "operation": "f51b713a-b30a-44b4-b309-374c37557b14",
+    "date_created": "2023-12-18T23:16:30.669Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "operations": null
+  },
+  {
+    "id": "526b3120-4445-4a18-a94d-c4ed61737cd9",
+    "name": "On New Incident Update > Services Affected",
+    "icon": "fiber_new",
+    "color": "#2ECDA7",
+    "description": "When new updates are posted to an incident, this flow updates the underlying services affected by the incident.",
+    "status": "active",
+    "trigger": "event",
+    "accountability": "all",
+    "options": {
+      "type": "action",
+      "scope": [
+        "items.create"
+      ],
+      "collections": [
+        "status_incidents_updates_services"
+      ]
+    },
+    "operation": "99a074c2-588c-4468-b242-67c422df00e3",
+    "date_created": "2023-12-18T22:40:22.489Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "operations": null
+  },
+  {
+    "id": "b4198846-ea24-417a-a8f9-a9721d61e429",
+    "name": "Test Webhook",
+    "icon": "labs",
+    "color": "#A2B5CD",
+    "description": "Just a lowly little flow used in testing webhook requests sent from the notification flows.",
+    "status": "inactive",
+    "trigger": "webhook",
+    "accountability": "all",
+    "options": {
+      "method": "POST"
+    },
+    "operation": null,
+    "date_created": "2023-12-18T23:23:32.748Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "operations": null
+  }
+]

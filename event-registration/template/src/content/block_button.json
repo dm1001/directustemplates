@@ -1,0 +1,80 @@
+[
+  {
+    "id": "1e0d7b9d-5d36-42e8-a4f0-c6a2c95dc873",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-11T12:38:30.436Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-22T15:49:23.604Z",
+    "button_group": "bcbe0f7c-ff58-4d3a-b6a0-f99496173204",
+    "sort": 1,
+    "label": "Register Now",
+    "variant": "solid",
+    "url": "/tickets",
+    "open_in_new_window": false
+  },
+  {
+    "id": "261c6d25-daee-44a0-95a4-1e07e317fed8",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-12T15:59:44.240Z",
+    "user_updated": null,
+    "date_updated": null,
+    "button_group": "b78fdbe9-43d3-4e5b-9564-473c8df9259e",
+    "sort": 2,
+    "label": "Get a Demo",
+    "variant": "link",
+    "url": "https://directus.io/demo",
+    "open_in_new_window": true
+  },
+  {
+    "id": "2622481c-3872-433b-a199-c35f6267d6fc",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-05-21T17:44:28.729Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-12T15:21:19.869Z",
+    "button_group": "2fd9fb30-e989-43a6-9938-18b6d131992c",
+    "sort": 1,
+    "label": "Claim Your Seat",
+    "variant": "solid",
+    "url": "/tickets",
+    "open_in_new_window": false
+  },
+  {
+    "id": "9aa9ea6b-dcbf-43ef-a1b3-b5ac30e4df22",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-12T15:59:44.236Z",
+    "user_updated": null,
+    "date_updated": null,
+    "button_group": "b78fdbe9-43d3-4e5b-9564-473c8df9259e",
+    "sort": 1,
+    "label": "Register",
+    "variant": "solid",
+    "url": "/tickets",
+    "open_in_new_window": false
+  },
+  {
+    "id": "9b860662-9ad3-43ed-8808-581eda16a316",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-12T15:23:28.367Z",
+    "user_updated": null,
+    "date_updated": null,
+    "button_group": "2fd9fb30-e989-43a6-9938-18b6d131992c",
+    "sort": 2,
+    "label": "Get this Starter Kit",
+    "variant": "outline",
+    "url": "https://directus.io/plus?ref=event_registration_template_hero",
+    "open_in_new_window": true
+  },
+  {
+    "id": "d4130a41-75f0-4d83-aeed-c9cd97c0bb68",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-05-28T02:56:32.330Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-11T11:33:30.688Z",
+    "button_group": "d64d8c0d-2be7-4ad2-b7da-34f09b5bde9e",
+    "sort": 1,
+    "label": "Claim Your Mission Ticket",
+    "variant": "solid",
+    "url": "/tickets",
+    "open_in_new_window": false
+  }
+]

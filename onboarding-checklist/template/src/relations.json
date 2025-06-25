@@ -1,0 +1,626 @@
+[
+  {
+    "collection": "checklists",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklists_user_created_foreign",
+      "table": "checklists",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "checklists",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklists_user_updated_foreign",
+      "table": "checklists",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "checklists",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklist_tasks_user_created_foreign",
+      "table": "checklist_tasks",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "checklist_tasks",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklist_tasks_user_updated_foreign",
+      "table": "checklist_tasks",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "checklist_tasks",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklist_templates_user_updated_foreign",
+      "table": "checklist_templates",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "checklist_templates",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklist_templates_user_created_foreign",
+      "table": "checklist_templates",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "checklist_templates",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklist_template_tasks_user_created_foreign",
+      "table": "checklist_template_tasks",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "checklist_template_tasks",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklist_template_tasks_user_updated_foreign",
+      "table": "checklist_template_tasks",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "checklist_template_tasks",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "checklist_template",
+    "related_collection": "checklist_templates",
+    "schema": {
+      "constraint_name": "checklist_template_tasks_checklist_template_foreign",
+      "table": "checklist_template_tasks",
+      "column": "checklist_template",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "checklist_templates",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "checklist_template_tasks",
+      "many_field": "checklist_template",
+      "one_collection": "checklist_templates",
+      "one_field": "tasks",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": "sort",
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_template_tasks_files",
+    "field": "directus_files_id",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "checklist_template_tasks_files_directus_files_id_foreign",
+      "table": "checklist_template_tasks_files",
+      "column": "directus_files_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "checklist_template_tasks_files",
+      "many_field": "directus_files_id",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "checklist_template_tasks_id",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_template_tasks_files",
+    "field": "checklist_template_tasks_id",
+    "related_collection": "checklist_template_tasks",
+    "schema": {
+      "constraint_name": "checklist_template_tasks_files_checklist_t__77aa83b8_foreign",
+      "table": "checklist_template_tasks_files",
+      "column": "checklist_template_tasks_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "checklist_template_tasks",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "checklist_template_tasks_files",
+      "many_field": "checklist_template_tasks_id",
+      "one_collection": "checklist_template_tasks",
+      "one_field": "files",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "directus_files_id",
+      "sort_field": "sort",
+      "one_deselect_action": "delete"
+    }
+  },
+  {
+    "collection": "checklist_template_tasks",
+    "field": "default_assigned_to",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklist_template_tasks_default_assigned_to_foreign",
+      "table": "checklist_template_tasks",
+      "column": "default_assigned_to",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "checklist_template_tasks",
+      "many_field": "default_assigned_to",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "assigned_to",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklists_assigned_to_foreign",
+      "table": "checklists",
+      "column": "assigned_to",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "checklists",
+      "many_field": "assigned_to",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "default_approver",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklist_templates_default_approver_foreign",
+      "table": "checklist_templates",
+      "column": "default_approver",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "checklist_templates",
+      "many_field": "default_approver",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_templates",
+    "field": "default_assigned_to",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklist_templates_default_assigned_to_foreign",
+      "table": "checklist_templates",
+      "column": "default_assigned_to",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "checklist_templates",
+      "many_field": "default_assigned_to",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "approver",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklists_approver_foreign",
+      "table": "checklists",
+      "column": "approver",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "checklists",
+      "many_field": "approver",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklists",
+    "field": "checklist_template",
+    "related_collection": "checklist_templates",
+    "schema": {
+      "constraint_name": "checklists_checklist_template_foreign",
+      "table": "checklists",
+      "column": "checklist_template",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "checklist_templates",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "checklists",
+      "many_field": "checklist_template",
+      "one_collection": "checklist_templates",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "checklist_template_task",
+    "related_collection": "checklist_template_tasks",
+    "schema": {
+      "constraint_name": "checklist_tasks_checklist_template_task_foreign",
+      "table": "checklist_tasks",
+      "column": "checklist_template_task",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "checklist_template_tasks",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "checklist_tasks",
+      "many_field": "checklist_template_task",
+      "one_collection": "checklist_template_tasks",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_tasks_files",
+    "field": "directus_files_id",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "checklist_tasks_files_directus_files_id_foreign",
+      "table": "checklist_tasks_files",
+      "column": "directus_files_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "checklist_tasks_files",
+      "many_field": "directus_files_id",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "checklist_tasks_id",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_tasks_files",
+    "field": "checklist_tasks_id",
+    "related_collection": "checklist_tasks",
+    "schema": {
+      "constraint_name": "checklist_tasks_files_checklist_tasks_id_foreign",
+      "table": "checklist_tasks_files",
+      "column": "checklist_tasks_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "checklist_tasks",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "checklist_tasks_files",
+      "many_field": "checklist_tasks_id",
+      "one_collection": "checklist_tasks",
+      "one_field": "files",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "directus_files_id",
+      "sort_field": "sort",
+      "one_deselect_action": "delete"
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "checklist",
+    "related_collection": "checklists",
+    "schema": {
+      "constraint_name": "checklist_tasks_checklist_foreign",
+      "table": "checklist_tasks",
+      "column": "checklist",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "checklists",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "checklist_tasks",
+      "many_field": "checklist",
+      "one_collection": "checklists",
+      "one_field": "tasks",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_tasks",
+    "field": "assigned_to",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklist_tasks_assigned_to_foreign",
+      "table": "checklist_tasks",
+      "column": "assigned_to",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "checklist_tasks",
+      "many_field": "assigned_to",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_message_templates",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklist_message_templates_user_created_foreign",
+      "table": "checklist_message_templates",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "checklist_message_templates",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "checklist_message_templates",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "checklist_message_templates_user_updated_foreign",
+      "table": "checklist_message_templates",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "checklist_message_templates",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  }
+]

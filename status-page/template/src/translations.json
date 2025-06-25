@@ -1,0 +1,110 @@
+[
+  {
+    "id": "0f226e7e-ba86-4e2a-8256-e295626c9654",
+    "language": "en-US",
+    "key": "webhook",
+    "value": "Webhook"
+  },
+  {
+    "id": "18c56f23-d2da-479f-81f7-2f88cb803ac3",
+    "language": "en-US",
+    "key": "new",
+    "value": "New"
+  },
+  {
+    "id": "1ad5b071-c878-41cf-a7aa-d900c0bf1da5",
+    "language": "en-US",
+    "key": "identified",
+    "value": "Identified"
+  },
+  {
+    "id": "2bddd99c-2cb9-4834-af10-eb34805bd5da",
+    "language": "en-US",
+    "key": "major_outage",
+    "value": "Major Outage"
+  },
+  {
+    "id": "3727707c-624f-4c38-82e9-27a8b1e195cf",
+    "language": "en-US",
+    "key": "resolved",
+    "value": "Resolved"
+  },
+  {
+    "id": "44fbb79c-706d-4d62-9bb4-6a211f443e80",
+    "language": "en-US",
+    "key": "investigating",
+    "value": "Investigating"
+  },
+  {
+    "id": "65a74935-10a4-4691-90fa-f152a9fd233b",
+    "language": "en-US",
+    "key": "operational",
+    "value": "Operational"
+  },
+  {
+    "id": "6c0ee965-e3e3-490c-b542-78a67fc0a12a",
+    "language": "en-US",
+    "key": "in_progress",
+    "value": "In Progress"
+  },
+  {
+    "id": "72d540e9-749d-484c-bc4c-33417fddffa7",
+    "language": "en-US",
+    "key": "verifying",
+    "value": "Verifying"
+  },
+  {
+    "id": "86a59dd8-7b04-48ed-82a7-85097e378232",
+    "language": "en-US",
+    "key": "partial_outage",
+    "value": "Partial Outage"
+  },
+  {
+    "id": "89e9d29d-e431-42a5-aff2-e86a85f4c5ea",
+    "language": "en-US",
+    "key": "degraded_performance",
+    "value": "Degraded Performance"
+  },
+  {
+    "id": "95575a42-6c18-4d12-9b16-bbaa2bcf0d30",
+    "language": "en-US",
+    "key": "under_maintenance",
+    "value": "Under Maintenance"
+  },
+  {
+    "id": "a46899a0-898e-4b7c-bc64-4cb7cbebb3e1",
+    "language": "en-US",
+    "key": "monitoring",
+    "value": "Monitoring"
+  },
+  {
+    "id": "c109c9d9-d6ee-452d-a7e4-f822b58d3753",
+    "language": "en-US",
+    "key": "under_review",
+    "value": "Under Review"
+  },
+  {
+    "id": "e238f8b1-d0ec-47eb-83fb-bce3dfee26c4",
+    "language": "en-US",
+    "key": "scheduled",
+    "value": "Scheduled"
+  },
+  {
+    "id": "e3a2b7c4-f999-4552-9aac-f7f543696ff2",
+    "language": "en-US",
+    "key": "sms",
+    "value": "SMS"
+  },
+  {
+    "id": "eead4060-68c4-4792-a94c-cf40e62a7077",
+    "language": "en-US",
+    "key": "completed",
+    "value": "Completed"
+  },
+  {
+    "id": "fbc91671-e81b-4bb1-8e5f-121e18dc811f",
+    "language": "en-US",
+    "key": "closed",
+    "value": "Closed"
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "3da300c3-f983-4eb1-ae32-6ac4666f6f09",
+    "status": "published",
+    "sort": null,
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-11T14:57:03.811Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-21T23:27:26.869Z",
+    "start_at": "2024-07-04T16:00:00.000Z",
+    "session_title": "Secure Your Burrow: Cybersecurity Essentials",
+    "end_at": "2024-07-04T18:00:00.000Z",
+    "event_id": "c7e29494-0faa-469e-8966-b3458ada22cf",
+    "description": "<p>Understand the fundamental principles of cybersecurity and how to protect your software systems from potential threats.</p>",
+    "session_type": "workshop",
+    "location": "https://directus.io/tv/live",
+    "recording": null,
+    "slug": "secure-your-burrow-cybersecurity-essentials",
+    "speakers": [
+      "698d529f-4fa8-45e1-b3b4-228508301330"
+    ]
+  },
+  {
+    "id": "32d5feef-9d63-4e6f-b226-116c934ffaa7",
+    "status": "published",
+    "sort": null,
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-11T14:57:03.784Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-21T22:15:37.208Z",
+    "start_at": "2024-07-03T16:00:00.000Z",
+    "session_title": "Rapid Development with Rabbit Frameworks",
+    "end_at": "2024-07-03T18:00:00.000Z",
+    "event_id": "c7e29494-0faa-469e-8966-b3458ada22cf",
+    "description": "<p>Discover various rabbit-themed frameworks and tools that can speed up your development process and improve productivity.</p>",
+    "session_type": "demo",
+    "location": null,
+    "recording": "https://youtu.be/iraerOzeWQs",
+    "slug": "rapid-development-with-rabbit-frameworks",
+    "speakers": [
+      "e09eb1e6-934e-48ec-beb2-7580ad526734"
+    ]
+  },
+  {
+    "id": "ff8c36e7-4dda-44c9-8b10-4e4c1e54a0e5",
+    "status": "published",
+    "sort": null,
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-11T12:34:45.322Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-21T22:16:08.451Z",
+    "start_at": "2024-07-02T16:00:00.000Z",
+    "session_title": "Hopping into Microservices: Best Practices and Patterns",
+    "end_at": "2024-07-02T17:00:00.000Z",
+    "event_id": "c7e29494-0faa-469e-8966-b3458ada22cf",
+    "description": "<p>Explore the best practices and patterns for designing, developing, and deploying microservices in your applications.</p>",
+    "session_type": "talk",
+    "location": "https://directus.io/tv/live",
+    "recording": "https://youtu.be/GmMnPYVFKck?si=MTURDMW8ONKW8uMT",
+    "slug": "hopping-into-microservices-best-practices-and-patterns",
+    "speakers": [
+      "990f3aad-d55a-4647-8470-af168cc65eb6",
+      "6129b7c9-1add-4682-8cfd-efc2f6930993",
+      "34639c9b-8e82-4df0-8059-74ed220cb20e"
+    ]
+  }
+]

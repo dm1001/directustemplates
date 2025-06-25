@@ -1,0 +1,470 @@
+[
+  {
+    "collection": "streaming_episodes",
+    "field": "video_transcript_file",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "streaming_episodes_video_transcript_file_foreign",
+      "table": "streaming_episodes",
+      "column": "video_transcript_file",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "streaming_episodes",
+      "many_field": "video_transcript_file",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_episodes",
+    "field": "tile",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "episodes_tile_foreign",
+      "table": "streaming_episodes",
+      "column": "tile",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "streaming_episodes",
+      "many_field": "tile",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_episodes",
+    "field": "video_file",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "streaming_episodes_video_file_foreign",
+      "table": "streaming_episodes",
+      "column": "video_file",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "streaming_episodes",
+      "many_field": "video_file",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_people",
+    "field": "avatar",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "streaming_people_avatar_foreign",
+      "table": "streaming_people",
+      "column": "avatar",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "streaming_people",
+      "many_field": "avatar",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_shows",
+    "field": "tile",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "shows_tile_foreign",
+      "table": "streaming_shows",
+      "column": "tile",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "streaming_shows",
+      "many_field": "tile",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_shows",
+    "field": "logo",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "shows_logo_foreign",
+      "table": "streaming_shows",
+      "column": "logo",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "streaming_shows",
+      "many_field": "logo",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_shows",
+    "field": "cover",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "shows_cover_foreign",
+      "table": "streaming_shows",
+      "column": "cover",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "streaming_shows",
+      "many_field": "cover",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_ratings",
+    "field": "user_id",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "streaming_ratings_user_id_foreign",
+      "table": "streaming_ratings",
+      "column": "user_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "streaming_ratings",
+      "many_field": "user_id",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_sessions",
+    "field": "user_id",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "streaming_sessions_user_id_foreign",
+      "table": "streaming_sessions",
+      "column": "user_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "streaming_sessions",
+      "many_field": "user_id",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_people",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "streaming_people_user_created_foreign",
+      "table": "streaming_people",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "streaming_people",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_people",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "streaming_people_user_updated_foreign",
+      "table": "streaming_people",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "streaming_people",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_ratings",
+    "field": "show_id",
+    "related_collection": "streaming_shows",
+    "schema": {
+      "constraint_name": "streaming_ratings_show_id_foreign",
+      "table": "streaming_ratings",
+      "column": "show_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "streaming_shows",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "streaming_ratings",
+      "many_field": "show_id",
+      "one_collection": "streaming_shows",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_seasons",
+    "field": "show",
+    "related_collection": "streaming_shows",
+    "schema": {
+      "constraint_name": "seasons_show_foreign",
+      "table": "streaming_seasons",
+      "column": "show",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "streaming_shows",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "streaming_seasons",
+      "many_field": "show",
+      "one_collection": "streaming_shows",
+      "one_field": "seasons",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": "number",
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_episodes",
+    "field": "season",
+    "related_collection": "streaming_seasons",
+    "schema": {
+      "constraint_name": "episodes_season_foreign",
+      "table": "streaming_episodes",
+      "column": "season",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "streaming_seasons",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "streaming_episodes",
+      "many_field": "season",
+      "one_collection": "streaming_seasons",
+      "one_field": "episodes",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": "episode_number",
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_episodes_people",
+    "field": "people_id",
+    "related_collection": "streaming_people",
+    "schema": {
+      "constraint_name": "streaming_episodes_people_people_id_foreign",
+      "table": "streaming_episodes_people",
+      "column": "people_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "streaming_people",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "streaming_episodes_people",
+      "many_field": "people_id",
+      "one_collection": "streaming_people",
+      "one_field": "episodes",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "episodes_id",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_ratings",
+    "field": "episode_id",
+    "related_collection": "streaming_episodes",
+    "schema": {
+      "constraint_name": "streaming_ratings_episode_id_foreign",
+      "table": "streaming_ratings",
+      "column": "episode_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "streaming_episodes",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "streaming_ratings",
+      "many_field": "episode_id",
+      "one_collection": "streaming_episodes",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_sessions",
+    "field": "episode_id",
+    "related_collection": "streaming_episodes",
+    "schema": {
+      "constraint_name": "streaming_sessions_episode_id_foreign",
+      "table": "streaming_sessions",
+      "column": "episode_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "streaming_episodes",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "streaming_sessions",
+      "many_field": "episode_id",
+      "one_collection": "streaming_episodes",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "streaming_episodes_people",
+    "field": "episodes_id",
+    "related_collection": "streaming_episodes",
+    "schema": {
+      "constraint_name": "streaming_episodes_people_episodes_id_foreign",
+      "table": "streaming_episodes_people",
+      "column": "episodes_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "streaming_episodes",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "streaming_episodes_people",
+      "many_field": "episodes_id",
+      "one_collection": "streaming_episodes",
+      "one_field": "people",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "people_id",
+      "sort_field": "sort",
+      "one_deselect_action": "delete"
+    }
+  }
+]

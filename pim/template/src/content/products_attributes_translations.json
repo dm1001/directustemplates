@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2234d4cf-9059-4f1d-a34a-1fd37f62f02b",
+    "products_attributes_id": "35da99ad-f50c-4b74-bf74-0d858f05de14",
+    "languages_code": null,
+    "value": "3"
+  },
+  {
+    "id": "2b384ff5-a0f0-43ed-a89d-b11a36974a8d",
+    "products_attributes_id": "2ca3df75-8b5d-4085-a7fd-86ab3204d82a",
+    "languages_code": null,
+    "value": "33"
+  },
+  {
+    "id": "36fbac23-249b-4439-9ccf-9862a6896b79",
+    "products_attributes_id": "eec88a3d-7e0f-4fa3-89ae-e0bbf15b82e1",
+    "languages_code": null,
+    "value": "Small"
+  },
+  {
+    "id": "9891c241-fe9d-4bdd-bd01-22fdac5ee230",
+    "products_attributes_id": "2ca3df75-8b5d-4085-a7fd-86ab3204d82a",
+    "languages_code": "de-DE",
+    "value": "33"
+  },
+  {
+    "id": "ca3ccc1a-90c4-4271-bb25-f814732c3b4b",
+    "products_attributes_id": "eec88a3d-7e0f-4fa3-89ae-e0bbf15b82e1",
+    "languages_code": "de-DE",
+    "value": "klein"
+  },
+  {
+    "id": "ea97e941-b078-48cd-ba79-7e3cc2197101",
+    "products_attributes_id": "35da99ad-f50c-4b74-bf74-0d858f05de14",
+    "languages_code": "de-DE",
+    "value": "3"
+  }
+]

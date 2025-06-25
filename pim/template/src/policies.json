@@ -1,0 +1,32 @@
+[
+  {
+    "id": "259558f4-8548-4d44-ae86-40d7ee30fe43",
+    "name": "PIM - Team Member",
+    "icon": "supervised_user_circle",
+    "description": "Role for team members that don't need admin access. Can update all product data.",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": true
+  },
+  {
+    "id": "5232cc40-89d0-4faf-bf0a-c44c75c6ba6b",
+    "name": "Administrator",
+    "icon": "verified",
+    "description": "$t:admin_policy_description",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": true,
+    "app_access": true
+  },
+  {
+    "id": "abf8a154-5b1c-4a46-ac9c-7300570f4f17",
+    "name": "$t:public_label",
+    "icon": "public",
+    "description": "$t:public_description",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": false
+  }
+]

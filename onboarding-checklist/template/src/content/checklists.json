@@ -1,0 +1,46 @@
+[
+  {
+    "id": "152bd927-2016-4603-8f57-aca5b404ea6b",
+    "status": "active",
+    "sort": null,
+    "user_created": null,
+    "date_created": "2024-05-03T19:15:16.844Z",
+    "user_updated": null,
+    "date_updated": "2024-05-03T19:15:42.895Z",
+    "start_date": "2024-05-06T16:00:00.000Z",
+    "due_date": "2024-05-31T16:00:00.000Z",
+    "checklist_name": "Task Rabbit Onboarding",
+    "description": "<p>Onboarding checklist for new employees.</p>",
+    "assigned_to": "0d76bf11-8778-4e71-b40e-907343fe37e7",
+    "approver": "0e789571-a83b-42eb-bfef-5e8a91189c34",
+    "checklist_template": "bf5578e3-b9e5-475a-a661-8733483534ed",
+    "date_completed": null,
+    "completion_percentage": "50.00",
+    "tasks": [
+      "4cf9cc37-eb33-4e2c-b999-d72d64060a10",
+      "cc01145f-a130-407f-adb9-0516c3006088"
+    ]
+  },
+  {
+    "id": "92b6ad66-2206-4aab-b76c-4f963fdf8be6",
+    "status": "active",
+    "sort": null,
+    "user_created": null,
+    "date_created": "2024-05-03T19:29:10.269Z",
+    "user_updated": null,
+    "date_updated": "2024-05-03T19:38:53.552Z",
+    "start_date": "2024-05-06T16:00:00.000Z",
+    "due_date": "2024-05-10T19:29:00.000Z",
+    "checklist_name": "Weekly Tasks - May 6th",
+    "description": "Weekly business tasks for Task Rabbit.",
+    "assigned_to": "0e789571-a83b-42eb-bfef-5e8a91189c34",
+    "approver": null,
+    "checklist_template": "f35472a1-0b38-4714-9c98-4464b458f187",
+    "date_completed": null,
+    "completion_percentage": "0.00",
+    "tasks": [
+      "a2503f5f-a2e0-483e-ab80-0813b93a78a5",
+      "4ed8df5c-ca09-428d-9a55-78e10ca17f30"
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "34639c9b-8e82-4df0-8059-74ed220cb20e",
+    "event_sessions_id": "ff8c36e7-4dda-44c9-8b10-4e4c1e54a0e5",
+    "speakers_id": "1f1865fd-e4e9-4d1b-91cd-55de7d2961a5",
+    "sort": 3
+  },
+  {
+    "id": "6129b7c9-1add-4682-8cfd-efc2f6930993",
+    "event_sessions_id": "ff8c36e7-4dda-44c9-8b10-4e4c1e54a0e5",
+    "speakers_id": "8d25375f-7550-4fcb-8d66-6d705d10fad9",
+    "sort": 2
+  },
+  {
+    "id": "698d529f-4fa8-45e1-b3b4-228508301330",
+    "event_sessions_id": "3da300c3-f983-4eb1-ae32-6ac4666f6f09",
+    "speakers_id": "1f1865fd-e4e9-4d1b-91cd-55de7d2961a5",
+    "sort": 1
+  },
+  {
+    "id": "990f3aad-d55a-4647-8470-af168cc65eb6",
+    "event_sessions_id": "ff8c36e7-4dda-44c9-8b10-4e4c1e54a0e5",
+    "speakers_id": "b0fdee01-f072-4fd2-977d-986fb6860648",
+    "sort": 1
+  },
+  {
+    "id": "e09eb1e6-934e-48ec-beb2-7580ad526734",
+    "event_sessions_id": "32d5feef-9d63-4e6f-b226-116c934ffaa7",
+    "speakers_id": "8d25375f-7550-4fcb-8d66-6d705d10fad9",
+    "sort": 1
+  }
+]

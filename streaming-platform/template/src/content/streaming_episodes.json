@@ -1,0 +1,138 @@
+[
+  {
+    "id": "3baf8d66-55e4-4ced-99f5-0331580ebfea",
+    "status": "published",
+    "season": "8ecafdf4-f01e-406a-960a-b55729856a73",
+    "slug": "lazy-programmer",
+    "title": "Lazy Programmer",
+    "tile": "61f390a2-9ce5-4a96-843e-2148f577697e",
+    "resources": null,
+    "vimeo_id": "891432818",
+    "description": "Some developers are efficient. Maybe a little too efficient.",
+    "episode_number": 1,
+    "video_url": null,
+    "video_transcript": null,
+    "video_transcript_file": null,
+    "published_date": null,
+    "video_file": null,
+    "duration_in_seconds": null,
+    "people": [
+      "4921a989-c5c4-433f-9b85-5fac63495629"
+    ]
+  },
+  {
+    "id": "2d848504-0907-4315-b73e-94745042b868",
+    "status": "published",
+    "season": "bf1ea922-80fc-420e-ac6a-fa17d6a2ab3e",
+    "slug": "web-3-blockchain",
+    "title": "Web3, Blockchain, and dApps with Ben",
+    "tile": "0a994d04-3d4a-46bf-b181-7b34cf50ff00",
+    "resources": [
+      {
+        "name": "Fuel",
+        "url": "https://www.fuel.network/"
+      }
+    ],
+    "vimeo_id": "893747977",
+    "description": "Kevin is joined by Ben Greenberg to tackle his learning on topics around Web3, blockchain, and decentralized apps. ",
+    "episode_number": 1,
+    "video_url": null,
+    "video_transcript": null,
+    "video_transcript_file": null,
+    "published_date": null,
+    "video_file": null,
+    "duration_in_seconds": null,
+    "people": [
+      "fc33d94f-f4bc-4b5c-8128-f38086856119"
+    ]
+  },
+  {
+    "id": "cb4e067f-9507-4e18-ab9a-435565f9e653",
+    "status": "published",
+    "season": "56dda5ff-2c3a-41ce-ae3a-580d6101026b",
+    "slug": "expenses-system",
+    "title": "Mission: Expensify Clone",
+    "tile": "48dba4a7-4bf0-45df-9b3d-4de5ffa8b98a",
+    "resources": null,
+    "vimeo_id": "893800625",
+    "description": "Expensify is an expense management tool that tracks receipts, rolls them up into business reports and documents, and handles the approval workflow. Bryant has one hour to build it (or die trying).",
+    "episode_number": 1,
+    "video_url": null,
+    "video_transcript": null,
+    "video_transcript_file": null,
+    "published_date": null,
+    "video_file": null,
+    "duration_in_seconds": null,
+    "people": [
+      "f547f4a8-3cbd-401d-8262-3c4a3f28d648"
+    ]
+  },
+  {
+    "id": "120171fc-b80d-4940-ba66-a16ea67a1aba",
+    "status": "published",
+    "season": "bf1ea922-80fc-420e-ac6a-fa17d6a2ab3e",
+    "slug": "edge-computing",
+    "title": "Edge Computing with Pandelis",
+    "tile": "725ad1de-038d-4832-8344-e5d782c10974",
+    "resources": [
+      {
+        "name": "Pandelis' Twitter Thread",
+        "url": "https://twitter.com/PandelisZ/status/1726957806820164032"
+      }
+    ],
+    "vimeo_id": "893709475",
+    "description": "Kevin is joined by Pandelis to properly understand edge computing, and how they evolve from CDNs and distributed compute.",
+    "episode_number": 2,
+    "video_url": null,
+    "video_transcript": null,
+    "video_transcript_file": null,
+    "published_date": null,
+    "video_file": null,
+    "duration_in_seconds": null,
+    "people": [
+      "d709bc98-1891-4d24-86aa-a6ad489566f6"
+    ]
+  },
+  {
+    "id": "3ff2054a-f876-495b-bbcf-adc59989740e",
+    "status": "published",
+    "season": "8ecafdf4-f01e-406a-960a-b55729856a73",
+    "slug": "linear",
+    "title": "Linear",
+    "tile": "b10634c6-4ab8-4a44-9e0a-25c1fd5ec8ee",
+    "resources": null,
+    "vimeo_id": "891433794",
+    "description": "Development is hard. Estimating how long it takes based on shirt size is harder-er.",
+    "episode_number": 2,
+    "video_url": null,
+    "video_transcript": null,
+    "video_transcript_file": null,
+    "published_date": null,
+    "video_file": null,
+    "duration_in_seconds": null,
+    "people": [
+      "710ceb75-6c90-4d0d-aedb-93de5d7b68e4"
+    ]
+  },
+  {
+    "id": "8434838a-8e4f-489a-8da2-fbf10de5de6a",
+    "status": "published",
+    "season": "56dda5ff-2c3a-41ce-ae3a-580d6101026b",
+    "slug": "lms",
+    "title": "Mission: Learning Management System",
+    "tile": "73ceb5b3-6a79-484f-8254-a4d41ab970b3",
+    "resources": null,
+    "vimeo_id": "895940893",
+    "description": "From creating and organizing course content, managing instructors and students, and tracking enrollments and completions, Bryant has sixty minutes on the clock.",
+    "episode_number": 2,
+    "video_url": null,
+    "video_transcript": null,
+    "video_transcript_file": null,
+    "published_date": null,
+    "video_file": null,
+    "duration_in_seconds": null,
+    "people": [
+      "95848702-5b6f-47bd-be7a-eb8a9c58f5df"
+    ]
+  }
+]

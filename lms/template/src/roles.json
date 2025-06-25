@@ -1,0 +1,42 @@
+[
+  {
+    "id": "2415c235-ac49-4d17-9a6e-123310288a92",
+    "name": "LMS - Instructor",
+    "icon": "school",
+    "description": "Role for third-party instructors. Can only edit their own content.",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "7ac48753-46b5-4f03-b98f-bad697a5f887",
+    "name": "Administrator",
+    "icon": "verified",
+    "description": "$t:admin_description",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "a2ef7e7c-ec50-441b-921c-0a26277e3ee0",
+    "name": "LMS - User",
+    "icon": "person",
+    "description": "Role for the users of the LMS. Only access the content through front-end.",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "a62225dc-838f-47c1-8728-3e879e485709",
+    "name": "LMS - Internal Team Member",
+    "icon": "sports_soccer",
+    "description": "Role for team members that don't need admin access. Can update all content.",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  }
+]

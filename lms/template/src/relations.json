@@ -1,0 +1,1120 @@
+[
+  {
+    "collection": "directus_users",
+    "field": "lms_instructor_id",
+    "related_collection": "lms_instructors",
+    "schema": {
+      "constraint_name": "directus_users_lms_instructor_id_foreign",
+      "table": "directus_users",
+      "column": "lms_instructor_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_instructors",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "directus_users",
+      "many_field": "lms_instructor_id",
+      "one_collection": "lms_instructors",
+      "one_field": "user_id",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_modules",
+    "field": "course",
+    "related_collection": "lms_courses",
+    "schema": {
+      "constraint_name": "lms_modules_course_foreign",
+      "table": "lms_modules",
+      "column": "course",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_courses",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "lms_modules",
+      "many_field": "course",
+      "one_collection": "lms_courses",
+      "one_field": "modules",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": "sort",
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_modules",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_modules_user_updated_foreign",
+      "table": "lms_modules",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_modules",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_modules",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_modules_user_created_foreign",
+      "table": "lms_modules",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_modules",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_courses",
+    "field": "image",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "lms_courses_image_foreign",
+      "table": "lms_courses",
+      "column": "image",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "lms_courses",
+      "many_field": "image",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_courses",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_courses_user_created_foreign",
+      "table": "lms_courses",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_courses",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_courses",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_courses_user_updated_foreign",
+      "table": "lms_courses",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_courses",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_lessons",
+    "field": "video_file",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "lms_lessons_video_file_foreign",
+      "table": "lms_lessons",
+      "column": "video_file",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "lms_lessons",
+      "many_field": "video_file",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "lms_lessons_id",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_lessons",
+    "field": "module",
+    "related_collection": "lms_modules",
+    "schema": {
+      "constraint_name": "lms_lessons_module_foreign",
+      "table": "lms_lessons",
+      "column": "module",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_modules",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "lms_lessons",
+      "many_field": "module",
+      "one_collection": "lms_modules",
+      "one_field": "lessons",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": "sort",
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_lessons",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_lessons_user_updated_foreign",
+      "table": "lms_lessons",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_lessons",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_lessons",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_lessons_user_created_foreign",
+      "table": "lms_lessons",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_lessons",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_settings",
+    "field": "course_folder_root",
+    "related_collection": "directus_folders",
+    "schema": {
+      "constraint_name": "lms_settings_course_folder_root_foreign",
+      "table": "lms_settings",
+      "column": "course_folder_root",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_folders",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "lms_settings",
+      "many_field": "course_folder_root",
+      "one_collection": "directus_folders",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_settings",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_settings_user_updated_foreign",
+      "table": "lms_settings",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_settings",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_enrollments",
+    "field": "user_enrolled",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_enrollments_user_enrolled_foreign",
+      "table": "lms_enrollments",
+      "column": "user_enrolled",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "lms_enrollments",
+      "many_field": "user_enrolled",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_enrollments",
+    "field": "course",
+    "related_collection": "lms_courses",
+    "schema": {
+      "constraint_name": "lms_enrollments_course_foreign",
+      "table": "lms_enrollments",
+      "column": "course",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_courses",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "lms_enrollments",
+      "many_field": "course",
+      "one_collection": "lms_courses",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_enrollments",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_enrollments_user_updated_foreign",
+      "table": "lms_enrollments",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_enrollments",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_enrollments",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_enrollments_user_created_foreign",
+      "table": "lms_enrollments",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_enrollments",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_courses_reviews",
+    "field": "course",
+    "related_collection": "lms_courses",
+    "schema": {
+      "constraint_name": "lms_courses_reviews_course_foreign",
+      "table": "lms_courses_reviews",
+      "column": "course",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_courses",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "lms_courses_reviews",
+      "many_field": "course",
+      "one_collection": "lms_courses",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_courses_reviews",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_courses_reviews_user_updated_foreign",
+      "table": "lms_courses_reviews",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_courses_reviews",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_courses_reviews",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_courses_reviews_user_created_foreign",
+      "table": "lms_courses_reviews",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_courses_reviews",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_instructors",
+    "field": "avatar",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "lms_instructors_avatar_foreign",
+      "table": "lms_instructors",
+      "column": "avatar",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "lms_instructors",
+      "many_field": "avatar",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_instructors",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_instructors_user_updated_foreign",
+      "table": "lms_instructors",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_instructors",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_instructors",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_instructors_user_created_foreign",
+      "table": "lms_instructors",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_instructors",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_comments",
+    "field": "parent_comment",
+    "related_collection": "lms_comments",
+    "schema": {
+      "constraint_name": "lms_comments_parent_comment_foreign",
+      "table": "lms_comments",
+      "column": "parent_comment",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_comments",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_comments",
+      "many_field": "parent_comment",
+      "one_collection": "lms_comments",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_comments",
+    "field": "lesson",
+    "related_collection": "lms_lessons",
+    "schema": {
+      "constraint_name": "lms_comments_lesson_foreign",
+      "table": "lms_comments",
+      "column": "lesson",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_lessons",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "lms_comments",
+      "many_field": "lesson",
+      "one_collection": "lms_lessons",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_comments",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_comments_user_updated_foreign",
+      "table": "lms_comments",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_comments",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_comments",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_comments_user_created_foreign",
+      "table": "lms_comments",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_comments",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_courses_instructors",
+    "field": "lms_courses_id",
+    "related_collection": "lms_courses",
+    "schema": {
+      "constraint_name": "lms_courses_instructors_lms_courses_id_foreign",
+      "table": "lms_courses_instructors",
+      "column": "lms_courses_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_courses",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "lms_courses_instructors",
+      "many_field": "lms_courses_id",
+      "one_collection": "lms_courses",
+      "one_field": "instructors",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "lms_instructors_id",
+      "sort_field": "sort",
+      "one_deselect_action": "delete"
+    }
+  },
+  {
+    "collection": "lms_courses_instructors",
+    "field": "lms_instructors_id",
+    "related_collection": "lms_instructors",
+    "schema": {
+      "constraint_name": "lms_courses_instructors_lms_instructors_id_foreign",
+      "table": "lms_courses_instructors",
+      "column": "lms_instructors_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_instructors",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "lms_courses_instructors",
+      "many_field": "lms_instructors_id",
+      "one_collection": "lms_instructors",
+      "one_field": "courses",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "lms_courses_id",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_lessons_resources",
+    "field": "lesson",
+    "related_collection": "lms_lessons",
+    "schema": {
+      "constraint_name": "lms_lessons_resources_lesson_foreign",
+      "table": "lms_lessons_resources",
+      "column": "lesson",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_lessons",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "lms_lessons_resources",
+      "many_field": "lesson",
+      "one_collection": "lms_lessons",
+      "one_field": "resources",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_lessons_resources",
+    "field": "file",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "lms_lessons_resources_file_foreign",
+      "table": "lms_lessons_resources",
+      "column": "file",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "lms_lessons_resources",
+      "many_field": "file",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_enrollments_lessons_completed",
+    "field": "lms_enrollments_id",
+    "related_collection": "lms_enrollments",
+    "schema": {
+      "constraint_name": "lms_enrollments_lessons_completed_lms_enrollments_id_foreign",
+      "table": "lms_enrollments_lessons_completed",
+      "column": "lms_enrollments_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_enrollments",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "lms_enrollments_lessons_completed",
+      "many_field": "lms_enrollments_id",
+      "one_collection": "lms_enrollments",
+      "one_field": "lessons_completed",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "lms_lessons_id",
+      "sort_field": null,
+      "one_deselect_action": "delete"
+    }
+  },
+  {
+    "collection": "lms_enrollments_lessons_completed",
+    "field": "lms_lessons_id",
+    "related_collection": "lms_lessons",
+    "schema": {
+      "constraint_name": "lms_enrollments_lessons_completed_lms_lessons_id_foreign",
+      "table": "lms_enrollments_lessons_completed",
+      "column": "lms_lessons_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_lessons",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "lms_enrollments_lessons_completed",
+      "many_field": "lms_lessons_id",
+      "one_collection": "lms_lessons",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "lms_enrollments_id",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_topics",
+    "field": "image",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "lms_topics_image_foreign",
+      "table": "lms_topics",
+      "column": "image",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "lms_topics",
+      "many_field": "image",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_topics",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_topics_user_created_foreign",
+      "table": "lms_topics",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_topics",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_topics",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_topics_user_updated_foreign",
+      "table": "lms_topics",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_topics",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_tracks_courses",
+    "field": "lms_tracks_id",
+    "related_collection": "lms_tracks",
+    "schema": {
+      "constraint_name": "lms_tracks_courses_lms_tracks_id_foreign",
+      "table": "lms_tracks_courses",
+      "column": "lms_tracks_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_tracks",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "lms_tracks_courses",
+      "many_field": "lms_tracks_id",
+      "one_collection": "lms_tracks",
+      "one_field": "courses",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "lms_courses_id",
+      "sort_field": "sort",
+      "one_deselect_action": "delete"
+    }
+  },
+  {
+    "collection": "lms_tracks_courses",
+    "field": "lms_courses_id",
+    "related_collection": "lms_courses",
+    "schema": {
+      "constraint_name": "lms_tracks_courses_lms_courses_id_foreign",
+      "table": "lms_tracks_courses",
+      "column": "lms_courses_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_courses",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "lms_tracks_courses",
+      "many_field": "lms_courses_id",
+      "one_collection": "lms_courses",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "lms_tracks_id",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_courses_topics",
+    "field": "lms_courses_id",
+    "related_collection": "lms_courses",
+    "schema": {
+      "constraint_name": "lms_courses_topics_lms_courses_id_foreign",
+      "table": "lms_courses_topics",
+      "column": "lms_courses_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_courses",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "lms_courses_topics",
+      "many_field": "lms_courses_id",
+      "one_collection": "lms_courses",
+      "one_field": "topics",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "lms_topics_id",
+      "sort_field": "sort",
+      "one_deselect_action": "delete"
+    }
+  },
+  {
+    "collection": "lms_courses_topics",
+    "field": "lms_topics_id",
+    "related_collection": "lms_topics",
+    "schema": {
+      "constraint_name": "lms_courses_topics_lms_topics_id_foreign",
+      "table": "lms_courses_topics",
+      "column": "lms_topics_id",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "lms_topics",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "CASCADE"
+    },
+    "meta": {
+      "many_collection": "lms_courses_topics",
+      "many_field": "lms_topics_id",
+      "one_collection": "lms_topics",
+      "one_field": "courses",
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": "lms_courses_id",
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_tracks",
+    "field": "image",
+    "related_collection": "directus_files",
+    "schema": {
+      "constraint_name": "lms_tracks_image_foreign",
+      "table": "lms_tracks",
+      "column": "image",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_files",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "SET NULL"
+    },
+    "meta": {
+      "many_collection": "lms_tracks",
+      "many_field": "image",
+      "one_collection": "directus_files",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_tracks",
+    "field": "user_created",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_tracks_user_created_foreign",
+      "table": "lms_tracks",
+      "column": "user_created",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_tracks",
+      "many_field": "user_created",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  },
+  {
+    "collection": "lms_tracks",
+    "field": "user_updated",
+    "related_collection": "directus_users",
+    "schema": {
+      "constraint_name": "lms_tracks_user_updated_foreign",
+      "table": "lms_tracks",
+      "column": "user_updated",
+      "foreign_key_schema": "public",
+      "foreign_key_table": "directus_users",
+      "foreign_key_column": "id",
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    "meta": {
+      "many_collection": "lms_tracks",
+      "many_field": "user_updated",
+      "one_collection": "directus_users",
+      "one_field": null,
+      "one_collection_field": null,
+      "one_allowed_collections": null,
+      "junction_field": null,
+      "sort_field": null,
+      "one_deselect_action": "nullify"
+    }
+  }
+]

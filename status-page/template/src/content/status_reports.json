@@ -1,0 +1,12 @@
+[
+  {
+    "id": "c8ea8ebd-ae1e-4876-9f2b-82aabb11a6d2",
+    "status": "new",
+    "message": "I noticed that the API is having some trouble.",
+    "ip_address": "127.0.0.1",
+    "timestamp": "2023-12-20T00:49:22.104Z",
+    "impact": null,
+    "services_affected": null,
+    "subscriber": "88d7d5e1-8fad-4e6c-87ff-d0d5b0e98e8e"
+  }
+]

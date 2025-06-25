@@ -1,0 +1,11 @@
+{
+  "author": "",
+  "description": "",
+  "directusTemplate": true,
+  "files": [
+    "src"
+  ],
+  "name": "directus-template-ai-content-machine",
+  "templateName": "AI Content Machine",
+  "version": "1.0.0"
+}

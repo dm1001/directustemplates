@@ -1,0 +1,21 @@
+[
+  {
+    "id": "d1e214b0-b1a8-4fa5-beca-242a3cd4a268",
+    "status": "draft",
+    "sort": null,
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_created": "2024-05-16T21:43:55.118Z",
+    "user_updated": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_updated": "2024-05-16T22:35:30.344Z",
+    "title": "Announcing Directus AI: Elevate Your Data Projects with AI-Powered Extensions",
+    "slug": "announcing-directus-ai-elevate-your-data-projects",
+    "image": "6261b674-c35e-4b6c-b093-f483aed6e7eb",
+    "content_workflow": "feed41e6-7f30-4a0e-9cd4-f21549cfb1b0",
+    "date_published": "2024-05-30T16:00:00.000Z",
+    "author": "f1c832c4-2dd2-4065-a158-e138d64288fc",
+    "translations": [
+      "0ab3d59a-de3f-4bbb-b9df-440fe0f00424",
+      "bf555779-3ff8-46ac-9308-0219912c9099"
+    ]
+  }
+]

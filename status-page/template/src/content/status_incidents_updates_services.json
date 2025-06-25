@@ -1,0 +1,20 @@
+[
+  {
+    "id": "06e1485f-49fb-4996-8e56-ec6c7e82bc82",
+    "status": "operational",
+    "status_incidents_updates_id": "11e5954d-5656-4a3f-96e0-750c34c19c64",
+    "status_services_id": "9e7df960-5441-40d9-9f67-606752575b5f"
+  },
+  {
+    "id": "908bee6f-b5a2-4ee5-859a-01b8aad2a438",
+    "status": "operational",
+    "status_incidents_updates_id": "6e95c1bd-6555-4fc5-86da-1cb1a749890c",
+    "status_services_id": "d8eee5c9-f721-43ca-b558-0f81256aa902"
+  },
+  {
+    "id": "de1a2976-b67e-4ba6-b625-b8263307a947",
+    "status": "degraded_performance",
+    "status_incidents_updates_id": "9d2f200f-ee72-442b-8abc-67a437263d3e",
+    "status_services_id": "9e7df960-5441-40d9-9f67-606752575b5f"
+  }
+]

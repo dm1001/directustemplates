@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1b72a3ab-b1bf-4a48-936c-81c1cfbd4e90",
+    "name": "Event Site API",
+    "icon": "robot",
+    "description": "Role for the frontend website / application.",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "2f6ff7f5-f842-4245-9c71-80d0c787840e",
+    "name": "Administrator",
+    "icon": "verified",
+    "description": "$t:admin_description",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "c8b8ebcd-8241-412c-8108-2c5ab54c574c",
+    "name": "User",
+    "icon": "supervised_user_circle",
+    "description": null,
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "bf886597-d5ee-4341-9c7c-5e6574b81459",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-11T12:46:00.837Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-11T12:49:13.478Z",
+    "title": "What's New in Directus 10.12",
+    "description": "Join Kevin for the latest release notes.",
+    "image": "2b694236-8e27-460b-83b5-7ed3b51c2408",
+    "badge": "Video",
+    "card_type": "video",
+    "video_url": "https://www.youtube.com/watch?v=FmhAOYkSl50",
+    "video_file": null,
+    "url": null,
+    "cardgroup": "5c586f5a-d5a5-4d3c-b1e3-e80a586802cf",
+    "sort": 2
+  },
+  {
+    "id": "f8b11f8e-a9d0-4137-8bf2-3ad6bcaaa139",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-11T12:49:13.468Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-14T07:31:26.934Z",
+    "title": "Directus TV",
+    "description": "Go down the rabbit hole with hours of original developer-focused content from the team at Directus.",
+    "image": "12ff5198-64f0-4280-bd55-43472108266b",
+    "badge": "Video",
+    "card_type": "link",
+    "video_url": null,
+    "video_file": null,
+    "url": "https://directus.io/tv",
+    "cardgroup": "5c586f5a-d5a5-4d3c-b1e3-e80a586802cf",
+    "sort": 1
+  },
+  {
+    "id": "fea2b5b5-3e20-49b5-953f-fde22ef79bc9",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-11T12:44:14.297Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-11T12:49:13.473Z",
+    "title": "Three-Legged Stool for the Composable Future",
+    "description": "Q&A in CMS Critic with Directus founder and CEO, Ben Haynes.",
+    "image": "369c8ac6-6152-462b-996b-c2b3f872f875",
+    "badge": "Article",
+    "card_type": "link",
+    "video_url": null,
+    "video_file": null,
+    "url": "https://cmscritic.com/new-directus-marketplace-completes-a-three-legged-stool-for-the-composable-future",
+    "cardgroup": "5c586f5a-d5a5-4d3c-b1e3-e80a586802cf",
+    "sort": 3
+  }
+]

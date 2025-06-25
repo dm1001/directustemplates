@@ -1,0 +1,82 @@
+[
+  {
+    "id": "7705fdaa-2cbf-469c-957e-c0c07b3bdfd5",
+    "name": "Render Template",
+    "icon": "bolt",
+    "color": null,
+    "description": "Utility flow that renders an email template based on the custom templating engine.",
+    "status": "active",
+    "trigger": "operation",
+    "accountability": "all",
+    "options": {
+      "return": "$last"
+    },
+    "operation": "632e948f-ee24-4e91-9b53-c1741930a651",
+    "date_created": "2024-06-11T11:34:15.769Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "operations": null
+  },
+  {
+    "id": "7bf7e4e0-c03d-4252-a215-f9efcf07dfff",
+    "name": "Deploy Site",
+    "icon": "build_circle",
+    "color": null,
+    "description": "Creates a new deployment for the frontend at your preferred host by calling a build hook URL setup within the globals.",
+    "status": "active",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "collections": [
+        "event_globals"
+      ],
+      "requireSelection": false,
+      "requireConfirmation": true,
+      "confirmationDescription": "Are you sure you want to re-build the site?"
+    },
+    "operation": null,
+    "date_created": "2024-06-12T20:54:10.539Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "operations": null
+  },
+  {
+    "id": "8293cea7-81ea-44a8-adb9-785ed6e5b2fb",
+    "name": "New Registrant",
+    "icon": "fiber_new",
+    "color": null,
+    "description": "Sends an email for new registrants with welcome information.",
+    "status": "active",
+    "trigger": "event",
+    "accountability": "all",
+    "options": {
+      "type": "action",
+      "scope": [
+        "items.create"
+      ],
+      "collections": [
+        "people"
+      ]
+    },
+    "operation": "aa081d53-48c3-4e1b-a2ee-581fc5931a4b",
+    "date_created": "2024-06-11T11:34:15.865Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "operations": null
+  },
+  {
+    "id": "ee200502-ca95-45b7-a19d-bb9dfac18304",
+    "name": "New Confirmation Code",
+    "icon": "fiber_pin",
+    "color": null,
+    "description": "Sends a new confirmation code for a registrant that lost access.",
+    "status": "active",
+    "trigger": "webhook",
+    "accountability": "all",
+    "options": {
+      "method": "POST",
+      "async": true
+    },
+    "operation": "18792e1b-7ace-404d-adb1-55b4c7fab921",
+    "date_created": "2024-06-11T11:34:15.964Z",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "operations": null
+  }
+]

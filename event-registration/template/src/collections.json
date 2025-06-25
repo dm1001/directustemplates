@@ -1,0 +1,679 @@
+[
+  {
+    "collection": "block_button",
+    "meta": {
+      "collection": "block_button",
+      "icon": null,
+      "note": null,
+      "display_template": "{{label}} • {{url}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 10,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_button",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_button_group",
+    "meta": {
+      "collection": "block_button_group",
+      "icon": null,
+      "note": null,
+      "display_template": "{{buttons}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 9,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_button_group",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_card",
+    "meta": {
+      "collection": "block_card",
+      "icon": null,
+      "note": null,
+      "display_template": "{{title}} - {{image.$thumbnail}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 8,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_card",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_cardgroup",
+    "meta": {
+      "collection": "block_cardgroup",
+      "icon": "tab_group",
+      "note": null,
+      "display_template": "{{title}} • {{cards}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Card Group"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 7,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_cardgroup",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_countdown",
+    "meta": {
+      "collection": "block_countdown",
+      "icon": "av_timer",
+      "note": null,
+      "display_template": "{{title}} • {{headline}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Countdown"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 5,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_countdown",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_cta",
+    "meta": {
+      "collection": "block_cta",
+      "icon": "chip_extraction",
+      "note": null,
+      "display_template": "{{title}} • {{headline}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "CTA"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 4,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_cta",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_faqs",
+    "meta": {
+      "collection": "block_faqs",
+      "icon": "question_mark",
+      "note": null,
+      "display_template": "{{title}} • {{headline}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "FAQs"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_faqs",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_hero",
+    "meta": {
+      "collection": "block_hero",
+      "icon": "star",
+      "note": null,
+      "display_template": "{{title}} • {{headline}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Hero"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_hero",
+      "comment": null
+    }
+  },
+  {
+    "collection": "blocks",
+    "meta": {
+      "collection": "blocks",
+      "icon": "code_blocks",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "event_registration",
+      "collapse": "closed",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "block_schedule",
+    "meta": {
+      "collection": "block_schedule",
+      "icon": "auto_schedule",
+      "note": null,
+      "display_template": "{{title}} • {{headline}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Schedule"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_schedule",
+      "comment": null
+    }
+  },
+  {
+    "collection": "block_speakers",
+    "meta": {
+      "collection": "block_speakers",
+      "icon": "speaker",
+      "note": null,
+      "display_template": "{{title}} • {{headline}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Speaker List"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 6,
+      "group": "blocks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "block_speakers",
+      "comment": null
+    }
+  },
+  {
+    "collection": "email_templates",
+    "meta": {
+      "collection": "email_templates",
+      "icon": "mark_email_unread",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 4,
+      "group": "event_registration",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "email_templates",
+      "comment": null
+    }
+  },
+  {
+    "collection": "event_globals",
+    "meta": {
+      "collection": "event_globals",
+      "icon": "globe_uk",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": true,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Event Global Settings"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 5,
+      "group": "event_registration",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "event_globals",
+      "comment": null
+    }
+  },
+  {
+    "collection": "event_landing_page_blocks",
+    "meta": {
+      "collection": "event_landing_page_blocks",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "events",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "event_landing_page_blocks",
+      "comment": null
+    }
+  },
+  {
+    "collection": "event_registration",
+    "meta": {
+      "collection": "event_registration",
+      "icon": "event_upcoming",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "events",
+    "meta": {
+      "collection": "events",
+      "icon": "event_note",
+      "note": null,
+      "display_template": "{{title}} • {{start_at}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": false,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "event_registration",
+      "collapse": "open",
+      "preview_url": "http://localhost:3000/{{slug}}",
+      "versioning": true
+    },
+    "schema": {
+      "schema": "public",
+      "name": "events",
+      "comment": null
+    }
+  },
+  {
+    "collection": "event_sessions",
+    "meta": {
+      "collection": "event_sessions",
+      "icon": "format_list_bulleted",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Sessions"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "events",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "event_sessions",
+      "comment": null
+    }
+  },
+  {
+    "collection": "event_session_speakers",
+    "meta": {
+      "collection": "event_session_speakers",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "event_speakers",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "event_session_speakers",
+      "comment": null
+    }
+  },
+  {
+    "collection": "event_speakers",
+    "meta": {
+      "collection": "event_speakers",
+      "icon": "select_to_speak",
+      "note": null,
+      "display_template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Speakers"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "events",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "event_speakers",
+      "comment": null
+    }
+  },
+  {
+    "collection": "event_tickets",
+    "meta": {
+      "collection": "event_tickets",
+      "icon": "airplane_ticket",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Tickets"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 4,
+      "group": "events",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "event_tickets",
+      "comment": null
+    }
+  },
+  {
+    "collection": "people",
+    "meta": {
+      "collection": "people",
+      "icon": "emoji_people",
+      "note": null,
+      "display_template": "{{email}} - {{first_name}} {{last_name}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "event_registration",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "people",
+      "comment": null
+    }
+  }
+]

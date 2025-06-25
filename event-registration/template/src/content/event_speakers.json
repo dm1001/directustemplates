@@ -1,0 +1,47 @@
+[
+  {
+    "id": "b0fdee01-f072-4fd2-977d-986fb6860648",
+    "sort": null,
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-11T12:34:45.338Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-11T14:40:49.846Z",
+    "first_name": "Milton",
+    "last_name": "Waddams",
+    "bio": "<p>Milton Waddams is a senior architect with expertise in microservices and cloud-native applications. He has worked with numerous Fortune 500 companies to modernize their software architectures.</p>",
+    "links": null,
+    "avatar": "35dd16f3-00ff-47d3-b04e-d5f539962e63",
+    "job_title": "Senior Architect",
+    "company_logo": "023b9e18-4264-4738-bd7f-54929eb536c2"
+  },
+  {
+    "id": "8d25375f-7550-4fcb-8d66-6d705d10fad9",
+    "sort": null,
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-11T14:54:08.932Z",
+    "user_updated": null,
+    "date_updated": null,
+    "first_name": "Peter",
+    "last_name": "Gibbons",
+    "bio": "<p>Peter is an agile coach and scrum master with extensive experience in guiding teams through agile transformations. He is known for his innovative approaches to agile practices.</p>",
+    "links": null,
+    "avatar": "40ee62ed-d55d-486f-b9f9-a674d7b50a0e",
+    "job_title": "Scrum Master",
+    "company_logo": "023b9e18-4264-4738-bd7f-54929eb536c2"
+  },
+  {
+    "id": "1f1865fd-e4e9-4d1b-91cd-55de7d2961a5",
+    "sort": null,
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-11T14:55:23.754Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-11T17:01:36.175Z",
+    "first_name": "Michael",
+    "last_name": "Bolton",
+    "bio": "<p>Michael is a cybersecurity expert with a focus on application security and threat modeling. She has helped numerous organizations secure their software environments.</p>",
+    "links": null,
+    "avatar": "a68ef81f-30b0-466a-94f3-8c038b0e484c",
+    "job_title": "Head of Cybersecurity",
+    "company_logo": "023b9e18-4264-4738-bd7f-54929eb536c2"
+  }
+]

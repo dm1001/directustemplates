@@ -1,0 +1,56 @@
+[
+  {
+    "id": "010c8179-af83-4376-86df-786ad2815a13",
+    "status": "resolved",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_created": "2023-12-20T00:54:07.170Z",
+    "user_updated": null,
+    "date_updated": null,
+    "message": "We can confirm this is resolved.",
+    "incident": "1525588a-1ff2-4d2c-8edd-cd19c7d4a412",
+    "notify_subscribers": true,
+    "services_affected": []
+  },
+  {
+    "id": "11e5954d-5656-4a3f-96e0-750c34c19c64",
+    "status": "monitoring",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_created": "2023-12-20T00:53:27.730Z",
+    "user_updated": null,
+    "date_updated": null,
+    "message": "We've kicked Bry Ross out of the building and are currently monitoring incoming traffic in case he tries to sneak back in.",
+    "incident": "1525588a-1ff2-4d2c-8edd-cd19c7d4a412",
+    "notify_subscribers": true,
+    "services_affected": [
+      "06e1485f-49fb-4996-8e56-ec6c7e82bc82"
+    ]
+  },
+  {
+    "id": "6e95c1bd-6555-4fc5-86da-1cb1a749890c",
+    "status": "scheduled",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_created": "2023-12-20T00:50:44.894Z",
+    "user_updated": null,
+    "date_updated": null,
+    "message": "We're taking a break on Christmas. Our servers need some rest too.",
+    "incident": "2fcfbdee-add1-4cbb-8eb8-919670a2ac97",
+    "notify_subscribers": false,
+    "services_affected": [
+      "908bee6f-b5a2-4ee5-859a-01b8aad2a438"
+    ]
+  },
+  {
+    "id": "9d2f200f-ee72-442b-8abc-67a437263d3e",
+    "status": "investigating",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_created": "2023-12-20T00:52:33.575Z",
+    "user_updated": null,
+    "date_updated": null,
+    "message": "We've got some reports of some Bry Ross guy causing all kinds of trouble for the website theme.",
+    "incident": "1525588a-1ff2-4d2c-8edd-cd19c7d4a412",
+    "notify_subscribers": true,
+    "services_affected": [
+      "de1a2976-b67e-4ba6-b625-b8263307a947"
+    ]
+  }
+]

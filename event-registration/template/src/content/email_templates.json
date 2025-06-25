@@ -1,0 +1,12 @@
+[
+  {
+    "id": "confirmation-code-reset",
+    "subject": "New code for HoppinCode 24 🐰 🚀",
+    "template": "<div>\n<p>Hi {{ first_name }}!</p>\n\n<p>Here's the new confirmation code you requested.</p>\n<pre>{{ confirmation_code }}</pre>\n    \n<p><strong><a href=\"https://yoururlhere.com/auth/login?email={{email}}&confirmation_code={{confirmation_code}}\" target=\"_blank\" rel=\"noopener\">Click here to login</a></strong></p>\n\n<hr>\n<p>If you have any questions, please let us know at <a href=\"mailto:team@example.com\">team@example.com</a>.</p>\n<p><strong>See you on the stage!</strong></p>\n<p>The HoppinCode Team</p>\n</div>"
+  },
+  {
+    "id": "intro",
+    "subject": "Your ticket for Hoppin Code 24",
+    "template": "<div>\n<p>Hi {{ first_name }}!</p>\n<p><strong>Thanks for registering for Hoppin Code 24!</strong></p>\n<p>Here's your confirmation code (in case you log out or switch devices)</p>\n<pre>{{ confirmation_code }}</pre>\n<h3>Giveaways + Referrals</h3>\n<p>Your registration gives you one entry to win one of the great prizes available..</p>\n<p>To earn more entries and increase your chances of winning, use/promote your personal referral link and earn more registrations.</p>\n<p><strong>This is your link to your own personal mission control to see your sharable link + how many entries you&rsquo;ve earned:</strong></p>\n<p><strong><a href=\"https://yoururlhere.com/t/{{tickets.create[0].slug}}\" target=\"_blank\" rel=\"noopener\">&rarr; https://yoururlhere.com/t/{{tickets.create[0].slug}}</a></strong></p>\n<hr>\n<p>If you have any questions, please let us know at <a href=\"mailto:team@example.com\">team@example.com</a>.</p>\n<p><strong>See you on the stage!</strong></p>\n<p>The HoppinCode Team</p>\n</div>"
+  }
+]

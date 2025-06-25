@@ -1,0 +1,173 @@
+[
+  {
+    "id": "41c9aade-8f7a-43cd-b4da-4639619419a3",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_created": "2024-05-15T17:04:17.445Z",
+    "user_updated": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_updated": "2024-05-16T22:35:29.045Z",
+    "aspect_ratio": "16/9",
+    "title": "Marker Star",
+    "colors": [
+      {
+        "color": "#6644FF",
+        "type": "primary",
+        "name": "violet"
+      }
+    ],
+    "prompt": "Create a hand-drawn marker style illustration to be used as a featured image for blog posts targeting developers. The illustration should have a whimsical theme, using bold, uneven marker-style lines to create an engaging and eye-catching design. The background should always be white. The primary color should be the only color used - with lighter and darker shades of the primary color for contrast and depth. Focus on creating a loose, sketchy appearance that mimics the look of marker strokes. Avoiding overly polished, digital effects and gradients. The illustration  feature should a small number of abstract, cosmic elements, such as planets, stars, and futuristic objects, but always have a very simple, clutter-free composition. ",
+    "sample_image": "4c10f8ee-b6dc-485f-bc4f-67fc33a7b7e2"
+  },
+  {
+    "id": "447c13f2-3fa8-4a3f-b38f-a3c8c64a4699",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_created": "2024-05-15T15:45:29.650Z",
+    "user_updated": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_updated": "2024-05-16T22:35:29.147Z",
+    "aspect_ratio": "16/9",
+    "title": "Glass Bubbles",
+    "colors": [
+      {
+        "color": "#6644FF",
+        "type": "primary"
+      },
+      {
+        "color": "#A2B5CD",
+        "type": "background"
+      }
+    ],
+    "prompt": "Create an image of an object with a playful and whimsical design and a modern 3d glassy appearance. Use soft, pastel colors and incorporate rounded shapes. Ensure the design is futuristic and minimalist, featuring smooth, seamless lines and a lack of intricate detailing. The overall style should be contemporary, combining functionality with a modern, stylish look.",
+    "sample_image": "5baf30a5-f028-453d-83db-cd8fedc8e3de"
+  },
+  {
+    "id": "44f5a2bd-99ff-40ce-9908-b14d79edf439",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_created": "2024-05-15T17:59:06.269Z",
+    "user_updated": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_updated": "2024-05-16T22:35:29.229Z",
+    "aspect_ratio": "16/9",
+    "title": "Person + Abstract",
+    "colors": [
+      {
+        "color": "#6644FF",
+        "type": "primary",
+        "name": "violet"
+      }
+    ],
+    "prompt": "Create an illustration that features a realistic photograph of a person combined with abstract elements. The design should have a modern, minimal  aesthetic, using a limited color palette. Incorporate abstract geometric shapes such as circles, semi-circles, and dots as accents. Use a primary color, such along with neutral tones and black. The composition should prominently feature the person as the focal point in black and white, with abstract elements layered around them to create visual interest and depth.",
+    "sample_image": "5d827153-0c93-437b-be7e-f06f0564e65a"
+  },
+  {
+    "id": "5b13d003-72b8-4843-97a8-ec445216f03a",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_created": "2024-05-15T16:51:24.620Z",
+    "user_updated": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_updated": "2024-05-16T22:35:29.343Z",
+    "aspect_ratio": "16/9",
+    "title": "Sticker It",
+    "colors": [
+      {
+        "color": "#6644FF",
+        "type": "primary",
+        "name": "violet"
+      }
+    ],
+    "prompt": "Create a sharp, professional cartoon-style sticker image. The sticker should feature a round white offset border with a subtle shadow to give the appearance of a physical sticker. Image background should be white or gray gradient. The illustration inside should be a very simple vector illustration with clean lines. Suitable for a technical or professional audience. Ensure the image is visually engaging and stands out, while maintaining a clean and polished look.",
+    "sample_image": "06d8b932-0b36-43d7-84fb-4c8b2373d356"
+  },
+  {
+    "id": "651a3868-64be-4110-97e7-fac0f98cc822",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_created": "2024-05-15T16:41:13.235Z",
+    "user_updated": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_updated": "2024-05-16T22:35:29.444Z",
+    "aspect_ratio": "16/9",
+    "title": "Zine Brutality",
+    "colors": [
+      {
+        "color": "#6644FF",
+        "type": "primary",
+        "name": "violet"
+      }
+    ],
+    "prompt": "Create a brutalist zine style illustration should have a chaotic, collage with bold, contrasting elements. Use a mix of abstract shapes, halftone patterns, and sketchy lines to create a dynamic and edgy composition. Incorporate elements such as eyes, ears, and crowns in a fragmented, overlapping manner. Use realistic looking tape to as an accent. The color palette should primarily include shades of the primary color, black, and white, with occasional pops of other colors for emphasis. Ensure the overall look is gritty and raw, capturing the essence of a brutalist and avant-garde visual style.",
+    "sample_image": "47178b17-e646-482b-b80b-ccd01c9a2028"
+  },
+  {
+    "id": "bfd32179-36e7-4e48-9531-e9944bfdff99",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_created": "2024-05-15T16:45:23.681Z",
+    "user_updated": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_updated": "2024-05-16T22:35:29.536Z",
+    "aspect_ratio": "16/9",
+    "title": "Blueprint-us",
+    "colors": [
+      {
+        "color": "#6644FF",
+        "type": "primary",
+        "name": "violet"
+      }
+    ],
+    "prompt": "Create a featured image for a blog post targeting developers. The image should follow a minimalist, blueprint-esque style and feature a single primary color. Use white background. Incorporate very subtle graph paper grids or dot grids in the background with minimal contrast from the background color. Place a relevant shape or icon in the center of the image, avoiding the use of text.",
+    "sample_image": "7b3226ba-739c-4a82-be1c-1b89f2d2f68b"
+  },
+  {
+    "id": "ca57d13d-3eb2-4e98-be78-aa800d65fd56",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_created": "2024-05-14T16:20:06.393Z",
+    "user_updated": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_updated": "2024-05-16T22:35:29.637Z",
+    "aspect_ratio": "16/9",
+    "title": "Holographic Futuristic",
+    "colors": [
+      {
+        "color": "#6644FF",
+        "type": "primary"
+      },
+      {
+        "color": "#A2B5CD",
+        "type": "background"
+      }
+    ],
+    "prompt": "Create an illustration in a holographic, futuristic style featuring a handful of geometric shapes and abstract elements. The image should use bright, iridescent colors with shades of purple, blue, green, and pink, creating a vibrant and eye-catching effect. Include clean lines and precise details to give the artwork a polished, modern look. The overall composition should have a digital, cybernetic feel with a playful and whimsical atmosphere. Incorporate elements that reflect a shiny, metallic appearance, using gradients and reflections to enhance the holographic effect.",
+    "sample_image": "2dd62627-e4b3-4061-b613-04156950974d"
+  },
+  {
+    "id": "ef28646b-6020-4642-b542-3ce54ca26093",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_created": "2024-05-15T15:03:12.109Z",
+    "user_updated": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_updated": "2024-05-16T22:35:29.748Z",
+    "aspect_ratio": "16/9",
+    "title": "Isometric Illustration",
+    "colors": [
+      {
+        "color": "#6644FF",
+        "type": "primary"
+      },
+      {
+        "color": "#A2B5CD",
+        "type": "background"
+      }
+    ],
+    "prompt": "Create a minimalistic and modern isometric illustration. The scene should include clean lines, organized 3d elements, and a light color palette. Ensure the overall style is serene and productive, with attention to detail in the placement and design of objects. The composition should be visually balanced and aesthetically pleasing, emphasizing simplicity and functionality.",
+    "sample_image": "d3d4d660-e8c8-4c9d-9c3a-521e375478d8"
+  },
+  {
+    "id": "f906f947-d525-4f78-ae2d-1d8894d2851d",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_created": "2024-05-15T16:16:40.810Z",
+    "user_updated": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "date_updated": "2024-05-16T22:35:29.843Z",
+    "aspect_ratio": "16/9",
+    "title": "Big Arms Big Legs",
+    "colors": [
+      {
+        "color": "#6644FF",
+        "type": "primary",
+        "name": "violet"
+      }
+    ],
+    "prompt": "Create an illustration for a blog post targeted at developers. The illustration should feature a character with exaggerated proportions for their arms and legs, similar to the provided example. Use only two main colors: a specified primary shade and black. The character should be dynamic and engaging, with a modern and minimalist style. Ensure that the overall design is playful, whimsical, and contemporary, capturing the attention of the audience while maintaining a clean and professional look.",
+    "sample_image": "81fa1e10-5c56-4bc6-8db0-e69129d140d6"
+  }
+]

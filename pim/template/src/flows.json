@@ -1,0 +1,62 @@
+[
+  {
+    "id": "01062d76-15f4-4d87-b0b9-8b787b56d061",
+    "name": "Attribute Values",
+    "icon": "bolt",
+    "color": null,
+    "description": null,
+    "status": "inactive",
+    "trigger": "event",
+    "accountability": "all",
+    "options": {
+      "type": "filter",
+      "scope": [
+        "items.create"
+      ],
+      "collections": [
+        "products_attributes"
+      ],
+      "return": "$last"
+    },
+    "operation": "6be75e6c-1272-4029-856d-5adfdb58ec35",
+    "date_created": "2024-01-19T18:24:07.709Z",
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "operations": null
+  },
+  {
+    "id": "5b38f577-1dd6-402e-87ef-acfc63210166",
+    "name": "Add Attribute Group to Product",
+    "icon": "playlist_add",
+    "color": null,
+    "description": null,
+    "status": "inactive",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "location": "item",
+      "requireConfirmation": true,
+      "collections": [
+        "products"
+      ],
+      "fields": [
+        {
+          "field": "attribute_group",
+          "name": "Select Group of Attributes",
+          "type": "json",
+          "meta": {
+            "interface": "collection-item-dropdown",
+            "width": "full",
+            "required": true,
+            "options": {
+              "selectedCollection": "attribute_groups"
+            }
+          }
+        }
+      ]
+    },
+    "operation": "93b64fb3-1bcd-4c26-b5ca-54ef2ea6f381",
+    "date_created": "2024-01-19T07:23:13.806Z",
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "operations": null
+  }
+]

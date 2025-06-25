@@ -1,0 +1,22 @@
+[
+  {
+    "id": "259558f4-8548-4d44-ae86-40d7ee30fe43",
+    "name": "PIM - Team Member",
+    "icon": "supervised_user_circle",
+    "description": "Role for team members that don't need admin access. Can update all product data.",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "5232cc40-89d0-4faf-bf0a-c44c75c6ba6b",
+    "name": "Administrator",
+    "icon": "verified",
+    "description": "$t:admin_description",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  }
+]

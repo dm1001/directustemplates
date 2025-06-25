@@ -1,0 +1,195 @@
+[
+  {
+    "id": "05f1bfcc-c680-4985-b7f6-6a96416f31ee",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "05f1bfcc-c680-4985-b7f6-6a96416f31ee",
+      "folder": "88a2e516-1fa2-40d3-b27d-649e24aff962",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/88a2e516-1fa2-40d3-b27d-649e24aff962",
+      "name": "@directus-labs/ai-writer-operation",
+      "version": "1.2.0",
+      "type": "operation",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "host": "^10.10.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "https://api.openai.com/v1/**"
+            ],
+            "methods": [
+              "POST"
+            ]
+          },
+          "log": {}
+        }
+      },
+      "local": true
+    }
+  },
+  {
+    "id": "3e274b8a-e16d-4a6a-995b-751e1351d3ed",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "3e274b8a-e16d-4a6a-995b-751e1351d3ed",
+      "folder": "05c0842a-e6ea-4793-ace3-4c91a4e5c8c4",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/05c0842a-e6ea-4793-ace3-4c91a4e5c8c4",
+      "name": "@directus-labs/ai-transcription-operation",
+      "version": "1.1.0",
+      "type": "operation",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "host": "^10.10.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "https://api.deepgram.com/v1/**"
+            ],
+            "methods": [
+              "POST"
+            ]
+          },
+          "log": {}
+        }
+      },
+      "local": true
+    }
+  },
+  {
+    "id": "5648428e-b82c-4b7b-bb49-03162e272195",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "5648428e-b82c-4b7b-bb49-03162e272195",
+      "folder": "5c51efc3-542d-4fad-9e4c-afe7665b1f08",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/5c51efc3-542d-4fad-9e4c-afe7665b1f08",
+      "name": "@directus-labs/ai-translator-operation",
+      "version": "1.0.2",
+      "type": "operation",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "host": "^10.10.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "https://api-free.deepl.com/v2/**",
+              "https://api.deepl.com/v2/**"
+            ],
+            "methods": [
+              "POST"
+            ]
+          },
+          "log": {}
+        }
+      },
+      "local": true
+    }
+  },
+  {
+    "id": "ca6d4260-3ecc-4464-bc2f-55ba5e776b13",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "ca6d4260-3ecc-4464-bc2f-55ba5e776b13",
+      "folder": "0be9bfe3-6524-48e5-a5ec-98d5341cca00",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/0be9bfe3-6524-48e5-a5ec-98d5341cca00",
+      "name": "@directus-labs/extension-steps-component",
+      "version": "1.0.0",
+      "type": "bundle",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "entries": [
+        {
+          "name": "steps-interface",
+          "type": "interface"
+        }
+      ],
+      "host": "^10.10.0",
+      "local": true
+    }
+  },
+  {
+    "id": "f9f02ffa-7d35-45bd-92e3-957c5a876457",
+    "bundle": null,
+    "meta": {
+      "enabled": true,
+      "id": "f9f02ffa-7d35-45bd-92e3-957c5a876457",
+      "folder": "467d87ba-5246-41b7-be33-2bd0aa9c6c5e",
+      "source": "registry",
+      "bundle": null
+    },
+    "schema": {
+      "path": "/directus/extensions/.registry/467d87ba-5246-41b7-be33-2bd0aa9c6c5e",
+      "name": "@directus-labs/ai-image-generation-operation",
+      "version": "1.0.1",
+      "type": "operation",
+      "entrypoint": {
+        "app": "dist/app.js",
+        "api": "dist/api.js"
+      },
+      "host": "^10.10.0",
+      "sandbox": {
+        "enabled": true,
+        "requestedScopes": {
+          "request": {
+            "urls": [
+              "https://api.openai.com/v1/**"
+            ],
+            "methods": [
+              "POST"
+            ]
+          },
+          "log": {}
+        }
+      },
+      "local": true
+    }
+  },
+  {
+    "id": "e5014a2e-73fb-4316-8afa-0305141d8e31",
+    "bundle": "ca6d4260-3ecc-4464-bc2f-55ba5e776b13",
+    "meta": {
+      "enabled": true,
+      "id": "e5014a2e-73fb-4316-8afa-0305141d8e31",
+      "folder": "steps-interface",
+      "source": "registry",
+      "bundle": "ca6d4260-3ecc-4464-bc2f-55ba5e776b13"
+    },
+    "schema": {
+      "name": "steps-interface",
+      "type": "interface"
+    }
+  }
+]

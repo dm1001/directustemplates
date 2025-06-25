@@ -1,0 +1,32 @@
+[
+  {
+    "id": "299e4db7-ea20-4b27-9f28-031360ff2a8c",
+    "language": "en-US",
+    "key": "review",
+    "value": "In Review"
+  },
+  {
+    "id": "343dfc42-4871-4980-b17d-45705b552848",
+    "language": "en-US",
+    "key": "in_progress",
+    "value": "In Progress"
+  },
+  {
+    "id": "a00cf0da-fd20-424b-9747-a146d2449213",
+    "language": "en-US",
+    "key": "pending",
+    "value": "Pending"
+  },
+  {
+    "id": "c095895e-fd5a-47ae-98e5-567bbcfca3cc",
+    "language": "en-US",
+    "key": "completed",
+    "value": "Completed"
+  },
+  {
+    "id": "f7cdc5b2-63c6-48a8-9377-c63be3aa6320",
+    "language": "en-US",
+    "key": "void",
+    "value": "Void"
+  }
+]

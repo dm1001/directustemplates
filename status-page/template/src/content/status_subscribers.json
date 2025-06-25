@@ -1,0 +1,41 @@
+[
+  {
+    "id": "48a24e36-e0ea-4578-81c5-5dcc6cf28502",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_created": "2023-12-18T23:24:03.033Z",
+    "user_updated": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_updated": "2024-02-08T04:57:34.155Z",
+    "email": null,
+    "phone_number": "555-555-5555",
+    "webhook_url": null,
+    "is_active": true,
+    "type": "sms",
+    "date_confirmed": null
+  },
+  {
+    "id": "88d7d5e1-8fad-4e6c-87ff-d0d5b0e98e8e",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_created": "2023-12-18T23:14:42.684Z",
+    "user_updated": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_updated": "2023-12-20T00:26:43.475Z",
+    "email": "bryant@example.com",
+    "phone_number": null,
+    "webhook_url": null,
+    "is_active": true,
+    "type": "email",
+    "date_confirmed": "2023-12-19T17:00:00.000Z"
+  },
+  {
+    "id": "9abb1fd6-8363-4317-a508-27011e93e201",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_created": "2023-12-18T23:23:47.170Z",
+    "user_updated": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "date_updated": "2023-12-20T00:27:01.181Z",
+    "email": "steve@example.com",
+    "phone_number": null,
+    "webhook_url": "http://localhost:8055/flows/trigger/b4198846-ea24-417a-a8f9-a9721d61e429",
+    "is_active": true,
+    "type": "webhook",
+    "date_confirmed": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1f13ff2d-fbe9-4280-8f00-3e71c1bb2fed",
+    "categories_id": "91d1a832-9b8a-4118-8c62-91d081f9123c",
+    "languages_code": "en-US",
+    "name": "Apparel",
+    "slug": "apparel",
+    "description": null
+  },
+  {
+    "id": "23d5f0e9-f20e-4deb-95f8-cb891d5934aa",
+    "categories_id": "5e423d4d-cfad-4231-8f77-9c14169a2eec",
+    "languages_code": "en-US",
+    "name": "T-Shirts",
+    "slug": "t-shirts",
+    "description": null
+  },
+  {
+    "id": "674ebd2f-f901-4ccb-9c77-567df433c577",
+    "categories_id": "5e423d4d-cfad-4231-8f77-9c14169a2eec",
+    "languages_code": "de-DE",
+    "name": "Hemden",
+    "slug": "hemden",
+    "description": null
+  },
+  {
+    "id": "fbe0fd76-c538-4bcb-b24b-82dee1a12929",
+    "categories_id": "91d1a832-9b8a-4118-8c62-91d081f9123c",
+    "languages_code": "de-DE",
+    "name": "Bekleidung",
+    "slug": "bekleidung",
+    "description": null
+  }
+]

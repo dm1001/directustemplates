@@ -1,0 +1,6543 @@
+{
+  "version": 1,
+  "directus": "11.3.5",
+  "vendor": "postgres",
+  "collections": [
+    {
+      "collection": "status_incidents",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": false,
+        "archive_field": "status",
+        "archive_value": null,
+        "collapse": "open",
+        "collection": "status_incidents",
+        "color": "#3399FF",
+        "display_template": "{{name}} - {{date_created}}",
+        "group": "status_page",
+        "hidden": false,
+        "icon": "error",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 2,
+        "sort_field": null,
+        "translations": [
+          {
+            "language": "en-US",
+            "plural": "incedents",
+            "singular": "incident",
+            "translation": "Incidents"
+          }
+        ],
+        "unarchive_value": null,
+        "versioning": false
+      },
+      "schema": {
+        "name": "status_incidents"
+      }
+    },
+    {
+      "collection": "status_incidents_updates",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": false,
+        "archive_field": null,
+        "archive_value": null,
+        "collapse": "open",
+        "collection": "status_incidents_updates",
+        "color": "#3399FF",
+        "display_template": null,
+        "group": "status_incidents",
+        "hidden": true,
+        "icon": "newspaper",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 1,
+        "sort_field": null,
+        "translations": [
+          {
+            "language": "en-US",
+            "translation": "Incident Updates"
+          }
+        ],
+        "unarchive_value": null,
+        "versioning": false
+      },
+      "schema": {
+        "name": "status_incidents_updates"
+      }
+    },
+    {
+      "collection": "status_incidents_updates_services",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": null,
+        "archive_value": null,
+        "collapse": "open",
+        "collection": "status_incidents_updates_services",
+        "color": "#3399FF",
+        "display_template": "{{sp_services_id.status}} {{sp_services_id.name}}",
+        "group": "status_incidents_updates",
+        "hidden": true,
+        "icon": null,
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 1,
+        "sort_field": null,
+        "translations": null,
+        "unarchive_value": null,
+        "versioning": false
+      },
+      "schema": {
+        "name": "status_incidents_updates_services"
+      }
+    },
+    {
+      "collection": "status_metrics",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": null,
+        "archive_value": null,
+        "collapse": "open",
+        "collection": "status_metrics",
+        "color": "#3399FF",
+        "display_template": "{{name}}",
+        "group": "status_page",
+        "hidden": false,
+        "icon": "ssid_chart",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 5,
+        "sort_field": null,
+        "translations": [
+          {
+            "language": "en-US",
+            "translation": "Metrics"
+          }
+        ],
+        "unarchive_value": null,
+        "versioning": false
+      },
+      "schema": {
+        "name": "status_metrics"
+      }
+    },
+    {
+      "collection": "status_metrics_data",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": null,
+        "archive_value": null,
+        "collapse": "open",
+        "collection": "status_metrics_data",
+        "color": "#3399FF",
+        "display_template": "{{metric.prefix}}{{value}}{{metric.suffix}} • {{timestamp}}",
+        "group": "status_metrics",
+        "hidden": false,
+        "icon": "show_chart",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 1,
+        "sort_field": null,
+        "translations": [
+          {
+            "language": "en-US",
+            "translation": "Metric Data"
+          }
+        ],
+        "unarchive_value": null,
+        "versioning": false
+      },
+      "schema": {
+        "name": "status_metrics_data"
+      }
+    },
+    {
+      "collection": "status_page",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": null,
+        "archive_value": null,
+        "collapse": "open",
+        "collection": "status_page",
+        "color": "#3399FF",
+        "display_template": null,
+        "group": null,
+        "hidden": false,
+        "icon": "signal_wifi_statusbar_null",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 1,
+        "sort_field": null,
+        "translations": null,
+        "unarchive_value": null,
+        "versioning": false
+      }
+    },
+    {
+      "collection": "status_pages",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": null,
+        "archive_value": null,
+        "collapse": "open",
+        "collection": "status_pages",
+        "color": "#3399FF",
+        "display_template": null,
+        "group": "status_page",
+        "hidden": false,
+        "icon": "pages",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": true,
+        "sort": 6,
+        "sort_field": null,
+        "translations": [
+          {
+            "language": "en-US",
+            "plural": null,
+            "singular": null,
+            "translation": "Page Settings"
+          }
+        ],
+        "unarchive_value": null,
+        "versioning": false
+      },
+      "schema": {
+        "name": "status_pages"
+      }
+    },
+    {
+      "collection": "status_reports",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": "status",
+        "archive_value": "archived",
+        "collapse": "open",
+        "collection": "status_reports",
+        "color": "#3399FF",
+        "display_template": "{{timestamp}}",
+        "group": "status_page",
+        "hidden": false,
+        "icon": "all_inbox",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 1,
+        "sort_field": null,
+        "translations": [
+          {
+            "language": "en-US",
+            "plural": "reports",
+            "singular": "report",
+            "translation": "Reports"
+          }
+        ],
+        "unarchive_value": "draft",
+        "versioning": false
+      },
+      "schema": {
+        "name": "status_reports"
+      }
+    },
+    {
+      "collection": "status_services",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": "status",
+        "archive_value": "archived",
+        "collapse": "open",
+        "collection": "status_services",
+        "color": "#3399FF",
+        "display_template": "{{name}} - {{status}}",
+        "group": "status_page",
+        "hidden": false,
+        "icon": "room_service",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 4,
+        "sort_field": "sort",
+        "translations": [
+          {
+            "language": "en-US",
+            "plural": "services",
+            "singular": "service",
+            "translation": "Services"
+          }
+        ],
+        "unarchive_value": "draft",
+        "versioning": false
+      },
+      "schema": {
+        "name": "status_services"
+      }
+    },
+    {
+      "collection": "status_subscribers",
+      "meta": {
+        "accountability": "all",
+        "archive_app_filter": true,
+        "archive_field": null,
+        "archive_value": "archived",
+        "collapse": "open",
+        "collection": "status_subscribers",
+        "color": "#3399FF",
+        "display_template": "{{email}}",
+        "group": "status_page",
+        "hidden": false,
+        "icon": "notification_important",
+        "item_duplication_fields": null,
+        "note": null,
+        "preview_url": null,
+        "singleton": false,
+        "sort": 3,
+        "sort_field": null,
+        "translations": [
+          {
+            "language": "en-US",
+            "plural": "subscribers",
+            "singular": "subscriber",
+            "translation": "Subscribers"
+          }
+        ],
+        "unarchive_value": "draft",
+        "versioning": false
+      },
+      "schema": {
+        "name": "status_subscribers"
+      }
+    }
+  ],
+  "fields": [
+    {
+      "collection": "status_incidents",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "status_incidents",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "status",
+      "type": "string",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "background": null,
+          "choices": [
+            {
+              "text": "$t:investigating",
+              "value": "investigating"
+            },
+            {
+              "text": "$t:identified",
+              "value": "identified"
+            },
+            {
+              "text": "$t:monitoring",
+              "value": "monitoring"
+            },
+            {
+              "text": "$t:resolved",
+              "value": "resolved"
+            },
+            {
+              "text": "$t:scheduled",
+              "value": "scheduled"
+            },
+            {
+              "text": "$t:verifying",
+              "value": "verifying"
+            },
+            {
+              "text": "$t:completed",
+              "value": "completed"
+            },
+            {
+              "text": "$t:in_progress",
+              "value": "in_progress"
+            }
+          ],
+          "conditionalFormatting": [
+            {
+              "background": "#3399FF",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "investigating"
+            },
+            {
+              "background": "#3399FF",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "scheduled"
+            },
+            {
+              "background": "#FFC23B",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "identified"
+            },
+            {
+              "background": "#FFC23B",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "in_progress"
+            },
+            {
+              "background": "#6644FF",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "monitoring"
+            },
+            {
+              "background": "#6644FF",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "verifying"
+            },
+            {
+              "background": "#2ECDA7",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "completed"
+            },
+            {
+              "background": "#2ECDA7",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "resolved"
+            }
+          ],
+          "format": true
+        },
+        "field": "status",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown",
+        "note": "This status is updated automatically based on Updates that you had.",
+        "options": {
+          "choices": [
+            {
+              "text": "$t:investigating",
+              "value": "investigating"
+            },
+            {
+              "text": "$t:identified",
+              "value": "identified"
+            },
+            {
+              "text": "$t:monitoring",
+              "value": "monitoring"
+            },
+            {
+              "text": "$t:resolved",
+              "value": "resolved"
+            },
+            {
+              "text": "$t:completed",
+              "value": "completed"
+            },
+            {
+              "text": "$t:in_progress",
+              "value": "in_progress"
+            },
+            {
+              "text": "$t:scheduled",
+              "value": "scheduled"
+            },
+            {
+              "text": "$t:verifying",
+              "value": "verifying"
+            }
+          ]
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 4,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "status",
+        "table": "status_incidents",
+        "data_type": "character varying",
+        "default_value": "NULL",
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "user_created",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_created",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 6,
+        "special": [
+          "user-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_created",
+        "table": "status_incidents",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "date_created",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_created",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 7,
+        "special": [
+          "date-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_created",
+        "table": "status_incidents",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "user_updated",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 8,
+        "special": [
+          "user-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_updated",
+        "table": "status_incidents",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "date_updated",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 9,
+        "special": [
+          "date-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_updated",
+        "table": "status_incidents",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "name",
+      "type": "string",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "name",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "name",
+        "table": "status_incidents",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "postmortem",
+      "type": "text",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": [
+          {
+            "hidden": false,
+            "name": "Show IF status = resolved or completed",
+            "options": {
+              "font": "sans-serif",
+              "toolbar": [
+                "bold",
+                "italic",
+                "underline",
+                "h1",
+                "h2",
+                "h3",
+                "numlist",
+                "bullist",
+                "removeformat",
+                "blockquote",
+                "customLink",
+                "customImage",
+                "customMedia",
+                "hr",
+                "code",
+                "fullscreen"
+              ]
+            },
+            "rule": {
+              "_and": [
+                {
+                  "_or": [
+                    {
+                      "status": {
+                        "_eq": "resolved"
+                      }
+                    },
+                    {
+                      "status": {
+                        "_eq": "completed"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "display": null,
+        "display_options": null,
+        "field": "postmortem",
+        "group": null,
+        "hidden": true,
+        "interface": "input-rich-text-html",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 13,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "postmortem",
+        "table": "status_incidents",
+        "data_type": "text",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "impact",
+      "type": "string",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": [
+          {
+            "name": "Locked",
+            "options": {
+              "allowNone": false,
+              "allowOther": false
+            },
+            "readonly": true,
+            "rule": {
+              "_and": [
+                {
+                  "id": {
+                    "_null": true
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "display": "formatted-value",
+        "display_options": {
+          "border": true,
+          "conditionalFormatting": [
+            {
+              "color": "#3399FF",
+              "icon": "check",
+              "operator": "eq",
+              "value": "none"
+            },
+            {
+              "background": null,
+              "color": "#FFA439",
+              "icon": "warning",
+              "operator": "eq",
+              "value": "major"
+            },
+            {
+              "color": "#FFC23B",
+              "icon": "check_indeterminate_small",
+              "operator": "eq",
+              "value": "minor"
+            },
+            {
+              "color": "#E35169",
+              "icon": "local_fire_department",
+              "operator": "eq",
+              "value": "critical"
+            }
+          ],
+          "format": true
+        },
+        "field": "impact",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown",
+        "note": null,
+        "options": {
+          "choices": [
+            {
+              "text": "None",
+              "value": "none"
+            },
+            {
+              "text": "Minor",
+              "value": "minor"
+            },
+            {
+              "text": "Major",
+              "value": "major"
+            },
+            {
+              "text": "Critical",
+              "value": "critical"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 5,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "impact",
+        "table": "status_incidents",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "updates",
+      "type": "alias",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": null,
+        "display": "related-values",
+        "display_options": {
+          "template": "{{message}}"
+        },
+        "field": "updates",
+        "group": "history",
+        "hidden": false,
+        "interface": "list-o2m",
+        "note": null,
+        "options": {
+          "enableLink": true,
+          "enableSelect": false,
+          "fields": [
+            "status",
+            "message",
+            "services_affected.sp_services_id.status",
+            "services_affected.sp_services_id.name"
+          ],
+          "template": "{{status}} • {{services_affected}} • {{date_created}}"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "o2m"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "maintenance",
+      "type": "alias",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": [
+          {
+            "hidden": false,
+            "name": "Show IF type = maintenance",
+            "options": {
+              "start": "open"
+            },
+            "rule": {
+              "_and": [
+                {
+                  "is_maintenance": {
+                    "_eq": true
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "display": null,
+        "display_options": null,
+        "field": "maintenance",
+        "group": null,
+        "hidden": true,
+        "interface": "group-detail",
+        "note": null,
+        "options": {
+          "headerIcon": "settings_suggest"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 10,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "scheduled_for",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "scheduled_for",
+        "group": "maintenance",
+        "hidden": false,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "scheduled_for",
+        "table": "status_incidents",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "scheduled_until",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "scheduled_until",
+        "group": "maintenance",
+        "hidden": false,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "scheduled_until",
+        "table": "status_incidents",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "notice_postmortem",
+      "type": "alias",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": [
+          {
+            "hidden": false,
+            "name": "Show IF status = resolved or completed",
+            "options": {
+              "color": "normal",
+              "font": "sans-serif",
+              "toolbar": [
+                "bold",
+                "italic",
+                "underline",
+                "h1",
+                "h2",
+                "h3",
+                "numlist",
+                "bullist",
+                "removeformat",
+                "blockquote",
+                "customLink",
+                "customImage",
+                "customMedia",
+                "hr",
+                "code",
+                "fullscreen"
+              ]
+            },
+            "rule": {
+              "_and": [
+                {
+                  "_or": [
+                    {
+                      "status": {
+                        "_eq": "resolved"
+                      }
+                    },
+                    {
+                      "status": {
+                        "_eq": "completed"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "display": null,
+        "display_options": null,
+        "field": "notice_postmortem",
+        "group": null,
+        "hidden": true,
+        "interface": "presentation-notice",
+        "note": null,
+        "options": {
+          "color": "warning",
+          "icon": "warning",
+          "text": "If this incident is resolved, you should add a postmortem to build trust and confidence with users"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 12,
+        "special": [
+          "alias",
+          "no-data"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "is_maintenance",
+      "type": "boolean",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "is_maintenance",
+        "group": null,
+        "hidden": false,
+        "interface": "boolean",
+        "note": null,
+        "options": {
+          "label": "Scheduled Maintenance"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": [
+          "cast-boolean"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "is_maintenance",
+        "table": "status_incidents",
+        "data_type": "boolean",
+        "default_value": false,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "history",
+      "type": "alias",
+      "meta": {
+        "collection": "status_incidents",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "history",
+        "group": null,
+        "hidden": false,
+        "interface": "group-detail",
+        "note": null,
+        "options": {
+          "headerIcon": "history"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 11,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "status_incidents_updates",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_incidents_updates",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "status_incidents_updates",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents_updates",
+      "field": "status",
+      "type": "string",
+      "meta": {
+        "collection": "status_incidents_updates",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "choices": [
+            {
+              "text": "-- Incident --",
+              "value": "incident"
+            },
+            {
+              "text": "$t:investigating",
+              "value": "investigating"
+            },
+            {
+              "text": "$t:identified",
+              "value": "identified"
+            },
+            {
+              "text": "$t:monitoring",
+              "value": "monitoring"
+            },
+            {
+              "text": "$t:resolved",
+              "value": "resolved"
+            },
+            {
+              "text": "-- Maintenance --",
+              "value": "maintenance"
+            },
+            {
+              "text": "$t:scheduled",
+              "value": "scheduled"
+            },
+            {
+              "text": "$t:in_progress",
+              "value": "in_progress"
+            },
+            {
+              "text": "$t:verifying",
+              "value": "verifying"
+            },
+            {
+              "text": "$t:completed",
+              "value": "completed"
+            }
+          ],
+          "conditionalFormatting": [
+            {
+              "background": "#3399FF",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "investigating"
+            },
+            {
+              "background": "#3399FF",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "scheduled"
+            },
+            {
+              "background": "#FFC23B",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "identified"
+            },
+            {
+              "background": "#FFC23B",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "in_progress"
+            },
+            {
+              "background": "#6644FF",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "monitoring"
+            },
+            {
+              "background": "#6644FF",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "verifying"
+            },
+            {
+              "background": "#2ECDA7",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "completed"
+            },
+            {
+              "background": "#2ECDA7",
+              "color": "#FFFFFF",
+              "operator": "eq",
+              "value": "resolved"
+            }
+          ],
+          "format": true
+        },
+        "field": "status",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown",
+        "note": null,
+        "options": {
+          "choices": [
+            {
+              "text": "-- Incident --",
+              "value": "incident"
+            },
+            {
+              "text": "$t:investigating",
+              "value": "investigating"
+            },
+            {
+              "text": "$t:identified",
+              "value": "identified"
+            },
+            {
+              "text": "$t:monitoring",
+              "value": "monitoring"
+            },
+            {
+              "text": "$t:resolved",
+              "value": "resolved"
+            },
+            {
+              "text": "-- Maintenance --",
+              "value": "maintenance"
+            },
+            {
+              "text": "$t:scheduled",
+              "value": "scheduled"
+            },
+            {
+              "text": "$t:in_progress",
+              "value": "in_progress"
+            },
+            {
+              "text": "$t:verifying",
+              "value": "verifying"
+            },
+            {
+              "text": "$t:completed",
+              "value": "completed"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 6,
+        "special": null,
+        "translations": null,
+        "validation": {
+          "_and": [
+            {
+              "_and": [
+                {
+                  "status": {
+                    "_neq": "incident"
+                  }
+                },
+                {
+                  "status": {
+                    "_neq": "maintenance"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "validation_message": "Please choose a different value for status because you selected a placeholder.",
+        "width": "full"
+      },
+      "schema": {
+        "name": "status",
+        "table": "status_incidents_updates",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents_updates",
+      "field": "user_created",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_incidents_updates",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_created",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 2,
+        "special": [
+          "user-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_created",
+        "table": "status_incidents_updates",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_incidents_updates",
+      "field": "date_created",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_incidents_updates",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_created",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 3,
+        "special": [
+          "date-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_created",
+        "table": "status_incidents_updates",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents_updates",
+      "field": "user_updated",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_incidents_updates",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 4,
+        "special": [
+          "user-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_updated",
+        "table": "status_incidents_updates",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_incidents_updates",
+      "field": "date_updated",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_incidents_updates",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 5,
+        "special": [
+          "date-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_updated",
+        "table": "status_incidents_updates",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents_updates",
+      "field": "message",
+      "type": "text",
+      "meta": {
+        "collection": "status_incidents_updates",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "conditionalFormatting": null,
+          "format": true
+        },
+        "field": "message",
+        "group": null,
+        "hidden": false,
+        "interface": "input-multiline",
+        "note": null,
+        "options": {
+          "trim": true
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 7,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "message",
+        "table": "status_incidents_updates",
+        "data_type": "text",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents_updates",
+      "field": "incident",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_incidents_updates",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "incident",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 8,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "incident",
+        "table": "status_incidents_updates",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "status_incidents",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_incidents_updates",
+      "field": "notify_subscribers",
+      "type": "boolean",
+      "meta": {
+        "collection": "status_incidents_updates",
+        "conditions": [
+          {
+            "name": "Prevent Editing After Creation",
+            "options": {
+              "iconOff": "check_box_outline_blank",
+              "iconOn": "check_box",
+              "label": "Enabled"
+            },
+            "readonly": true,
+            "rule": {
+              "_and": [
+                {
+                  "id": {
+                    "_nnull": true
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "display": "boolean",
+        "display_options": null,
+        "field": "notify_subscribers",
+        "group": null,
+        "hidden": false,
+        "interface": "boolean",
+        "note": "Notify subscribers via their chosen method upon saving update.",
+        "options": {
+          "label": "Notify"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 9,
+        "special": [
+          "cast-boolean"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "notify_subscribers",
+        "table": "status_incidents_updates",
+        "data_type": "boolean",
+        "default_value": true,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents_updates",
+      "field": "services_affected",
+      "type": "alias",
+      "meta": {
+        "collection": "status_incidents_updates",
+        "conditions": [
+          {
+            "name": "Prevent Editing",
+            "options": {
+              "allowDuplicates": false,
+              "enableCreate": true,
+              "enableLink": false,
+              "enableSearchFilter": false,
+              "enableSelect": true,
+              "junctionFieldLocation": "bottom",
+              "layout": "list",
+              "limit": 15
+            },
+            "readonly": true,
+            "rule": {
+              "_and": [
+                {
+                  "id": {
+                    "_nnull": true
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "display": "related-values",
+        "display_options": null,
+        "field": "services_affected",
+        "group": null,
+        "hidden": false,
+        "interface": "list-m2m",
+        "note": null,
+        "options": {
+          "enableCreate": false,
+          "enableLink": true,
+          "junctionFieldLocation": "top"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 10,
+        "special": [
+          "m2m"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "status_incidents_updates_services",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_incidents_updates_services",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "status_incidents_updates_services",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents_updates_services",
+      "field": "status",
+      "type": "string",
+      "meta": {
+        "collection": "status_incidents_updates_services",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "border": true,
+          "choices": [
+            {
+              "text": "Investigating",
+              "value": "investigating"
+            },
+            {
+              "text": "Identified",
+              "value": "identified"
+            },
+            {
+              "text": "Monitoring",
+              "value": "monitoring"
+            },
+            {
+              "text": "Resolved",
+              "value": "resolved"
+            }
+          ],
+          "conditionalFormatting": [
+            {
+              "background": null,
+              "color": "#2ECDA7",
+              "icon": "check",
+              "operator": "eq",
+              "value": "operational"
+            },
+            {
+              "background": null,
+              "color": "#3399FF",
+              "icon": "settings_suggest",
+              "operator": "eq",
+              "value": "under_maintenance"
+            },
+            {
+              "background": null,
+              "color": "#FFC23B",
+              "icon": "check_indeterminate_small",
+              "operator": "eq",
+              "value": "degraded_performance"
+            },
+            {
+              "background": null,
+              "color": "#FFA439",
+              "icon": "exclamation",
+              "operator": "eq",
+              "value": "partial_outage"
+            },
+            {
+              "background": null,
+              "color": "#E35169",
+              "icon": "local_fire_department",
+              "operator": "eq",
+              "value": "major_outage"
+            }
+          ],
+          "format": true
+        },
+        "field": "status",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown",
+        "note": "We'll update the underlying service status to this.",
+        "options": {
+          "choices": [
+            {
+              "text": "$t:operational",
+              "value": "operational"
+            },
+            {
+              "text": "$t:under_maintenance",
+              "value": "under_maintenance"
+            },
+            {
+              "text": "$t:degraded_performance",
+              "value": "degraded_performance"
+            },
+            {
+              "text": "$t:partial_outage",
+              "value": "partial_outage"
+            },
+            {
+              "text": "$t:major_outage",
+              "value": "major_outage"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "status",
+        "table": "status_incidents_updates_services",
+        "data_type": "character varying",
+        "default_value": "draft",
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_incidents_updates_services",
+      "field": "status_incidents_updates_id",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_incidents_updates_services",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "status_incidents_updates_id",
+        "group": null,
+        "hidden": true,
+        "interface": null,
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 5,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "status_incidents_updates_id",
+        "table": "status_incidents_updates_services",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "status_incidents_updates",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_incidents_updates_services",
+      "field": "status_services_id",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_incidents_updates_services",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "status_services_id",
+        "group": null,
+        "hidden": true,
+        "interface": null,
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 6,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "status_services_id",
+        "table": "status_incidents_updates_services",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "status_services",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_metrics",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_metrics",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": "Unique ID for this metric. You'll need this when add metric data via the API.",
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 9,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "status_metrics",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_metrics",
+      "field": "user_created",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_metrics",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_created",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "user-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_created",
+        "table": "status_metrics",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_metrics",
+      "field": "date_created",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_metrics",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_created",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 2,
+        "special": [
+          "date-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_created",
+        "table": "status_metrics",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_metrics",
+      "field": "user_updated",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_metrics",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 3,
+        "special": [
+          "user-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_updated",
+        "table": "status_metrics",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_metrics",
+      "field": "date_updated",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_metrics",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 4,
+        "special": [
+          "date-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_updated",
+        "table": "status_metrics",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_metrics",
+      "field": "name",
+      "type": "string",
+      "meta": {
+        "collection": "status_metrics",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "name",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": "Display name for this metric",
+        "options": {
+          "placeholder": "Average response time"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 5,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "name",
+        "table": "status_metrics",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_metrics",
+      "field": "description",
+      "type": "text",
+      "meta": {
+        "collection": "status_metrics",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "description",
+        "group": null,
+        "hidden": false,
+        "interface": "input-multiline",
+        "note": "More detailed description of the metric",
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 6,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "description",
+        "table": "status_metrics",
+        "data_type": "text",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_metrics",
+      "field": "suffix",
+      "type": "string",
+      "meta": {
+        "collection": "status_metrics",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "suffix",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": "The suffix or units of the metric (ms, % uptime, per min, etc)",
+        "options": {
+          "placeholder": "ms"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 8,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "suffix",
+        "table": "status_metrics",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_metrics",
+      "field": "data",
+      "type": "alias",
+      "meta": {
+        "collection": "status_metrics",
+        "conditions": null,
+        "display": "related-values",
+        "display_options": null,
+        "field": "data",
+        "group": null,
+        "hidden": false,
+        "interface": "list-o2m",
+        "note": null,
+        "options": {
+          "enableLink": true,
+          "template": null
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 10,
+        "special": [
+          "o2m"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "status_metrics",
+      "field": "prefix",
+      "type": "string",
+      "meta": {
+        "collection": "status_metrics",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "prefix",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": "The suffix or units of the metric (ms, % uptime, per min, etc)",
+        "options": {
+          "placeholder": "ms"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 7,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "prefix",
+        "table": "status_metrics",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_metrics_data",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_metrics_data",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "status_metrics_data",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_metrics_data",
+      "field": "timestamp",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_metrics_data",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "timestamp",
+        "group": null,
+        "hidden": false,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 2,
+        "special": [
+          "date-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "timestamp",
+        "table": "status_metrics_data",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_metrics_data",
+      "field": "value",
+      "type": "float",
+      "meta": {
+        "collection": "status_metrics_data",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "format": true
+        },
+        "field": "value",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "value",
+        "table": "status_metrics_data",
+        "data_type": "real",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 24,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_metrics_data",
+      "field": "metric",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_metrics_data",
+        "conditions": null,
+        "display": "related-values",
+        "display_options": {
+          "template": "{{name}}"
+        },
+        "field": "metric",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{name}}"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "metric",
+        "table": "status_metrics_data",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "status_metrics",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "status_pages",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "user_created",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_created",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 2,
+        "special": [
+          "user-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_created",
+        "table": "status_pages",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "date_created",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_created",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 3,
+        "special": [
+          "date-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_created",
+        "table": "status_pages",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "user_updated",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 4,
+        "special": [
+          "user-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_updated",
+        "table": "status_pages",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "date_updated",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 5,
+        "special": [
+          "date-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_updated",
+        "table": "status_pages",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "website_url",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "website_url",
+        "group": "urls",
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "website_url",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "support_url",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "support_url",
+        "group": "urls",
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "support_url",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "page_headline",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "page_headline",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 6,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "page_headline",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "page_description",
+      "type": "text",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "page_description",
+        "group": null,
+        "hidden": false,
+        "interface": "input-rich-text-html",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 7,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "page_description",
+        "table": "status_pages",
+        "data_type": "text",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "privacy_policy_url",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "privacy_policy_url",
+        "group": "urls",
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "privacy_policy_url",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "no_index",
+      "type": "boolean",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": "boolean",
+        "display_options": {
+          "labelOff": "Visible",
+          "labelOn": "Hidden"
+        },
+        "field": "no_index",
+        "group": "urls",
+        "hidden": false,
+        "interface": "boolean",
+        "note": "Hide page from search engines",
+        "options": {
+          "label": "Hidden from Search Engines"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 5,
+        "special": [
+          "cast-boolean"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "no_index",
+        "table": "status_pages",
+        "data_type": "boolean",
+        "default_value": false,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "terms_of_service_url",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "terms_of_service_url",
+        "group": "urls",
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "terms_of_service_url",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theming",
+      "type": "alias",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theming",
+        "group": null,
+        "hidden": false,
+        "interface": "group-detail",
+        "note": null,
+        "options": {
+          "headerIcon": "format_paint"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 8,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "urls",
+      "type": "alias",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "urls",
+        "group": null,
+        "hidden": false,
+        "interface": "group-detail",
+        "note": null,
+        "options": {
+          "headerIcon": "link"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 9,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "custom_css",
+      "type": "text",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "custom_css",
+        "group": "theming",
+        "hidden": false,
+        "interface": "input-code",
+        "note": null,
+        "options": {
+          "language": "css"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 10,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "custom_css",
+        "table": "status_pages",
+        "data_type": "text",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "custom_javascript",
+      "type": "text",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "custom_javascript",
+        "group": "theming",
+        "hidden": false,
+        "interface": "input-code",
+        "note": null,
+        "options": {
+          "language": "javascript"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 11,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "custom_javascript",
+        "table": "status_pages",
+        "data_type": "text",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "logo",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "logo",
+        "group": "light_mode",
+        "hidden": false,
+        "interface": "file-image",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "file"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "logo",
+        "table": "status_pages",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_files",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "favicon",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "favicon",
+        "group": "theming",
+        "hidden": false,
+        "interface": "file-image",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": [
+          "file"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "favicon",
+        "table": "status_pages",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_files",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_background_color",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_background_color",
+        "group": "light_mode",
+        "hidden": false,
+        "interface": "select-color",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_background_color",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_font_color",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_font_color",
+        "group": "light_mode",
+        "hidden": false,
+        "interface": "select-color",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_font_color",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_greens",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_greens",
+        "group": "status_colors",
+        "hidden": false,
+        "interface": "select-color",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_greens",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_yellows",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_yellows",
+        "group": "status_colors",
+        "hidden": false,
+        "interface": "select-color",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_yellows",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_oranges",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_oranges",
+        "group": "status_colors",
+        "hidden": false,
+        "interface": "select-color",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_oranges",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_reds",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_reds",
+        "group": "status_colors",
+        "hidden": false,
+        "interface": "select-color",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_reds",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_blues",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_blues",
+        "group": "status_colors",
+        "hidden": false,
+        "interface": "select-color",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 5,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_blues",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_border_color",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_border_color",
+        "group": "theming",
+        "hidden": false,
+        "interface": "select-color",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 6,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_border_color",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_border_radius",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_border_radius",
+        "group": "theming",
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 5,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_border_radius",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_no_data",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_no_data",
+        "group": "status_colors",
+        "hidden": false,
+        "interface": "select-color",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 7,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_no_data",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_dark_background_color",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_dark_background_color",
+        "group": "dark_mode",
+        "hidden": false,
+        "interface": "select-color",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_dark_background_color",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_secondary_font_color",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_secondary_font_color",
+        "group": "light_mode",
+        "hidden": false,
+        "interface": "select-color",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_secondary_font_color",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_dark_font_color",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_dark_font_color",
+        "group": "dark_mode",
+        "hidden": false,
+        "interface": "select-color",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_dark_font_color",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_dark_secondary_font_color",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_dark_secondary_font_color",
+        "group": "dark_mode",
+        "hidden": false,
+        "interface": "select-color",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_dark_secondary_font_color",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_primary",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_primary",
+        "group": "theming",
+        "hidden": false,
+        "interface": "select-color",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_primary",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "logo_dark",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "logo_dark",
+        "group": "dark_mode",
+        "hidden": false,
+        "interface": "file-image",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "file"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "logo_dark",
+        "table": "status_pages",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_files",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_font_family_body_google",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_font_family_body_google",
+        "group": "theming",
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_font_family_body_google",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "theme_font_family_display_google",
+      "type": "string",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "theme_font_family_display_google",
+        "group": "theming",
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "theme_font_family_display_google",
+        "table": "status_pages",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "dark_mode",
+      "type": "alias",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "dark_mode",
+        "group": "theming",
+        "hidden": false,
+        "interface": "group-detail",
+        "note": null,
+        "options": {
+          "headerIcon": "dark_mode",
+          "start": "closed"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 8,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "light_mode",
+      "type": "alias",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "light_mode",
+        "group": "theming",
+        "hidden": false,
+        "interface": "group-detail",
+        "note": null,
+        "options": {
+          "headerIcon": "light_mode",
+          "start": "closed"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 7,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "status_colors",
+      "type": "alias",
+      "meta": {
+        "collection": "status_pages",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "status_colors",
+        "group": "theming",
+        "hidden": false,
+        "interface": "group-detail",
+        "note": null,
+        "options": {
+          "headerIcon": "invert_colors",
+          "start": "closed"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 9,
+        "special": [
+          "alias",
+          "no-data",
+          "group"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      }
+    },
+    {
+      "collection": "status_reports",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_reports",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "status_reports",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_reports",
+      "field": "status",
+      "type": "string",
+      "meta": {
+        "collection": "status_reports",
+        "conditions": null,
+        "display": "labels",
+        "display_options": {
+          "choices": [
+            {
+              "background": "var(--theme--primary)",
+              "foreground": "#FFFFFF",
+              "text": "$t:published",
+              "value": "published"
+            },
+            {
+              "background": "#D3DAE4",
+              "foreground": "#18222F",
+              "text": "$t:draft",
+              "value": "draft"
+            },
+            {
+              "background": "var(--theme--warning)",
+              "foreground": "#FFFFFF",
+              "text": "$t:archived",
+              "value": "archived"
+            }
+          ],
+          "showAsDot": true
+        },
+        "field": "status",
+        "group": null,
+        "hidden": false,
+        "interface": "select-radio",
+        "note": null,
+        "options": {
+          "choices": [
+            {
+              "text": "$t:new",
+              "value": "new"
+            },
+            {
+              "text": "$t:under_review",
+              "value": "under_review"
+            },
+            {
+              "text": "$t:closed",
+              "value": "closed"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "status",
+        "table": "status_reports",
+        "data_type": "character varying",
+        "default_value": "draft",
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_reports",
+      "field": "message",
+      "type": "text",
+      "meta": {
+        "collection": "status_reports",
+        "conditions": [
+          {
+            "name": "Prevent Editing Once Created",
+            "options": {
+              "clear": false,
+              "font": "sans-serif",
+              "trim": false
+            },
+            "readonly": true,
+            "rule": {
+              "_and": [
+                {
+                  "id": {
+                    "_nnull": true
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "display": null,
+        "display_options": null,
+        "field": "message",
+        "group": null,
+        "hidden": false,
+        "interface": "input-multiline",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 5,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "message",
+        "table": "status_reports",
+        "data_type": "text",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_reports",
+      "field": "ip_address",
+      "type": "string",
+      "meta": {
+        "collection": "status_reports",
+        "conditions": [
+          {
+            "name": "Prevent Editing Once Created",
+            "options": {
+              "clear": false,
+              "font": "sans-serif",
+              "masked": false,
+              "slug": false,
+              "trim": false
+            },
+            "readonly": true,
+            "rule": {
+              "_and": [
+                {
+                  "id": {
+                    "_nnull": true
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "display": null,
+        "display_options": null,
+        "field": "ip_address",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "ip_address",
+        "table": "status_reports",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_reports",
+      "field": "timestamp",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_reports",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "format": "short"
+        },
+        "field": "timestamp",
+        "group": null,
+        "hidden": false,
+        "interface": "datetime",
+        "note": null,
+        "options": {
+          "use24": false
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 4,
+        "special": [
+          "date-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "timestamp",
+        "table": "status_reports",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_reports",
+      "field": "impact",
+      "type": "string",
+      "meta": {
+        "collection": "status_reports",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "impact",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 6,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "impact",
+        "table": "status_reports",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_reports",
+      "field": "services_affected",
+      "type": "json",
+      "meta": {
+        "collection": "status_reports",
+        "conditions": null,
+        "display": "formatted-json-value",
+        "display_options": {
+          "format": "{{ name }}"
+        },
+        "field": "services_affected",
+        "group": null,
+        "hidden": false,
+        "interface": "list",
+        "note": null,
+        "options": {
+          "fields": [
+            {
+              "field": "name",
+              "meta": {
+                "display": null,
+                "field": "name",
+                "interface": "input",
+                "required": false,
+                "type": "string",
+                "width": "full"
+              },
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "field": "key",
+              "meta": {
+                "field": "key",
+                "interface": "input",
+                "type": "string",
+                "width": "full"
+              },
+              "name": "key",
+              "type": "string"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 7,
+        "special": [
+          "cast-json"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "services_affected",
+        "table": "status_reports",
+        "data_type": "json",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_reports",
+      "field": "subscriber",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_reports",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "subscriber",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{email}}"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 8,
+        "special": [
+          "m2o"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "subscriber",
+        "table": "status_reports",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "status_subscribers",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_services",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_services",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "status_services",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_services",
+      "field": "status",
+      "type": "string",
+      "meta": {
+        "collection": "status_services",
+        "conditions": null,
+        "display": "formatted-value",
+        "display_options": {
+          "border": true,
+          "choices": [
+            {
+              "background": "#2ECDA7",
+              "foreground": "#FFFFFF",
+              "text": "Operational",
+              "value": "operational"
+            },
+            {
+              "background": "#3399FF",
+              "foreground": "#FFFFFF",
+              "text": "Under Maintenance",
+              "value": "under_maintenance"
+            },
+            {
+              "background": "#FFC23B",
+              "foreground": "#18222F",
+              "text": "Degraded Performance",
+              "value": "degrade_performance"
+            },
+            {
+              "background": "#FFA439",
+              "foreground": "#18222F",
+              "text": "Partial Outage",
+              "value": "partial_outage"
+            },
+            {
+              "background": "#E35169",
+              "foreground": "#FFFFFF",
+              "text": "Major Outage",
+              "value": "major_outage"
+            }
+          ],
+          "conditionalFormatting": [
+            {
+              "background": null,
+              "color": "#2ECDA7",
+              "icon": "check",
+              "operator": "eq",
+              "value": "operational"
+            },
+            {
+              "background": null,
+              "color": "#3399FF",
+              "icon": "settings_suggest",
+              "operator": "eq",
+              "value": "under_maintenance"
+            },
+            {
+              "background": null,
+              "color": "#FFC23B",
+              "icon": "check_indeterminate_small",
+              "operator": "eq",
+              "value": "degraded_performance"
+            },
+            {
+              "background": null,
+              "color": "#FFA439",
+              "icon": "exclamation",
+              "operator": "eq",
+              "value": "partial_outage"
+            },
+            {
+              "background": null,
+              "color": "#E35169",
+              "icon": "local_fire_department",
+              "operator": "eq",
+              "value": "major_outage"
+            }
+          ],
+          "format": true
+        },
+        "field": "status",
+        "group": null,
+        "hidden": false,
+        "interface": "select-dropdown",
+        "note": null,
+        "options": {
+          "choices": [
+            {
+              "text": "$t:operational",
+              "value": "operational"
+            },
+            {
+              "text": "$t:under_maintenance",
+              "value": "under_maintenance"
+            },
+            {
+              "text": "$t:degraded_performance",
+              "value": "degraded_performance"
+            },
+            {
+              "text": "$t:partial_outage",
+              "value": "partial_outage"
+            },
+            {
+              "text": "$t:major_outage",
+              "value": "major_outage"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "status",
+        "table": "status_services",
+        "data_type": "character varying",
+        "default_value": "operational",
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_services",
+      "field": "sort",
+      "type": "integer",
+      "meta": {
+        "collection": "status_services",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "sort",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 4,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "sort",
+        "table": "status_services",
+        "data_type": "integer",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": 32,
+        "numeric_scale": 0,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_services",
+      "field": "user_created",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_services",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_created",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 5,
+        "special": [
+          "user-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_created",
+        "table": "status_services",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_services",
+      "field": "date_created",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_services",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_created",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 6,
+        "special": [
+          "date-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_created",
+        "table": "status_services",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_services",
+      "field": "user_updated",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_services",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 7,
+        "special": [
+          "user-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_updated",
+        "table": "status_services",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_services",
+      "field": "date_updated",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_services",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 8,
+        "special": [
+          "date-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_updated",
+        "table": "status_services",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_services",
+      "field": "name",
+      "type": "string",
+      "meta": {
+        "collection": "status_services",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "name",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": "Display name for this service on the status page",
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 9,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "name",
+        "table": "status_services",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_services",
+      "field": "description",
+      "type": "text",
+      "meta": {
+        "collection": "status_services",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "description",
+        "group": null,
+        "hidden": false,
+        "interface": "input-multiline",
+        "note": "More detailed description of what this service is or does",
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 10,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "description",
+        "table": "status_services",
+        "data_type": "text",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_services",
+      "field": "start_date",
+      "type": "date",
+      "meta": {
+        "collection": "status_services",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "start_date",
+        "group": null,
+        "hidden": false,
+        "interface": "datetime",
+        "note": "The date this service started being used",
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 11,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "start_date",
+        "table": "status_services",
+        "data_type": "date",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_services",
+      "field": "is_visible",
+      "type": "boolean",
+      "meta": {
+        "collection": "status_services",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "is_visible",
+        "group": null,
+        "hidden": false,
+        "interface": "boolean",
+        "note": "Should this service be visible / featured on the status page",
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": [
+          "cast-boolean"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "is_visible",
+        "table": "status_services",
+        "data_type": "boolean",
+        "default_value": true,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_subscribers",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_subscribers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 1,
+        "special": [
+          "uuid"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "status_subscribers",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": true,
+        "is_indexed": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_subscribers",
+      "field": "user_created",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_subscribers",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_created",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 2,
+        "special": [
+          "user-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "user_created",
+        "table": "status_subscribers",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_subscribers",
+      "field": "date_created",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_subscribers",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_created",
+        "group": null,
+        "hidden": false,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 10,
+        "special": [
+          "date-created"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_created",
+        "table": "status_subscribers",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_subscribers",
+      "field": "user_updated",
+      "type": "uuid",
+      "meta": {
+        "collection": "status_subscribers",
+        "conditions": null,
+        "display": "user",
+        "display_options": null,
+        "field": "user_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "select-dropdown-m2o",
+        "note": null,
+        "options": {
+          "template": "{{avatar.$thumbnail}} {{first_name}} {{last_name}}"
+        },
+        "readonly": true,
+        "required": false,
+        "sort": 4,
+        "special": [
+          "user-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "user_updated",
+        "table": "status_subscribers",
+        "data_type": "uuid",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "collection": "status_subscribers",
+      "field": "date_updated",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_subscribers",
+        "conditions": null,
+        "display": "datetime",
+        "display_options": {
+          "relative": true
+        },
+        "field": "date_updated",
+        "group": null,
+        "hidden": true,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": true,
+        "required": false,
+        "sort": 3,
+        "special": [
+          "date-updated"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_updated",
+        "table": "status_subscribers",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_subscribers",
+      "field": "email",
+      "type": "string",
+      "meta": {
+        "collection": "status_subscribers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "email",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 7,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "email",
+        "table": "status_subscribers",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_subscribers",
+      "field": "phone_number",
+      "type": "string",
+      "meta": {
+        "collection": "status_subscribers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "phone_number",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 8,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "phone_number",
+        "table": "status_subscribers",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_subscribers",
+      "field": "webhook_url",
+      "type": "string",
+      "meta": {
+        "collection": "status_subscribers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "webhook_url",
+        "group": null,
+        "hidden": false,
+        "interface": "input",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 9,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "webhook_url",
+        "table": "status_subscribers",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_subscribers",
+      "field": "is_active",
+      "type": "boolean",
+      "meta": {
+        "collection": "status_subscribers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "is_active",
+        "group": null,
+        "hidden": false,
+        "interface": "boolean",
+        "note": null,
+        "options": {
+          "label": "Active Subscriber"
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 6,
+        "special": [
+          "cast-boolean"
+        ],
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "is_active",
+        "table": "status_subscribers",
+        "data_type": "boolean",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_subscribers",
+      "field": "type",
+      "type": "string",
+      "meta": {
+        "collection": "status_subscribers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "type",
+        "group": null,
+        "hidden": false,
+        "interface": "select-radio",
+        "note": null,
+        "options": {
+          "choices": [
+            {
+              "text": "$t:email",
+              "value": "email"
+            },
+            {
+              "text": "$t:sms",
+              "value": "sms"
+            },
+            {
+              "text": "$t:webhook",
+              "value": "webhook"
+            }
+          ]
+        },
+        "readonly": false,
+        "required": false,
+        "sort": 5,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "type",
+        "table": "status_subscribers",
+        "data_type": "character varying",
+        "default_value": null,
+        "max_length": 255,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "collection": "status_subscribers",
+      "field": "date_confirmed",
+      "type": "timestamp",
+      "meta": {
+        "collection": "status_subscribers",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "date_confirmed",
+        "group": null,
+        "hidden": false,
+        "interface": "datetime",
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 11,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "half"
+      },
+      "schema": {
+        "name": "date_confirmed",
+        "table": "status_subscribers",
+        "data_type": "timestamp with time zone",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_indexed": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "collection": "status_incidents",
+      "field": "user_updated",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_incidents",
+        "many_field": "user_updated",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_incidents",
+        "column": "user_updated",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_incidents_user_updated_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "status_incidents",
+      "field": "user_created",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_incidents",
+        "many_field": "user_created",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_incidents",
+        "column": "user_created",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_incidents_user_created_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "status_incidents_updates",
+      "field": "user_created",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_incidents_updates",
+        "many_field": "user_created",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_incidents_updates",
+        "column": "user_created",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_incidents_updates_user_created_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "status_incidents_updates",
+      "field": "user_updated",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_incidents_updates",
+        "many_field": "user_updated",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_incidents_updates",
+        "column": "user_updated",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_incidents_updates_user_updated_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "status_incidents_updates",
+      "field": "incident",
+      "related_collection": "status_incidents",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_incidents_updates",
+        "many_field": "incident",
+        "one_allowed_collections": null,
+        "one_collection": "status_incidents",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": "updates",
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_incidents_updates",
+        "column": "incident",
+        "foreign_key_table": "status_incidents",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_incidents_updates_incident_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "CASCADE"
+      }
+    },
+    {
+      "collection": "status_incidents_updates_services",
+      "field": "status_services_id",
+      "related_collection": "status_services",
+      "meta": {
+        "junction_field": "status_incidents_updates_id",
+        "many_collection": "status_incidents_updates_services",
+        "many_field": "status_services_id",
+        "one_allowed_collections": null,
+        "one_collection": "status_services",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_incidents_updates_services",
+        "column": "status_services_id",
+        "foreign_key_table": "status_services",
+        "foreign_key_column": "id",
+        "constraint_name": "status_incidents_updates_services_status_services_id_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "status_incidents_updates_services",
+      "field": "status_incidents_updates_id",
+      "related_collection": "status_incidents_updates",
+      "meta": {
+        "junction_field": "status_services_id",
+        "many_collection": "status_incidents_updates_services",
+        "many_field": "status_incidents_updates_id",
+        "one_allowed_collections": null,
+        "one_collection": "status_incidents_updates",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": "services_affected",
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_incidents_updates_services",
+        "column": "status_incidents_updates_id",
+        "foreign_key_table": "status_incidents_updates",
+        "foreign_key_column": "id",
+        "constraint_name": "status_incidents_updates_services_status_in__1879bf1_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "CASCADE"
+      }
+    },
+    {
+      "collection": "status_metrics",
+      "field": "user_created",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_metrics",
+        "many_field": "user_created",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_metrics",
+        "column": "user_created",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_metrics_user_created_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "status_metrics",
+      "field": "user_updated",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_metrics",
+        "many_field": "user_updated",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_metrics",
+        "column": "user_updated",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_metrics_user_updated_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "status_metrics_data",
+      "field": "metric",
+      "related_collection": "status_metrics",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_metrics_data",
+        "many_field": "metric",
+        "one_allowed_collections": null,
+        "one_collection": "status_metrics",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": "data",
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_metrics_data",
+        "column": "metric",
+        "foreign_key_table": "status_metrics",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_metrics_data_metric_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "user_created",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_pages",
+        "many_field": "user_created",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_pages",
+        "column": "user_created",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_page_settings_user_created_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "user_updated",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_pages",
+        "many_field": "user_updated",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_pages",
+        "column": "user_updated",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_page_settings_user_updated_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "logo",
+      "related_collection": "directus_files",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_pages",
+        "many_field": "logo",
+        "one_allowed_collections": null,
+        "one_collection": "directus_files",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_pages",
+        "column": "logo",
+        "foreign_key_table": "directus_files",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_pages_logo_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "favicon",
+      "related_collection": "directus_files",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_pages",
+        "many_field": "favicon",
+        "one_allowed_collections": null,
+        "one_collection": "directus_files",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_pages",
+        "column": "favicon",
+        "foreign_key_table": "directus_files",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_pages_favicon_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "status_pages",
+      "field": "logo_dark",
+      "related_collection": "directus_files",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_pages",
+        "many_field": "logo_dark",
+        "one_allowed_collections": null,
+        "one_collection": "directus_files",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_pages",
+        "column": "logo_dark",
+        "foreign_key_table": "directus_files",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_pages_logo_dark_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "status_reports",
+      "field": "subscriber",
+      "related_collection": "status_subscribers",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_reports",
+        "many_field": "subscriber",
+        "one_allowed_collections": null,
+        "one_collection": "status_subscribers",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_reports",
+        "column": "subscriber",
+        "foreign_key_table": "status_subscribers",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_reports_subscriber_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "status_services",
+      "field": "user_created",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_services",
+        "many_field": "user_created",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_services",
+        "column": "user_created",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_services_user_created_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "status_services",
+      "field": "user_updated",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_services",
+        "many_field": "user_updated",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_services",
+        "column": "user_updated",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_services_user_updated_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "status_subscribers",
+      "field": "user_created",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_subscribers",
+        "many_field": "user_created",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_subscribers",
+        "column": "user_created",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_subscribers_user_created_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    },
+    {
+      "collection": "status_subscribers",
+      "field": "user_updated",
+      "related_collection": "directus_users",
+      "meta": {
+        "junction_field": null,
+        "many_collection": "status_subscribers",
+        "many_field": "user_updated",
+        "one_allowed_collections": null,
+        "one_collection": "directus_users",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "status_subscribers",
+        "column": "user_updated",
+        "foreign_key_table": "directus_users",
+        "foreign_key_column": "id",
+        "constraint_name": "sp_subscribers_user_updated_foreign",
+        "on_update": "NO ACTION",
+        "on_delete": "NO ACTION"
+      }
+    }
+  ]
+}

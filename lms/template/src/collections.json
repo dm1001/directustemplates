@@ -1,0 +1,653 @@
+[
+  {
+    "collection": "lms",
+    "meta": {
+      "collection": "lms",
+      "icon": "eyeglasses",
+      "note": "Folder for all the LMS collections.",
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Headless LMS"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "lms_comments",
+    "meta": {
+      "collection": "lms_comments",
+      "icon": "mode_comment",
+      "note": null,
+      "display_template": "{{date_created}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Comments",
+          "singular": "Comment",
+          "plural": "Comments"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#18222F",
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "lms_data",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_comments",
+      "comment": null
+    }
+  },
+  {
+    "collection": "lms_content",
+    "meta": {
+      "collection": "lms_content",
+      "icon": "play_circle",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Content"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "lms",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "lms_courses",
+    "meta": {
+      "collection": "lms_courses",
+      "icon": "collections_bookmark",
+      "note": null,
+      "display_template": "{{title}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Courses",
+          "singular": "Course",
+          "plural": "Courses"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "lms_content",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_courses",
+      "comment": null
+    }
+  },
+  {
+    "collection": "lms_courses_instructors",
+    "meta": {
+      "collection": "lms_courses_instructors",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "lms_instructors",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_courses_instructors",
+      "comment": null
+    }
+  },
+  {
+    "collection": "lms_courses_reviews",
+    "meta": {
+      "collection": "lms_courses_reviews",
+      "icon": "star_half",
+      "note": "Reviews of the courses in the LMS.",
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Reviews",
+          "singular": "Review",
+          "plural": "Reviews"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#18222F",
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "lms_data",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_courses_reviews",
+      "comment": null
+    }
+  },
+  {
+    "collection": "lms_courses_topics",
+    "meta": {
+      "collection": "lms_courses_topics",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "lms_courses",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_courses_topics",
+      "comment": null
+    }
+  },
+  {
+    "collection": "lms_data",
+    "meta": {
+      "collection": "lms_data",
+      "icon": "chart_data",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Data"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#18222F",
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "lms",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "lms_enrollments",
+    "meta": {
+      "collection": "lms_enrollments",
+      "icon": "library_add_check",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Enrollments",
+          "singular": "Enrollment",
+          "plural": "Enrollments"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#18222F",
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "lms_data",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_enrollments",
+      "comment": null
+    }
+  },
+  {
+    "collection": "lms_enrollments_lessons_completed",
+    "meta": {
+      "collection": "lms_enrollments_lessons_completed",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#18222F",
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "lms_enrollments",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_enrollments_lessons_completed",
+      "comment": null
+    }
+  },
+  {
+    "collection": "lms_instructors",
+    "meta": {
+      "collection": "lms_instructors",
+      "icon": "person_4",
+      "note": null,
+      "display_template": " {{avatar.$thumbnail}} {{first_name}} {{last_name}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Instructors",
+          "singular": "Instructor",
+          "plural": "Instructors"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": false,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 4,
+      "group": "lms_content",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_instructors",
+      "comment": null
+    }
+  },
+  {
+    "collection": "lms_lessons",
+    "meta": {
+      "collection": "lms_lessons",
+      "icon": "video_library",
+      "note": null,
+      "display_template": "{{title}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Lessons",
+          "singular": "Lesson",
+          "plural": "Lessons"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "lms_content",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_lessons",
+      "comment": null
+    }
+  },
+  {
+    "collection": "lms_lessons_resources",
+    "meta": {
+      "collection": "lms_lessons_resources",
+      "icon": "file_copy",
+      "note": "Resources (files or links) that you can attach with each lesson.",
+      "display_template": "{{title}}",
+      "hidden": true,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Lesson Resources",
+          "singular": "Lesson Resource",
+          "plural": "Lesson Resources"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "lms_lessons",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_lessons_resources",
+      "comment": null
+    }
+  },
+  {
+    "collection": "lms_meta",
+    "meta": {
+      "collection": "lms_meta",
+      "icon": "settings_suggest",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Metadata"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#3399FF",
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "lms",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "lms_modules",
+    "meta": {
+      "collection": "lms_modules",
+      "icon": "tab_group",
+      "note": null,
+      "display_template": "{{title}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Modules",
+          "singular": "Module",
+          "plural": "Modules"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "lms_content",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_modules",
+      "comment": null
+    }
+  },
+  {
+    "collection": "lms_settings",
+    "meta": {
+      "collection": "lms_settings",
+      "icon": "globe_uk",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": true,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Settings",
+          "singular": "Settings",
+          "plural": "Settings"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": false,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#3399FF",
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "lms_meta",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_settings",
+      "comment": null
+    }
+  },
+  {
+    "collection": "lms_topics",
+    "meta": {
+      "collection": "lms_topics",
+      "icon": "tag",
+      "note": null,
+      "display_template": "{{title}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Topics",
+          "singular": "Topic",
+          "plural": "Topics"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#3399FF",
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "lms_meta",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_topics",
+      "comment": null
+    }
+  },
+  {
+    "collection": "lms_tracks",
+    "meta": {
+      "collection": "lms_tracks",
+      "icon": "conversion_path",
+      "note": "Learning tracks for your users composed of different courses.",
+      "display_template": "{{title}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Tracks",
+          "singular": "Track",
+          "plural": "Tracks"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": "#3399FF",
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "lms_meta",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_tracks",
+      "comment": null
+    }
+  },
+  {
+    "collection": "lms_tracks_courses",
+    "meta": {
+      "collection": "lms_tracks_courses",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "lms_tracks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "lms_tracks_courses",
+      "comment": null
+    }
+  }
+]

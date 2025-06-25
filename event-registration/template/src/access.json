@@ -1,0 +1,30 @@
+[
+  {
+    "id": "b21828ed-b80b-4e5b-9d0c-606ea620852d",
+    "role": "2f6ff7f5-f842-4245-9c71-80d0c787840e",
+    "user": null,
+    "policy": "2f6ff7f5-f842-4245-9c71-80d0c787840e",
+    "sort": 1
+  },
+  {
+    "id": "9959872b-82fd-4fa7-af57-16ea1664a82b",
+    "role": "1b72a3ab-b1bf-4a48-936c-81c1cfbd4e90",
+    "user": null,
+    "policy": "1b72a3ab-b1bf-4a48-936c-81c1cfbd4e90",
+    "sort": 1
+  },
+  {
+    "id": "6ebef185-d9c4-4ef5-9834-b4469b0d9274",
+    "role": "c8b8ebcd-8241-412c-8108-2c5ab54c574c",
+    "user": null,
+    "policy": "c8b8ebcd-8241-412c-8108-2c5ab54c574c",
+    "sort": 1
+  },
+  {
+    "id": "77ed534c-2918-459f-bab6-ad34e797b583",
+    "role": null,
+    "user": null,
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17",
+    "sort": 1
+  }
+]

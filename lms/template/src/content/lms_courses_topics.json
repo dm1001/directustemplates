@@ -1,0 +1,26 @@
+[
+  {
+    "id": "5b1b6952-af8f-4dad-b82a-0a2187ffbff2",
+    "lms_courses_id": "520fd9bd-981e-4b37-b30d-71d8199e9f7c",
+    "lms_topics_id": "e4103d91-7a36-4b54-bdaa-3990750654c8",
+    "sort": 1
+  },
+  {
+    "id": "61af2e9c-957b-447a-90a3-53dd73a134a9",
+    "lms_courses_id": "1bb1b023-9c61-4e21-8dd7-6548416e7e16",
+    "lms_topics_id": "6a96659b-272d-4777-a958-61bbed7f2636",
+    "sort": 1
+  },
+  {
+    "id": "68c06dc3-c784-4003-9ba4-8199297b4129",
+    "lms_courses_id": "22f713dd-e4c1-4dd5-bc7e-37ab49f1750a",
+    "lms_topics_id": "4d8ecf80-ec05-4502-9215-5137a45f3823",
+    "sort": 1
+  },
+  {
+    "id": "ffdc8df9-254b-400d-a150-e251268d16ed",
+    "lms_courses_id": null,
+    "lms_topics_id": "9095ca42-87b0-4aed-91be-68f575f03f8e",
+    "sort": null
+  }
+]

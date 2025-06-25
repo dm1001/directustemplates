@@ -1,0 +1,33 @@
+[
+  {
+    "id": "2d47a731-207e-4139-8a2b-ea23c06641fc",
+    "user_created": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_created": "2024-06-11T12:13:11.064Z",
+    "user_updated": null,
+    "date_updated": null,
+    "headline": "Answers to your questions",
+    "faqs": [
+      {
+        "title": "What is the date of the event?",
+        "answer": "<p>The event will be held from July 20-22, 2024.</p>"
+      },
+      {
+        "title": "Is there a cost to attend?",
+        "answer": "<p>The event is free to attend, but registration is required.</p>"
+      },
+      {
+        "title": "Who should attend?",
+        "answer": "<p>Developers of all levels, software engineers, tech enthusiasts, and anyone interested in the latest trends in software development.</p>"
+      },
+      {
+        "title": "Will the sessions be recorded?",
+        "answer": "<p>Yes, all sessions will be recorded and available to registered attendees after the event.</p>"
+      },
+      {
+        "title": "How can I network with other attendees?",
+        "answer": "<p>Our virtual platform includes chat rooms, discussion boards, and scheduled networking sessions to connect with fellow attendees.</p>"
+      }
+    ],
+    "title": "FAQs"
+  }
+]

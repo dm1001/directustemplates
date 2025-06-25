@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1414514e-df08-4302-b75b-99fcf3a1dcf1",
+    "name": "User - Streaming Platform",
+    "icon": "supervised_user_circle",
+    "description": "Role for users consuming content on the front-end. No app access.",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "28c4e8de-f9f0-4025-ad24-d8bb9a0b0007",
+    "name": "Administrator",
+    "icon": "verified",
+    "description": "$t:admin_description",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "a181c69e-41e3-4781-87ac-eda913aa401e",
+    "name": "Editor - Streaming Platform",
+    "icon": "movie_edit",
+    "description": "Role for internal and external content editors. ",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "code": "de",
+    "name": "German",
+    "direction": "ltr"
+  },
+  {
+    "code": "en-US",
+    "name": "English (U.S.)",
+    "direction": "ltr"
+  },
+  {
+    "code": "es",
+    "name": "Spanish",
+    "direction": "ltr"
+  },
+  {
+    "code": "fr-FR",
+    "name": "French",
+    "direction": "ltr"
+  }
+]

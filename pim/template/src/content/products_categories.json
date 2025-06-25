@@ -1,0 +1,16 @@
+[
+  {
+    "id": "36c92f3f-a1a2-4ce1-a474-9bc78bb560d2",
+    "products_id": null,
+    "categories_id": null,
+    "sort": 1,
+    "is_primary_category": true
+  },
+  {
+    "id": "7a7e6f3b-4490-4894-9e2d-6302cd54e271",
+    "products_id": null,
+    "categories_id": null,
+    "sort": 2,
+    "is_primary_category": null
+  }
+]

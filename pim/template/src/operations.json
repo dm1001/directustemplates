@@ -1,0 +1,78 @@
+[
+  {
+    "id": "33b26a27-afee-48c3-b250-61e373306e58",
+    "name": "Transform",
+    "key": "transform",
+    "type": "exec",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "code": "function createJunctionTableData(triggerData, attributeGroupData) {\n  // Validate input data\n  if (!triggerData || !triggerData.body || !triggerData.body.keys) {\n    throw new Error('Invalid trigger data: Missing product keys.');\n  }\n  if (!attributeGroupData || !attributeGroupData.attributes) {\n    throw new Error('Invalid attribute group data: Missing attributes.');\n  }\n\n  // Extract product and attribute IDs\n  const productIds = triggerData.body.keys;\n  const attributes = attributeGroupData.attributes;\n\n  // Initialize an array to hold the objects\n  let junctionTableData = [];\n\n  // Loop through each product ID\n  productIds.forEach(productId => {\n    // Loop through each attribute ID\n    attributes.forEach(attribute => {\n      // Create an object with the product ID and attribute ID\n      let junctionObject = {\n        products_id: productId,\n        attributes_id: attribute.attributes_id\n      };\n      // Add the object to the array\n      junctionTableData.push(junctionObject);\n    });\n  });\n\n  // Return the array of objects\n  return junctionTableData;\n}\n\n\nmodule.exports = async function (data) {\n    const result = createJunctionTableData(data.$trigger, data.get_group)\n    return result\n}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "5b38f577-1dd6-402e-87ef-acfc63210166",
+    "date_created": "2024-01-19T13:25:15.036Z",
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31"
+  },
+  {
+    "id": "4276681c-0e25-4b83-b130-66e6dd8ba4ff",
+    "name": "Transform Payload",
+    "key": "transform_payload",
+    "type": "exec",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "code": "module.exports = async function(data) {\n\tconst payload = data.$trigger.payload\n\treturn {\n        ...payload,\n        value_type: data.get_attribute_id.type\n    };\n}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "01062d76-15f4-4d87-b0b9-8b787b56d061",
+    "date_created": "2024-01-19T18:29:36.723Z",
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31"
+  },
+  {
+    "id": "6be75e6c-1272-4029-856d-5adfdb58ec35",
+    "name": "Get Attribute Id",
+    "key": "get_attribute_id",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "collection": "attributes",
+      "key": [
+        "{{$trigger.payload.attributes_id.id}}"
+      ]
+    },
+    "resolve": "4276681c-0e25-4b83-b130-66e6dd8ba4ff",
+    "reject": null,
+    "flow": "01062d76-15f4-4d87-b0b9-8b787b56d061",
+    "date_created": "2024-01-19T18:26:37.609Z",
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31"
+  },
+  {
+    "id": "93b64fb3-1bcd-4c26-b5ca-54ef2ea6f381",
+    "name": "Get Group",
+    "key": "get_group",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "collection": "attribute_groups",
+      "key": [
+        "{{$trigger.body.attribute_group.key}}"
+      ],
+      "query": {
+        "fields": [
+          "*",
+          "attributes.*"
+        ]
+      }
+    },
+    "resolve": "33b26a27-afee-48c3-b250-61e373306e58",
+    "reject": null,
+    "flow": "5b38f577-1dd6-402e-87ef-acfc63210166",
+    "date_created": "2024-01-19T13:24:53.112Z",
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31"
+  }
+]

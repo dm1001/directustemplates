@@ -1,0 +1,22 @@
+[
+  {
+    "id": "317dabe4-0cc2-455d-b27e-62608a8a2eb5",
+    "sort": null,
+    "user_created": "b0e55e5e-e42b-4110-a97f-7cbaeb171322",
+    "date_created": "2024-06-12T04:38:34.705Z",
+    "user_updated": "09f19bdb-9546-4d36-a259-6386977f995a",
+    "date_updated": "2024-06-22T16:37:58.886Z",
+    "first_name": "Bryant",
+    "last_name": "Gillespie",
+    "email": "bryant@example.com",
+    "job_title": "Software Engineer",
+    "website": "https://example.com",
+    "avatar": null,
+    "country": "US",
+    "confirmation_code": "$argon2id$v=19$m=65536,t=3,p=4$TUghbcsgguPbDUXi9nCx4w$6+98stoNkaLMhFwoz2xOymTZqUJcDCCs1qiTIixn6yo",
+    "ip_address": "127.0.0.1",
+    "tickets": [
+      "c4d7cf6a-878c-4a0d-9d8e-604314828f88"
+    ]
+  }
+]

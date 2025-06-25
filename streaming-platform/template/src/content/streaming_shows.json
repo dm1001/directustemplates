@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1e9d2e3a-7688-4615-a4c9-457bc1982d1b",
+    "slug": "dev-thoughts",
+    "title": "Dev Thoughts",
+    "description": "Short, witty monologues that offer a playful and introspective look at the quirky realities of modern software development. Each sketch presents a unique and humorous perspective, turning everyday coding scenarios into moments of lighthearted reflection.",
+    "cover": "3f918058-abae-4d99-915e-6d03491c9aaa",
+    "tile": "4fd2e1e8-2386-4d3a-9880-08ac1661710a",
+    "logo": "1acb8e67-5bcd-421c-b4e3-f682cb303a67",
+    "announcement_text": null,
+    "status": "published",
+    "one_liner": "Short, witty monologues on the quirky realities of modern software development.",
+    "seasons": [
+      "8ecafdf4-f01e-406a-960a-b55729856a73"
+    ]
+  },
+  {
+    "id": "c5fdfb27-4949-4b06-85b3-0020a06ca3a8",
+    "slug": "learning-things-i-love-to-hate",
+    "title": "Learning Things I Love To Hate",
+    "description": "Join Kevin while he stops avoiding technologies with the help of his friends. Whether based in skepticism or understanding, each guest will help you navigate complex and interesting topics.",
+    "cover": "511d1f2c-5b6d-4976-a7da-cfe10220d523",
+    "tile": "4a962a76-2351-477b-be15-c3f1fca6f82b",
+    "logo": "4a6f2e87-16d2-4a26-a963-d388fde1c26c",
+    "announcement_text": "New episodes every second Tuesday",
+    "status": "published",
+    "one_liner": "Kevin stops avoiding technologies and learns them with the help of his friends.",
+    "seasons": [
+      "bf1ea922-80fc-420e-ac6a-fa17d6a2ab3e"
+    ]
+  },
+  {
+    "id": "fb9d1e83-52ea-4ab2-9ef9-23309f9b955d",
+    "slug": "100-apps-100-hours",
+    "title": "100 Apps In 100 Hours",
+    "description": "Follow Bryant as he embarks on missions to speed-build apps using Directus, within a tight limit of just 60 minutes. Armed with Directus and any other essential tools, his goal is to either fully develop the app's core functionality, or make significant progress, within the allotted hour.",
+    "cover": "d86c91af-e1e4-4f2f-9908-9fa6e322bb4c",
+    "tile": "fb0f9d45-be21-4634-94d4-2ef1cc5146f2",
+    "logo": "e6bba7c4-2ae2-4798-9ee9-d3b6a043b09e",
+    "announcement_text": "New Episodes every Monday",
+    "status": "published",
+    "one_liner": "One project. Just sixty minutes on the clock. Will Bryant get it built? Tune in to find out.",
+    "seasons": [
+      "56dda5ff-2c3a-41ce-ae3a-580d6101026b"
+    ]
+  }
+]

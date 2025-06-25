@@ -1,0 +1,32 @@
+[
+  {
+    "id": "bca66e31-7892-4376-b7fe-07bcd906108c",
+    "name": "LMS",
+    "icon": "chart_data",
+    "note": "Main overview dashboard for the LMS.",
+    "date_created": "2024-01-17T22:11:58.388Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "color": null,
+    "panels": null
+  },
+  {
+    "id": "d9093ade-7d7e-45ce-b43b-d0cbc0cb2885",
+    "name": "LMS - Course Detail",
+    "icon": "golf_course",
+    "note": "Dashboard to review an individual courses performance.",
+    "date_created": "2024-01-17T21:34:21.356Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "color": null,
+    "panels": null
+  },
+  {
+    "id": "dcc64180-e883-4556-b82c-02b650866990",
+    "name": "LMS - User Detail",
+    "icon": "frame_person",
+    "note": "Dashboard to review an individual users progress within courses.",
+    "date_created": "2024-01-04T18:33:07.100Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "color": null,
+    "panels": null
+  }
+]

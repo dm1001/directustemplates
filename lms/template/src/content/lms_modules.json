@@ -1,0 +1,59 @@
+[
+  {
+    "id": "0895ff0f-4d05-40cd-80a0-d37556653c2b",
+    "sort": null,
+    "user_created": null,
+    "date_created": "2024-01-17T11:18:44.790Z",
+    "user_updated": "0aa23191-681e-47ff-b638-3f2d8030feb9",
+    "date_updated": "2024-01-17T13:21:52.784Z",
+    "course": "1bb1b023-9c61-4e21-8dd7-6548416e7e16",
+    "title": "Building with Astro",
+    "description": "Explore Astro and how it redefines modern web development.",
+    "lessons": [
+      "d0331b7e-8e96-4c59-a035-dcbdb1692bde"
+    ]
+  },
+  {
+    "id": "98e24c09-c52a-42bd-97c9-4ee59c843feb",
+    "sort": null,
+    "user_created": null,
+    "date_created": "2024-01-17T11:18:44.772Z",
+    "user_updated": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_updated": "2024-01-17T11:19:38.778Z",
+    "course": "22f713dd-e4c1-4dd5-bc7e-37ab49f1750a",
+    "title": "React Fundamentals",
+    "description": "Learn the essentials of React, from components to state management.",
+    "lessons": [
+      "95223baa-6989-464a-b047-4fedef007a17"
+    ]
+  },
+  {
+    "id": "9f2f437c-db90-4c14-888b-5d4e170ad70a",
+    "sort": null,
+    "user_created": null,
+    "date_created": "2024-01-17T11:18:44.751Z",
+    "user_updated": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_updated": "2024-01-17T11:19:45.013Z",
+    "course": "4e0d5e59-8770-4f5b-b750-6582e66a4c93",
+    "title": "Exploring Vue Basics",
+    "description": "Get started with Vue.js and understand its core principles.",
+    "lessons": [
+      "d72b7512-e5ce-44d1-8fda-81c78709fe0a",
+      "c98fe4ee-4c6a-4d8e-8334-689b6d2987b9"
+    ]
+  },
+  {
+    "id": "e3fe2bc3-6fd1-42da-864b-252e555bb059",
+    "sort": null,
+    "user_created": null,
+    "date_created": "2024-01-17T11:18:44.782Z",
+    "user_updated": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_updated": "2024-01-17T11:19:51.770Z",
+    "course": "520fd9bd-981e-4b37-b30d-71d8199e9f7c",
+    "title": "Svelte Development Techniques",
+    "description": "Discover the simplicity and power of Svelte for front-end development.",
+    "lessons": [
+      "c57aa657-2156-4cf7-819c-5a3dba55d8ab"
+    ]
+  }
+]

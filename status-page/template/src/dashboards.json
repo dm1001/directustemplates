@@ -1,0 +1,12 @@
+[
+  {
+    "id": "16d241e2-8cb6-4a44-94f2-faaa21e8fecb",
+    "name": "Status",
+    "icon": "health_metrics",
+    "note": "Tracking service status and metrics",
+    "date_created": "2023-12-06T17:31:50.051Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b",
+    "color": "#3399FF",
+    "panels": null
+  }
+]

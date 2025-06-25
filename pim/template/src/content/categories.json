@@ -1,0 +1,42 @@
+[
+  {
+    "id": "5e423d4d-cfad-4231-8f77-9c14169a2eec",
+    "sort": null,
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_created": "2024-02-06T12:35:50.393Z",
+    "user_updated": null,
+    "date_updated": null,
+    "parent": "91d1a832-9b8a-4118-8c62-91d081f9123c",
+    "seo": null,
+    "image": null,
+    "key": "tees",
+    "metadata": null,
+    "filterable_attributes": [],
+    "children": [],
+    "category_translations": [
+      "23d5f0e9-f20e-4deb-95f8-cb891d5934aa",
+      "674ebd2f-f901-4ccb-9c77-567df433c577"
+    ]
+  },
+  {
+    "id": "91d1a832-9b8a-4118-8c62-91d081f9123c",
+    "sort": null,
+    "user_created": "1b87687a-7284-4e0e-9e87-8891fb665a31",
+    "date_created": "2024-02-06T12:34:54.279Z",
+    "user_updated": null,
+    "date_updated": null,
+    "parent": null,
+    "seo": null,
+    "image": "7477cdc4-d628-46f0-b924-5e0c0e4ad68b",
+    "key": "apparel",
+    "metadata": null,
+    "filterable_attributes": [],
+    "children": [
+      "5e423d4d-cfad-4231-8f77-9c14169a2eec"
+    ],
+    "category_translations": [
+      "1f13ff2d-fbe9-4280-8f00-3e71c1bb2fed",
+      "fbe0fd76-c538-4bcb-b24b-82dee1a12929"
+    ]
+  }
+]

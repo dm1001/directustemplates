@@ -1,0 +1,22 @@
+[
+  {
+    "id": "weekly_report",
+    "sort": null,
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "date_created": "2024-05-03T12:38:21.893Z",
+    "user_updated": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "date_updated": "2024-05-03T17:22:09.317Z",
+    "name": "Weekly Summary of Tasks Completed",
+    "template": "<div style=\"font-family: Arial, sans-serif; color: #333333; background-color: #f4f4f4; padding: 20px; border-radius: 16px;\">\n    <h1 style=\"text-align: center; color: #6644FF;\">Completed Tasks</h1>\n    <table border=\"0\" cellpadding=\"10\" cellspacing=\"0\" style=\"width: 100%; border-collapse: collapse; background-color: #ffffff; margin: auto;\">\n        <thead>\n            <tr style=\"background-color: #6644FF; color: #ffffff;\">\n                <th style=\"border-bottom: 2px solid #ffffff;\">Task Name</th>\n                <th style=\"border-bottom: 2px solid #ffffff;\">Due Date</th>\n                <th style=\"border-bottom: 2px solid #ffffff;\">Date Completed</th>\n                <th style=\"border-bottom: 2px solid #ffffff;\">Assigned To</th>\n                <th style=\"border-bottom: 2px solid #ffffff;\">Checklist Name</th>\n            </tr>\n        </thead>\n        <tbody>\n            {{loop:tasks}}\n            <tr style=\"border-bottom: 1px solid #dddddd;\">\n                <td style=\"text-align: left;\">{{task_name}}</td>\n                <td style=\"text-align: left;\">{{due_date}}</td>\n                <td style=\"text-align: left;\">{{date_completed}}</td>\n                <td style=\"text-align: left;\">{{assigned_to.first_name}} {{assigned_to.last_name}}</td>\n                <td style=\"text-align: left;\">{{checklist.checklist_name}}</td>\n            </tr>\n            {{/loop:tasks}}\n        </tbody>\n    </table>\n</div>"
+  },
+  {
+    "id": "task_approval",
+    "sort": null,
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "date_created": "2024-05-03T13:29:33.333Z",
+    "user_updated": "68aa8441-c781-4460-9d8f-b5388d684b25",
+    "date_updated": "2024-05-03T17:36:42.281Z",
+    "name": "Task Approval Email",
+    "template": "<body style=\"font-family: Arial, sans-serif; color: #000000; background-color: #f4f4f4; padding: 20px; border-radius: 16px;\">\n    <h1 style=\"text-align: center; color: #6644FF;\">Task Approval Needed</h1>\n    <p style=\"text-align: center;\">The following task(s) requires your review and approval:</p>\n    <table border=\"0\" cellpadding=\"10\" cellspacing=\"0\" style=\"width: 100%; border-collapse: collapse; background-color: #ffffff; margin: auto;\">\n        <thead>\n            <tr style=\"background-color: #6644FF; color: #ffffff;\">\n                <th style=\"border-bottom: 2px solid #ffffff;\">Task Name</th>\n                <th style=\"border-bottom: 2px solid #ffffff;\">Due Date</th>\n                <th style=\"border-bottom: 2px solid #ffffff;\">Assigned To</th>\n                <th style=\"border-bottom: 2px solid #ffffff;\">Checklist Name</th>\n            </tr>\n        </thead>\n        <tbody>\n            {{loop:tasks}}\n            <tr style=\"border-bottom: 1px solid #dddddd;\">\n                <td style=\"text-align: left;\"><a href=\"http://localhost:8055/admin/content/checklist_tasks/{{id}}\" style=\"color: #6644FF; text-decoration: none;\">{{task_name}}</a></td>\n                <td style=\"text-align: left;\">{{due_date}}</td> \n                <td style=\"text-align: left;\">{{assigned_to.first_name}} {{assigned_to.last_name}}</td>\n                <td style=\"text-align: left;\">{{checklist.checklist_name}}</td>\n            </tr>\n            {{/loop:tasks}}\n        </tbody>\n    </table>\n    <h3 style=\"text-align: center; color: #6644FF;\">Notes</h3>\n    <p style=\"text-align: center; margin-top: 8px;\">\n      {{ notes }}\n    </p>\n    <p style=\"text-align: center; font-size: 20px; font-weight: 600; margin-top: 20px;\">\n        Please review the details above and <a href=\"http://localhost:8055/admin/content/checklist_tasks?bookmark=80\" style=\"color: #6644FF; text-decoration: none;\">click here to review task(s) and mark as completed</a>.\n    </p>\n</body>\n"
+  }
+]

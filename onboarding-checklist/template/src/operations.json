@@ -1,0 +1,623 @@
+[
+  {
+    "id": "07318997-ecdf-4875-ae04-524136c93b94",
+    "name": "Get Task",
+    "key": "get_task",
+    "type": "item-read",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "collection": "checklist_tasks",
+      "key": "{{get_keys}}",
+      "query": {
+        "fields": [
+          "id",
+          "checklist.*"
+        ]
+      },
+      "permissions": "$full"
+    },
+    "resolve": "d5997597-d868-41b7-9872-6c6e16a6da25",
+    "reject": null,
+    "flow": "40235771-cc75-4770-8c55-ec12b86c9036",
+    "date_created": "2024-04-24T18:11:00.864Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "0f07d22c-fde7-435e-9f65-a9384ad191e3",
+    "name": "Update Completion Date",
+    "key": "update_completion_date",
+    "type": "item-update",
+    "position_x": 114,
+    "position_y": 17,
+    "options": {
+      "collection": "checklist_tasks",
+      "payload": {
+        "date_completed": "{{get_now}}"
+      },
+      "key": "{{get_keys}}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "40235771-cc75-4770-8c55-ec12b86c9036",
+    "date_created": "2024-04-24T18:35:06.977Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "104affdd-9a4a-4fab-8637-81c4a086bc91",
+    "name": "Get Checklist",
+    "key": "get_checklist",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "permissions": "$full",
+      "collection": "checklists",
+      "key": [
+        "{{$trigger.checklist}}"
+      ],
+      "query": {
+        "fields": [
+          "*",
+          "tasks.id",
+          "tasks.status"
+        ]
+      }
+    },
+    "resolve": "db224920-0e8f-47fb-aa01-663015ae1f63",
+    "reject": null,
+    "flow": "1559f1f4-136c-4cc3-b9ce-4873e7bb6e5c",
+    "date_created": "2024-04-24T18:14:57.955Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "13ee638a-5368-4510-8b09-6c55d9c69708",
+    "name": "Update Checklist",
+    "key": "update_checklist",
+    "type": "item-update",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "collection": "checklists",
+      "permissions": "$full",
+      "payload": "{{calculate_percentage}}",
+      "key": [
+        "{{$trigger.checklist}}"
+      ]
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "1559f1f4-136c-4cc3-b9ce-4873e7bb6e5c",
+    "date_created": "2024-04-24T18:24:16.350Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "15f560a6-e6b3-4ddc-97b0-8efdb442d122",
+    "name": "Read Template",
+    "key": "template",
+    "type": "item-read",
+    "position_x": 38,
+    "position_y": 1,
+    "options": {
+      "permissions": "$full",
+      "collection": "checklist_message_templates",
+      "key": [
+        "{{$trigger.template}}"
+      ]
+    },
+    "resolve": "65909336-db7d-41e5-9914-b39da01076c1",
+    "reject": null,
+    "flow": "adf9a331-58df-4b7c-8e19-dbda146aef7d",
+    "date_created": "2024-05-03T12:54:05.968Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "31a0967c-f6b4-4947-9ae1-03ef1d5974d3",
+    "name": "Format Checklist Template",
+    "key": "format_checklist_template",
+    "type": "exec",
+    "position_x": 74,
+    "position_y": 17,
+    "options": {
+      "code": "module.exports = function(data) {\n\tconst template = data.get_template\n    const { run_count } = template\n    \n    const payload = {\n        run_count: run_count + 1,\n        last_ran_at: new Date().toISOString()\n    }\n    \n    return payload\n   \n}"
+    },
+    "resolve": "cb3bc822-1eb0-4589-978b-5154d85d16df",
+    "reject": null,
+    "flow": "c1506f1f-3244-4f86-867a-f23ef2a6c449",
+    "date_created": "2024-05-03T13:53:18.323Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "31eddcf5-e70c-4d1a-83ee-6502374ce780",
+    "name": "Get Keys",
+    "key": "get_keys",
+    "type": "exec",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "code": "module.exports =  function(data) {\n\tif (data.$trigger.event.includes('.create')) {\n        return [data.$trigger.key]\n\t}\n\tif (data.$trigger.event.includes('.update')) {\n        return data.$trigger.keys\n    }    \n}"
+    },
+    "resolve": "07318997-ecdf-4875-ae04-524136c93b94",
+    "reject": null,
+    "flow": "40235771-cc75-4770-8c55-ec12b86c9036",
+    "date_created": "2024-04-24T19:42:05.329Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "321e9690-d324-46ee-8ff3-446310c1c494",
+    "name": "Validate",
+    "key": "validate",
+    "type": "exec",
+    "position_x": 20,
+    "position_y": 1,
+    "options": {
+      "code": "module.exports = function(data) {\n\tconst trigger = data.$trigger\n    \n    if (!trigger.template && typeof trigger.template !== 'string') {\n        throw new Error('Template is missing or not supplied in the proper format. Needs to be a string that contains the id of the template to render.')\n    }\n    \n    if (!trigger.data && typeof trigger.data !== 'object') {\n\t\tthrow new Error('Data is missing or not supplied in the proper format. Needs to be a object.')\n\n    }\n}"
+    },
+    "resolve": "15f560a6-e6b3-4ddc-97b0-8efdb442d122",
+    "reject": null,
+    "flow": "adf9a331-58df-4b7c-8e19-dbda146aef7d",
+    "date_created": "2024-05-03T12:54:05.978Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "364de27b-3b0f-4a4a-82e4-b91c79c7d051",
+    "name": "Send Email",
+    "key": "send_email",
+    "type": "mail",
+    "position_x": 92,
+    "position_y": 1,
+    "options": {
+      "to": "{{format_data.emails}}",
+      "subject": "Task Approval Needed",
+      "type": "wysiwyg",
+      "body": "<p>{{render_template}}</p>"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "2d00c079-6928-41f8-804d-5f374bcbef44",
+    "date_created": "2024-05-03T16:36:16.937Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "41e3339a-b22d-4954-8eee-8ec28eca55b3",
+    "name": "Create Checklists",
+    "key": "create_checklists",
+    "type": "trigger",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "flow": "c1506f1f-3244-4f86-867a-f23ef2a6c449",
+      "payload": "{{get_checklists}}",
+      "iterationMode": "serial"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "b407ee9d-ac49-4eea-b50c-36fed355c3bc",
+    "date_created": "2024-05-03T13:54:01.758Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "42b69010-e3c7-43a5-88c2-dfe7b55760de",
+    "name": "Find Completed Tasks",
+    "key": "find_completed_tasks",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "permissions": "$full",
+      "collection": "checklist_tasks",
+      "query": {
+        "fields": [
+          "*",
+          "assigned_to.first_name",
+          "assigned_to.last_name",
+          "assigned_to.email",
+          "assigned_to.id",
+          "checklist.id",
+          "checklist.checklist_name"
+        ],
+        "sort": [
+          "-date_completed"
+        ],
+        "filter": {
+          "_and": [
+            {
+              "status": {
+                "_eq": "completed"
+              }
+            },
+            {
+              "date_completed": {
+                "_gte": "$NOW(-7 days)"
+              }
+            }
+          ]
+        },
+        "limit": -1
+      }
+    },
+    "resolve": "522ceb44-bff8-4ea0-8bf4-2f0cf281b95b",
+    "reject": null,
+    "flow": "dd8e5b01-e58b-41ea-bf47-8c95d1adfe25",
+    "date_created": "2024-05-02T20:59:34.504Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "522ceb44-bff8-4ea0-8bf4-2f0cf281b95b",
+    "name": "Render Template",
+    "key": "render_template",
+    "type": "trigger",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "flow": "adf9a331-58df-4b7c-8e19-dbda146aef7d",
+      "payload": {
+        "data": {
+          "tasks": "{{find_completed_tasks}}"
+        },
+        "template": "weekly_report"
+      }
+    },
+    "resolve": "5a6309ff-b4f2-4ca6-b461-d9156c464959",
+    "reject": null,
+    "flow": "dd8e5b01-e58b-41ea-bf47-8c95d1adfe25",
+    "date_created": "2024-05-02T21:12:31.369Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "54f4dc54-4f2f-4958-9c9a-88c7cfd74264",
+    "name": "Format Data",
+    "key": "format_data",
+    "type": "exec",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "code": "module.exports = function(data) {\n    \n    // If task data is an array return it, if make one\n    const tasks = data.get_tasks\n    const tasksArray = Array.isArray(tasks) ? tasks : [tasks]\n    \n    // Get all unique emails from tasks\n    const emails = new Set()\n    for(const task of tasksArray) {\n     \tif(task.checklist?.approver?.email) {\n            emails.add(task.checklist.approver.email)\n        }\n    }\n    \n    // If no emails throw error\n    if(emails.size === 0) {\n        throw new Error('No approver emails found')\n    }\n    \n\treturn {\n        tasks: tasksArray,\n        emails: Array.from(emails)\n    }\n    \n}"
+    },
+    "resolve": "f3587a00-e196-4584-b8af-d456660320a1",
+    "reject": null,
+    "flow": "2d00c079-6928-41f8-804d-5f374bcbef44",
+    "date_created": "2024-05-03T16:36:16.959Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "58964052-5050-452a-9329-b2c49191d012",
+    "name": "Create Checklist",
+    "key": "create_checklist",
+    "type": "item-create",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "permissions": "$full",
+      "collection": "checklists",
+      "payload": "{{format_checklist}}"
+    },
+    "resolve": "31a0967c-f6b4-4947-9ae1-03ef1d5974d3",
+    "reject": null,
+    "flow": "c1506f1f-3244-4f86-867a-f23ef2a6c449",
+    "date_created": "2024-05-01T21:07:24.835Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "5a6309ff-b4f2-4ca6-b461-d9156c464959",
+    "name": "Send Email",
+    "key": "send_email",
+    "type": "mail",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "to": [
+        "bryant@directus.io"
+      ],
+      "subject": "Weekly Report",
+      "type": "wysiwyg",
+      "body": "{{render_template}}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "dd8e5b01-e58b-41ea-bf47-8c95d1adfe25",
+    "date_created": "2024-05-03T13:06:40.608Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "5de4391f-0609-49c4-b49d-2ad296e31e58",
+    "name": "Format Checklist",
+    "key": "format_checklist",
+    "type": "exec",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "code": "// Validation function to ensure required data is present\nfunction validateData(data) {\n    if (!data || !data.$trigger || !data.get_template || !data.get_template.tasks) {\n        throw new Error('Invalid or missing data in trigger payload');\n    }\n}\n\n// Function to parse start and due dates from trigger data\nfunction parseDates({start_date, due_date}) {\n    const startDate = start_date ? new Date(start_date) : new Date();\n    const dueDate = due_date ? new Date(due_date) : new Date();\n    return { startDate, dueDate };\n}\n\n// Function to determine assigned user for a task\nfunction getAssignedUser(task, data, listAssignedTo, listApprover) {\n    switch (task.assigned_to) {\n        case 'assignee':\n            return listAssignedTo;\n        case 'approver':\n            return listApprover;\n        case 'creator':\n            return data.$accountability.user;\n        default:\n            return null;\n    }\n}\n\n// Function to set task start and due dates based on template configuration\nfunction setTaskDates(task, startDate, dueDate) {\n    let taskStartDate, taskDueDate;\n\n    if (task.set_dates_relative_to === 'checklist_due_date' && dueDate) {\n        taskStartDate = new Date(dueDate);\n        taskStartDate.setDate(taskStartDate.getDate() - (task.start_days || 0));\n        taskDueDate = new Date(dueDate);\n        taskDueDate.setDate(taskDueDate.getDate() - (task.due_days || 0));\n    } else {\n        taskStartDate = new Date(startDate);\n        taskStartDate.setDate(taskStartDate.getDate() + (task.start_days || 0));\n        taskDueDate = new Date(startDate);\n        taskDueDate.setDate(taskDueDate.getDate() + (task.due_days || 0));\n    }\n\n    return { taskStartDate, taskDueDate };\n}\n\n// Function to create a new task object based on specifications\nfunction createTask(task, assignedTo, taskStartDate, taskDueDate) {\n    return {\n        task_name: task.task_name,\n        description: task.description,\n        task_type: task.task_type,\n        start_date: taskStartDate ? taskStartDate.toISOString() : null,\n        due_date: taskDueDate ? taskDueDate.toISOString() : null,\n        assigned_to: assignedTo,\n        video_url: task.video_url,\n        links: task.links,\n        is_approval_required: task.is_approval_required,\n        checklist_template_task: task.id,\n        task_points: task.task_points,\n        files: task.files.map(file => ({ directus_files_id: file.directus_files_id }))\n    };\n}\n\n// Main module function\nmodule.exports = async function(data) {\n    validateData(data);\n\n    try {\n        const manualTriggerData = data.$trigger.manual_data;\n        const { startDate, dueDate } = parseDates(manualTriggerData);\n        const template = data.get_template;\n        const listAssignedTo = manualTriggerData.assigned_to?.key ?? template?.default_assigned_to ?? data.$accountability?.user;\n        const listApprover = manualTriggerData.approver?.key ?? template?.default_approver;\n\n        const listOfTasks = template.tasks.filter(task => task.status === 'active').map(task => {\n            const assignedTo = getAssignedUser(task, data, listAssignedTo, listApprover);\n            const { taskStartDate, taskDueDate } = setTaskDates(task, startDate, dueDate);\n            return createTask(task, assignedTo, taskStartDate, taskDueDate);\n        });\n\n        const checklist = {\n            checklist_name: manualTriggerData.checklist_name ?? template.checklist_name, \n            description: template.description,\n            assigned_to: listAssignedTo,\n            approver: listApprover,\n            start_date: startDate.toISOString(),\n            due_date: dueDate.toISOString(),\n            tasks: listOfTasks,\n            checklist_template: template.id\n        };\n\n        return checklist;\n    } catch (error) {\n        throw new Error(error.message);\n    }\n};"
+    },
+    "resolve": "58964052-5050-452a-9329-b2c49191d012",
+    "reject": null,
+    "flow": "c1506f1f-3244-4f86-867a-f23ef2a6c449",
+    "date_created": "2024-05-01T21:07:24.856Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "65909336-db7d-41e5-9914-b39da01076c1",
+    "name": "Render",
+    "key": "render",
+    "type": "exec",
+    "position_x": 56,
+    "position_y": 1,
+    "options": {
+      "code": "// Simple templating engine\n// Accepts two arguments - template and data\n// Template is a string with placeholders in the format {{ key }} or {{ key.nestedKey }}\n// Loops are supported with the format {{ loop:key }} ... {{ /loop:key }}\n// Data is an object with values to replace the placeholders\n// Example:\n// templateEngine({\n//     template: 'Hello {{ name }}! <ul>{{ loop:items }}<li>{{ name }} - {{ price }}</li>{{ /loop: items }}</ul>',\n//     data: {\n//         name: 'John',\n//         items: [\n//             { name: 'Apple', price: 1 },\n//             { name: 'Banana', price: 2 }\n//         ]\n//     }\n// });\n// Output: 'Hello John! <ul><li>Apple - 1</li><li>Banana - 2</li></ul>'\n// Created because Liquid templating is not available within Flow Operations and cannot use third party libs without extensions either.\n\nfunction templateEngine(template, data) {\n    // Function to handle replacement within a string for simple placeholders\n    function replaceString(str, localData) {\n        return str.replace(/\\{\\{\\s*([^}]+?)\\s*\\}\\}/g, function(match, key) {\n            let value = localData;\n            key.split('.').forEach(part => {\n                part = part.trim(); // Trim any whitespace around the key parts\n                if (value != null && value[part] !== undefined) {\n                    value = value[part];\n                } else {\n                    throw new Error(`Key '${part}' not found in the data.`);\n                }\n            });\n            return value;\n        });\n    }\n\n    // Function to process loop blocks\n    function processLoops(template, data) {\n        return template.replace(/\\{\\{\\s*loop:([^}]+?)\\s*\\}\\}([\\s\\S]*?)\\{\\{\\s*\\/loop:\\1\\s*\\}\\}/g, function(match, loopKey, loopItemTemplate) {\n            loopKey = loopKey.trim(); // Ensure loop key is correctly trimmed\n            if (data[loopKey] && Array.isArray(data[loopKey])) {\n                return data[loopKey].map(item => replaceString(loopItemTemplate, item)).join('');\n            } else {\n                throw new Error(`Key '${loopKey}' is missing or not an array.`);\n            }\n        });\n    }\n\n    // Validate input data and template are adequate\n    if (!data || typeof data !== 'object' || Object.keys(data).length === 0) {\n        throw new Error(\"Data object is empty or invalid.\");\n    }\n\n    if (!template || typeof template !== 'string') {\n        throw new Error(\"Template is empty or not a string.\");\n    }\n\n    // Process loop blocks first, then replace remaining placeholders\n\tlet processedTemplate = processLoops(template, data);\n    return replaceString(processedTemplate, data);\n}\n\n\nmodule.exports = function(inputData) {\n\ttry {\n        const { $trigger, template } = inputData\n\t\tconst data = $trigger.data\n\t    // We're passing template.template because the message templates have a template field.\n    \treturn templateEngine(template.template, data)\n    } catch(error) {\n        throw new Error(error.message)\n    }\n}"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "adf9a331-58df-4b7c-8e19-dbda146aef7d",
+    "date_created": "2024-05-02T12:32:01.216Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "6f4cac13-7a61-4125-8ae2-b33337dddb9b",
+    "name": "Render Template",
+    "key": "render_template",
+    "type": "trigger",
+    "position_x": 73,
+    "position_y": 1,
+    "options": {
+      "flow": "adf9a331-58df-4b7c-8e19-dbda146aef7d",
+      "iterationMode": "serial",
+      "payload": {
+        "data": {
+          "tasks": "{{format_data.tasks}}",
+          "notes": "{{$trigger.body.notes}}"
+        },
+        "template": "task_approval"
+      }
+    },
+    "resolve": "364de27b-3b0f-4a4a-82e4-b91c79c7d051",
+    "reject": null,
+    "flow": "2d00c079-6928-41f8-804d-5f374bcbef44",
+    "date_created": "2024-05-03T16:36:16.953Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "7119c944-2e41-4b1a-9db7-5656339fd72f",
+    "name": "Get Checklists",
+    "key": "get_checklists",
+    "type": "exec",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "code": "function findChecklistsToRun(checklists) {\n    const now = new Date();\n    let checklistsToRun = [];\n\n    checklists.forEach(checklist => {\n        const lastRanAt = checklist.last_ran_at ? new Date(checklist.last_ran_at) : null;\n        if (shouldRunChecklist(checklist, now, lastRanAt)) {\n            checklistsToRun.push(checklist.id);\n        }\n    });\n\n    return checklistsToRun;\n}\n\nfunction shouldRunChecklist(checklist, now, lastRanAt) {\n    const timeNow = now.toTimeString().substring(0, 8);  // \"HH:MM:SS\" format\n\n    if (checklist.recurring_timeframe === 'weekly') {\n        return now.getDay() === checklist.recurring_day_of_week &&\n               timeNow >= checklist.recurring_time &&\n               (!lastRanAt || weekDifference(now, lastRanAt) >= 1);\n    } else if (checklist.recurring_timeframe === 'monthly') {\n        return now.getDate() === checklist.recurring_day_of_the_month &&\n               timeNow >= checklist.recurring_time &&\n               (!lastRanAt || monthDifference(now, lastRanAt) >= 1);\n    }\n    return false;\n}\n\nfunction weekDifference(d1, d2) {\n    if (!d2) {\n        return Infinity;\n    }\n    const diff = d1.getTime() - d2.getTime();\n    const weekInMillis = 7 * 24 * 60 * 60 * 1000;\n    return diff / weekInMillis;\n}\n\nfunction monthDifference(d1, d2) {\n    if (!d2) {\n        return Infinity;\n    }\n    const years = d1.getFullYear() - d2.getFullYear();\n    const months = d1.getMonth() - d2.getMonth() + years * 12;\n    return months;\n}\n\n\nmodule.exports = function(data) {\n    try {\n        if (!data || !Array.isArray(data.find_recurring)) {\n            throw new Error('Input data is not valid or missing find_recurring key.');\n        }\n        const ids = findChecklistsToRun(data.find_recurring);\n        return ids;\n    } catch (error) {\n        console.error(`Error in module export function: ${error.message}`);\n        return [];\n    }\n}\n"
+    },
+    "resolve": "41e3339a-b22d-4954-8eee-8ec28eca55b3",
+    "reject": null,
+    "flow": "b407ee9d-ac49-4eea-b50c-36fed355c3bc",
+    "date_created": "2024-05-02T03:01:21.476Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "7704a4e1-7647-4c1d-9344-d3a173d38dad",
+    "name": "Get Tasks",
+    "key": "get_tasks",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "permissions": "$full",
+      "collection": "checklist_tasks",
+      "key": "{{$trigger.body.keys}}",
+      "query": {
+        "fields": [
+          "*",
+          "assigned_to.first_name",
+          "assigned_to.last_name",
+          "assigned_to.email",
+          "assigned_to.id",
+          "checklist.approver.first_name",
+          "checklist.approver.last_name",
+          "checklist.approver.email",
+          "checklist.approver.id",
+          "checklist.id",
+          "checklist.checklist_name"
+        ]
+      }
+    },
+    "resolve": "54f4dc54-4f2f-4958-9c9a-88c7cfd74264",
+    "reject": null,
+    "flow": "2d00c079-6928-41f8-804d-5f374bcbef44",
+    "date_created": "2024-05-03T16:36:16.965Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "7a1de3e0-dbc4-4bdf-ac37-cc167f1b3e7e",
+    "name": "Find Recurring",
+    "key": "find_recurring",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "collection": "checklist_templates",
+      "query": {
+        "filter": {
+          "_and": [
+            {
+              "checklist_type": {
+                "_eq": "recurring"
+              }
+            },
+            {
+              "status": {
+                "_eq": "active"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "resolve": "7119c944-2e41-4b1a-9db7-5656339fd72f",
+    "reject": null,
+    "flow": "b407ee9d-ac49-4eea-b50c-36fed355c3bc",
+    "date_created": "2024-05-02T02:15:36.093Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "7c4ebe90-7c87-45ec-81f7-44f388161406",
+    "name": "Get Template",
+    "key": "get_template",
+    "type": "item-read",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "permissions": "$full",
+      "collection": "checklist_templates",
+      "key": [
+        "{{$trigger.checklist_template_id}}"
+      ],
+      "query": {
+        "fields": [
+          "*",
+          "tasks.*",
+          "tasks.files.*"
+        ]
+      }
+    },
+    "resolve": "5de4391f-0609-49c4-b49d-2ad296e31e58",
+    "reject": null,
+    "flow": "c1506f1f-3244-4f86-867a-f23ef2a6c449",
+    "date_created": "2024-05-01T21:07:24.863Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "842089a3-1742-4312-8a74-43fe48fb3a24",
+    "name": "Get Now",
+    "key": "get_now",
+    "type": "exec",
+    "position_x": 94,
+    "position_y": 17,
+    "options": {
+      "code": "\n// Simple Run Script function to get current time in ISO format because there's not currently a dynamic helper.\nmodule.exports = function(data) {\n\tconst now = new Date()\n    return now.toISOString()\n}"
+    },
+    "resolve": "0f07d22c-fde7-435e-9f65-a9384ad191e3",
+    "reject": null,
+    "flow": "40235771-cc75-4770-8c55-ec12b86c9036",
+    "date_created": "2024-04-24T18:35:06.998Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "cb3bc822-1eb0-4589-978b-5154d85d16df",
+    "name": "Update Checklist Template",
+    "key": "update_checklist_template",
+    "type": "item-update",
+    "position_x": 93,
+    "position_y": 17,
+    "options": {
+      "key": [
+        "{{$trigger.checklist_template_id}}"
+      ],
+      "payload": "{{format_checklist_template}}",
+      "collection": "checklist_templates"
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "c1506f1f-3244-4f86-867a-f23ef2a6c449",
+    "date_created": "2024-05-03T13:53:18.316Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "d526ee46-ef72-4b7c-820a-63624ce5e6d8",
+    "name": "Run Checklist",
+    "key": "run_checklist",
+    "type": "trigger",
+    "position_x": 19,
+    "position_y": 1,
+    "options": {
+      "flow": "c1506f1f-3244-4f86-867a-f23ef2a6c449",
+      "iterationMode": "serial",
+      "payload": {
+        "manual_data": "{{$trigger.body}}",
+        "checklist_template_id": "{{$trigger.body.checklist_template.key}}"
+      }
+    },
+    "resolve": null,
+    "reject": null,
+    "flow": "5f16e208-34cf-40fa-b860-40917e13c08a",
+    "date_created": "2024-05-03T13:55:51.409Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "d5997597-d868-41b7-9872-6c6e16a6da25",
+    "name": "Trigger Checklist Completion Calculation",
+    "key": "trigger_checklist",
+    "type": "trigger",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "flow": "1559f1f4-136c-4cc3-b9ce-4873e7bb6e5c",
+      "payload": {
+        "checklist": "{{get_task.checklist.id}}"
+      }
+    },
+    "resolve": "f03f6a5e-2bc1-4c07-9d42-9bd7d8341760",
+    "reject": null,
+    "flow": "40235771-cc75-4770-8c55-ec12b86c9036",
+    "date_created": "2024-04-24T18:17:06.789Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "db224920-0e8f-47fb-aa01-663015ae1f63",
+    "name": "Calculate Percentage",
+    "key": "calculate_percentage",
+    "type": "exec",
+    "position_x": 37,
+    "position_y": 1,
+    "options": {
+      "code": "function calculateCompletionPercentage(checklist) {\n    \n    const payload = {}\n    const tasks = checklist.tasks;\n    const totalTasks = tasks.length;\n    const completedTasks = tasks.filter(task => task.status === 'completed').length;\n    const completionPercentage = (completedTasks / totalTasks) * 100;\n    \n    payload.completion_percentage = completionPercentage\n    \n    if (completionPercentage >= 100) {\n        payload.date_completed = new Date().toISOString()\n        payload.status = 'completed'\n    } else {\n        payload.date_completed = null\n        payload.status = 'active'\n    }\n\n    return payload\n}\n\nmodule.exports = function(data) {\n\ttry {\n        const update = calculateCompletionPercentage(data.get_checklist);\n        return update;\n    } catch(error) {\n        throw new Error(error);\n    }\n    \n}"
+    },
+    "resolve": "13ee638a-5368-4510-8b09-6c55d9c69708",
+    "reject": null,
+    "flow": "1559f1f4-136c-4cc3-b9ce-4873e7bb6e5c",
+    "date_created": "2024-04-24T18:24:16.366Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "f03f6a5e-2bc1-4c07-9d42-9bd7d8341760",
+    "name": "Condition",
+    "key": "condition_cg77q",
+    "type": "condition",
+    "position_x": 74,
+    "position_y": 17,
+    "options": {
+      "filter": {
+        "$trigger": {
+          "payload": {
+            "status": {
+              "_eq": "completed"
+            }
+          }
+        }
+      }
+    },
+    "resolve": "842089a3-1742-4312-8a74-43fe48fb3a24",
+    "reject": null,
+    "flow": "40235771-cc75-4770-8c55-ec12b86c9036",
+    "date_created": "2024-04-24T18:25:52.309Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  },
+  {
+    "id": "f3587a00-e196-4584-b8af-d456660320a1",
+    "name": "Update Tasks",
+    "key": "update_tasks",
+    "type": "item-update",
+    "position_x": 55,
+    "position_y": 1,
+    "options": {
+      "key": "{{$trigger.body.keys}}",
+      "payload": {
+        "status": "review"
+      },
+      "collection": "checklist_tasks",
+      "permissions": "$full"
+    },
+    "resolve": "6f4cac13-7a61-4125-8ae2-b33337dddb9b",
+    "reject": null,
+    "flow": "2d00c079-6928-41f8-804d-5f374bcbef44",
+    "date_created": "2024-05-03T17:11:26.479Z",
+    "user_created": "68aa8441-c781-4460-9d8f-b5388d684b25"
+  }
+]

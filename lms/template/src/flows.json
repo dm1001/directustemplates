@@ -1,0 +1,49 @@
+[
+  {
+    "id": "08dc310e-3c35-4328-ae6e-46c3797fb405",
+    "name": "[LMS] Create Folders for Courses",
+    "icon": "create_new_folder",
+    "color": null,
+    "description": "This flow creates a new folder for each new course that is created.",
+    "status": "active",
+    "trigger": "event",
+    "accountability": "all",
+    "options": {
+      "type": "action",
+      "scope": [
+        "items.create",
+        "items.update"
+      ],
+      "collections": [
+        "lms_courses"
+      ]
+    },
+    "operation": "80411c16-34b4-43c1-963a-92396783200b",
+    "date_created": "2024-01-30T01:09:21.221Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "operations": null
+  },
+  {
+    "id": "827f018d-5e0f-4129-b9d8-3455d2a8dc1a",
+    "name": "[LMS] Calculate Enrollment Completion",
+    "icon": "percent",
+    "color": null,
+    "description": "This flow calculates the enrollment completion percentage based on the number of published lessons in a course.",
+    "status": "active",
+    "trigger": "event",
+    "accountability": "all",
+    "options": {
+      "type": "action",
+      "scope": [
+        "items.create"
+      ],
+      "collections": [
+        "lms_enrollments_lessons_completed"
+      ]
+    },
+    "operation": "b5d9195e-e12c-4e95-82f4-9e5d0b172726",
+    "date_created": "2024-01-30T01:09:21.408Z",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "operations": null
+  }
+]

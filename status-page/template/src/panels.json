@@ -1,0 +1,218 @@
+[
+  {
+    "id": "16562958-334d-464e-86c1-b7c530d6ac88",
+    "dashboard": "16d241e2-8cb6-4a44-94f2-faaa21e8fecb",
+    "name": "Date To",
+    "icon": "date_range",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "variable",
+    "position_x": 19,
+    "position_y": 24,
+    "width": 18,
+    "height": 6,
+    "options": {
+      "field": "date_to",
+      "type": "timestamp",
+      "inter": "datetime"
+    },
+    "date_created": "2024-02-08T04:51:09.735Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "444ca9a4-6dfa-4055-b275-40c314f2fd69",
+    "dashboard": "16d241e2-8cb6-4a44-94f2-faaa21e8fecb",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 1,
+    "position_y": 22,
+    "width": 36,
+    "height": 2,
+    "options": {
+      "text": "You can filter Metrics and Incidents based on date range",
+      "textAlign": "left",
+      "fontWeight": 400,
+      "color": "#595959",
+      "font": "monospace"
+    },
+    "date_created": "2024-02-08T04:51:09.742Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "502e14b8-42f8-4c86-b684-bb531e2c4aa5",
+    "dashboard": "16d241e2-8cb6-4a44-94f2-faaa21e8fecb",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 1,
+    "position_y": 46,
+    "width": 36,
+    "height": 3,
+    "options": {
+      "text": "Past Incidents",
+      "textAlign": "left",
+      "fontWeight": 700,
+      "color": "#3399FF"
+    },
+    "date_created": "2024-02-08T04:51:09.757Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "57459e20-94b6-464c-bf10-021c2ff1cf46",
+    "dashboard": "16d241e2-8cb6-4a44-94f2-faaa21e8fecb",
+    "name": "Average API Response Time",
+    "icon": "api",
+    "color": "#2ECDA7",
+    "show_header": true,
+    "note": null,
+    "type": "time-series",
+    "position_x": 1,
+    "position_y": 30,
+    "width": 36,
+    "height": 15,
+    "options": {
+      "collection": "status_metrics_data",
+      "valueField": "value",
+      "color": "#2ECDA7",
+      "dateField": "timestamp",
+      "function": "avg",
+      "filter": {
+        "_and": [
+          {
+            "_and": [
+              {
+                "timestamp": {
+                  "_between": [
+                    "{{date_from}}",
+                    "{{date_to}}"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "range": "auto"
+    },
+    "date_created": "2023-12-06T17:32:44.927Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "85109ac7-5b80-41f4-9046-c27b9b82076f",
+    "dashboard": "16d241e2-8cb6-4a44-94f2-faaa21e8fecb",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 1,
+    "position_y": 19,
+    "width": 36,
+    "height": 3,
+    "options": {
+      "text": "System Metrics",
+      "textAlign": "left",
+      "fontWeight": 700,
+      "color": "#3399FF"
+    },
+    "date_created": "2024-02-08T04:51:09.750Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "94dcbfb7-4e8a-43bd-bbf1-4d340135df51",
+    "dashboard": "16d241e2-8cb6-4a44-94f2-faaa21e8fecb",
+    "name": null,
+    "icon": null,
+    "color": null,
+    "show_header": false,
+    "note": null,
+    "type": "label",
+    "position_x": 1,
+    "position_y": 1,
+    "width": 36,
+    "height": 5,
+    "options": {
+      "text": "Status Page",
+      "textAlign": "left",
+      "fontWeight": 700,
+      "color": "#3399FF"
+    },
+    "date_created": "2024-02-08T04:44:07.515Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "a1b0d2ef-bf24-490b-b421-a40a0b9dfa95",
+    "dashboard": "16d241e2-8cb6-4a44-94f2-faaa21e8fecb",
+    "name": "Past Incidents",
+    "icon": "report",
+    "color": "#3399FF",
+    "show_header": false,
+    "note": null,
+    "type": "list",
+    "position_x": 1,
+    "position_y": 49,
+    "width": 36,
+    "height": 18,
+    "options": {
+      "collection": "status_incidents",
+      "sortField": "date_created",
+      "displayTemplate": "{{date_created}} • {{name}} • {{status}} • {{impact}}"
+    },
+    "date_created": "2024-02-08T04:44:07.497Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "d9598bbe-f044-4956-990d-9fe5ac12956c",
+    "dashboard": "16d241e2-8cb6-4a44-94f2-faaa21e8fecb",
+    "name": "Current Services Status",
+    "icon": "electrical_services",
+    "color": "#3399FF",
+    "show_header": true,
+    "note": null,
+    "type": "list",
+    "position_x": 1,
+    "position_y": 7,
+    "width": 36,
+    "height": 11,
+    "options": {
+      "collection": "status_services",
+      "limit": -1,
+      "linkToItem": true,
+      "sortField": "sort",
+      "displayTemplate": "{{name}} • {{status}} • {{description}}"
+    },
+    "date_created": "2024-02-08T04:44:07.525Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  },
+  {
+    "id": "ffddaac3-f327-4cf0-8411-f73f5267c98c",
+    "dashboard": "16d241e2-8cb6-4a44-94f2-faaa21e8fecb",
+    "name": "Date From",
+    "icon": "date_range",
+    "color": null,
+    "show_header": true,
+    "note": null,
+    "type": "variable",
+    "position_x": 1,
+    "position_y": 24,
+    "width": 18,
+    "height": 6,
+    "options": {
+      "field": "date_from",
+      "type": "timestamp",
+      "inter": "datetime",
+      "defaultValue": null
+    },
+    "date_created": "2024-02-08T04:51:09.728Z",
+    "user_created": "b32c3ede-0ae6-4bd8-81bd-246400a0a72b"
+  }
+]

@@ -1,0 +1,418 @@
+[
+  {
+    "id": "0d1083b0-7076-433f-a303-668902d4f9fa",
+    "name": "3c. Schedule Post",
+    "icon": "auto_schedule",
+    "color": null,
+    "description": "This flow moves the post from your content workflow into your Posts collection ready for publishing.",
+    "status": "active",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "collections": [
+        "content_workflow"
+      ],
+      "requireConfirmation": true,
+      "fields": [
+        {
+          "field": "date_published",
+          "name": "Publish Date",
+          "type": "timestamp",
+          "meta": {
+            "interface": "datetime",
+            "note": "What date would you like to publish this post?",
+            "width": "full",
+            "required": true,
+            "options": {
+              "use24": false
+            }
+          }
+        }
+      ],
+      "confirmationDescription": "Publish Post"
+    },
+    "operation": "420ecaa3-a229-41c7-91c3-77b6238d23d1",
+    "date_created": "2024-05-16T22:35:31.244Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "operations": null
+  },
+  {
+    "id": "1c79e17f-b591-421b-b00f-53b110e179c8",
+    "name": "3a. Generate Image",
+    "icon": "image",
+    "color": null,
+    "description": "Generates an image based on the content workflow post and a supplied image style.",
+    "status": "active",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "collections": [
+        "content_workflow"
+      ],
+      "requireConfirmation": true,
+      "confirmationDescription": "Generate Images",
+      "fields": [
+        {
+          "field": "image_style",
+          "type": "json",
+          "name": "Image Style",
+          "meta": {
+            "interface": "collection-item-dropdown",
+            "note": "Choose an image style to remain on-brand and match your other assets.",
+            "width": "full",
+            "required": true,
+            "options": {
+              "selectedCollection": "image_styles",
+              "template": "{{title}}"
+            }
+          }
+        }
+      ]
+    },
+    "operation": "2b7bf61a-1713-4e54-adea-0614cb5b2470",
+    "date_created": "2024-05-16T22:35:31.342Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "operations": null
+  },
+  {
+    "id": "21da0057-8b53-4ebb-ad62-5402420374c4",
+    "name": "3b. Generate Social Posts",
+    "icon": "chat_bubble",
+    "color": null,
+    "description": "This flow generates social media promotional posts in channels of your choosing based on the content of the article, a template, and a specific tone of voice.",
+    "status": "active",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "collections": [
+        "content_workflow"
+      ],
+      "requireConfirmation": true,
+      "confirmationDescription": "Generate Social Posts",
+      "fields": [
+        {
+          "field": "channels",
+          "type": "json",
+          "name": "Channels",
+          "meta": {
+            "interface": "select-multiple-dropdown",
+            "note": "Which channels would you like to generate posts for?",
+            "width": "full",
+            "required": true,
+            "options": {
+              "choices": [
+                {
+                  "text": "X",
+                  "value": "x"
+                },
+                {
+                  "text": "LinkedIn",
+                  "value": "linkedin"
+                },
+                {
+                  "text": "Instagram",
+                  "value": "instagram"
+                },
+                {
+                  "text": "Facebook",
+                  "value": "facebook"
+                },
+                {
+                  "text": "Discord",
+                  "value": "discord"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "field": "template",
+          "type": "json",
+          "name": "Template",
+          "meta": {
+            "interface": "collection-item-dropdown",
+            "note": "Which post template and prompt would you like to use to generate the social posts?",
+            "width": "full",
+            "required": false,
+            "options": {
+              "selectedCollection": "templates",
+              "template": "{{title}} • {{channels}}"
+            }
+          }
+        },
+        {
+          "field": "voice",
+          "type": "json",
+          "name": "Voice",
+          "meta": {
+            "interface": "collection-item-dropdown",
+            "note": "What writing style and tone of voice would you like to use?",
+            "width": "full",
+            "options": {
+              "selectedCollection": "voices",
+              "template": "{{title}}"
+            }
+          }
+        }
+      ]
+    },
+    "operation": "385a9892-e66c-498b-8765-85652ab3dd6a",
+    "date_created": "2024-05-16T22:35:31.434Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "operations": null
+  },
+  {
+    "id": "62ce4de3-29a1-440a-910c-6e6a76cefaea",
+    "name": "[Utils] Slugify",
+    "icon": "link",
+    "color": null,
+    "description": "This is a helper flow to slugify a provided string to ensure it is URL safe.",
+    "status": "active",
+    "trigger": "operation",
+    "accountability": "all",
+    "options": {
+      "return": "$last"
+    },
+    "operation": "5167c9a8-a557-4569-9d94-0e52402898e5",
+    "date_created": "2024-05-16T22:35:31.537Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "operations": null
+  },
+  {
+    "id": "82163edf-47ea-4d19-9580-3814fb72fe3a",
+    "name": "[Utils] Get Globals",
+    "icon": "globe_uk",
+    "color": null,
+    "description": "This flow is a helper that returns the `globals` settings for use in other flows.",
+    "status": "active",
+    "trigger": "operation",
+    "accountability": null,
+    "options": {
+      "return": "$last"
+    },
+    "operation": "8d64a743-fe25-4a10-977a-7d3305cb9f17",
+    "date_created": "2024-05-16T22:35:31.635Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "operations": null
+  },
+  {
+    "id": "91fb672f-00b2-4a7f-9571-865baaf4d1e0",
+    "name": "4. Translate Post",
+    "icon": "language_chinese_cangjie",
+    "color": null,
+    "description": "This flow creates translations for the selected fields to a specified language using the DeepL translation extension.",
+    "status": "active",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "collections": [
+        "posts"
+      ],
+      "requireConfirmation": true,
+      "confirmationDescription": "Create Translations",
+      "fields": [
+        {
+          "field": "language_from",
+          "type": "json",
+          "name": "Translate From",
+          "meta": {
+            "interface": "collection-item-dropdown",
+            "note": "What is the language you want to translate from?",
+            "width": "full",
+            "options": {
+              "selectedCollection": "languages",
+              "template": "{{name}} • {{code}}"
+            }
+          }
+        },
+        {
+          "field": "fields",
+          "type": "json",
+          "name": "Fields to Translate",
+          "meta": {
+            "interface": "select-multiple-dropdown",
+            "width": "full",
+            "options": {
+              "choices": [
+                {
+                  "text": "Title",
+                  "value": "title"
+                },
+                {
+                  "text": "Content",
+                  "value": "content"
+                },
+                {
+                  "text": "Slug",
+                  "value": "slug"
+                }
+              ],
+              "previewThreshold": 5
+            },
+            "required": true,
+            "note": "What fields would you like to translate?"
+          }
+        },
+        {
+          "field": "language_to",
+          "type": "json",
+          "name": "Translate To",
+          "meta": {
+            "interface": "collection-item-dropdown",
+            "note": "What is the language you want to translate to?",
+            "width": "full",
+            "options": {
+              "selectedCollection": "languages",
+              "template": "{{name}} • {{code}}"
+            }
+          }
+        }
+      ]
+    },
+    "operation": "f6126cf7-6e1b-4874-9341-169c1aab29a5",
+    "date_created": "2024-05-16T22:35:31.745Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "operations": null
+  },
+  {
+    "id": "9745bd85-6830-40bd-a4c2-55d5c301c186",
+    "name": "[Utils] Generate Transcript",
+    "icon": "docs_add_on",
+    "color": null,
+    "description": "This flow generates a transcript whenever a file or file_url is added to a content workflow.",
+    "status": "active",
+    "trigger": "event",
+    "accountability": "all",
+    "options": {
+      "type": "action",
+      "scope": [
+        "items.create",
+        "items.update"
+      ],
+      "collections": [
+        "content_workflow_inputs"
+      ]
+    },
+    "operation": "462c7a18-a77a-4b78-8b69-ce50db4ce556",
+    "date_created": "2024-05-16T22:35:31.836Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "operations": null
+  },
+  {
+    "id": "b900604f-d37c-4fd8-beac-1835ec35f8a1",
+    "name": "2. Generate Article",
+    "icon": "article",
+    "color": null,
+    "description": "Generates a complete article based on a provided content idea and a transcript.",
+    "status": "active",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "collections": [
+        "content_workflow"
+      ],
+      "requireConfirmation": true,
+      "fields": [
+        {
+          "field": "content_workflow_idea",
+          "type": "json",
+          "name": "Idea to Generate",
+          "meta": {
+            "interface": "collection-item-dropdown",
+            "note": "Select the idea you'd like to generate a full post for.",
+            "width": "full",
+            "required": true,
+            "options": {
+              "selectedCollection": "content_workflow_ideas",
+              "filter": {
+                "_and": [
+                  {
+                    "is_archived": {
+                      "_neq": true
+                    }
+                  }
+                ]
+              },
+              "template": "{{title}}"
+            }
+          }
+        },
+        {
+          "field": "voice",
+          "type": "json",
+          "name": "Voice",
+          "meta": {
+            "interface": "collection-item-dropdown",
+            "note": "What tone of voice would you like to use?",
+            "width": "full",
+            "required": true,
+            "options": {
+              "selectedCollection": "voices",
+              "template": "{{title}}"
+            }
+          }
+        }
+      ],
+      "confirmationDescription": "Generate Article from an Idea"
+    },
+    "operation": "c3ff1be5-e10e-4426-823d-b4e8711de0bd",
+    "date_created": "2024-05-16T22:35:31.934Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "operations": null
+  },
+  {
+    "id": "e4efc0e1-cb1f-4e73-ad4a-f62dff00babc",
+    "name": "1. Generate Content Ideas",
+    "icon": "robot",
+    "color": null,
+    "description": "Generates content ideas based on a content workflow and a selected post template.",
+    "status": "active",
+    "trigger": "manual",
+    "accountability": "all",
+    "options": {
+      "collections": [
+        "content_workflow"
+      ],
+      "requireConfirmation": true,
+      "confirmationDescription": "Generate Content Ideas",
+      "fields": [
+        {
+          "field": "template",
+          "type": "json",
+          "name": "Template",
+          "meta": {
+            "interface": "collection-item-dropdown",
+            "note": "Select a post template to use for the content.",
+            "width": "full",
+            "required": true,
+            "options": {
+              "selectedCollection": "templates",
+              "template": "{{title}}"
+            }
+          }
+        }
+      ]
+    },
+    "operation": "5a56831e-e8dc-4dc2-b419-7ecb8ca242a0",
+    "date_created": "2024-05-16T22:35:32.033Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "operations": null
+  },
+  {
+    "id": "f9411e3d-bb8c-41cb-b3aa-c50da4eddaea",
+    "name": "[Utils] Translate Content",
+    "icon": "translate",
+    "color": null,
+    "description": "This flow is a helper for translating content to be trigger by other flows.",
+    "status": "active",
+    "trigger": "operation",
+    "accountability": "all",
+    "options": {
+      "return": "$last"
+    },
+    "operation": "7d8b7e94-3d88-4eb7-ba67-db0cdcad9bdd",
+    "date_created": "2024-05-16T22:35:32.130Z",
+    "user_created": "6bdeefd0-bf31-4345-9cab-31f4e577ec3c",
+    "operations": null
+  }
+]

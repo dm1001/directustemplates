@@ -1,0 +1,58 @@
+[
+  {
+    "id": "4d8ecf80-ec05-4502-9215-5137a45f3823",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_created": "2024-01-17T11:07:13.916Z",
+    "user_updated": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_updated": "2024-01-17T12:19:58.104Z",
+    "title": "React",
+    "slug": "react",
+    "description": "React is an open-source JavaScript library developed by Facebook for building user interfaces, particularly for single-page applications. It's known for its efficient and flexible approach to building interactive UIs with a focus on reusable components.",
+    "image": null,
+    "courses": [
+      "68c06dc3-c784-4003-9ba4-8199297b4129"
+    ]
+  },
+  {
+    "id": "6a96659b-272d-4777-a958-61bbed7f2636",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_created": "2024-01-17T11:07:31.769Z",
+    "user_updated": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_updated": "2024-01-17T12:20:17.730Z",
+    "title": "Astro",
+    "slug": "astro",
+    "description": "Astro is a modern web framework that enables developers to build faster websites with a focus on performance. It leverages static site generation and a component-based architecture, allowing for efficient rendering and optimal loading times.",
+    "image": null,
+    "courses": [
+      "61af2e9c-957b-447a-90a3-53dd73a134a9"
+    ]
+  },
+  {
+    "id": "9095ca42-87b0-4aed-91be-68f575f03f8e",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_created": "2024-01-04T20:58:48.143Z",
+    "user_updated": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_updated": "2024-01-17T12:19:48.213Z",
+    "title": "Vue",
+    "slug": "vue",
+    "description": "Vue is a progressive JavaScript framework used for building user interfaces. It is designed to be incrementally adoptable, making it ideal for creating sophisticated single-page applications as well as integrating into complex projects.",
+    "image": null,
+    "courses": [
+      "ffdc8df9-254b-400d-a150-e251268d16ed"
+    ]
+  },
+  {
+    "id": "e4103d91-7a36-4b54-bdaa-3990750654c8",
+    "user_created": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_created": "2024-01-17T11:07:43.813Z",
+    "user_updated": "b0fda524-d7d7-49d5-bcbc-ac7246d859ca",
+    "date_updated": "2024-01-17T12:20:05.870Z",
+    "title": "Svelte",
+    "slug": "svelte",
+    "description": "Svelte is an innovative framework for building faster web applications. Unlike other frameworks, Svelte shifts much of the work to compile time, producing highly optimized vanilla JavaScript at build time and reducing the need for client-side processing.",
+    "image": null,
+    "courses": [
+      "5b1b6952-af8f-4dad-b82a-0a2187ffbff2"
+    ]
+  }
+]
