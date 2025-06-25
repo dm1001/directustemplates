@@ -1,0 +1,17 @@
+[
+  {
+    "id": "00d88edb-22cd-4dd7-9728-796c1d2185bf",
+    "name": "McDowells",
+    "parent": "debb9295-7675-4503-a8c4-479383229541"
+  },
+  {
+    "id": "88b33685-c134-4c70-80cc-cf39450b2e58",
+    "name": "Public",
+    "parent": null
+  },
+  {
+    "id": "debb9295-7675-4503-a8c4-479383229541",
+    "name": "Teams",
+    "parent": null
+  }
+]

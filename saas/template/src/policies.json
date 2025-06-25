@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1c6f63e6-ee81-4eb5-8a39-47f4e72d37ec",
+    "name": "Support - SaaS",
+    "icon": "medical_services",
+    "description": "Role for internal employees who do support but don't need admin access.",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": true
+  },
+  {
+    "id": "79403aa9-3d72-4904-9bd9-545d4bb01103",
+    "name": "User - SaaS",
+    "icon": "admin_panel_settings",
+    "description": "Role for users of the SaaS app. No app access. Only through your frontend via API.",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": false
+  },
+  {
+    "id": "7f4d9afd-a15b-4a64-9514-d6edb701fef5",
+    "name": "API - SaaS",
+    "icon": "robot",
+    "description": "Used for server to server communications.",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": false
+  },
+  {
+    "id": "abf8a154-5b1c-4a46-ac9c-7300570f4f17",
+    "name": "$t:public_label",
+    "icon": "public",
+    "description": "$t:public_description",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": false,
+    "app_access": false
+  },
+  {
+    "id": "fd626999-e45e-40ab-9949-a2e3eadf8572",
+    "name": "Administrator",
+    "icon": "verified",
+    "description": "$t:admin_policy_description",
+    "ip_access": null,
+    "enforce_tfa": false,
+    "admin_access": true,
+    "app_access": true
+  }
+]

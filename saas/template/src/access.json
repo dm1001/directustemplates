@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ca539b4b-105b-4dd2-8026-e9a16361d4ae",
+    "role": "fd626999-e45e-40ab-9949-a2e3eadf8572",
+    "user": null,
+    "policy": "fd626999-e45e-40ab-9949-a2e3eadf8572",
+    "sort": 1
+  },
+  {
+    "id": "ea7e75ce-c1a5-47b8-9630-bd0eb0742a87",
+    "role": "1c6f63e6-ee81-4eb5-8a39-47f4e72d37ec",
+    "user": null,
+    "policy": "1c6f63e6-ee81-4eb5-8a39-47f4e72d37ec",
+    "sort": 1
+  },
+  {
+    "id": "2a0343f8-f890-4158-b77e-c161ee560e5e",
+    "role": "79403aa9-3d72-4904-9bd9-545d4bb01103",
+    "user": null,
+    "policy": "79403aa9-3d72-4904-9bd9-545d4bb01103",
+    "sort": 1
+  },
+  {
+    "id": "83bb3653-0ae8-4a23-a54e-18f440aab89c",
+    "role": "7f4d9afd-a15b-4a64-9514-d6edb701fef5",
+    "user": null,
+    "policy": "7f4d9afd-a15b-4a64-9514-d6edb701fef5",
+    "sort": 1
+  },
+  {
+    "id": "eb6ff826-d21d-4e0d-b316-59ab47535ace",
+    "role": null,
+    "user": null,
+    "policy": "abf8a154-5b1c-4a46-ac9c-7300570f4f17",
+    "sort": 1
+  }
+]

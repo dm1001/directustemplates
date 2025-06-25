@@ -1,0 +1,28 @@
+[
+  {
+    "id": "c4afae70-699d-4f28-8bdc-3edc2b326f0c",
+    "status": "draft",
+    "user_created": "0a027aa4-f31a-4d35-9a21-e46d7e72d1a2",
+    "date_created": "2024-03-04T03:29:21.131Z",
+    "user_updated": "0a027aa4-f31a-4d35-9a21-e46d7e72d1a2",
+    "date_updated": "2024-03-04T03:33:52.149Z",
+    "name": "McDowells",
+    "type": "live",
+    "slug": "mcdowells",
+    "billing_email": null,
+    "feature_flags": {
+      "feature_a": true,
+      "feature_b": false
+    },
+    "avatar": null,
+    "color": null,
+    "stripe_customer_id": null,
+    "billing_address": null,
+    "folder": "00d88edb-22cd-4dd7-9728-796c1d2185bf",
+    "billing_phone": null,
+    "subscriptions": [],
+    "users": [
+      "5643e359-4d9e-4f92-b80b-955ec7e055d4"
+    ]
+  }
+]

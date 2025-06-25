@@ -1,0 +1,44 @@
+[
+  {
+    "id": "43837635-69d5-4811-a7da-695515b9b358",
+    "language": "en-US",
+    "key": "demo",
+    "value": "Demo"
+  },
+  {
+    "id": "6abdaea7-b42a-4bf2-86ea-c1e03cbc546b",
+    "language": "en-US",
+    "key": "pending",
+    "value": "Pending"
+  },
+  {
+    "id": "a4a8b951-b535-4967-9e2b-bbb1ef01ddd6",
+    "language": "en-US",
+    "key": "assigned",
+    "value": "Assigned"
+  },
+  {
+    "id": "b183ee91-20d0-4a2a-b2d6-b967cbe2d265",
+    "language": "en-US",
+    "key": "new",
+    "value": "New"
+  },
+  {
+    "id": "b27e82b0-be45-41bd-8c86-93e1ccb28856",
+    "language": "en-US",
+    "key": "live",
+    "value": "Live"
+  },
+  {
+    "id": "b9d4e3ce-b768-4ef6-b5cc-0927ba8f78a6",
+    "language": "en-US",
+    "key": "destroyed",
+    "value": "Destroyed"
+  },
+  {
+    "id": "bf189db6-e108-4c63-894f-0b789439728b",
+    "language": "en-US",
+    "key": "closed",
+    "value": "Closed"
+  }
+]

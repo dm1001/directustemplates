@@ -1,0 +1,18 @@
+[
+  {
+    "id": "5d73c840-2bc0-4ee0-b27d-41977e25921a",
+    "status": "draft",
+    "sort": null,
+    "user_created": "0a027aa4-f31a-4d35-9a21-e46d7e72d1a2",
+    "date_created": "2024-03-04T13:44:09.783Z",
+    "user_updated": null,
+    "date_updated": null,
+    "team": null,
+    "project": null,
+    "name": null,
+    "description": null,
+    "assigned_to": null,
+    "due_date": null,
+    "files": []
+  }
+]

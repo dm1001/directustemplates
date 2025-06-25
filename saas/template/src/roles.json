@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1c6f63e6-ee81-4eb5-8a39-47f4e72d37ec",
+    "name": "Support - SaaS",
+    "icon": "medical_services",
+    "description": "Role for internal employees who do support but don't need admin access.",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "79403aa9-3d72-4904-9bd9-545d4bb01103",
+    "name": "User - SaaS",
+    "icon": "admin_panel_settings",
+    "description": "Role for users of the SaaS app. No app access. Only through your frontend via API.",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "7f4d9afd-a15b-4a64-9514-d6edb701fef5",
+    "name": "API - SaaS",
+    "icon": "robot",
+    "description": "Used for server to server communications.",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  },
+  {
+    "id": "fd626999-e45e-40ab-9949-a2e3eadf8572",
+    "name": "Administrator",
+    "icon": "verified",
+    "description": "$t:admin_description",
+    "parent": null,
+    "children": null,
+    "policies": null,
+    "users": null
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "71cd3355-d359-4b60-bef7-57de44afff3c",
+    "status": "new",
+    "date_created": "2024-03-04T13:58:43.525Z",
+    "user_updated": null,
+    "date_updated": null,
+    "assigned_to": "c35a1bee-f84f-4344-a1c9-05eb9ef026dc",
+    "metadata": {
+      "url": "https://saasapp.com/account/help"
+    },
+    "message": "I need to cancel my account please.",
+    "subject": "Help me",
+    "user": "0a027aa4-f31a-4d35-9a21-e46d7e72d1a2",
+    "team": "c4afae70-699d-4f28-8bdc-3edc2b326f0c"
+  }
+]

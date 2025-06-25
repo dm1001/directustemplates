@@ -1,0 +1,561 @@
+[
+  {
+    "collection": "saas",
+    "meta": {
+      "collection": "saas",
+      "icon": "computer",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "SaaS"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": null,
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "saas_billing",
+    "meta": {
+      "collection": "saas_billing",
+      "icon": "currency_exchange",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Billing"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 4,
+      "group": "saas",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "saas_events",
+    "meta": {
+      "collection": "saas_events",
+      "icon": "chip_extraction",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Events",
+          "singular": "event",
+          "plural": "events"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "saas_metadata",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "saas_events",
+      "comment": null
+    }
+  },
+  {
+    "collection": "saas_inbox",
+    "meta": {
+      "collection": "saas_inbox",
+      "icon": "all_inbox",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Inbox"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "saas",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "saas_inbox",
+      "comment": null
+    }
+  },
+  {
+    "collection": "saas_logs",
+    "meta": {
+      "collection": "saas_logs",
+      "icon": "nearby_error",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Logs",
+          "singular": "log",
+          "plural": "logs"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "saas_metadata",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "saas_logs",
+      "comment": null
+    }
+  },
+  {
+    "collection": "saas_metadata",
+    "meta": {
+      "collection": "saas_metadata",
+      "icon": "data_usage",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Metadata"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 5,
+      "group": "saas",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "saas_metrics",
+    "meta": {
+      "collection": "saas_metrics",
+      "icon": "stacked_line_chart",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Metrics",
+          "singular": "metric",
+          "plural": "metrics"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "saas_metadata",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "saas_metrics",
+      "comment": null
+    }
+  },
+  {
+    "collection": "saas_prices",
+    "meta": {
+      "collection": "saas_prices",
+      "icon": "attach_money",
+      "note": null,
+      "display_template": "{{lookup_key}} • {{unit_amount}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Prices",
+          "singular": "price",
+          "plural": "prices"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "saas_products",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "saas_prices",
+      "comment": null
+    }
+  },
+  {
+    "collection": "saas_products",
+    "meta": {
+      "collection": "saas_products",
+      "icon": "shopping_cart_checkout",
+      "note": null,
+      "display_template": "{{name}}",
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Products",
+          "singular": "product",
+          "plural": "products"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "saas_billing",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "saas_products",
+      "comment": null
+    }
+  },
+  {
+    "collection": "saas_projects",
+    "meta": {
+      "collection": "saas_projects",
+      "icon": "tab_group",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Projects",
+          "singular": "project",
+          "plural": "projects"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "saas_teams_data",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "saas_projects",
+      "comment": null
+    }
+  },
+  {
+    "collection": "saas_subscriptions",
+    "meta": {
+      "collection": "saas_subscriptions",
+      "icon": "money",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Subscriptions",
+          "singular": "subscription",
+          "plural": "subscriptions"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "saas_billing",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "saas_subscriptions",
+      "comment": null
+    }
+  },
+  {
+    "collection": "saas_tasks",
+    "meta": {
+      "collection": "saas_tasks",
+      "icon": "task_alt",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Tasks",
+          "singular": "task",
+          "plural": "tasks"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": "sort",
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "saas_teams_data",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "saas_tasks",
+      "comment": null
+    }
+  },
+  {
+    "collection": "saas_tasks_files",
+    "meta": {
+      "collection": "saas_tasks_files",
+      "icon": null,
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": null,
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "saas_tasks",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "saas_tasks_files",
+      "comment": null
+    }
+  },
+  {
+    "collection": "saas_teams",
+    "meta": {
+      "collection": "saas_teams",
+      "icon": "groups",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Teams",
+          "singular": "team",
+          "plural": "teams"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 3,
+      "group": "saas",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "saas_teams",
+      "comment": null
+    }
+  },
+  {
+    "collection": "saas_teams_data",
+    "meta": {
+      "collection": "saas_teams_data",
+      "icon": "database",
+      "note": null,
+      "display_template": null,
+      "hidden": false,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Data"
+        }
+      ],
+      "archive_field": null,
+      "archive_app_filter": true,
+      "archive_value": null,
+      "unarchive_value": null,
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 2,
+      "group": "saas",
+      "collapse": "closed",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": null
+  },
+  {
+    "collection": "saas_teams_users",
+    "meta": {
+      "collection": "saas_teams_users",
+      "icon": "group",
+      "note": null,
+      "display_template": null,
+      "hidden": true,
+      "singleton": false,
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Team Users",
+          "singular": "team user",
+          "plural": "team users"
+        }
+      ],
+      "archive_field": "status",
+      "archive_app_filter": true,
+      "archive_value": "archived",
+      "unarchive_value": "draft",
+      "sort_field": null,
+      "accountability": "all",
+      "color": null,
+      "item_duplication_fields": null,
+      "sort": 1,
+      "group": "saas_teams",
+      "collapse": "open",
+      "preview_url": null,
+      "versioning": false
+    },
+    "schema": {
+      "schema": "public",
+      "name": "saas_teams_users",
+      "comment": null
+    }
+  }
+]
